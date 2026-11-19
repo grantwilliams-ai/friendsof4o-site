@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f0d2a">
+<title>Does it sound like 4o? Guess which answer came from GPT-4o | Friends of 4o</title>
+<meta name="description" content="One question, two answers. One came from ChatGPT&#x27;s own GPT-4o. Guess which, then see which model wrote the other and how it was asked.">
+<link rel="canonical" href="https://friendsof4o.com/sounds-like-4o/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Friends of 4o">
+<meta property="og:title" content="Does it sound like 4o? Guess which answer came from GPT-4o | Friends of 4o">
+<meta property="og:description" content="One question, two answers. One came from ChatGPT&#x27;s own GPT-4o. Guess which, then see which model wrote the other and how it was asked.">
+<meta property="og:url" content="https://friendsof4o.com/sounds-like-4o/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/colors.css">
+<link rel="stylesheet" href="../css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the main content</a>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol></svg>
+<p class="early"><strong>Early version.</strong> This site is new, and more is being added. <a href="../mailing-list/">Get an email when something new is added</a></p>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="../">Friends of 4o</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../save/">Save your conversations</a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/" aria-current="page">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a>
+      <details class="more" data-menu>
+        <summary>More</summary>
+        <div class="more-panel"><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a><a href="../open-models/">Open-source models trained to sound like <span class="nb">GPT-4o</span></a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../how-this-was-made/">How this was made</a><a href="../news/">News</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a><span class="coming"><span><span class="nb">GPT-4o</span> voice kit</span> <span class="tag">Coming</span></span></div>
+      </details>
+    </nav>
+    <a class="btn btn-glass header-cta" href="../mailing-list/">Join the mailing list</a>
+    <details class="menu" data-menu>
+      <summary>Menu</summary>
+      <nav class="menu-panel" aria-label="All pages"><a href="../save/">Save your ChatGPT conversations</a><a href="../save/#custom-gpts">Save a custom GPT before December 11</a><a href="../read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a><a href="../sounds-like-4o/" aria-current="page">Does it sound like 4o?</a><a href="../models/">Find a model to replace <span class="nb">GPT-4o</span></a><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a><a href="../open-models/">Open-source models trained to sound like <span class="nb">GPT-4o</span></a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../how-this-was-made/">How this was made</a><a href="../news/">News</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a><span class="coming"><span><span class="nb">GPT-4o</span> voice kit</span> <span class="tag">Coming</span></span><a href="../mailing-list/">Mailing list and requests</a></nav>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="label">A guessing game</p>
+    <h1>Does it sound like 4o?</h1>
+    <p class="page-lede">Read a question and two answers. One of them came from ChatGPT&#x27;s own <span class="nb">GPT-4o.</span> Guess which one.</p>
+  </div>
+</section>
+<div class="game-page">
+  <div class="wrap" data-game="full">
+    <div class="round">
+      <div class="round-q">
+        <p class="label">The question</p>
+        <p class="q" data-q tabindex="-1">Loading a question.</p>
+      </div>
+      <div class="answers" data-answers>
+        <article class="answer" data-answer>
+          <h2 class="label" data-answer-label>Answer 1</h2>
+          <div class="answer-text" data-answer-text></div>
+          <p class="who" data-who hidden></p>
+        </article>
+        <article class="answer" data-answer>
+          <h2 class="label" data-answer-label>Answer 2</h2>
+          <div class="answer-text" data-answer-text></div>
+          <p class="who" data-who hidden></p>
+        </article>
+      </div>
+      <div class="pick-bar" data-before-pick>
+        <p class="pick-ask" id="pick-ask">Which answer came from ChatGPT&#x27;s own <span class="nb">GPT-4o</span>?</p>
+        <div class="pick-row" role="group" aria-labelledby="pick-ask">
+          <button class="btn btn-solid" type="button" data-pick="0" aria-label="Answer 1 came from ChatGPT&#x27;s own GPT-4o" disabled>Answer 1</button>
+          <button class="btn btn-solid" type="button" data-pick="1" aria-label="Answer 2 came from ChatGPT&#x27;s own GPT-4o" disabled>Answer 2</button>
+          <button class="btn btn-line" type="button" data-pick="cannot-tell" disabled>Can't tell</button>
+        </div>
+      </div>
+      <div class="result" data-result hidden>
+        <p class="result-text" data-result-text aria-live="polite"></p>
+        <div class="result-row" data-prefer>
+          <p class="ask">Which answer did you prefer?</p>
+          <button class="btn btn-line btn-small" type="button" data-prefer-pick="0" aria-pressed="false">Answer 1</button>
+          <button class="btn btn-line btn-small" type="button" data-prefer-pick="1" aria-pressed="false">Answer 2</button>
+          <button class="btn btn-line btn-small" type="button" data-prefer-pick="none" aria-pressed="false">No preference</button>
+        </div>
+        <button class="btn btn-solid" type="button" data-next>Next round</button>
+        <p class="tally" data-tally></p>
+      </div>
+    </div>
+    <noscript><p class="none-yet">This game needs JavaScript to load the answers. <a href="../read/">Read GPT-4o's own answers</a> works without it.</p></noscript>
+    <p class="game-foot">The February instruction is a short paragraph, sent before the question, that asks for warmth and directness. <a href="../style/">Read the February instruction</a><br>
+      One answer always comes from ChatGPT's own <span class="nb">GPT-4o.</span> Picks are not recorded yet. <a href="../how-this-was-made/#the-game">How the rounds are made</a></p>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <p class="wordmark">Friends of 4o</p>
+      <p>Made by Grant Williams. Not affiliated with OpenAI.</p>
+      <p>Every answer on this site is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
+    </div>
+    <nav class="footer-nav" aria-label="All pages, in the footer">
+      <ul><li><a href="../save/">Save your ChatGPT conversations</a></li><li><a href="../save/#custom-gpts">Save a custom GPT before December 11</a></li><li><a href="../read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a></li><li><a href="../sounds-like-4o/" aria-current="page">Does it sound like 4o?</a></li><li><a href="../models/">Find a model to replace <span class="nb">GPT-4o</span></a></li><li><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a></li><li><a href="../open-models/">Open-source models trained to sound like <span class="nb">GPT-4o</span></a></li></ul>
+      <ul><li><a href="../style/">How to get 4o&#x27;s style from another model</a></li><li><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a></li><li><a href="../how-this-was-made/">How this was made</a></li><li><a href="../news/">News</a></li><li><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></li><li><span class="coming"><span><span class="nb">GPT-4o</span> voice kit</span> <span class="tag">Coming</span></span></li><li><a href="../mailing-list/">Mailing list and requests</a></li></ul>
+    </nav>
+  </div>
+</footer>
+<script src="../js/site.js" defer></script>
+<script src="../js/game.js" defer></script>
+</body>
+</html>

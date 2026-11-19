@@ -1,0 +1,155 @@
+/* Friends of 4o: every colour on the site lives in this one file.
+
+   To change the colour scheme, change the values here and nothing else. site.css only ever says
+   var(--name); a check (tools/check_pages.py) fails the build if a colour is written anywhere else.
+
+   Three parts:
+     1. The page colours for light screens.
+     2. The night and the sunset: the header, the first screen, the dark bands and the footer.
+        These stay the same on light and dark screens.
+     3. The page colours again, for dark screens.
+*/
+
+/* ---------- 1. Page colours, light ---------- */
+:root {
+  --bg: #f8f5f2;                 /* the page */
+  --surface: #ffffff;            /* cards */
+  --ink: #191733;                /* text */
+  --ink-2: #57536e;              /* quieter text */
+  --line: #e6e0ee;               /* hairlines and card edges */
+  --line-strong: #cdc3ee;        /* a card's edge under the pointer */
+  --accent: #5a3fd0;             /* links, labels, small marks */
+  --accent-strong: #3b2a9c;      /* text on the soft accent */
+  --accent-soft: #efeafd;        /* soft fills: tags, notes, hover */
+  --rose: #c2305c;               /* "No", and corrections */
+  --rose-soft: #fde8ee;
+  --peach: #ffcf9e;              /* the warm highlight, used on the night */
+
+  --sun: linear-gradient(120deg, #5a3fd0 0%, #c14a8c 55%, #ee7d5c 100%);        /* the sunset stripe */
+  --sun-text: linear-gradient(120deg, #4a2fc0 0%, #a8327c 55%, #c9502e 100%);   /* the same, dark enough for big numbers */
+  --on-sun: #ffffff;
+
+  --band: linear-gradient(180deg, #f8f5f2 0%, #f1ecfc 46%, #fdeee6 100%);       /* the game band */
+  --band-2: linear-gradient(180deg, #f1ecfc 0%, #fdeee6 100%);                  /* the forms band */
+  --note-card: linear-gradient(135deg, #fff1e2 0%, #fbe6ee 52%, #e9e4fd 100%);  /* Grant's note */
+  --shown: linear-gradient(135deg, #f1ecff, #fdeee6);                           /* the answer that was GPT-4o's */
+
+  --btn-bg: #191733;             /* the main button */
+  --btn-ink: #ffffff;
+  --btn-bg-hover: #5a3fd0;
+  --btn-ink-hover: #ffffff;
+
+  --field-bg: #ffffff;           /* form fields */
+  --field-line: #8d87a6;
+  --field-placeholder: #6d6887;
+
+  --dot-no: #d2476f;             /* the dots in "Can I still use GPT-4o?" */
+  --dot-ending: #f0a13c;
+  --dot-other: #9a8cf0;
+
+  --shadow: 0 26px 60px -30px rgba(34, 24, 90, .42), 0 2px 8px rgba(34, 24, 90, .06);
+  --fade: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 85%);         /* the fade over a shortened answer */
+  --bar-bg: rgba(248, 245, 242, .92);                                           /* bars that float over the page */
+  --chrome: #0f0d2a;             /* the phone browser's own bar */
+}
+
+/* ---------- 2. The night and the sunset (the same on light and dark screens) ---------- */
+:root {
+  --early-bg: #0b0a22;
+  --early-ink: #e9e5f8;
+  --header: linear-gradient(180deg, #0f0d2a, #131038);
+  --footer: linear-gradient(180deg, #131038, #0d0b26);
+
+  --on-night: #ffffff;
+  --on-night-2: rgba(255, 255, 255, .9);
+  --on-night-3: rgba(255, 255, 255, .8);
+  --on-night-line: rgba(255, 255, 255, .5);
+  --on-night-underline: rgba(255, 255, 255, .4);
+  --on-light: #1b1548;           /* text on the white and peach buttons */
+  --on-light-bg: #ffffff;
+
+  --glass: rgba(255, 255, 255, .08);
+  --glass-2: rgba(255, 255, 255, .18);
+  --glass-line: rgba(255, 255, 255, .24);
+  --glass-line-2: rgba(255, 255, 255, .6);
+
+  /* the first screen */
+  --sky: linear-gradient(180deg, #131038 0%, #1f1856 30%, #3b2880 54%, #6a3791 71%, #a8478d 83%, #de6679 91.5%, #f6976b 96.5%, #fcd09a 100%);
+  --sea: linear-gradient(180deg, #f8b680 0, #e27a7c 9px, #b4558a 32px, #75408f 84px, #3f2b7a 180px, #221a56 330px, #141138 100%);
+  --stars:
+    radial-gradient(1.4px 1.4px at 6% 22%, rgba(255, 255, 255, .9), transparent 100%),
+    radial-gradient(1.2px 1.2px at 13% 58%, rgba(255, 255, 255, .7), transparent 100%),
+    radial-gradient(1.6px 1.6px at 21% 14%, rgba(255, 255, 255, .85), transparent 100%),
+    radial-gradient(1.1px 1.1px at 29% 44%, rgba(255, 255, 255, .6), transparent 100%),
+    radial-gradient(1.4px 1.4px at 37% 9%, rgba(255, 255, 255, .8), transparent 100%),
+    radial-gradient(1.1px 1.1px at 44% 70%, rgba(255, 255, 255, .5), transparent 100%),
+    radial-gradient(1.5px 1.5px at 58% 16%, rgba(255, 255, 255, .85), transparent 100%),
+    radial-gradient(1.1px 1.1px at 66% 52%, rgba(255, 255, 255, .6), transparent 100%),
+    radial-gradient(1.5px 1.5px at 73% 26%, rgba(255, 255, 255, .9), transparent 100%),
+    radial-gradient(1.2px 1.2px at 81% 64%, rgba(255, 255, 255, .6), transparent 100%),
+    radial-gradient(1.6px 1.6px at 88% 12%, rgba(255, 255, 255, .85), transparent 100%),
+    radial-gradient(1.2px 1.2px at 95% 40%, rgba(255, 255, 255, .7), transparent 100%);
+  --clouds:
+    radial-gradient(ellipse 34% 7% at 16% 70%, rgba(255, 176, 150, .34), transparent 70%),
+    radial-gradient(ellipse 26% 5% at 30% 86%, rgba(255, 214, 170, .42), transparent 70%),
+    radial-gradient(ellipse 30% 6% at 82% 64%, rgba(246, 150, 160, .3), transparent 70%),
+    radial-gradient(ellipse 28% 5% at 70% 84%, rgba(255, 214, 170, .44), transparent 70%),
+    radial-gradient(ellipse 18% 4% at 50% 56%, rgba(214, 120, 170, .26), transparent 70%);
+  --sun-glow: radial-gradient(closest-side, rgba(255, 238, 196, .9), rgba(255, 196, 136, .46) 26%, rgba(246, 140, 112, .17) 54%, rgba(246, 140, 112, 0) 72%);
+  --sun-disc: radial-gradient(circle at 50% 42%, #fffef6, #fff0c8 62%, #ffdfa6);
+  --glitter-1: #ffecc8;          /* the light on the water, from the sun down */
+  --glitter-2: #ffd2a4;
+  --glitter-3: #f6a08e;
+  --glitter-line: #fff4dc;
+  --tagline-shadow: 0 1px 20px rgba(20, 14, 60, .45);
+
+  --door-glass: rgba(21, 16, 60, .52);          /* the four doors on the water */
+  --door-glass-hover: rgba(21, 16, 60, .66);
+  --door-shadow: 0 18px 40px -22px rgba(8, 6, 30, .75);
+  --icon-warm: linear-gradient(135deg, #fff0cf, #f9a987);
+  --icon-warm-ink: #2a1a55;
+  --chip-bg: #ffe0b2;            /* the "days left" badge on a door */
+  --chip-ink: #33195a;
+
+  /* the dark reading band, and the top of every inner page */
+  --night-band: radial-gradient(70% 55% at 50% 0%, rgba(126, 84, 226, .42), rgba(126, 84, 226, 0) 70%), linear-gradient(180deg, #131038 0%, #1b154d 55%, #2b1c60 100%);
+  --page-head: radial-gradient(60% 90% at 50% 118%, rgba(246, 151, 107, .5), rgba(222, 102, 121, .24) 42%, rgba(222, 102, 121, 0) 72%), linear-gradient(180deg, #131038 0%, #1f1856 52%, #3b2880 100%);
+  --quote-text: linear-gradient(100deg, #ffffff 18%, #ffdcb6 68%, #ffb9a0 100%);
+}
+
+/* ---------- 3. Page colours, dark ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0d26;
+    --surface: #1a173f;
+    --ink: #f3f0fc;
+    --ink-2: #bbb5d6;
+    --line: #322d63;
+    --line-strong: #5a52a3;
+    --accent: #b9a9ff;
+    --accent-strong: #ddd5ff;
+    --accent-soft: #2a2462;
+    --rose: #ff94b2;
+    --rose-soft: #4a1b30;
+
+    --sun-text: linear-gradient(120deg, #b9a9ff 0%, #ff9cc4 55%, #ffb38a 100%);
+
+    --band: linear-gradient(180deg, #0f0d26 0%, #15123a 46%, #1f1541 100%);
+    --band-2: linear-gradient(180deg, #15123a 0%, #1f1541 100%);
+    --note-card: linear-gradient(135deg, #2c1e3c 0%, #2b1b47 52%, #1f1c55 100%);
+    --shown: linear-gradient(135deg, #241e5e, #35214c);
+
+    --btn-bg: #f3f0fc;
+    --btn-ink: #191733;
+    --btn-bg-hover: #ffcf9e;
+    --btn-ink-hover: #191733;
+
+    --field-bg: #121030;
+    --field-line: #8079ad;
+    --field-placeholder: #a59fc4;
+
+    --shadow: 0 26px 60px -30px rgba(0, 0, 0, .8), 0 2px 8px rgba(0, 0, 0, .35);
+    --fade: linear-gradient(180deg, rgba(26, 23, 63, 0), #1a173f 85%);
+    --bar-bg: rgba(15, 13, 38, .92);
+  }
+}
