@@ -9,4 +9,4 @@ how to save your ChatGPT conversations, GPT-4o's own answers, and how other mode
 
 Made by Grant Williams. Not affiliated with OpenAI.
 
-Contact: hello@grantwilliams.ai
+Contact: hello@friendsof4o.com
