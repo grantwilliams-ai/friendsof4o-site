@@ -812,3 +812,14 @@ a.door:hover h3 { color: var(--accent); }
 .arch-download h2 { font-size: 24px; margin-bottom: 10px; }
 .arch-download p { font-size: 17px; line-height: 1.55; }
 @media (min-width: 1000px) { .arch-about { grid-template-columns: 1.5fr 1fr; gap: 56px; } }
+
+/* ---------- the scripted conversations: the note to read first, and the instructions ---------- */
+.first-note { margin: 0 0 34px; padding: 22px 24px 10px; border-radius: 22px; background: var(--note-card); border: 1px solid var(--line-strong); }
+.prose .first-note h2 { margin-top: 0; font-size: 24px; }
+.inst-list { max-width: 70ch; margin-top: 8px; border-top: 1px solid var(--line); }
+.inst { border-bottom: 1px solid var(--line); }
+.inst summary { cursor: pointer; padding: 14px 4px; font-weight: 600; font-size: 17.5px; }
+.inst summary span { font-weight: 400; font-size: 14.5px; color: var(--ink-2); margin-left: 8px; }
+.inst blockquote { margin: 0 0 20px; padding: 4px 0 4px 18px; border-left: 3px solid var(--line-strong); font-size: 16.5px; line-height: 1.6; color: var(--ink-2); }
+.inst blockquote p { margin: 0 0 .8em; }
+.inst-note { margin: 0 0 14px; padding: 12px 14px; border-radius: 14px; background: var(--rose-soft); font-size: 16px; line-height: 1.5; }
