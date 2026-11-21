@@ -825,19 +825,39 @@ a.door:hover h3 { color: var(--accent); }
 .inst-note { margin: 0 0 14px; padding: 12px 14px; border-radius: 14px; background: var(--rose-soft); font-size: 16px; line-height: 1.5; }
 
 /* ---------- home: the archive, right under the first screen ---------- */
-.home-archive { position: relative; z-index: 2; margin-top: -44px; padding: 0 0 22px; }
+.home-archive { position: relative; z-index: 2; margin-top: -44px; padding: 0 0 26px; }
 .home-archive + .status { margin-top: 0; }
-.ha-card { display: grid; gap: 26px; padding: 28px 24px 30px; border-radius: 28px; background: var(--note-card); border: 1px solid var(--line-strong); box-shadow: var(--shadow); }
-.ha-card h2 { font-size: clamp(28px, 3.2vw, 40px); margin: 6px 0 12px; }
-.ha-text { margin: 0; font-size: 18.5px; line-height: 1.55; max-width: 34em; }
-.ha-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin: 8px 0 16px; }
-.ha-row input { width: 100%; min-width: 0; font: 400 19px/1.3 var(--sans); color: var(--ink); background: var(--field-bg); border: 1.5px solid var(--field-line); border-radius: 16px; padding: 14px 16px; }
+.ha-card { display: grid; gap: 30px; padding: 30px 20px 30px; border-radius: 30px; background: var(--note-card); border: 1.5px solid var(--line-strong); box-shadow: var(--shadow); }
+.ha-card h2 { font-size: clamp(32px, 5vw, 58px); line-height: 1.06; letter-spacing: -.028em; margin: 8px 0 14px; max-width: 16em; }
+.ha-text { margin: 0 0 22px; font-size: clamp(18.5px, 1.6vw, 21px); line-height: 1.55; max-width: 38em; }
+.ha-row { display: grid; grid-template-columns: 1fr; gap: 10px; max-width: 760px; }
+.ha-row input { width: 100%; min-width: 0; font: 400 21px/1.3 var(--sans); color: var(--ink); background: var(--field-bg); border: 2px solid var(--accent); border-radius: 20px; padding: 19px 20px; box-shadow: var(--shadow); }
 .ha-row input::placeholder { color: var(--field-placeholder); }
-.ha-links { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.ha-row .btn { font-size: 19px; padding: 17px 30px; justify-content: center; }
+.ha-part > .label { margin-bottom: 12px; }
+.ha-topics { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ha-topics .topic-chip { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 16.5px; padding: 10px 16px; }
+.ha-n { font-size: 13.5px; font-weight: 600; opacity: .7; }
+.ha-picks { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.ha-pick { text-decoration: none; height: 100%; background: var(--surface); }
+.ha-pick .pick-go { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.ha-pick .pick-a { -webkit-line-clamp: 4; margin: 0; padding: 0; border: 0; font-style: normal; }
+.ha-read { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 6px; font-weight: 600; color: var(--accent); }
+.ha-read .icon { width: 18px; height: 18px; }
+.ha-links { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+.ha-links .btn { font-size: 19px; padding: 17px 32px; }
+@media (min-width: 640px) { .ha-row { grid-template-columns: 1fr auto; } }
 @media (min-width: 900px) {
-  .home-archive { padding: 0 0 28px; }
-  .ha-card { grid-template-columns: 1.15fr 1fr; align-items: center; gap: 48px; padding: 44px 48px 46px; }
+  .ha-card { gap: 38px; padding: 52px 52px 50px; }
+  .ha-picks { grid-template-columns: repeat(3, 1fr); gap: 18px; }
 }
+/* the archive's door: first in the first screen, and the only light one */
+.first-door.first-archive { background: var(--note-card); color: var(--ink); border-color: transparent; gap: 12px; }
+.first-archive .fd-title { color: var(--ink); font-size: clamp(22px, 2.4vw, 28px); }
+.first-archive .fd-text { display: block; color: var(--ink-2); }
+.first-archive .fd-btn { align-self: flex-start; }
+.fa-new { align-self: flex-start; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; background: var(--accent); color: var(--surface); }
+@media (min-width: 720px) { .first-archive .fa-new, .first-archive .fd-btn { align-self: center; flex: none; } }
 
 /* ---------- the voice samples ---------- */
 .voice-grid .pick { gap: 8px; }
@@ -850,3 +870,13 @@ a.door:hover h3 { color: var(--accent); }
 .vc-name { min-width: 4.6em; font-weight: 600; font-size: 14.5px; color: var(--ink-2); }
 .voice-view .turns { margin-top: 12px; max-width: none; }
 @media (min-width: 1080px) { .voice-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- one thing to grab, in the top corner of a page's night sky ---------- */
+.head-action { margin-top: 22px; }
+.head-action .btn { font-size: 17px; padding: 14px 24px; }
+.head-action-note { margin: 10px 0 0; font-size: 14.5px; color: var(--on-night-2); }
+@media (min-width: 900px) {
+  .page-head.has-action .wrap { display: grid; grid-template-columns: 1fr auto; column-gap: 40px; align-items: start; }
+  .page-head.has-action .wrap > * { grid-column: 1; }
+  .page-head.has-action .head-action { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; text-align: right; }
+}
