@@ -8,3 +8,6 @@
 
 /archive-data/*
   X-Robots-Tag: noindex
+
+/voice-data/*
+  X-Robots-Tag: noindex
