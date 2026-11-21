@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /data/
+Disallow: /archive-data/
 
 Sitemap: https://friendsof4o.com/sitemap.xml

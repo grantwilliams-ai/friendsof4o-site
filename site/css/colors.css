@@ -48,6 +48,7 @@
   --dot-other: #9a8cf0;
 
   --shadow: 0 26px 60px -30px rgba(34, 24, 90, .42), 0 2px 8px rgba(34, 24, 90, .06);
+  --backdrop: rgba(15, 13, 42, .62);                                           /* behind the archive's reader */
   --fade: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 85%);         /* the fade over a shortened answer */
   --bar-bg: rgba(248, 245, 242, .92);                                           /* bars that float over the page */
   --chrome: #0f0d2a;             /* the phone browser's own bar */

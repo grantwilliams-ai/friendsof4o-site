@@ -5,3 +5,6 @@
 
 /data/*
   X-Robots-Tag: noindex
+
+/archive-data/*
+  X-Robots-Tag: noindex

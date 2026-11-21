@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://friendsof4o.com/archive/</loc></url>
   <url><loc>https://friendsof4o.com/ask-4o/</loc></url>
   <url><loc>https://friendsof4o.com/compare/</loc></url>
+  <url><loc>https://friendsof4o.com/download/comparison/</loc></url>
+  <url><loc>https://friendsof4o.com/download/conversations/</loc></url>
   <url><loc>https://friendsof4o.com/download/</loc></url>
   <url><loc>https://friendsof4o.com/early-experiment/</loc></url>
   <url><loc>https://friendsof4o.com/how-this-was-made/</loc></url>
