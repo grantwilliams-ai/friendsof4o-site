@@ -4,9 +4,12 @@
    The other model is sometimes one of GPT-4o's two versions on OpenAI's API. So the question, the buttons and
    the result always name the archived side in full, "ChatGPT's own GPT-4o", and never "GPT-4o" alone.
 
-   On the home page (data-game="home") one round is already written into the page, so it works without this
-   script; with it, a different short round is drawn on each visit.
-   On the game's own page (data-game="full") rounds are drawn from every question the game may use.
+   On the home page (data-game="home") one round is written into the page, so it works without this script; the
+   script makes it playable and puts the two answers in a random order. Nothing more is fetched on load; after a
+   round, "Another round" fetches the short home rounds (home-rounds.json) once, only when it is pressed.
+   On the game's own page (data-game="full") rounds are drawn from every question the game may use. After the
+   guess, and before any name is shown, the reader is asked which answer they preferred; then the names show.
+   Neither the guess nor the preference is recorded (see recordPick in site.js).
 */
 (function () {
   'use strict';
@@ -23,12 +26,17 @@
   var resultText = el.querySelector('[data-result-text]');
   var tallyEl = el.querySelector('[data-tally]');
   var nextBtn = el.querySelector('[data-next]');
+  var preferBar = el.querySelector('[data-prefer-bar]');
+  var preferAsk = el.querySelector('[data-prefer-ask]');
+  var guessEl = el.querySelector('[data-guess]');
   var preferBtns = Array.prototype.slice.call(el.querySelectorAll('[data-prefer-pick]'));
   var pickBtns = Array.prototype.slice.call(el.querySelectorAll('[data-pick]'));
+  var febNote = el.querySelector('[data-feb-note]');
   if (cards.length !== 2 || !qEl) { return; }
 
   var current = null;          // { id, other, otherCondition }
   var done = true;
+  var chosen = -1;             // the guess: 0 or 1 for an answer, -1 for Can't tell
   var tally = { rounds: 0, right: 0, unsure: 0 };
 
   /* ---- who said it: the same words the build writes into the home page ---- */
@@ -61,6 +69,40 @@
   }
   function pick(list) { return list[Math.floor(Math.random() * list.length)]; }
 
+  // An answer keeps its own words. On this page its own headings sit one level under the heading above it, in the
+  // same order, and contents links that point to no place in the answer are shown as plain text.
+  function fitAnswer(node, top) {
+    var hs = node.querySelectorAll('h1, h2, h3, h4, h5, h6'), levels = [], i, k;
+    for (i = 0; i < hs.length; i++) {
+      var l = Number(hs[i].tagName.charAt(1));
+      if (levels.indexOf(l) < 0) { levels.push(l); }
+    }
+    levels.sort();
+    for (i = 0; i < hs.length; i++) {
+      var h = hs[i], to = Math.min(6, top + levels.indexOf(Number(h.tagName.charAt(1))));
+      if (h.tagName === 'H' + to) { continue; }
+      var n = document.createElement('h' + to);
+      for (k = 0; k < h.attributes.length; k++) { n.setAttribute(h.attributes[k].name, h.attributes[k].value); }
+      while (h.firstChild) { n.appendChild(h.firstChild); }
+      h.parentNode.replaceChild(n, h);
+    }
+    var links = node.querySelectorAll('a[href^="#"]'), ids = node.querySelectorAll('[id]');
+    for (i = 0; i < links.length; i++) {
+      var a = links[i], want = a.getAttribute('href').slice(1), found = false;
+      for (k = 0; k < ids.length; k++) { if (want && ids[k].id === want) { found = true; } }
+      if (found) { continue; }
+      var span = document.createElement('span');
+      while (a.firstChild) { span.appendChild(a.firstChild); }
+      a.parentNode.replaceChild(span, a);
+    }
+  }
+  function fitCards() {
+    for (var n = 0; n < cards.length; n++) {
+      var label = cards[n].querySelector('[data-answer-label]');
+      fitAnswer(cards[n].querySelector('[data-answer-text]'), label ? Math.min(6, Number(label.tagName.charAt(1)) + 1) : 3);
+    }
+  }
+
   /* ---- put a round on the page ---- */
   function show(round) {
     // round = { id, prompt, four: { html, who }, other: { html, who, model, condition } }
@@ -76,10 +118,12 @@
       who.hidden = true;
       card.querySelector('[data-answer-label]').textContent = 'Answer ' + (n + 1);
     }
+    fitCards();
     qEl.textContent = '“' + round.prompt + '”';
     qEl.classList.toggle('q-long', round.prompt.length > 150);
     current = { id: round.id, other: round.other.model, otherCondition: round.other.condition };
     el.setAttribute('data-question', round.id);
+    if (febNote) { febNote.hidden = !round.feb; }   // the note on the February instruction, only when it was used
     ready();
   }
 
@@ -96,33 +140,61 @@
       var card = pickBtns[b].closest('[data-answer]');
       if (card) { pickBtns[b].setAttribute('aria-label', 'This one came from ' + ARCHIVED + ' (answer ' + (cards.indexOf(card) + 1) + ')'); }
     }
-    for (var p = 0; p < preferBtns.length; p++) { preferBtns[p].setAttribute('aria-pressed', 'false'); }
+    for (var p = 0; p < preferBtns.length; p++) { preferBtns[p].setAttribute('aria-pressed', 'false'); preferBtns[p].disabled = false; }
+    if (preferBar) { preferBar.hidden = true; }
     if (before) { before.hidden = false; }
     if (result) { result.hidden = true; }
     el.setAttribute('data-state', 'ready');
   }
 
-  /* ---- the reader picks ---- */
+  /* ---- the reader guesses ---- */
   function onPick(ev) {
     if (done) { return; }
     done = true;
     var button = ev.currentTarget;
     var value = button.getAttribute('data-pick');
     var card = button.closest('[data-answer]');
-    var chosen = card ? cards.indexOf(card) : (value === '0' ? 0 : value === '1' ? 1 : -1);   // -1: "Can't tell"
-    var picked = 'cannot-tell';
-    var number4o = 0;
+    chosen = card ? cards.indexOf(card) : (value === '0' ? 0 : value === '1' ? 1 : -1);   // -1: "Can't tell"
+    current = current || { id: el.getAttribute('data-question') || '', other: el.getAttribute('data-other') || '',
+      otherCondition: el.getAttribute('data-other-condition') || '' };
+    current.picked = chosen < 0 ? 'cannot-tell' : cards[chosen].getAttribute('data-is4o') === 'true' ? 'gpt4o' : 'other';
+    F.recordPick({ question: current.id, other: current.other, otherCondition: current.otherCondition, picked: current.picked });
+    if (!preferBar) { reveal(); return; }
+    // the game's own page: which answer did you prefer? asked before any name is shown
+    for (var b = 0; b < pickBtns.length; b++) { pickBtns[b].disabled = true; }
+    if (before) { before.hidden = true; }
+    if (guessEl) { guessEl.textContent = chosen < 0 ? "Your guess: Can't tell." : 'Your guess: Answer ' + (chosen + 1) + '.'; }
+    preferBar.hidden = false;
+    el.setAttribute('data-state', 'prefer');
+    if (preferAsk) {
+      preferAsk.setAttribute('tabindex', '-1');
+      preferAsk.focus({ preventScroll: true });
+    }
+  }
+  for (var b = 0; b < pickBtns.length; b++) { pickBtns[b].addEventListener('click', onPick); }
+
+  /* ---- the names: shown after the guess (on the game's own page, after the preference too) ---- */
+  function reveal() {
+    var number4o = 0, numberOther = 0, otherName = '';
     for (var n = 0; n < cards.length; n++) {
       var is4o = cards[n].getAttribute('data-is4o') === 'true';
-      if (is4o) { number4o = n + 1; }
+      if (is4o) { number4o = n + 1; } else {
+        numberOther = n + 1;
+        var named = cards[n].querySelector('[data-who] strong');
+        otherName = named ? named.textContent.replace(/\s+/g, ' ').trim() : '';
+      }
       cards[n].setAttribute('data-shown', is4o ? 'gpt4o' : 'other');
-      if (n === chosen) { cards[n].setAttribute('data-picked', ''); picked = is4o ? 'gpt4o' : 'other'; }
+      if (n === chosen) { cards[n].setAttribute('data-picked', ''); }
       cards[n].querySelector('[data-who]').hidden = false;
     }
     for (var b = 0; b < pickBtns.length; b++) { if (pickBtns[b].closest('[data-answer]')) { pickBtns[b].hidden = true; } }
     if (before) { before.hidden = true; }
+    if (preferBar) { preferBar.hidden = true; }
+    var picked = current.picked;
+    // the result names both sides, so a reader on a phone need not scroll back up to see the other model (D42)
     F.setText(resultText, (picked === 'gpt4o' ? 'Yes. ' : picked === 'other' ? 'No. ' : '') +
-      'Answer ' + number4o + ' came from ' + ARCHIVED + '.');
+      'Answer ' + number4o + ' came from ' + ARCHIVED + '.' +
+      (otherName ? ' Answer ' + numberOther + ' came from ' + otherName + '.' : ''));
     tally.rounds += 1;
     if (picked === 'gpt4o') { tally.right += 1; }
     if (picked === 'cannot-tell') { tally.unsure += 1; }
@@ -137,16 +209,12 @@
     }
     el.setAttribute('data-state', 'done');
     el.setAttribute('data-picked', picked);
-    current = current || { id: el.getAttribute('data-question') || '', other: el.getAttribute('data-other') || '',
-      otherCondition: el.getAttribute('data-other-condition') || '' };
-    current.picked = picked;
-    F.recordPick({ question: current.id, other: current.other, otherCondition: current.otherCondition, picked: picked });
   }
-  for (var b = 0; b < pickBtns.length; b++) { pickBtns[b].addEventListener('click', onPick); }
 
-  /* ---- after the reveal: which answer did you prefer? (optional) ---- */
+  /* ---- before the names: which answer did you prefer? ---- */
   for (var p = 0; p < preferBtns.length; p++) {
     preferBtns[p].addEventListener('click', function (ev) {
+      if (el.getAttribute('data-state') !== 'prefer') { return; }
       var value = ev.currentTarget.getAttribute('data-prefer-pick');
       for (var i = 0; i < preferBtns.length; i++) {
         preferBtns[i].setAttribute('aria-pressed', preferBtns[i] === ev.currentTarget ? 'true' : 'false');
@@ -155,46 +223,60 @@
       if (value === '0' || value === '1') {
         preferred = cards[Number(value)].getAttribute('data-is4o') === 'true' ? 'gpt4o' : 'other';
       }
-      if (current) {
-        F.recordPick({ question: current.id, other: current.other, otherCondition: current.otherCondition,
-          picked: current.picked, preferred: preferred });
-      }
+      F.recordPick({ question: current.id, other: current.other, otherCondition: current.otherCondition,
+        picked: current.picked, preferred: preferred });
+      reveal();
     });
   }
 
-  /* ---- home page: one short round, a different one on each visit ---- */
+  /* ---- home page: one short round; "Another round" fetches one more, only when pressed ---- */
   if (mode === 'home') {
-    // A different round is drawn before the buttons appear. If it is slow or fails, the round written into the
-    // page is made ready to play instead, and it stays for this visit: a round is never swapped once playable.
-    var settled = false;
-    var useWritten = function () {
-      if (settled) { return; }
-      settled = true;
-      var written = { id: el.getAttribute('data-question'), other: el.getAttribute('data-other'),
-        otherCondition: el.getAttribute('data-other-condition') };
-      if (Math.random() < 0.5) {
-        var a = cards[0].querySelector('[data-answer-text]'), z = cards[1].querySelector('[data-answer-text]');
-        var wa = cards[0].querySelector('[data-who]'), wz = cards[1].querySelector('[data-who]');
-        var html = a.innerHTML; a.innerHTML = z.innerHTML; z.innerHTML = html;
-        var who = wa.innerHTML; wa.innerHTML = wz.innerHTML; wz.innerHTML = who;
-        cards[0].setAttribute('data-is4o', 'false');
-        cards[1].setAttribute('data-is4o', 'true');
-      }
-      current = written;
-      ready();
-    };
-    setTimeout(useWritten, 1500);
-    F.getJSON('home-rounds.json').then(function (data) {
-      if (settled || !data.rounds || !data.rounds.length) { useWritten(); return; }
-      var r = pick(data.rounds);
-      var o = pick(r.others);
-      var round = { id: r.id, prompt: r.prompt,
-        four: { html: r.chatgpt.html, who: whoFourO(r.chatgpt) },
-        other: { html: o.html, who: whoOther(data.names[o.model] || o.model, o.asked, o.condition),
-          model: o.model, condition: o.condition } };
-      settled = true;
-      show(round);
-    }).catch(useWritten);
+    // The round written into the page is the one played first; its two answers are put in a random order.
+    if (Math.random() < 0.5) {
+      var a = cards[0].querySelector('[data-answer-text]'), z = cards[1].querySelector('[data-answer-text]');
+      var wa = cards[0].querySelector('[data-who]'), wz = cards[1].querySelector('[data-who]');
+      var html = a.innerHTML; a.innerHTML = z.innerHTML; z.innerHTML = html;
+      var who = wa.innerHTML; wa.innerHTML = wz.innerHTML; wz.innerHTML = who;
+      cards[0].setAttribute('data-is4o', 'false');
+      cards[1].setAttribute('data-is4o', 'true');
+    }
+    fitCards();
+    current = { id: el.getAttribute('data-question'), other: el.getAttribute('data-other'),
+      otherCondition: el.getAttribute('data-other-condition') };
+    ready();
+    var another = el.querySelector('[data-another]');
+    var anotherFail = el.querySelector('[data-another-fail]');
+    var homeRounds = null;
+    if (another) {
+      another.hidden = false;
+      another.addEventListener('click', function () {
+        another.disabled = true;
+        if (anotherFail) { anotherFail.hidden = true; }
+        (homeRounds || F.getJSON('home-rounds.json')).then(function (data) {
+          homeRounds = Promise.resolve(data);
+          var pairs = [];
+          (data.rounds || []).forEach(function (r) {
+            (r.others || []).forEach(function (o) {
+              if (!(r.id === current.id && o.model === current.other && o.condition === current.otherCondition)) { pairs.push([r, o]); }
+            });
+          });
+          if (!pairs.length) { throw new Error('no other round'); }
+          var p = pick(pairs), r = p[0], o = p[1];
+          show({ id: r.id, prompt: r.prompt,
+            four: { html: r.chatgpt.html, who: whoFourO(r.chatgpt) },
+            other: { html: o.html, who: whoOther((data.names || {})[o.model] || o.model, o.asked, o.condition), model: o.model, condition: o.condition },
+            feb: !!r.chatgpt.instruction || o.condition === 'instruction' });
+          another.disabled = false;
+          el.scrollIntoView({ block: 'start' });
+          qEl.setAttribute('tabindex', '-1');
+          qEl.focus({ preventScroll: true });
+        }).catch(function () {
+          homeRounds = null;                 // a failed load is not kept, so the next press tries again
+          another.disabled = false;
+          if (anotherFail) { anotherFail.hidden = false; }
+        });
+      });
+    }
     return;
   }
 

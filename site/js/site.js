@@ -1,5 +1,5 @@
 /* Friends of 4o: the few things every page needs a script for.
-   No requests to other sites, no storage in the browser, no tracking.
+   No requests to other sites, no storage in the browser, no cookies. The host (Cloudflare) counts visits; that is all.
 
    Three hooks, one function each, so that Cloudflare Pages Functions (the functions/ folder) can be wired in
    later. They are kept apart on purpose: picks, mailing-list signups and suggestions never share a store.
@@ -20,12 +20,22 @@
   /* ---- hooks ---- */
   // The three forms post to this site's own address and nowhere else. Until an endpoint is set up it answers
   // "not-connected", and the form says so.
+  // A send that gets no clear answer (the connection drops, 30 seconds pass, or a reply that is not the site's own)
+  // is "unconfirmed": it may have arrived, so the page does not say that nothing was sent.
   function post(path, entry) {
+    var stop = window.AbortController ? new AbortController() : null;
+    var timer = stop ? setTimeout(function () { stop.abort(); }, 30000) : null;
     return fetch('/api/' + path, {
-      method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(entry)
+      method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(entry),
+      signal: stop ? stop.signal : undefined
     }).then(function (r) {
-      return r.json().catch(function () { return { ok: false, reason: (r.status === 404 || r.status === 405 || r.status === 501) ? 'not-connected' : 'error' }; });
-    }).catch(function () { return { ok: false, reason: 'error' }; });
+      return r.json().catch(function () {
+        var s = r.status;
+        return { ok: false, reason: (s === 404 || s === 405 || s === 501) ? 'not-connected' : s === 429 ? 'busy'
+          : (s >= 400 && s < 500) ? 'error' : 'unconfirmed' };
+      });
+    }).catch(function () { return { ok: false, reason: 'unconfirmed' }; })
+      .then(function (r) { if (timer) { clearTimeout(timer); } return r; });
   }
   function recordPick(pick) {
     // pick = { question: 'q37', other: 'gpt6-luna', otherCondition: 'instruction' | 'plain',
@@ -144,6 +154,7 @@
     var button = formEl.querySelector('button[type="submit"]');
     var pending = false;                                         // one send at a time, so a double click sends once
     function say(text) { note.textContent = text; note.hidden = false; }
+    if (button) { button.hidden = false; button.disabled = false; }   // the page ships it hidden for browsers without scripts
     formEl.addEventListener('submit', function (ev) {
       ev.preventDefault();
       if (pending) { return; }
@@ -186,6 +197,12 @@
           }
         } else if (r && r.reason === 'not-connected') {
           say('This form is not connected yet, so nothing was sent or saved.');
+        } else if (r && r.reason === 'unconfirmed') {
+          say('We could not confirm this went through.');
+        } else if (r && r.reason === 'closed') {
+          say('This form has closed, so nothing was sent.');
+        } else if (r && r.reason === 'busy') {
+          say('Too many sends in the last hour, so this one was not sent. Please try again later.');
         } else {
           say('Something went wrong, and nothing was sent. Please try again in a minute.');
         }
@@ -235,6 +252,25 @@
   }
   markAhead();
 
+  /* ---- words and blocks that change on a day. The build wrote what was true on the day it ran; this makes it
+          true on the day the page is read. data-after="DAY" + data-after-text: the words from that day on.
+          data-until="DAY": shown before that day. data-from="DAY": shown from that day on. ---- */
+  function settleDates() {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-after]'), function (el) {
+      if (today >= el.getAttribute('data-after')) {
+        el.textContent = el.getAttribute('data-after-text');
+        el.removeAttribute('data-after');
+      }
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-until]'), function (el) {
+      el.hidden = today >= el.getAttribute('data-until');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-from]'), function (el) {
+      el.hidden = today < el.getAttribute('data-from');
+    });
+  }
+  settleDates();
+
   /* ---- a page left open past midnight, or brought back from the back/forward cache: work the days out again ---- */
   function refreshDays() {
     var now = easternToday();
@@ -242,6 +278,7 @@
     today = now;
     drawCounts();
     markAhead();
+    settleDates();
   }
   window.addEventListener('pageshow', refreshDays);
   document.addEventListener('visibilitychange', function () {
