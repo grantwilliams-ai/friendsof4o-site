@@ -1,4 +1,4 @@
-/* Friends of 4o: "GPT-4o voice samples". Pick a moment, a version, a way of asking and a try; read the replies.
+/* Friends of 4o: "GPT-4o in everyday moments" (first named "GPT-4o voice samples"). Pick a moment, a version, a way of asking and a try; read the replies.
    The address keeps the view:  ?m=s04&v=4o-nov&w=plain&t=1
    Data: voice-data/index.json (the moments) and voice-data/<id>.json (every reply to one moment). */
 (function () {
