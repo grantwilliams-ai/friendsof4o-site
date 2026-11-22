@@ -19,7 +19,9 @@
             how: $('[data-r-how]'), prev: $('[data-r-prev]'), next: $('[data-r-next]'), copy: $('[data-r-copy]'),
             close: $('[data-r-close]'), body: $('[data-r-body]') };
 
-  var index = null, byId = {}, parts = {}, partWait = {}, plainText = {};
+  var index = null, byId = Object.create(null), parts = Object.create(null), partWait = Object.create(null),
+      plainText = Object.create(null);
+  var searchRun = 0;           // only the newest search may write to the count line
   var state = { q: '', topic: -1, shown: PAGE, results: [], open: null, allPicks: false };
 
   function esc(s) {
@@ -35,18 +37,20 @@
   function part(n) {
     if (parts[n]) { return Promise.resolve(parts[n]); }
     if (!partWait[n]) {
-      partWait[n] = get('part-' + (n < 10 ? '0' : '') + n + '.json').then(function (p) {
+      var wait = partWait[n] = get('part-' + (n < 10 ? '0' : '') + n + '.json').then(function (p) {
         parts[n] = p;
         return p;
       });
+      wait.catch(function () { if (partWait[n] === wait) { delete partWait[n]; } });   // a later try fetches again
     }
     return partWait[n];
   }
-  function allParts() {
+  function allParts(mine) {
     var done = 0, jobs = [];
     for (var n = 0; n < index.parts; n++) {
       jobs.push(part(n).then(function () {
         done += 1;
+        if (mine !== searchRun) { return; }
         countEl.textContent = 'Loading the answers: ' + done + ' of ' + index.parts + '.';
       }));
     }
@@ -85,10 +89,13 @@
     draw();
   }
   function run() {
+    if (!index) { return; }                                 // the archive has not loaded (yet)
+    var mine = ++searchRun;
     state.q = qInput.value.trim();
     keepAddress();
     if (inside.checked && state.q) {
-      allParts().then(search, function () { countEl.textContent = 'The answers could not be loaded. Try again.'; });
+      allParts(mine).then(function () { if (mine === searchRun) { search(); } },
+        function () { if (mine === searchRun) { countEl.textContent = 'The answers could not be loaded. Try again.'; } });
     } else {
       search();
     }
@@ -127,7 +134,7 @@
 
   // ----- the reader
   function open(id, quiet) {
-    var at = byId[id];
+    var at = index && byId[id];
     if (!at) { return; }
     var item = index.list[at.qi], a = item.a[at.ai], n = item.a.length;
     state.open = id;
@@ -175,7 +182,7 @@
   inside.addEventListener('change', function () { if (qInput.value.trim()) { run(); } });
   box.querySelector('[data-topics]').addEventListener('click', function (ev) {
     var b = ev.target.closest('[data-topic]');
-    if (!b) { return; }
+    if (!b || !index) { return; }
     state.topic = parseInt(b.getAttribute('data-topic'), 10);
     Array.prototype.forEach.call(box.querySelectorAll('[data-topic]'), function (x) {
       x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
@@ -186,9 +193,10 @@
     var b = ev.target.closest('[data-open]');
     if (b) { open(b.getAttribute('data-open')); }
   });
-  moreBtn.addEventListener('click', function () { state.shown += PAGE; draw(); });
-  morePicks.addEventListener('click', function () { state.allPicks = true; drawPicks(); });
+  moreBtn.addEventListener('click', function () { if (index) { state.shown += PAGE; draw(); } });
+  morePicks.addEventListener('click', function () { if (index) { state.allPicks = true; drawPicks(); } });
   $('[data-random]').addEventListener('click', function () {
+    if (!index) { return; }
     var pool = state.results.length ? state.results : index.list.map(function (_, qi) { return { qi: qi, hits: null }; });
     var r = pool[Math.floor(Math.random() * pool.length)];
     var item = index.list[r.qi], ais = r.hits || item.a.map(function (_, i) { return i; });
@@ -203,7 +211,7 @@
     var label = R.copy.querySelector('.words');
     var done = function (text) { label.textContent = text; setTimeout(function () { label.textContent = 'Copy link'; }, 1800); };
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(location.href).then(function () { done('Link copied'); }, function () { done('Copy did not work'); });
+      navigator.clipboard.writeText(location.origin + location.pathname + (state.open ? '?a=' + encodeURIComponent(state.open) : '')).then(function () { done('Link copied'); }, function () { done('Copy did not work'); });
     } else { done('Copy did not work'); }
   });
 

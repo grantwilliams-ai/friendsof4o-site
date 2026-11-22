@@ -87,23 +87,26 @@
     return Math.round((Date.UTC(b[0], b[1] - 1, b[2]) - Date.UTC(a[0], a[1] - 1, a[2])) / 86400000);
   }
   var counts = document.querySelectorAll('[data-days-until]');
-  for (var n = 0; n < counts.length; n++) {
-    var count = counts[n];
-    var left = daysUntil(count.getAttribute('data-days-until'));
-    var box = count.closest('[data-days-box]') || count;
-    if (count.getAttribute('data-days-form') === 'number') {
-      // a bare number; its "days left" label sits beside it in the page
-      if (left < 0) { continue; }               // the date has passed: the box stays hidden
-      count.textContent = String(left);
-      var label = box.querySelector('[data-days-label]');
-      if (label) { label.textContent = left === 1 ? 'day left' : 'days left'; }
-    } else {
-      count.textContent = left > 1 ? left + ' days left' : left === 1 ? '1 day left' : left === 0 ? 'Today'
-        : 'This date has passed';
+  function drawCounts() {
+    for (var n = 0; n < counts.length; n++) {
+      var count = counts[n];
+      var left = daysUntil(count.getAttribute('data-days-until'));
+      var box = count.closest('[data-days-box]') || count;
+      if (count.getAttribute('data-days-form') === 'number') {
+        // a bare number; its "days left" label sits beside it in the page
+        if (left < 0) { box.hidden = true; continue; }   // the date has passed: the box stays hidden
+        count.textContent = String(left);
+        var label = box.querySelector('[data-days-label]');
+        if (label) { label.textContent = left === 1 ? 'day left' : 'days left'; }
+      } else {
+        count.textContent = left > 1 ? left + ' days left' : left === 1 ? '1 day left' : left === 0 ? 'Today'
+          : 'This date has passed';
+      }
+      box.hidden = false;
+      count.hidden = false;
     }
-    box.hidden = false;
-    count.hidden = false;
   }
+  drawCounts();
 
   /* ---- menus: close an open one with Escape or a click outside ---- */
   var menus = document.querySelectorAll('details[data-menu]');
@@ -117,6 +120,12 @@
     for (var m = 0; m < menus.length; m++) {
       if (menus[m].open && !menus[m].contains(ev.target)) { menus[m].open = false; }
     }
+  });
+  // tabbing out of an open menu closes it, so it does not stay open over the page
+  Array.prototype.forEach.call(menus, function (menu) {
+    menu.addEventListener('focusout', function (ev) {
+      if (menu.open && ev.relatedTarget && !menu.contains(ev.relatedTarget)) { menu.open = false; }
+    });
   });
 
   /* ---- the forms: mailing list, requests, questions for GPT-4o ---- */
@@ -132,12 +141,15 @@
     var kind = formEl.getAttribute('data-form');      // "signup", "suggestion" or "ask"
     var note = formEl.querySelector('[data-form-note]');
     var trap = formEl.querySelector('input[name="website"]');   // people never see this box; a filled one is a robot
+    var button = formEl.querySelector('button[type="submit"]');
+    var pending = false;                                         // one send at a time, so a double click sends once
     function say(text) { note.textContent = text; note.hidden = false; }
     formEl.addEventListener('submit', function (ev) {
       ev.preventDefault();
+      if (pending) { return; }
       var email = formEl.querySelector('input[type="email"]');
       var website = trap ? trap.value : '';
-      var sent;
+      var sent, entry = null;
       if (kind === 'signup') {
         if (!email.value || !email.checkValidity()) {
           say('Please enter your email address.');
@@ -157,19 +169,27 @@
           email.focus();
           return;
         }
-        var entry = { text: box.value.trim(), email: email.value.trim(), website: website };
+        entry = { text: box.value.trim(), email: email.value.trim(), website: website };
         sent = kind === 'ask' ? sendAsk(entry) : sendSuggestion(entry);
       }
+      pending = true;
+      if (button) { button.disabled = true; }
+      var settle = function () { pending = false; if (button) { button.disabled = false; } };
       sent.then(function (r) {
         if (r && r.ok) {
           say(kind === 'signup' ? (r.message || 'You are on the list.') : FORM_WORDS[kind].done);
-          if (kind !== 'signup') { formEl.reset(); }
+          if (entry) {
+            // clear only what was sent: anything typed since stays
+            if (box.value.trim() === entry.text) { box.value = ''; }
+            if (email.value.trim() === entry.email) { email.value = ''; }
+            if (trap && trap.value === entry.website) { trap.value = ''; }
+          }
         } else if (r && r.reason === 'not-connected') {
           say('This form is not connected yet, so nothing was sent or saved.');
         } else {
           say('Something went wrong, and nothing was sent. Please try again in a minute.');
         }
-      });
+      }).then(settle, settle);
     });
   }
 
@@ -193,20 +213,40 @@
 
   /* ---- timeline: mark the dates that are still ahead, as of the day the page is read ---- */
   var dated = document.querySelectorAll('[data-date]');
-  if (dated.length) {
+  function markAhead() {
     for (var d = 0; d < dated.length; d++) {
-      if (dated[d].getAttribute('data-date') > today) {
+      var ahead = dated[d].getAttribute('data-date') > today;
+      var line = dated[d].querySelector('.tl-date');
+      var old = line ? line.querySelector('[data-ahead-tag]') : null;
+      if (ahead) {
         dated[d].classList.add('is-ahead');
-        var line = dated[d].querySelector('.tl-date');
-        if (line) {
+        if (line && !old) {
           var tag = document.createElement('span');
           tag.className = 'tag';
+          tag.setAttribute('data-ahead-tag', '');
           tag.textContent = 'Still ahead';
           line.appendChild(tag);
         }
+      } else {
+        dated[d].classList.remove('is-ahead');
+        if (old) { line.removeChild(old); }
       }
     }
   }
+  markAhead();
+
+  /* ---- a page left open past midnight, or brought back from the back/forward cache: work the days out again ---- */
+  function refreshDays() {
+    var now = easternToday();
+    if (now === today) { return; }
+    today = now;
+    drawCounts();
+    markAhead();
+  }
+  window.addEventListener('pageshow', refreshDays);
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') { refreshDays(); }
+  });
 
   /* ---- reading pages: keep the question in view while its answer is being read (narrow screens) ---- */
   var bar = document.querySelector('[data-keep-bar]');

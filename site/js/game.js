@@ -94,7 +94,7 @@
       pickBtns[b].hidden = false;
       pickBtns[b].disabled = false;
       var card = pickBtns[b].closest('[data-answer]');
-      if (card) { pickBtns[b].setAttribute('aria-label', 'Answer ' + (cards.indexOf(card) + 1) + ' came from ' + ARCHIVED); }
+      if (card) { pickBtns[b].setAttribute('aria-label', 'This one came from ' + ARCHIVED + ' (answer ' + (cards.indexOf(card) + 1) + ')'); }
     }
     for (var p = 0; p < preferBtns.length; p++) { preferBtns[p].setAttribute('aria-pressed', 'false'); }
     if (before) { before.hidden = false; }
@@ -164,28 +164,37 @@
 
   /* ---- home page: one short round, a different one on each visit ---- */
   if (mode === 'home') {
-    // The round written into the page is ready to play as it is. Shuffle its sides, then try for another.
-    var written = { id: el.getAttribute('data-question'), other: el.getAttribute('data-other'),
-      otherCondition: el.getAttribute('data-other-condition') };
-    if (Math.random() < 0.5) {
-      var a = cards[0].querySelector('[data-answer-text]'), z = cards[1].querySelector('[data-answer-text]');
-      var wa = cards[0].querySelector('[data-who]'), wz = cards[1].querySelector('[data-who]');
-      var html = a.innerHTML; a.innerHTML = z.innerHTML; z.innerHTML = html;
-      var who = wa.innerHTML; wa.innerHTML = wz.innerHTML; wz.innerHTML = who;
-      cards[0].setAttribute('data-is4o', 'false');
-      cards[1].setAttribute('data-is4o', 'true');
-    }
-    current = written;
-    ready();
+    // A different round is drawn before the buttons appear. If it is slow or fails, the round written into the
+    // page is made ready to play instead, and it stays for this visit: a round is never swapped once playable.
+    var settled = false;
+    var useWritten = function () {
+      if (settled) { return; }
+      settled = true;
+      var written = { id: el.getAttribute('data-question'), other: el.getAttribute('data-other'),
+        otherCondition: el.getAttribute('data-other-condition') };
+      if (Math.random() < 0.5) {
+        var a = cards[0].querySelector('[data-answer-text]'), z = cards[1].querySelector('[data-answer-text]');
+        var wa = cards[0].querySelector('[data-who]'), wz = cards[1].querySelector('[data-who]');
+        var html = a.innerHTML; a.innerHTML = z.innerHTML; z.innerHTML = html;
+        var who = wa.innerHTML; wa.innerHTML = wz.innerHTML; wz.innerHTML = who;
+        cards[0].setAttribute('data-is4o', 'false');
+        cards[1].setAttribute('data-is4o', 'true');
+      }
+      current = written;
+      ready();
+    };
+    setTimeout(useWritten, 1500);
     F.getJSON('home-rounds.json').then(function (data) {
-      if (done || !data.rounds || !data.rounds.length) { return; }      // the reader has already picked: leave it
+      if (settled || !data.rounds || !data.rounds.length) { useWritten(); return; }
       var r = pick(data.rounds);
       var o = pick(r.others);
-      show({ id: r.id, prompt: r.prompt,
+      var round = { id: r.id, prompt: r.prompt,
         four: { html: r.chatgpt.html, who: whoFourO(r.chatgpt) },
         other: { html: o.html, who: whoOther(data.names[o.model] || o.model, o.asked, o.condition),
-          model: o.model, condition: o.condition } });
-    }).catch(function () { /* the written round stays */ });
+          model: o.model, condition: o.condition } };
+      settled = true;
+      show(round);
+    }).catch(useWritten);
     return;
   }
 

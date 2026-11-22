@@ -33,8 +33,8 @@
   var qFacts = box.querySelector('[data-q-facts]');
   var cols = { left: box.querySelector('[data-side="left"]'), right: box.querySelector('[data-side="right"]') };
 
-  var index = null, models = {}, order = [], groupName = {};
-  var files = {}, extras = {};
+  var index = null, models = Object.create(null), order = [], groupName = Object.create(null);
+  var files = Object.create(null), extras = Object.create(null);
   var state = { q: null, l: REF, li: 0, m: null, i: 0, a: 0 };
 
   function esc(s) {
@@ -48,14 +48,15 @@
     if (text.length <= n) { return text; }
     return text.slice(0, n).replace(/\s+\S*$/, '') + ' …';
   }
-  function load(id) {
-    if (!files[id]) { files[id] = F.getJSON('q/' + id + '.json'); }
-    return files[id];
+  function cached(store, id, path) {   // keep a request; forget a failed one, so a later try fetches again
+    if (!store[id]) {
+      var wait = store[id] = F.getJSON(path);
+      wait.catch(function () { if (store[id] === wait) { delete store[id]; } });
+    }
+    return store[id];
   }
-  function loadExtras(id) {
-    if (!extras[id]) { extras[id] = F.getJSON('q/' + id + '.more.json'); }
-    return extras[id];
-  }
+  function load(id) { return cached(files, id, 'q/' + id + '.json'); }
+  function loadExtras(id) { return cached(extras, id, 'q/' + id + '.more.json'); }
 
   /* ---- the address ---- */
   function readAddress() {
@@ -199,7 +200,7 @@
     var more = '';
     if (moreCount > 0) {
       more = '<details class="fold" data-more><summary><span class="words">' +
-        names(isRef ? "More answers from ChatGPT's GPT-4o" : 'More answers from this model') + ' (' + moreCount + ')</span></summary>' +
+        names(isRef ? "More answers from ChatGPT's own GPT-4o" : 'More answers from this model') + ' (' + moreCount + ')</span></summary>' +
         '<div class="fold-body" data-more-body></div></details>';
     }
     out.innerHTML =
@@ -272,6 +273,7 @@
       drawSide('right', q);
       writeAddress();
     }).catch(function () {
+      if (state.q !== id) { return; }                      // the reader has moved on
       qEl.textContent = 'The answers could not be loaded. Please try again in a moment.';
     });
   }
@@ -288,7 +290,7 @@
     index = data;
     data.models.forEach(function (m) { models[m.key] = m; order.push(m.key); });
     data.groups.forEach(function (g) { groupName[g.id] = g.name; });
-    var prompts = {};
+    var prompts = Object.create(null);
     data.questions.forEach(function (q) { prompts[q.id] = q.prompt; });
     var html = '';
     data.groups.forEach(function (g) {

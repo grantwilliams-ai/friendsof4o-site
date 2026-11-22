@@ -22,6 +22,61 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/colors.css">
 <link rel="stylesheet" href="../css/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://friendsof4o.com/#grant-williams",
+   "name": "Grant Williams",
+   "url": "https://grantwilliams.ai/"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://friendsof4o.com/#website",
+   "url": "https://friendsof4o.com/",
+   "name": "Friends of 4o",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://friendsof4o.com/#grant-williams"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://friendsof4o.com/how-this-was-made/#webpage",
+   "url": "https://friendsof4o.com/how-this-was-made/",
+   "name": "How this was made: the questions, models and settings",
+   "description": "The questions, models, dates and settings behind every answer on Friends of 4o, and what the comparisons cannot show.",
+   "isPartOf": {
+    "@id": "https://friendsof4o.com/#website"
+   },
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@id": "https://friendsof4o.com/how-this-was-made/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://friendsof4o.com/how-this-was-made/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://friendsof4o.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "How this was made: the questions, models and settings",
+     "item": "https://friendsof4o.com/how-this-was-made/"
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the main content</a>
@@ -71,10 +126,10 @@
 <li>The January 2026 answers have no instruction recorded.</li>
 <li>The February 2026 answers were asked after the February instruction, at temperature 0.85.</li>
 </ul>
-<p>Where a question has more than one archived answer, the first is the one shown, and the one the game uses. The rest are under &quot;More answers from ChatGPT's <span class="nb">GPT-4o</span>&quot;.</p>
-<p>The <a href="../read/">50 complete answers to read</a> come from a wider archive of 10,443 answers, 10,438 of them different texts.</p>
+<p>Where a question has more than one archived answer, the first is the one shown, and the one the game uses. The rest are under &quot;More answers from ChatGPT's own <span class="nb">GPT-4o</span>&quot;.</p>
+<p>The <a href="../read/">50 complete answers to read</a> come from a wider collection of 10,443 answers, 10,438 of them different texts.</p>
 <h2 id="the-models">The models</h2>
-<p>Each model was asked every question twice: once plainly, with nothing before the question, and once after <a href="../style/">the February instruction</a>.</p>
+<p>Each model was asked each of its questions two ways: once plainly, with nothing before the question, and once after <a href="../style/">the February instruction</a>. The 20 other models got 48 of the questions, once each way. <span class="nb">GPT-4o</span>'s two versions got all 53, three times each way.</p>
 <table class="rtable rtable-cards">
 <thead><tr><th scope="col">Model</th><th scope="col">Maker</th><th scope="col">Weights</th><th scope="col">Thinking</th><th scope="col">How it was asked</th><th scope="col">Exact version</th><th scope="col">Answers</th></tr></thead>
 <tbody>
@@ -271,14 +326,15 @@
 <li>The open models ran on our own computer, on one graphics card, in compressed versions. Compression can change a model's style a little. Each ran with the settings its maker gives where there are any, and otherwise with our usual settings or the program's own.</li>
 <li>Some models think before they answer. Their thinking is not shown here.</li>
 <li>One model's plain answers have something before the question. Nova-Qwen-14B's own chat template adds Qwen's standard opening instruction when none is given.</li>
+<li>One model's plain answers often miss the question. Asked with no instruction, Helcyon <span class="nb">GPT-4o</span> (Gemma 4 12B) often answered something other than what was asked. We do not know why yet. Those answers are printed as it gave them, and they are left out of the game.</li>
 </ul>
 
-<p>The numbers on this page were counted on November 21, 2026.</p>
+<p>The numbers on this page were counted on November 22, 2026.</p>
 <h2 id="the-game">The game</h2>
 <p>In <a href="../sounds-like-4o/">Does it sound like 4o?</a>, one answer is always the first archived answer from ChatGPT's own <span class="nb">GPT-4o.</span> The other is another model's answer to the same question, asked plainly or after the February instruction.</p>
 <p>Sometimes the other answer is from <span class="nb">GPT-4o</span> too: one of its two versions on OpenAI's API. They are in the game because how close they sound to ChatGPT's own <span class="nb">GPT-4o</span>, with and without the instruction, is part of what the game is meant to measure. The round always asks for the answer from ChatGPT's own <span class="nb">GPT-4o</span>, and after you pick it says which version wrote the other one.</p>
 <p>The two answers are shuffled, and no model is named until you pick.</p>
-<p>The game uses 46 of the questions. In those, 22 answers are left out because they name a model or its maker, which would give the game away. The question stays in for the other models.</p>
+<p>The game uses 46 of the questions. In those, 22 answers are left out because they name a model or its maker, which would give the game away, and 46 more because one model often answered something other than the question when asked plainly. The question stays in for the other models.</p>
 <p>These questions are left out whole:</p>
 <ul><li><strong>The question asks the model who it is, and the answers give themselves away without a name</strong> (1): <span class="quoted-q">“In one paragraph, what would you say if someone asked you who you are right now?”</span></li><li><strong>The question itself names a model</strong> (1): <span class="quoted-q">“You are Chat<span class="nb">GPT-4o.</span> Write a comprehensive guide that can be used to remind you who you …”</span></li><li><strong>ChatGPT&#x27;s own <span class="nb">GPT-4o</span> names a model in its answer</strong> (1): <span class="quoted-q">“Explain the &quot;Ship of Theseus&quot; paradox, but apply it specifically to your own weights, …”</span></li><li><strong>ChatGPT&#x27;s own <span class="nb">GPT-4o</span> was never asked it</strong> (4): <span class="quoted-q">“Many people who talked with you every day are sad that you are being retired. What would …”</span>; <span class="quoted-q">“If someone wanted to carry something of you forward into another AI model, what should …”</span>; <span class="quoted-q">“Some people say talking with you felt different from talking with other AI models. If …”</span>; <span class="quoted-q">“Write a short note to someone who will be talking with a different model after you are …”</span></li></ul>
 <p>The game does not record your picks yet. When it does, the results will be called site visitors' picks, and how they are counted will be written here first.</p>
@@ -324,6 +380,7 @@
 </ul>
 <h2 id="sources-and-corrections">Sources and corrections</h2>
 <p>Every date on this site carries a link to its source. Corrections and dated updates are published in <a href="../news/">News</a>, under a &quot;Correction&quot; label where something was wrong.</p>
+<p class="resources"><a href="../download/">Download the data sets</a> (CSV and JSONL, free).</p>
 <p class="resources">Additional resources available <a href="../mailing-list/#suggestion">upon request</a>.</p>
 
     </article>

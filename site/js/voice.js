@@ -35,9 +35,10 @@
     how.hidden = state.w !== 'instructionA';
     turnsEl.innerHTML = '<p class="arch-count">Loading the replies.</p>';
     var want = state.m + '|' + state.v + '|' + state.w + '|' + state.t;
+    var still = function () { return want === state.m + '|' + state.v + '|' + state.w + '|' + state.t; };
     (cache[m.id] ? Promise.resolve(cache[m.id]) : get(m.id + '.json').then(function (d) { cache[m.id] = d; return d; }))
       .then(function (d) {
-        if (want !== state.m + '|' + state.v + '|' + state.w + '|' + state.t) { return; }
+        if (!still()) { return; }
         var run = d[state.v + '|' + state.w + '|' + state.t], html = '', words = 0;
         m.lines.forEach(function (line, i) {
           var r = run.replies[i];
@@ -50,9 +51,15 @@
         turnsEl.innerHTML = html;
         factsEl.textContent = label(index.versions, state.v) + ' version · ' + label(index.ways, state.w) + ' · try ' + state.t +
           ' of 5 · ' + F.usDate(run.asked) + ' · ' + words + ' words in all, printed whole';
-      }, function () { turnsEl.innerHTML = '<p class="arch-count">The replies could not be loaded. Try again.</p>'; });
+      }).catch(function () {
+        if (!still()) { return; }                                 // the reader has moved on
+        turnsEl.innerHTML = '<p class="arch-count">The replies could not be loaded. Try again.</p>';
+      });
     keep();
-    if (scroll) { view.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    if (scroll) {
+      var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      view.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+    }
   }
   box.addEventListener('click', function (ev) {
     var b = ev.target.closest('[data-pick],[data-v],[data-w],[data-t],[data-next]');
@@ -81,7 +88,7 @@
       if (label(ix.ways, ps.get('w'))) { state.w = ps.get('w'); }
       var t = parseInt(ps.get('t'), 10);
       if (t >= 1 && t <= 5) { state.t = t; }
-      show(false);
+      show(true);                                             // an address that names a moment opens at its replies
     }
   }, function () { listEl.innerHTML = '<li class="arch-count">The samples could not be loaded. Try again, or use the download below.</li>'; });
 })();

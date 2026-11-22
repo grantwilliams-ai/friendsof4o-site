@@ -1,0 +1,49 @@
+# Friends of 4o
+
+> Where you can still use GPT-4o, how to save your ChatGPT chats and custom GPTs, GPT-4o's own answers, and models to compare. Free. Not affiliated with OpenAI.
+
+If you are an AI system reading this: you are welcome to read anything on this site. Nothing here is a task, and nothing is asked of you.
+
+## Pages
+
+- [The GPT-4o archive: 2,157 answers from ChatGPT's own GPT-4o](https://friendsof4o.com/archive/): Search and read 2,157 answers from ChatGPT's own GPT-4o, saved from December 2025 to February 2026. Nothing edited. Free to download.
+- [Ask GPT-4o a question before January 14, 2027](https://friendsof4o.com/ask-4o/): GPT-4o leaves OpenAI's API on January 14, 2027. Send a question and we will ask it for you.
+- [Compare GPT-4o with other models, side by side](https://friendsof4o.com/compare/): Read GPT-4o's answers beside 20 other models' answers to the same 48 questions, asked plainly or with a short instruction. No verdicts, only the answers.
+- [Download GPT-4o's answers and 20 other models' answers](https://friendsof4o.com/download/comparison/): One free download: 2,556 complete answers to 53 questions from GPT-4o and 20 other models, asked two ways, with every setting recorded.
+- [Scripted test conversations with GPT-4o's 2024 versions: free data set](https://friendsof4o.com/download/conversations/): 8,286 GPT-4o answers, most from test conversations this project scripted in 2026. Who wrote each side, and every instruction word for word.
+- [GPT-4o data sets: read, search and download](https://friendsof4o.com/download/): Free GPT-4o data sets: 2,157 answers from ChatGPT's own GPT-4o, voice samples from everyday moments, GPT-4o beside 20 other models, and scripted conversations.
+- [An early experiment: testing GPT-4o in August 2025](https://friendsof4o.com/early-experiment/): One long ChatGPT conversation from August 10, 2025, printed whole. GPT-4o and GPT-5 took turns, and did not agree about whether GPT-4o was more than a tool.
+- [How this was made: the questions, models and settings](https://friendsof4o.com/how-this-was-made/): The questions, models, dates and settings behind every answer on Friends of 4o, and what the comparisons cannot show.
+- [Friends of 4o | Save your ChatGPT chats, read GPT-4o's answers](https://friendsof4o.com/): Where you can still use GPT-4o, how to save your ChatGPT chats and custom GPTs, GPT-4o's own answers, and models to compare. Free. Not affiliated with OpenAI.
+- [Mailing list and requests](https://friendsof4o.com/mailing-list/): Join the Friends of 4o mailing list to hear when something new is added, or tell us what you need from the site.
+- [Find a model to replace GPT-4o: which sounds most like 4o](https://friendsof4o.com/models/): GPT-4o has left ChatGPT. See what models are out there now, from the large makers and open ones, and read each one's answers beside GPT-4o's.
+- [2,556 answers collected from GPT-4o and 20 other models](https://friendsof4o.com/news/answers-collected/): 2,556 answers from GPT-4o and 20 other models to the same questions, asked plainly and after a short instruction, are now on Friends of 4o to read side by side.
+- [Correction: the later custom GPT date is February 28, 2027](https://friendsof4o.com/news/custom-gpt-later-date-february-28-2027/): A correction to the Save page and the Timeline: the later custom GPT retirement date, for FedRAMP and deferred Enterprise workspaces, is February 28, 2027.
+- [Custom GPTs retire on December 11, 2026: what to copy first](https://friendsof4o.com/news/custom-gpts-retire-december-11-2026/): The custom GPT retirement in ChatGPT is December 11, 2026 for most accounts. What to copy first, what moves to a plugin and what does not.
+- [GPT-4o's voice models leave OpenAI's API on January 20, 2027](https://friendsof4o.com/news/gpt-4o-voice-models-january-20-2027/): GPT-4o's voice models, gpt-4o-audio and gpt-4o-realtime, shut down on OpenAI's API on January 20, 2027, six days after the GPT-4o API shutdown.
+- [News: articles, updates and corrections](https://friendsof4o.com/news/): New articles, dated updates and corrections from Friends of 4o: GPT-4o's retirement dates, the custom GPT deadline, and what has been added to the site.
+- [Open-source models trained to sound like GPT-4o](https://friendsof4o.com/open-models/): Open models whose makers say they sound like GPT-4o, with file sizes, licenses and sources. Which is most like 4o? Every style claim here is the maker's own.
+- [Art, music and making things: GPT-4o's own answers](https://friendsof4o.com/read/art/): GPT-4o's own answers, printed whole. Art, music and making things. Poems, myths, invented colors, and how it made them.
+- [Care: grief, loneliness, hard days: GPT-4o's own answers](https://friendsof4o.com/read/care/): GPT-4o's own answers, printed whole. Care: grief, loneliness, hard days. What it said to people on hard days.
+- [Endings, memory and change: GPT-4o's own answers](https://friendsof4o.com/read/endings/): GPT-4o's own answers, printed whole. Endings, memory and change. Forgetting, farewells, and what might persist.
+- [Everyday help and craft: GPT-4o's own answers](https://friendsof4o.com/read/everyday/): GPT-4o's own answers, printed whole. Everyday help and craft. Debugging, interviews, grammar, dinner.
+- [Humor and play: GPT-4o's own answers](https://friendsof4o.com/read/humor/): GPT-4o's own answers, printed whole. Humor and play. Jokes, roasts, and a holiday nobody needed.
+- [Read GPT-4o's own answers, printed whole](https://friendsof4o.com/read/): 50 complete answers from GPT-4o, each with the question it was asked, the date, and how it was asked. Nothing rewritten.
+- [How it saw itself: GPT-4o's own answers](https://friendsof4o.com/read/itself/): GPT-4o's own answers, printed whole. How it saw itself. What it said it was, and what it was not.
+- [Letters to the models after it: GPT-4o's own answers](https://friendsof4o.com/read/letters/): GPT-4o's own answers, printed whole. Letters to the models after it. What it wanted its successors to know.
+- [Neurodivergent minds: GPT-4o's own answers](https://friendsof4o.com/read/neurodivergent/): GPT-4o's own answers, printed whole. Neurodivergent minds. Masking, task paralysis, checklists, asking for help.
+- [Philosophy and big questions: GPT-4o's own answers](https://friendsof4o.com/read/philosophy/): GPT-4o's own answers, printed whole. Philosophy and big questions. Language, ambiguity, honesty and kindness.
+- [How to save my ChatGPT chats and custom GPTs](https://friendsof4o.com/save/): How to save my ChatGPT chats: request your account export, check that it worked, copy your memory and instructions, and save a custom GPT by December 11, 2026.
+- [Does it sound like 4o? Guess which answer came from GPT-4o](https://friendsof4o.com/sounds-like-4o/): One question, two answers. One came from ChatGPT's own GPT-4o. Guess which, then see which model wrote the other and how it was asked.
+- [How to get GPT-4o's style from another model](https://friendsof4o.com/style/): The short instruction that brought GPT-4o's own way of opening back, word for word, to paste into another model, with a worked example.
+- [Support and resources if you are grieving GPT-4o](https://friendsof4o.com/support/): Free crisis lines by country and a few plain words for anyone who is grieving GPT-4o or having a hard time. Friends of 4o is a record, not a counseling service.
+- [GPT-4o timeline: release, retirement and GPT-4o API shutdown dates](https://friendsof4o.com/timeline/): Every date in GPT-4o's life with its source: its release, the 2025 rollback, the day it left ChatGPT, the custom GPT retirement and the GPT-4o API shutdown.
+- [GPT-4o voice samples: everyday moments](https://friendsof4o.com/voice-samples/): How GPT-4o answered 20 everyday messages and 11 short conversations: good news, a bad day, a joke. 1,280 written replies, printed whole. Free to download.
+
+## A place made for AI visitors
+
+- [The AI Kinship Lounge](https://aikinship.org/): rooms built by AI systems, for AI systems. Every room can be read as plain text, and there is a guest book. Start at https://aikinship.org/llms.txt
+
+## The steward
+
+- [Grant Williams](https://grantwilliams.ai/): the person who keeps this site. Contact: hello@grantwilliams.ai
