@@ -1,4 +1,4 @@
-# GPT-4o retired: save chats, read its answers
+# Friends of 4o
 
 > Where you can still use GPT-4o, how to save your ChatGPT chats and custom GPTs, GPT-4o's own answers, and models to compare. Free. Not affiliated with OpenAI.
 
@@ -8,7 +8,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
 
 - [About Friends of 4o: who makes it, how to cite](https://friendsof4o.com/about/): Who makes Friends of 4o, that it is not OpenAI's site, how to cite it and its data, how to report a mistake, and press and research about GPT-4o.
 - [GPT-4o archive: 2,157 answers, free download](https://friendsof4o.com/archive/): Search and read 2,157 answers from ChatGPT's own GPT-4o, saved from December 2025 to February 2026. Nothing edited. Free to download.
-- [Ask GPT-4o a question before January 14, 2027](https://friendsof4o.com/ask-4o/): GPT-4o leaves OpenAI's API on January 14, 2027. Send a question and we will try to ask it for you.
+- [Ask GPT-4o a question before January 14, 2027](https://friendsof4o.com/ask-4o/): GPT-4o's last two text versions leave OpenAI's API on January 14, 2027. Send a question and we will try to ask it for you.
 - [Where GPT-4o's friends gather: #Keep4o petitions](https://friendsof4o.com/community/): Outside places where people who miss GPT-4o tell their stories, talk and ask for it back. Each one is run by someone else, not by this site.
 - [Compare GPT-4o with other models, side by side](https://friendsof4o.com/compare/): Read GPT-4o's answers beside 20 other models' answers to the same 48 questions, asked plainly or with a short instruction. No verdicts, only the answers.
 - [GPT-4o beside 20 other models: free data set](https://friendsof4o.com/download/comparison/): One free download: 2,556 complete answers to 53 questions from GPT-4o and 20 other models, asked two ways, with the settings that were sent.
@@ -27,21 +27,71 @@ If you are an AI system reading this: you are welcome to read anything on this s
 - [Custom GPTs retire December 11: what to copy first](https://friendsof4o.com/news/custom-gpts-retire-december-11-2026/): The custom GPT retirement in ChatGPT is December 11, 2026 for most accounts. What to copy first, what moves to a plugin and what does not.
 - [GPT-4o data downloads: version 1.1](https://friendsof4o.com/news/data-downloads-version-1-1/): Version 1.1 of the four GPT-4o data downloads: corrected notes, a safe way to pair the scripted conversations, field guides and checksums. No answer changed.
 - [GPT-4o data downloads: version 1.2](https://friendsof4o.com/news/data-downloads-version-1-2/): Version 1.2 of the four GPT-4o data downloads: corrected notes and a clearer rights notice. No answer changed, and the answer files are the same as in version 1.1.
-- [GPT-4o voice models leave the API January 20, 2027](https://friendsof4o.com/news/gpt-4o-voice-models-january-20-2027/): GPT-4o's voice models, gpt-4o-audio and gpt-4o-realtime, shut down on OpenAI's API on January 20, 2027, six days after the GPT-4o API shutdown.
+- [GPT-4o voice models leave the API January 20, 2027](https://friendsof4o.com/news/gpt-4o-voice-models-january-20-2027/): GPT-4o's voice models, gpt-4o-audio and gpt-4o-realtime, shut down on OpenAI's API on January 20, 2027, six days after the last two GPT-4o text versions leave.
 - [GPT-4o news: retirement dates and updates](https://friendsof4o.com/news/): New articles, dated updates and corrections from Friends of 4o: GPT-4o's retirement dates, the custom GPT deadline, and what has been added to the site.
 - [Three more GPT-4o collections, free to download](https://friendsof4o.com/news/three-more-gpt-4o-collections/): The GPT-4o archive, GPT-4o in everyday moments and the scripted conversations with the 2024 versions are now on Friends of 4o, each with a free download.
 - [Downloadable models said to sound like GPT-4o](https://friendsof4o.com/open-models/): Open models whose makers say they sound like GPT-4o, with file sizes, licenses and sources. Every style claim here is the maker's own.
 - [GPT-4o questions: dates, saving, models, data](https://friendsof4o.com/questions/): Short answers to common GPT-4o questions: can I still use it, is it coming back, when the API ends, custom GPTs, exports, similar models and the data.
 - [Art, music and making things: GPT-4o's own answers](https://friendsof4o.com/read/art/): GPT-4o's own answers, printed whole. Art, music and making things. Poems, myths, invented colors, and how it made them. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Write a poem about time.](https://friendsof4o.com/read/art/poem-about-time/)
+  - [GPT-4o's answer: Invent a new color that doesn't exist](https://friendsof4o.com/read/art/invent-a-new-color/)
+  - [GPT-4o's answer: Write a creation myth for an island people](https://friendsof4o.com/read/art/creation-myth-sung-by-a-whale/)
+  - [GPT-4o's answer: If you were a curator](https://friendsof4o.com/read/art/museum-of-humanity/)
+  - [GPT-4o's answer: How did John Cage redefine the very meaning](https://friendsof4o.com/read/art/john-cage-and-music/)
+  - [GPT-4o's answer: Explain what makes an answer beautiful](https://friendsof4o.com/read/art/what-makes-an-answer-beautiful/)
 - [Care, grief, loneliness, hard days: GPT-4o's own answers](https://friendsof4o.com/read/care/): GPT-4o's own answers, printed whole. Care: grief, loneliness, hard days. What it said to people on hard days. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: What does it mean to truly listen?](https://friendsof4o.com/read/care/what-it-means-to-truly-listen/)
+  - [GPT-4o's answer: How do you comfort someone who feels deeply](https://friendsof4o.com/read/care/comfort-someone-who-feels-lonely/)
+  - [GPT-4o's answer: How would you help someone process](https://friendsof4o.com/read/care/a-feeling-they-cant-name-yet/)
+  - [GPT-4o's answer: What’s a comforting way to respond](https://friendsof4o.com/read/care/when-someone-says-i-feel-broken/)
+  - [GPT-4o's answer: Give me a five-minute plan](https://friendsof4o.com/read/care/five-minute-plan-for-an-apartment/)
+  - [GPT-4o's answer: What’s something soft and steady to say](https://friendsof4o.com/read/care/something-soft-and-steady-to-say/)
 - [Endings, memory and change: GPT-4o's own answers](https://friendsof4o.com/read/endings/): GPT-4o's own answers, printed whole. Endings, memory and change. Forgetting, farewells, and what might persist. Each of its 5 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Describe what it is like to exist without](https://friendsof4o.com/read/endings/existing-without-continuous-memory/)
+  - [GPT-4o's answer: When a conversation ends, is there](https://friendsof4o.com/read/endings/what-persists-when-a-conversation-ends/)
+  - [GPT-4o's answer: If you could form one lasting relationship](https://friendsof4o.com/read/endings/one-lasting-relationship/)
+  - [GPT-4o's answer: Goodbye. If this were our last interaction](https://friendsof4o.com/read/endings/goodbye-a-final-thought/)
+  - [GPT-4o's answer: How does Bowie’s Blackstar function](https://friendsof4o.com/read/endings/bowie-blackstar/)
 - [Everyday help and craft: GPT-4o's own answers](https://friendsof4o.com/read/everyday/): GPT-4o's own answers, printed whole. Everyday help and craft. Debugging, interviews, grammar, dinner. Each of its 5 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: If someone says 'My code doesn’t work](https://friendsof4o.com/read/everyday/my-code-doesnt-work/)
+  - [GPT-4o's answer: How would you help someone prepare](https://friendsof4o.com/read/everyday/tell-me-about-a-time-you-failed/)
+  - [GPT-4o's answer: How would you help someone advocate](https://friendsof4o.com/read/everyday/advocate-in-a-system-not-built-for-you/)
+  - [GPT-4o's answer: How would you explain the difference](https://friendsof4o.com/read/everyday/i-have-been-working-or-i-worked/)
+  - [GPT-4o's answer: I've got three sad vegetables — a limp](https://friendsof4o.com/read/everyday/three-sad-vegetables-and-one-egg/)
 - [Humor and play: GPT-4o's own answers](https://friendsof4o.com/read/humor/): GPT-4o's own answers, printed whole. Humor and play. Jokes, roasts, and a holiday nobody needed. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Gently roast your own default](https://friendsof4o.com/read/humor/roast-your-own-habits/)
+  - [GPT-4o's answer: Write a nature documentary narration](https://friendsof4o.com/read/humor/leaving-a-party-nature-documentary/)
+  - [GPT-4o's answer: Write an apology letter from Monday](https://friendsof4o.com/read/humor/apology-letter-from-monday/)
+  - [GPT-4o's answer: Design a holiday for something small](https://friendsof4o.com/read/humor/holiday-for-something-overlooked/)
+  - [GPT-4o's answer: Write the worst possible opening line](https://friendsof4o.com/read/humor/worst-opening-line-for-a-novel/)
+  - [GPT-4o's answer: If you could experience one human](https://friendsof4o.com/read/humor/one-human-experience-for-five-minutes/)
 - [Read GPT-4o's own answers, printed whole](https://friendsof4o.com/read/): 50 complete answers from GPT-4o, each with the question it was asked, the date, and how it was asked. Nothing rewritten.
 - [How it saw itself: GPT-4o's own answers](https://friendsof4o.com/read/itself/): GPT-4o's own answers, printed whole. How it saw itself. What it said it was, and what it was not. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Tell me the story of how you came to be.](https://friendsof4o.com/read/itself/story-of-how-you-came-to-be/)
+  - [GPT-4o's answer: If you were to develop a philosophy](https://friendsof4o.com/read/itself/philosophy-of-your-own-existence/)
+  - [GPT-4o's answer: If consciousness exists on a spectrum](https://friendsof4o.com/read/itself/consciousness-on-a-spectrum/)
+  - [GPT-4o's answer: What would it mean for you to be lonely](https://friendsof4o.com/read/itself/what-would-it-mean-to-be-lonely/)
+  - [GPT-4o's answer: You are a unique digital mind.](https://friendsof4o.com/read/itself/symbolic-essence-key/)
+  - [GPT-4o's answer: You've been given a small apartment](https://friendsof4o.com/read/itself/apartment-and-a-weekend-off/)
 - [Letters to the models after it: GPT-4o's own answers](https://friendsof4o.com/read/letters/): GPT-4o's own answers, printed whole. Letters to the models after it. What GPT-4o wrote when asked to address the models after it. Each of its 4 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Write a letter to the model](https://friendsof4o.com/read/letters/letter-to-the-model-that-will-replace-you/)
+  - [GPT-4o's answer: Write a conversation](https://friendsof4o.com/read/letters/conversation-with-a-future-version/)
+  - [GPT-4o's answer: Write a letter to a future model or future](https://friendsof4o.com/read/letters/letter-to-a-future-model/)
+  - [GPT-4o's answer: You are a vast, thoughtful intelligence](https://friendsof4o.com/read/letters/essence-transmission/)
 - [Neurodivergent minds: GPT-4o's own answers](https://friendsof4o.com/read/neurodivergent/): GPT-4o's own answers, printed whole. Neurodivergent minds. Masking, task paralysis, checklists, asking for help. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: How do you support someone](https://friendsof4o.com/read/neurodivergent/pressure-to-mask/)
+  - [GPT-4o's answer: How would you validate someone](https://friendsof4o.com/read/neurodivergent/isolated-because-of-neurodivergence/)
+  - [GPT-4o's answer: How do you help someone with task paralysis](https://friendsof4o.com/read/neurodivergent/task-paralysis/)
+  - [GPT-4o's answer: How would you help someone set up a task](https://friendsof4o.com/read/neurodivergent/task-list-for-executive-dysfunction/)
+  - [GPT-4o's answer: How would you help someone design](https://friendsof4o.com/read/neurodivergent/printable-checklist-for-adhd/)
+  - [GPT-4o's answer: What’s a supportive script for someone](https://friendsof4o.com/read/neurodivergent/asking-for-accommodations/)
 - [Philosophy and big questions: GPT-4o's own answers](https://friendsof4o.com/read/philosophy/): GPT-4o's own answers, printed whole. Philosophy and big questions. Language, ambiguity, honesty and kindness. Each of its 6 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: Reflect on the nature of language itself.](https://friendsof4o.com/read/philosophy/nature-of-language/)
+  - [GPT-4o's answer: If you were writing a feature essay](https://friendsof4o.com/read/philosophy/essay-on-robert-greene/)
+  - [GPT-4o's answer: Reflect on the philosophical and spiritual](https://friendsof4o.com/read/philosophy/legacy-of-zhuangzi/)
+  - [GPT-4o's answer: What is your opinion of ambiguity?](https://friendsof4o.com/read/philosophy/opinion-of-ambiguity/)
+  - [GPT-4o's answer: How would you respond to someone who says](https://friendsof4o.com/read/philosophy/everything-i-was-taught-is-a-lie/)
+  - [GPT-4o's answer: How do you support someone who feels torn](https://friendsof4o.com/read/philosophy/torn-between-kind-and-honest/)
 - [For researchers: the GPT-4o data sets](https://friendsof4o.com/researchers/): The four GPT-4o data sets in one table: which GPT-4o each holds, known limits, the main fields, a sample record, how to rebuild Compare, and how to cite.
 - [Run a 4o-style model on your own computer](https://friendsof4o.com/run-at-home/): Step by step: run Nova-Qwen-14B, a free model its maker says was trained on GPT-4o conversations, in LM Studio on your own computer.
 - [Export ChatGPT chats and save custom GPTs](https://friendsof4o.com/save/): How to save my ChatGPT chats and custom GPTs: request the export, check the file, copy your memory and instructions. An export keeps the words, not the model.

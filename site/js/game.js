@@ -42,7 +42,7 @@
   /* ---- who said it: the same words the build writes into the home page ---- */
   var ARCHIVED = "ChatGPT's own GPT-4o";     // the side the round asks for, named the same everywhere
   function whoFourO(c) {
-    var text = 'Asked on ' + F.usDate(c.asked);
+    var text = 'Asked through OpenAI\'s API on ' + F.usDate(c.asked);
     if (c.instruction) {
       text += ', with the February instruction' +
         (c.temperature === null || c.temperature === undefined ? '' : ', temperature ' + c.temperature) + '.';
