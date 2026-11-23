@@ -319,6 +319,7 @@ details > summary::-webkit-details-marker { display: none; }
 .note-body p { margin: 0 0 18px; font-size: 17px; line-height: 1.65; }
 .note-body p:first-child { font-size: clamp(21px, 2.05vw, 28px); line-height: 1.38; letter-spacing: -.02em; margin: 14px 0 22px; }
 .note-body .sig { font-weight: 600; font-size: 15px; color: var(--ink); margin: 0; }
+.note-words { margin: 22px 0 0; font-size: 15px; }
 @media (min-width: 1000px) {
   .note { padding-bottom: 104px; }
   .note-card { padding: 56px 60px 56px; }
