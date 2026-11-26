@@ -3,7 +3,6 @@
  "rounds_first": 3,
  "rounds_max": 5,
  "min_votes": 30,
- "near_lowest": 2,
  "check": "4o-nov-check",
  "questions": [
   "s01",
@@ -198,7 +197,7 @@
   "says": "GPT-4o through OpenAI's API, the November 2024 version (gpt-4o-2024-11-20), asked with no instruction on November 21, 2026."
  },
  "check_says": "A second, separately made answer from the same GPT-4o version as the example.",
- "saving": false,
+ "saving": true,
  "messages": [
   {
    "id": "s01",

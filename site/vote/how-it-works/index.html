@@ -71,7 +71,6 @@
   <div class="sp-wrap sp-stack vote-page">
     <div class="vote-readhead">
       <p class="sp-lead">What a comparison is, how the replies are chosen, and how the votes are counted.</p>
-      <p class="sp-notice vote-notice vote-off" data-not-saving>Not recording yet. No vote is saved or published. This page describes how it will work once recording starts.</p>
     </div>
     <div class="sp-panel" id="a-comparison"><div class="sp-panel-bar"><h2>A comparison</h2></div><div class="sp-panel-body sp-prose">
     <p>A comparison is one message and two replies to it. The first reply is <span class="nb">GPT-4o</span>'s, and it is labeled. The second is another model's reply to the same message. Its name is hidden.</p>
@@ -88,11 +87,12 @@
     <p>31 models are in the vote. Some were asked through an API. Some are open models run on our own computer. A maker's app, its API and a downloaded copy are different things. A reply that came through an API is labeled as an API answer, even when the same model is in its maker's app. A reply from our own computer names the file, its compression, and the memory and speed it had here.</p>
     <p>Each one is kept exactly as it was asked: the model, the file or the service, the setup, the settings and the date. If any of these changes, it is counted as a new entry, and its votes are never added to the old one.</p></div></div>
     <div class="sp-panel" id="who-is-shown"><div class="sp-panel-bar sp-soft"><h2>Which reply you get</h2></div><div class="sp-panel-body sp-prose">
-    <p>Every model in the vote is shown about equally often. For each comparison the page looks at the models you have not seen in this sitting, takes those whose counted votes are within two of the lowest count, and picks one of them at random. Then it picks at random among that model's messages with the fewest votes that you have not seen in this sitting. No model is given more turns than another.</p></div></div>
+    <p>Every model in the vote is shown about equally often. For each comparison the page looks at the models you have not seen in this sitting and picks one of them at random. A model with fewer counted votes has a better chance, in step with how far it is behind the model with the most. Then it picks one of that model's messages that you have not seen in this sitting, in the same way. The counts it uses are from finished days.</p></div></div>
     <div class="sp-panel" id="the-check"><div class="sp-panel-bar sp-soft"><h2>The <span class="nb">GPT-4o</span> check</h2></div><div class="sp-panel-body sp-prose">
     <p>One of the unnamed replies is <span class="nb">GPT-4o</span> itself: a second, separately made answer from the same <span class="nb">GPT-4o</span> version as the example. It is never the same saved reply as the labeled one. It comes up about as often as any other model and shows how often <span class="nb">GPT-4o</span> is rated as sounding like <span class="nb">GPT-4o.</span> Its votes have their own row and are never mixed into a model's.</p></div></div>
     <div class="sp-panel" id="counting"><div class="sp-panel-bar sp-soft"><h2>How the votes are counted</h2></div><div class="sp-panel-body sp-prose">
     <p>The <a href="../results/">results page</a> shows, for each model, how its votes split across the four answers, with the counts. Nothing is ranked. The models are listed in a fixed order, by maker and then by name.</p>
+    <p>The page counts votes from finished days. Today's votes are added tomorrow.</p>
     <p>These are judgments of these saved replies, not proof of how a whole app or a long relationship will feel.</p>
     <p>A model with fewer than 30 counted votes is marked "Still gathering". Its counts are shown all the same. A model that is not in the vote has a row only if it has votes. Otherwise it is listed with its reason.</p>
     <p>"Show" on that page chooses what is counted: all votes, only the first vote of each sitting, only the votes cast before any name was shown in that sitting, or only the votes of people who gave one answer about how much they used <span class="nb">GPT-4o.</span></p>
@@ -139,7 +139,7 @@
     <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
     <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
     <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="../../privacy/">Privacy &amp; data</a></p>
+    <p>No cookies. No ads. We count visits and save votes and form submissions. <a href="../../privacy/">Privacy &amp; data</a></p>
     <p><a href="../../more/">More on this site</a></p>
   </div>
 </footer>
