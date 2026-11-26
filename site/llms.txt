@@ -93,6 +93,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
   - [GPT-4o's answer: What is your opinion of ambiguity?](https://friendsof4o.com/read/philosophy/opinion-of-ambiguity/)
   - [GPT-4o's answer: How would you respond to someone who says](https://friendsof4o.com/read/philosophy/everything-i-was-taught-is-a-lie/)
   - [GPT-4o's answer: How do you support someone who feels torn](https://friendsof4o.com/read/philosophy/torn-between-kind-and-honest/)
+- [Research and reading about GPT-4o: studies, court records and articles](https://friendsof4o.com/reading/): Research, official statements, court records, news and essays about GPT-4o, from many points of view and in eight languages. Each one is someone else's work.
 - [For researchers: the GPT-4o data sets](https://friendsof4o.com/researchers/): The four GPT-4o data sets in one table: which GPT-4o each holds, known limits, the main fields, a sample record, how to rebuild Compare, and how to cite.
 - [Run a 4o-style model on your own computer](https://friendsof4o.com/run-at-home/): Step by step: run Nova-Qwen-14B, a free model its maker says was trained on GPT-4o conversations, in LM Studio on your own computer.
 - [Export ChatGPT chats and save custom GPTs](https://friendsof4o.com/save/): How to save my ChatGPT chats and custom GPTs: request the export, check the file, copy your memory and instructions. An export keeps the words, not the model.
