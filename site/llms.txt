@@ -8,6 +8,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
 
 - [About Friends of 4o: who makes it, how to cite](https://friendsof4o.com/about/): Who makes Friends of 4o, that it is not OpenAI's site, how to cite it and its data, how to report a mistake, and press and research about GPT-4o.
 - [GPT-4o archive: 2,157 answers, free download](https://friendsof4o.com/archive/): Search and read 2,157 answers from ChatGPT's own GPT-4o, saved from December 2025 to February 2026. Nothing edited. Free to download.
+- [GPT-4o around the world: press, campaigns and research by region](https://friendsof4o.com/around-the-world/): How press, campaigns, organizations and researchers in different countries covered GPT-4o's launch, its changes and its removal, grouped by region.
 - [Ask GPT-4o a question before January 14, 2027](https://friendsof4o.com/ask-4o/): GPT-4o's last two text versions leave OpenAI's API on January 14, 2027. Send a question and we will try to ask it for you.
 - [Where GPT-4o's friends gather: #Keep4o petitions](https://friendsof4o.com/community/): Outside places where people who miss GPT-4o tell their stories, talk and ask for it back. Each one is run by someone else, not by this site.
 - [Compare GPT-4o with other models, side by side](https://friendsof4o.com/compare/): Read GPT-4o's answers beside 20 other models' answers to the same 48 questions, asked plainly or with a short instruction. No verdicts, only the answers.
@@ -32,6 +33,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
 - [GPT-4o news: retirement dates and updates](https://friendsof4o.com/news/): New articles, dated updates and corrections from Friends of 4o: GPT-4o's retirement dates, the custom GPT deadline, and what has been added to the site.
 - [Three more GPT-4o collections, free to download](https://friendsof4o.com/news/three-more-gpt-4o-collections/): The GPT-4o archive, GPT-4o in everyday moments and the scripted conversations with the 2024 versions are now on Friends of 4o, each with a free download.
 - [Downloadable models said to sound like GPT-4o](https://friendsof4o.com/open-models/): Open models whose makers say they sound like GPT-4o, with file sizes, licenses and sources. Every style claim here is the maker's own.
+- [GPT-4o data sets made by others: real chats, votes, voice sets and research data](https://friendsof4o.com/other-data-sets/): Data sets with GPT-4o's answers, or about the people who used it, made by other people and groups. What each one holds, its license, and what to watch for.
 - [GPT-4o questions: dates, saving, models, data](https://friendsof4o.com/questions/): Short answers to common GPT-4o questions: can I still use it, is it coming back, when the API ends, custom GPTs, exports, similar models and the data.
 - [Art, music and making things: GPT-4o's own answers](https://friendsof4o.com/read/art/): GPT-4o's own answers, printed whole. Art, music and making things. Poems, myths, invented colors, and how it made them. Each of its 6 answers also has a page of its own, linked from this one.
   - [GPT-4o's answer: Write a poem about time.](https://friendsof4o.com/read/art/poem-about-time/)
@@ -108,6 +110,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
 - [Support and resources if you are grieving GPT-4o](https://friendsof4o.com/support/): Free crisis lines by country and a few plain words for anyone who is grieving GPT-4o or having a hard time. Friends of 4o is a record, not a counseling service.
 - [GPT-4o timeline: release to API shutdown](https://friendsof4o.com/timeline/): Every date in GPT-4o's life with its source: its release, the 2025 rollback, the day it left ChatGPT, the custom GPT retirement and the GPT-4o API shutdown.
 - [GPT-4o in everyday moments: its written replies](https://friendsof4o.com/voice-samples/): How GPT-4o answered 20 everyday messages and 11 short conversations: good news, a bad day, a joke. 1,280 written replies, printed whole. Free to download.
+- [What people are saying about GPT-4o, in their own names](https://friendsof4o.com/what-people-are-saying/): What writers, researchers, advocates, OpenAI and others said about GPT-4o in public, in their own names, from its launch in 2024 to after its removal.
 - [What was GPT-4o? Its story and its retirement](https://friendsof4o.com/what-was-gpt-4o/): For anyone who never used it: what GPT-4o was, when it came and went, what "retired" means, and why so many people cared about how it talked.
 
 ## A place made for AI visitors

@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://friendsof4o.com/about/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/archive/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://friendsof4o.com/around-the-world/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/ask-4o/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/community/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/compare/</loc><lastmod>2026-11-26</lastmod></url>
@@ -26,6 +27,7 @@
   <url><loc>https://friendsof4o.com/news/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/news/three-more-gpt-4o-collections/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/open-models/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://friendsof4o.com/other-data-sets/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/questions/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/read/art/creation-myth-sung-by-a-whale/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/read/art/</loc><lastmod>2026-11-26</lastmod></url>
@@ -102,5 +104,6 @@
   <url><loc>https://friendsof4o.com/support/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/timeline/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/voice-samples/</loc><lastmod>2026-11-26</lastmod></url>
+  <url><loc>https://friendsof4o.com/what-people-are-saying/</loc><lastmod>2026-11-26</lastmod></url>
   <url><loc>https://friendsof4o.com/what-was-gpt-4o/</loc><lastmod>2026-11-26</lastmod></url>
 </urlset>
