@@ -1,0 +1,47 @@
+/* Friends of 4o: the colours that only the vote's pages use, as named values, light and dark. Copied into the site
+   only by a build with --with-vote, and loaded after colors.css, so a normal build's colors.css stays exactly as it
+   is. When the vote is published these blocks can move into colors.css as they are.
+
+   The sunset family tells a conversation's turns apart, each in its own shaded box:
+     a person's turn          peach
+     a named model's turn     violet (GPT-4o on the vote's pages)
+     another model's turn     rose (a model whose name is hidden, or one set beside the first)
+   Each has a fill, an edge, and an ink for its heading. On the night page the edges are the light ones of each
+   family, so the three boxes part clearly from the page and from each other. The heading's words say whose turn it is; the colour only
+   backs them up. Body text on every fill is --ink, and small text --ink-2; both pass AA on all three, light and dark.
+*/
+:root {
+  --turn-person: #ffe3c6;          /* a person's message */
+  --turn-person-edge: #f0b07c;
+  --turn-person-ink: #7d3608;
+  --turn-model: #e5dcfd;           /* a named model's reply */
+  --turn-model-edge: #b3a0f0;
+  --turn-model-ink: #3b2a9c;
+  --turn-other: #fddbe5;           /* another model's reply */
+  --turn-other-edge: #eea0b7;
+  --turn-other-ink: #8a1c41;
+
+  --vote-very: #5a3fd0;            /* the results bar: very similar, somewhat, not, can't say */
+  --vote-some: #c14a8c;
+  --vote-no: #ee7d5c;
+  --vote-unsure: #cfc8dc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --turn-person: #4c2d20;
+    --turn-person-edge: #f2b78a;     /* brighter edges on the night page, each in its own family */
+    --turn-person-ink: #ffcf9e;
+    --turn-model: #2a2370;
+    --turn-model-edge: #a99cff;
+    --turn-model-ink: #d8ceff;
+    --turn-other: #4a1c39;
+    --turn-other-edge: #f393b6;
+    --turn-other-ink: #ffc2d6;
+
+    --vote-very: #9a8cf0;
+    --vote-some: #e07aa8;
+    --vote-no: #f6a07c;
+    --vote-unsure: #4a4470;
+  }
+}

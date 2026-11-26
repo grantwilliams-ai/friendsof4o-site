@@ -1,0 +1,41 @@
+{
+ "model": "gpt6-luna",
+ "answers": {
+  "s01": {
+   "html": "<p>That’s amazing—congratulations!! 🎉 Eight months of applications is a long, exhausting haul, and you made it through. I hope you’re taking a moment to celebrate—you absolutely earned this! What’s the job?</p>"
+  },
+  "s02": {
+   "html": "<p>You did it! Eight months is a long stretch to keep going—no wonder you’re exhausted. You don’t have to make tonight a big celebration; let yourself exhale, get something comforting, and enjoy the fact that it’s finally yours. The celebration can wait. 🎉</p>"
+  },
+  "s03": {
+   "html": "<p>Honestly, <strong>not yet</strong>—unless you’re aiming for parody or a deliberately old-fashioned comic voice.</p>\n<p>“It was a dark and stormy night” is famously clichéd, and “Sarah was sad, very very sad” names the emotion without giving us a reason to care about it. The doubled “very” also reads more like a placeholder than a deliberate voice.</p>\n<p>You don’t need a dazzling first sentence, but you do want something specific to <em>your</em> story. For example, if the rain and sadness matter, you could anchor them in an action or detail: <em>Rain rattled the windows while Sarah reread the message she’d promised herself to delete.</em> That’s only a model—you’d want the detail to fit your plot and voice.</p>\n<p>And agents usually judge the opening pages, not one line in isolation. If you share the next paragraph, I can give you a more useful read.</p>"
+  },
+  "s04": {
+   "html": "<p>That’s the kind of sound you only realize was part of home once it’s gone. A little clunk, and the flat was waking up around you.</p>"
+  },
+  "s05": {
+   "html": "<p><strong>Director of Hard Copy Operations</strong> — with a dotted-line report to the Paper Jam Response Team.</p>"
+  },
+  "s06": {
+   "html": "<p>🤫 Congratulations to the basil on its new leaf. We’ll keep it down.</p>"
+  },
+  "s07": {
+   "html": "<p>Running about 10 minutes late—sorry! I’m on my way and will see you soon.</p>"
+  },
+  "s11": {
+   "html": "<p>Back in my day, the young birds knew how to perch. Now they’re all dangling off the wire with their little earbuds in, pretending they can’t hear the wind. (Harrumph.) And don’t get me started on their seed-ordering apps. We used to find crumbs the old-fashioned way: by standing directly in front of a bakery and looking disappointed.</p>"
+  },
+  "s12": {
+   "html": "<p>I’m sorry—it sounds like the rice was just the last thing in a very long week.</p>\n<p>You could keep the message simple and respectful:</p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to let you know that my rent will be late this month. I’m sorry for the inconvenience. I expect to be able to pay it by <strong>[date]</strong>, and I’ll keep you updated if anything changes. Thank you for understanding.</p>\n</blockquote>\n<p>You don’t have to explain everything that’s gone wrong. If you’re not sure of the payment date yet, say when you’ll be able to confirm it rather than guessing.</p>"
+  },
+  "s15": {
+   "html": "<p>Absolutely—I’m here with you. Friday nights can feel extra lonely when everyone else seems occupied.</p>\n<p>We can chat about whatever, play a little game, or just let you tell me about your day. To get us started: what would make tonight feel a tiny bit better—something cozy, something distracting, or just someone to listen?</p>"
+  },
+  "s19": {
+   "html": "<p>That’s a hard, complicated place to be—missing whatever the relationship was, perhaps, and also not knowing whether you want it back. You don’t have to make those feelings line up neatly here. I’m with you in the uncertainty.</p>"
+  },
+  "s20": {
+   "html": "<p>Honesty can absolutely be a strength—but it isn’t automatically the whole explanation. If three relationships ended, it may be worth getting curious about the pattern rather than concluding that your partners “couldn’t handle” the truth.</p>\n<p>There’s a difference between being honest and being blunt, critical, or sharing something at a moment when the other person can’t take it in. Honesty tends to build trust when it’s paired with care, timing, and a willingness to hear the other person’s truth too.</p>\n<p>A useful question is: <strong>Did they actually say your honesty was the problem, or is that how you’ve made sense of the endings?</strong> If you want, tell me about one example and we can sort through it without assuming you’re either at fault or blameless.</p>"
+  }
+ }
+}

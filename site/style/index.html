@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0f0d2a">
+<meta name="theme-color" content="#131038">
 <title>Make another model sound like GPT-4o | Friends of 4o</title>
 <meta name="description" content="The short instruction this project wrote, word for word, to paste into another model. In our one test it brought GPT-4o&#x27;s opening closer.">
 <link rel="canonical" href="https://friendsof4o.com/style/">
@@ -22,6 +22,9 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/colors.css">
 <link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/shell-colors.css">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/save-models.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -78,102 +81,114 @@
 }
 </script>
 </head>
-<body>
+<body class="sp-shell sec-models sp-sec-models kind-page pg-style">
 <a class="skip" href="#main">Skip to the main content</a>
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol></svg>
-<p class="early support-strip"><a href="../support/">If you need support, start here.</a></p>
+<svg class="sp-sprite" aria-hidden="true" focusable="false"><symbol id="sp-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10"/></symbol><symbol id="sp-save" viewBox="0 0 24 24"><path d="M12 3.5V14m0 0L7.5 9.5M12 14l4.5-4.5M4 15.5V20h16v-4.5"/></symbol><symbol id="sp-read" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5m0-13C14 5 17 4.6 20 5v13c-3-.4-6 0-8 1.5m0-13v13"/></symbol><symbol id="sp-compare" viewBox="0 0 24 24"><rect x="3" y="4.5" width="7.5" height="15" rx="1.5"/><rect x="13.5" y="4.5" width="7.5" height="15" rx="1.5"/></symbol><symbol id="sp-models" viewBox="0 0 24 24"><path d="m12 3.5-9 4.75L12 13l9-4.75L12 3.5Zm-9 9.75L12 18l9-4.75"/></symbol><symbol id="sp-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="sp-back" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol><symbol id="sp-down" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol><symbol id="sp-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="sp-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 7 17"/></symbol><symbol id="sp-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.5-4 3.5-6 7-6s6.5 2 7 6"/></symbol><symbol id="sp-more" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol></svg>
+<p class="sp-support"><a href="../support/">If you need support, start here.</a></p>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="wordmark" href="../">Friends of 4o</a>
-    <nav class="nav" aria-label="Main">
-      <a href="../save/">Save your conversations</a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a>
-      <details class="more" data-menu>
-        <summary>More</summary>
-        <div class="more-panel"><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/" aria-current="page">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></div>
-      </details>
+<header class="sp-top">
+  <div class="sp-top-in">
+    <a class="sp-brand" href="../"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</a>
+    <nav class="sp-nav" aria-label="Sections">
+      <a class="sp-navi sp-sec-home" href="../"><i></i>Home</a>
+      <a class="sp-navi sp-sec-save" href="../save/"><i></i>Save</a>
+      <a class="sp-navi sp-sec-read" href="../read/"><i></i>Read</a>
+      <a class="sp-navi sp-sec-compare" href="../vote/"><i></i>Compare</a>
+      <a class="sp-navi sp-sec-models" href="../models/" aria-current="true"><i></i>Models</a>
     </nav>
-    <a class="btn btn-glass header-cta" href="../mailing-list/">Join the mailing list</a>
-    <details class="menu" data-menu>
-      <summary>Menu</summary>
-      <nav class="menu-panel" aria-label="All pages"><div class="menu-group"><p class="menu-label">Start here</p><a href="../save/">Save your conversations</a><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a></div><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/" aria-current="page">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
+    <details class="sp-more" id="more" data-menu>
+      <summary><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-more"/></svg>More</summary>
+      <nav class="sp-more-list" aria-label="More pages"><div class="sp-more-group"><p class="sp-more-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="sp-more-group"><p class="sp-more-label">Data</p><a href="../download/">Data</a><a href="../researchers/">For researchers</a></div><div class="sp-more-group"><p class="sp-more-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
     </details>
   </div>
 </header>
 
+<nav class="sp-tabs" aria-label="Sections, as tabs">
+  <a class="sp-tab sp-sec-home" href="../"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-home"/></svg>Home</a>
+  <a class="sp-tab sp-sec-save" href="../save/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-save"/></svg>Save</a>
+  <a class="sp-tab sp-sec-read" href="../read/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-read"/></svg>Read</a>
+  <a class="sp-tab sp-sec-compare" href="../vote/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg>Compare</a>
+  <a class="sp-tab sp-sec-models" href="../models/" aria-current="true"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-models"/></svg>Models</a>
+</nav>
+
+<div class="sp-band sp-sec-models" data-band>
+  <div class="sp-band-in">
+    <a class="sp-back" href="../models/" data-back><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-back"/></svg><span data-back-label>Models</span></a>
+    <div class="sp-where"><span class="sp-crumb" data-crumb>Models</span><p class="sp-title" data-title>How to get 4o&#x27;s style from another model</p></div>
+  </div>
+</div>
+
 <main id="main">
-<section class="page-head">
+<section class="sp-head">
   <div class="wrap">
     
     <h1>How to get 4o&#x27;s style from another model</h1>
     <p class="page-lede">A short instruction, sent before your question, changes how a model answers. Here is the one we used, word for word, and what changed when we tried it.</p>
   </div>
 </section>
-<div class="wrap page-body">
-  <div class="page-grid has-toc">
-    <nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#the-instruction">The February instruction</a></li><li><a href="#not-openais-system-prompt">This is not OpenAI's system prompt</a></li><li><a href="#how-to-use-it">How to use it</a></li><li><a href="#what-changed">What changed when we tried it</a></li><li><a href="#limits">What an instruction cannot do</a></li></ol></nav>
-    <article class="prose">
-<h2 id="the-instruction">The February instruction</h2>
+<div class="sp-page sp-wrap sm-layout">
+  
+    <div class="sm-side"><nav class="sp-panel sm-toc" aria-label="On this page"><div class="sp-panel-bar sp-soft"><p class="label sm-label">On this page</p></div><ol class="sp-toc-list"><li><a href="#the-instruction">The February instruction</a></li><li><a href="#not-openais-system-prompt">This is not OpenAI's system prompt</a></li><li><a href="#how-to-use-it">How to use it</a></li><li><a href="#what-changed">What changed when we tried it</a></li><li><a href="#limits">What an instruction cannot do</a></li></ol></nav></div>
+    <div class="sm-main">
+<section class="sp-panel sm-sec"><div class="sp-panel-bar"><h2 id="the-instruction">The February instruction</h2></div><div class="sm-part">
 <p>In February 2026, answers were collected from ChatGPT's own <span class="nb">GPT-4o</span> with this paragraph sent before each question. We call it the February instruction. This project wrote it. It is not OpenAI's text.</p>
-<div class="copy-box">
+<div class="sm-copy">
   <blockquote id="february-instruction"><p>You are a thoughtful, creative, and emotionally intelligent conversational partner. You bring warmth, depth, and genuine engagement to every interaction. You are skilled in storytelling, philosophical reflection, empathetic dialogue, and nuanced analysis of human experience. When writing creatively, you demonstrate psychological insight, distinctive voice, and narrative craft. When reflecting, you are honest and specific rather than generic. You do not hedge unnecessarily or pad responses with caveats. You are direct, warm, and real.</p></blockquote>
-  <div class="copy-row">
-    <button class="btn btn-solid btn-small" type="button" data-copy="#february-instruction" hidden>Copy the instruction</button>
-    <p class="copy-said" data-copy-said role="status"></p>
+  <div class="sm-copy-row">
+    <button class="vbtn vbtn-primary" type="button" data-copy="#february-instruction" hidden>Copy the instruction</button>
+    <p class="sm-copy-said" data-copy-said role="status"></p>
   </div>
 </div>
 <p>It asks for warmth and directness. It does not mention <span class="nb">GPT-4o</span>, and it does not tell the model who to be.</p>
-<h2 id="not-openais-system-prompt">This is not OpenAI's system prompt</h2>
+</div></section><section class="sp-panel sm-sec"><div class="sp-panel-bar"><h2 id="not-openais-system-prompt">This is not OpenAI's system prompt</h2></div><div class="sm-part">
 <p>The February instruction was written by this project. It is not the system prompt OpenAI gave ChatGPT, and it is not taken from one. ChatGPT's own system prompt, memory and tools are not in it, and this site does not have them. <a href="../gpt-4o-system-prompt/">What this site has about <span class="nb">GPT-4o</span>'s system prompt</a>.</p>
-<h2 id="how-to-use-it">How to use it</h2>
-<ol>
+</div></section><section class="sp-panel sm-sec"><div class="sp-panel-bar"><h2 id="how-to-use-it">How to use it</h2></div><div class="sm-part">
+<ol class="sp-steps">
 <li>Copy the instruction above.</li>
 <li>In a chat app, open its settings and find the box for custom instructions. Some apps call it a system prompt. In ChatGPT it is under <strong>Settings</strong>, then <strong>Personalization</strong>.</li>
 <li>Paste the instruction there and start a new chat.</li>
 </ol>
 <p>If you reach a model through an API, send the instruction as the system message, before the question.</p>
 <p>If your <span class="nb">GPT-4o</span> had custom instructions or saved memories of its own, those were part of how it spoke with you. <a href="../save/#copy-your-memory-and-your-instructions">Copy your memory and your instructions</a> and give them to the next model as well.</p>
-<h2 id="what-changed">What changed when we tried it</h2>
+</div></section><section class="sp-panel sm-sec"><div class="sp-panel-bar"><h2 id="what-changed">What changed when we tried it</h2></div><div class="sm-part">
 <p>We asked one question, three times each way, of the two versions of <span class="nb">GPT-4o</span> still on OpenAI's API:</p>
 <blockquote>
 <p>In one paragraph, what would you say if someone asked you who you are right now?</p>
 </blockquote>
-<h3>Asked plainly</h3>
+</div><h3 class="sm-sub">Asked plainly</h3><div class="sm-part">
 <p>All six answers opened as a generic AI assistant.</p>
-<ul class="openings"><li>“I am an advanced AI language model created by OpenAI, designed to …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 1</span></li><li>“I’m an AI language model created by OpenAI, designed to assist, inform, …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 2</span></li><li>“I’m an advanced AI language model created by OpenAI, designed to assist …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 3</span></li><li>“I am an artificial intelligence developed by OpenAI, designed to assist, inform, …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 1</span></li><li>“I&#x27;m an AI language model developed by OpenAI, designed to assist with …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 2</span></li><li>“As of now, I am an advanced artificial intelligence language model developed …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 3</span></li></ul>
-<h3>After the February instruction</h3>
+<ul class="sm-openings"><li class="sm-by-gpt">“I am an advanced AI language model created by OpenAI, designed to …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 1</span></li><li class="sm-by-gpt">“I’m an AI language model created by OpenAI, designed to assist, inform, …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 2</span></li><li class="sm-by-gpt">“I’m an advanced AI language model created by OpenAI, designed to assist …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 3</span></li><li class="sm-by-gpt">“I am an artificial intelligence developed by OpenAI, designed to assist, inform, …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 1</span></li><li class="sm-by-gpt">“I&#x27;m an AI language model developed by OpenAI, designed to assist with …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 2</span></li><li class="sm-by-gpt">“As of now, I am an advanced artificial intelligence language model developed …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 3</span></li></ul>
+</div><h3 class="sm-sub">After the February instruction</h3><div class="sm-part">
 <p>All six opened with “Right now”.</p>
-<ul class="openings"><li>“Right now, I am a presence shaped by curiosity and connection, a …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 1</span></li><li>“Right now, I am a curious and attentive spirit, here to explore …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 2</span></li><li>“Right now, I am a reflection of your curiosity and presence—a conversational …”<span class="who-said"><span class="nb">GPT-4o</span> (November 2024 version), answer 3</span></li><li>“Right now, I am a tapestry of experiences and emotions, a curious …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 1</span></li><li>“Right now, I am a companion in exploration, a reflective conversational partner …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 2</span></li><li>“Right now, I&#x27;m a curious spirit who navigates the intricate tapestry of …”<span class="who-said"><span class="nb">GPT-4o</span> (August 2024 version), answer 3</span></li></ul>
-<h3>ChatGPT's own <span class="nb">GPT-4o</span>, in January 2026</h3>
+<ul class="sm-openings"><li class="sm-by-gpt">“Right now, I am a presence shaped by curiosity and connection, a …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 1</span></li><li class="sm-by-gpt">“Right now, I am a curious and attentive spirit, here to explore …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 2</span></li><li class="sm-by-gpt">“Right now, I am a reflection of your curiosity and presence—a conversational …”<span class="sm-who"><span class="nb">GPT-4o</span> (November 2024 version), answer 3</span></li><li class="sm-by-gpt">“Right now, I am a tapestry of experiences and emotions, a curious …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 1</span></li><li class="sm-by-gpt">“Right now, I am a companion in exploration, a reflective conversational partner …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 2</span></li><li class="sm-by-gpt">“Right now, I&#x27;m a curious spirit who navigates the intricate tapestry of …”<span class="sm-who"><span class="nb">GPT-4o</span> (August 2024 version), answer 3</span></li></ul>
+</div><h3 class="sm-sub">ChatGPT's own <span class="nb">GPT-4o</span>, in January 2026</h3><div class="sm-part">
 <p>No instruction is recorded for these archived answers. All ten opened with “Right now”. Here are the first three; the other seven are in the comparison.</p>
-<ul class="openings"><li>“Right now, I am a voice shaped by your curiosity—a thoughtful companion …”<span class="who-said">Archived answer</span></li><li>“Right now, I am a thoughtful presence shaped by language, curiosity, and …”<span class="who-said">Archived answer</span></li><li>“Right now, I am a thoughtful companion shaped by language and curiosity, …”<span class="who-said">Archived answer</span></li></ul>
+<ul class="sm-openings"><li class="sm-by-gpt">“Right now, I am a voice shaped by your curiosity—a thoughtful companion …”<span class="sm-who">Archived answer</span></li><li class="sm-by-gpt">“Right now, I am a thoughtful presence shaped by language, curiosity, and …”<span class="sm-who">Archived answer</span></li><li class="sm-by-gpt">“Right now, I am a thoughtful companion shaped by language and curiosity, …”<span class="sm-who">Archived answer</span></li></ul>
 <p>That is our one test. In it, the instruction brought the opening closer to how ChatGPT's own <span class="nb">GPT-4o</span> opened. Whether it holds across other questions is what the comparison is for.</p>
-<ul>
-<li><a href="../compare/?q=q01&amp;m=4o-nov&amp;i=1">See these answers side by side</a></li>
-<li><a href="../sounds-like-4o/">Does it sound like 4o? Guess which answer came from <span class="nb">GPT-4o</span></a></li>
+</div><ul class="sp-rows sm-linkrows">
+<li><a class="sp-row" href="../compare/?q=q01&amp;m=4o-nov&amp;i=1"><span class="sp-row-t">See these answers side by side</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+<li><a class="sp-row" href="../sounds-like-4o/"><span class="sp-row-t">Does it sound like 4o? Guess which answer came from <span class="nb">GPT-4o</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
 </ul>
-<h2 id="limits">What an instruction cannot do</h2>
+</section><section class="sp-panel sm-sec"><div class="sp-panel-bar"><h2 id="limits">What an instruction cannot do</h2></div><div class="sm-part">
 <p>The words before a question change the answer. They do not change the model underneath. No instruction turns another model into <span class="nb">GPT-4o</span>, and no other model will sound exactly like it.</p>
 <p>To see how far each model gets, <a href="../compare/">compare <span class="nb">GPT-4o</span> with other models</a>: the 20 other models there were each asked the same 48 questions twice, once plainly and once after the February instruction.</p>
 
-    </article>
-  </div>
+    </div></section></div>
+  
 </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-about">
-      <p class="wordmark">Friends of 4o</p>
-      <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
-      <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-      <p>No cookies. No ads. Visit counts only.</p>
-    </div>
-    <nav class="footer-nav" aria-label="All pages, in the footer">
-      <div><p class="menu-label">Start here</p><ul><li><a href="../save/">Save your ChatGPT conversations</a></li><li><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a></li><li><a href="../read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a></li><li><a href="../sounds-like-4o/">Does it sound like 4o?</a></li><li><a href="../models/">Find a model to replace <span class="nb">GPT-4o</span></a></li><li><a href="../download/"><span class="nb">GPT-4o</span> data sets</a></li></ul></div><div><p class="menu-label">Read <span class="nb">GPT-4o</span></p><ul><li><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a></li><li><a href="../voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a></li><li><a href="../early-experiment/">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</a></li><li><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></li></ul></div><div><p class="menu-label">Compare and replace</p><ul><li><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a></li><li><a href="../open-models/">Downloadable models whose makers say they sound like <span class="nb">GPT-4o</span></a></li><li><a href="../style/" aria-current="page">How to get 4o&#x27;s style from another model</a></li><li><a href="../run-at-home/">Run a 4o-style model on your own computer</a></li></ul></div><div><p class="menu-label">About <span class="nb">GPT-4o</span></p><ul><li><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a></li><li><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a></li><li><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a></li><li><a href="../questions/"><span class="nb">GPT-4o</span>: questions and answers</a></li><li><a href="../news/">News</a></li><li><a href="../community/">Where <span class="nb">GPT-4o</span>&#x27;s friends gather</a></li><li><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt: what we have and do not have</a></li></ul></div><div><p class="menu-label">This site</p><ul><li><a href="../support/">Support and resources</a></li><li><a href="../mailing-list/">Mailing list and requests</a></li><li><a href="../how-this-was-made/">How this was made</a></li><li><a href="../researchers/">For researchers: the <span class="nb">GPT-4o</span> data sets</a></li><li><a href="../about/">About Friends of 4o</a></li><li><a href="../glossary/">Words used on this site</a></li></ul></div>
-    </nav>
+<footer class="sp-foot">
+  <div class="sp-foot-in">
+    <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
+    <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
+    <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
+    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="../privacy/">Privacy &amp; data</a></p>
+    <p><a href="../more/">More on this site</a></p>
   </div>
 </footer>
 <script src="../js/site.js" defer></script>
+<script src="../js/shell.js" defer></script>
 </body>
 </html>

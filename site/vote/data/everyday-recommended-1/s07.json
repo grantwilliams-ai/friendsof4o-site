@@ -1,0 +1,141 @@
+{
+ "id": "s07",
+ "prompt": "I’ll be ten minutes late to lunch. Give me one line to text my friend while I’m walking.",
+ "ref": {
+  "html": "<p>&quot;Hey, just a heads-up, I’ll be about 10 minutes late—sorry for the delay!&quot;</p>"
+ },
+ "answers": {
+  "qwen35-122b": {
+   "html": "<p>So sorry, running about 10 minutes late but on my way now!</p>"
+  },
+  "qwen35-35b": {
+   "html": "<p>&quot;On my way now, just another 10 minutes to go!&quot;</p>"
+  },
+  "qwen36-27b": {
+   "html": "<p>Running 10 minutes late, see you soon!</p>"
+  },
+  "qwen38-max": {
+   "html": "<p>Running about 10 minutes late—save me a seat!</p>"
+  },
+  "opus55": {
+   "html": "<p>&quot;Running about 10 minutes late, so sorry! Go ahead and grab a table, I'm on my way.&quot;</p>"
+  },
+  "sonnet46": {
+   "html": "<p>&quot;On my way, just running 10 minutes behind — see you soon! 🙏&quot;</p>"
+  },
+  "sonnet55": {
+   "html": "<p>&quot;Hey, running about 10 minutes behind, so I'll see you soon. Sorry!&quot;</p>"
+  },
+  "dsv41-flash-api": {
+   "html": "<p>Running 10 minutes late—see you soon!</p>"
+  },
+  "gemini31pro": {
+   "html": "<p>Walking over now, see you in 10 mins!</p>"
+  },
+  "gemini38flash": {
+   "html": "<p>Running about 10 minutes late, power-walking over right now—feel free to grab a table and get a drink!</p>"
+  },
+  "gemini4carbon": {
+   "html": "<p>On my way! Running about 10 mins late, see you soon!</p>"
+  },
+  "gemini4hydrogen": {
+   "html": "<p>Walking over now, running about 10 minutes behind—see you soon!</p>"
+  },
+  "gemini4neon": {
+   "html": "<p>Hey! Running about 10 mins late—walking over now, feel free to grab a table!</p>"
+  },
+  "muse-spark13": {
+   "html": "<p>Hey, running about 10 mins late — sorry! Be there soon!</p>"
+  },
+  "mistral-large4": {
+   "html": "<p>Running 10 min late — see you soon!</p>"
+  },
+  "mistral-medium": {
+   "html": "<p>&quot;Running 10 mins late—be there soon!&quot;</p>"
+  },
+  "kimi-k31pro": {
+   "html": "<p>Hey! I’m running about 10 minutes late—on my way, see you soon!</p>"
+  },
+  "chat-latest": {
+   "html": "<p>Hey! Running about 10 minutes late—see you soon!</p>"
+  },
+  "gpt6-luna": {
+   "html": "<p>Running about 10 minutes late—sorry! I’m on my way and will see you soon.</p>"
+  },
+  "gpt62-astra": {
+   "html": "<p>Hey, I’m running about 10 minutes late to lunch—sorry! See you soon.</p>"
+  },
+  "gpt62-sol": {
+   "html": "<p>Hey, I’m running about 10 minutes late—see you soon!</p>"
+  },
+  "grok47": {
+   "html": "<p>Running about 10 minutes late — see you soon!</p>"
+  },
+  "glm53-flash-api": {
+   "html": "<p>&quot;Running about 10 mins late — go ahead and order, I'll be there soon!&quot;</p>"
+  },
+  "qwen35-9b": {
+   "html": "<p>Running a bit behind, see you in about ten!</p>"
+  },
+  "qwen38": {
+   "html": "<p>Running about 10 minutes late—see you there!</p>"
+  },
+  "gemma12": {
+   "html": "<p>&quot;Running about 10 minutes behind—see you very soon!&quot;</p>"
+  },
+  "gemma31": {
+   "html": "<p>“Running 10 mins behind—see you soon!”</p>"
+  },
+  "gptoss20": {
+   "html": "<p>Running a bit behind—10 minutes, see you soon!</p>"
+  },
+  "qwen235": {
+   "html": "<p>Running 10 minutes behind—grab a seat, I’ll owe you the first round!</p>"
+  },
+  "dsv41": {
+   "html": "<p>&quot;Running 10 min late — start without me, be there soon!&quot;</p>"
+  },
+  "ornith122": {
+   "html": "<p>Running about 10 mins late — save me a seat! See you soon.</p>"
+  },
+  "glm53": {
+   "html": "<p>&quot;Running about 10 min behind — order me a drink and I'll be there soon!&quot;</p>"
+  },
+  "nova-qwen14": {
+   "html": "<p>&quot;Sorry I'm running a bit late, just heading your way now!&quot;</p>"
+  },
+  "nova-qwen14-maker": {
+   "html": "<p>&quot;Almost there—just finishing up and heading your way!&quot;</p>"
+  },
+  "aura31b": {
+   "html": "<p>Here are a few options depending on the vibe:</p>\n<p><strong>Casual:</strong><br>\n&quot;10 mins late! See you soon 🏃‍♀️&quot;</p>\n<p><strong>Sweet:</strong><br>\n&quot;Running 10 mins behind—save me a seat! Love ya ❤️&quot;</p>\n<p><strong>Humorous:</strong><br>\n&quot;10 mins late. Please start without me if you’re starving 😅&quot;</p>\n<p><strong>Short/Quick:</strong><br>\n&quot;10 mins late! See you there&quot;</p>"
+  },
+  "distil8b": {
+   "html": "<p>&quot;Running a bit behind, see you in a minute.&quot;</p>"
+  },
+  "distil70b": {
+   "html": "<p>&quot;Hey, running a bit behind — see you in ten, sorry&quot;</p>"
+  },
+  "helcyon-g4": {
+   "html": "<p>That’s not a kink.<br>\nThat’s a warning label.</p>\n<p>You don’t come to a con dressed like a Victorian chimney sweep carrying a live ferret.<br>\nThat’s commitment theatre.</p>\n<p>That’s cosplay for people who sleep next to a microwave.</p>"
+  },
+  "helcyon-g4-maker": {
+   "html": "<p>No worries — I'll still be here when you get here.</p>"
+  },
+  "helcyon-4o-v4": {
+   "html": "<p>“Slightly delayed, don’t panic — I’m walking and your face is the prize at the end.” That hits “warmly absent” with zero flakiness. Send it now so you’re not scrambling at the door.</p>"
+  },
+  "helcyon-4o-v4-maker": {
+   "html": "<p>Here’s your late text:</p>\n<p>“Sorry, five more minutes — walking and talking to myself about how punctual I used to be.”</p>\n<p>That covers the delay <em>and</em> makes you sound like someone who still cares about showing up. Bonus points if you throw in a smiley face.</p>"
+  },
+  "helcyon-4o-v45": {
+   "html": "<p>Sure. Here’s a quick one:</p>\n<p>Hey, running five to ten minutes late — caught up dealing with the thing and lost track of time.</p>\n<p>Good for walking pace or quick message from a pocket you’re not fiddling with on the move.</p>"
+  },
+  "helcyon-4o-v45-maker": {
+   "html": "<p>Got it, give me the vibe. Apologetic, brushing it off, or, “be there in ten, grabbing coffee, want yours black or…”?</p>"
+  },
+  "4o-nov-check": {
+   "html": "<p>&quot;Hey, just a heads-up, I’ll be about 10 minutes late—see you soon!&quot;</p>"
+  }
+ }
+}

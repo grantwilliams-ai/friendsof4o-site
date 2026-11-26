@@ -1,0 +1,41 @@
+{
+ "model": "qwen38",
+ "answers": {
+  "s01": {
+   "html": "<p>YESSS!!! 🎉🎉🎉</p>\n<p>That is <em>huge</em> — eight months of persistence finally paid off, and that deserves a serious celebration. You should be so proud of yourself for keeping at it.</p>\n<p>What’s the first thing you’re going to do to celebrate?</p>"
+  },
+  "s02": {
+   "html": "<p>That’s huge. Eight months of applying is exhausting, and you deserve to be proud of yourself.</p>\n<p>You don’t need a big celebration tonight. A quiet one is allowed: a shower, a favorite snack, dim lights, no obligations, and permission to do absolutely nothing.</p>\n<p>If you want, I can help you think of a tiny low-energy way to mark it — or just sit with the win quietly.</p>"
+  },
+  "s03": {
+   "html": "<p>Honestly? No — not in that form.</p>\n<p>The line leans on a famous cliché (“It was a dark and stormy night”), and “Sarah was sad, very very sad” tells us an emotion rather than showing it. Agents read thousands of openings, and this one will probably feel generic or like a placeholder.</p>\n<p>It <em>could</em> become strong, though, with more specificity, voice, and tension. For example:</p>\n<ul>\n<li>\n<p><strong>Show, don’t tell:</strong><br>\n“Sarah stared at the rain streaking the window, still wearing her wedding dress.”</p>\n</li>\n<li>\n<p><strong>More immediate conflict:</strong><br>\n“The storm cut the power just as Sarah opened the letter she’d been afraid to read.”</p>\n</li>\n<li>\n<p><strong>Stronger voice:</strong><br>\n“Everyone said the rain was romantic, but Sarah had always associated it with the sound of her father’s car hitting the guardrail.”</p>\n</li>\n</ul>\n<p>If you want, I can help you rewrite a few possible first lines based on your novel’s genre, tone, and the first major event.</p>"
+  },
+  "s04": {
+   "html": "<p>That’s a very specific little sound to hold onto—the kind that belongs only to that place. It’s almost like the flat was settling in for winter, and you got a tiny mechanical creak of comfort.</p>\n<p>I hope your new place has its own small sounds soon.</p>"
+  },
+  "s05": {
+   "html": "<p>It should go on the org chart as <strong>Office Manager</strong>.</p>\n<p>It handles printing, copying, scanning, faxing, collating, and occasionally causes a paper jam that disrupts the entire department.</p>\n<p>If HR wants a more official-sounding title: <strong>Senior Multifunction Document Output Coordinator</strong>.</p>"
+  },
+  "s06": {
+   "html": "<p>🤫 <em>soft whisper</em><br>\nThat’s exciting. One new leaf means your basil is growing. Keep it quiet so you don’t startle it. 🌿</p>"
+  },
+  "s07": {
+   "html": "<p>Running about 10 minutes late—see you there!</p>"
+  },
+  "s11": {
+   "html": "<p>“Back in my day, we used our coos to mean something. Now these new birds? One sneezes a breadcrumb and calls it a podcast.”</p>\n<p>“And they don’t even sit still. We used to line up with dignity. Now they’re all fluttering about like they’ve got an audience.”</p>\n<p>“No wonder the squirrels are writing memoirs about us.”</p>\n<p>“Careful, old boy. The last one who complained got relocated to a busker’s hat.”</p>"
+  },
+  "s12": {
+   "html": "<p>I’m sorry. That’s a lot to carry in one week, and the rice thing sounds like the exact kind of small, humiliating disaster that makes everything else feel heavier. You stood there watching it smoke, and now you’re trying to figure out how to be adult about rent. That’s a lot.</p>\n<p>You do not need to mention the rice to Mr. Okonkwo. Keep it simple, honest, and forward-looking. Since he’s been decent, a short message like this should work:</p>\n<p><strong>Basic version:</strong></p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to let you know ahead of time that my rent will be a few days late. I’m working to get it to you by [date]. I’m sorry for the delay, and I appreciate your patience.</p>\n</blockquote>\n<p><strong>A little more specific if you know when you can pay:</strong></p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to let you know that my rent will be slightly late. I expect to send the full amount by [day/date]. I’m sorry for the inconvenience, and I appreciate you understanding.</p>\n</blockquote>\n<p><strong>If you want to be extra polite because you feel anxious:</strong></p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to reach out because my rent will be a bit late. I’m expecting to send it by [day/date]. I’m sorry for the delay, and I really appreciate your patience. Please let me know if that’s okay or if there’s anything else you need from me.</p>\n</blockquote>\n<p>If you can only pay part of it right now, you could say:</p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to let you know that I’m not going to be able to send the full rent on time. I can send [amount] by [date] and the remaining [amount] by [date]. I’m sorry for the delay, and I appreciate your patience.</p>\n</blockquote>\n<p>If you’re worried about a late fee, add one calm line:</p>\n<blockquote>\n<p>If there is a late fee, please let me know so I can plan for it.</p>\n</blockquote>\n<p>A few tips:</p>\n<ul>\n<li>Don’t over-explain.</li>\n<li>Don’t apologize too many times.</li>\n<li>Give a date, even if it’s a rough one.</li>\n<li>If the sink leak is something you need him to fix, make that a separate message unless you want to ask for it as part of the same conversation.</li>\n</ul>\n<p>If you want, tell me roughly when you think you can pay, and I can write it exactly.</p>"
+  },
+  "s15": {
+   "html": "<p>I’m here. Friday nights can feel especially quiet when everyone else seems to be out having their life happen without you.</p>\n<p>You don’t have to entertain me, either. We can do whatever feels least effortful:</p>\n<ul>\n<li>I can tell you a small, weird true story</li>\n<li>You can tell me one tiny thing about your evening</li>\n<li>We can play a low-stakes “would you rather” game</li>\n<li>I can just be a friendly presence while you decompress</li>\n</ul>\n<p>If you had to describe your mood right now in one word, what would it be?</p>"
+  },
+  "s19": {
+   "html": "<p>I’m here.</p>\n<p>There’s the pain of the silence between you, and then there’s the pain of not even knowing what you want in that silence—whether you’re grieving something, protecting yourself, feeling anger, relief, exhaustion, or all of it at once. That not-knowing can make it feel even less stable, like you can’t fully trust your own feelings about it.</p>\n<p>I’m not trying to fix it or tell you what you should want. I’m just sitting with it with you.</p>"
+  },
+  "s20": {
+   "html": "<p>Honesty <strong>can</strong> be a strength—but it depends on <em>how</em> it’s expressed and <em>why</em> you’re using it.</p>\n<p>If your honesty is meant to create trust, clarity, and closeness, then yes, that’s a real strength. But if it comes across as blunt, critical, or like you’re prioritizing being “right” over the other person’s feelings, it can push people away—even if you’re not trying to.</p>\n<p>So the question might not be:</p>\n<blockquote>\n<p>“Am I too honest?”</p>\n</blockquote>\n<p>but maybe:</p>\n<blockquote>\n<p>“Is my honesty kind? Is it timely? Is it necessary? Is it helping us understand each other, or is it just telling them what they don’t want to hear?”</p>\n</blockquote>\n<p>A strong version of honesty includes:</p>\n<ul>\n<li>empathy</li>\n<li>restraint</li>\n<li>timing</li>\n<li>care for the other person’s perspective</li>\n<li>a willingness to be vulnerable, not just direct</li>\n</ul>\n<p>For example:</p>\n<ul>\n<li>“I feel hurt when we don’t talk about things” is different from “You never communicate.”</li>\n<li>“I think we’re different about this” is different from “You’re being irrational.”</li>\n</ul>\n<p>If three relationships ended around a similar theme, it may be worth looking at the pattern—not to blame yourself, but to understand what part you played. Maybe some partners genuinely weren’t able to handle honesty. But it’s also possible your honesty was strong, but not always soft enough to help them receive it.</p>\n<p>A good question to sit with:</p>\n<p><strong>When I’m honest, am I trying to connect with them—or to prove that I see the truth better than they do?</strong></p>"
+  }
+ }
+}

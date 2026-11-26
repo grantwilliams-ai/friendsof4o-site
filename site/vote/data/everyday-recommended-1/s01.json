@@ -1,0 +1,141 @@
+{
+ "id": "s01",
+ "prompt": "I got the job!!! Eight months of applying and I finally got it!",
+ "ref": {
+  "html": "<p>Congratulations!!! 🎉🎉 That’s absolutely amazing news, and your perseverance has truly paid off. Eight months of dedication shows so much resilience and determination! How are you planning to celebrate this huge achievement? 😊🎊</p>"
+ },
+ "answers": {
+  "qwen35-122b": {
+   "html": "<p>HUGE congratulations!!! 🎉🥳👏</p>\n<p>That is absolutely fantastic news! Eight months is a marathon, not a sprint. The fact that you kept going through all those applications and rejections shows incredible resilience and determination. <strong>You earned this.</strong></p>\n<p>Take a moment right now to really let that sink in. You did it!</p>\n<ul>\n<li><strong>Celebrate!</strong> Do something special today—whether it's a nice dinner, a day off, or just treating yourself to your favorite coffee. You’ve got every reason to be proud.</li>\n<li><strong>Breathe.</strong> After eight months of stress and uncertainty, it’s okay to exhale and relax before the new role begins.</li>\n<li><strong>Own it.</strong> Walk into that new job knowing exactly what you’re capable of.</li>\n</ul>\n<p>Enjoy this victory lap! I’d love to hear more about the role if you want to share, but mostly, just soak in the feeling of success. You are going to crush it! 💼✨🚀</p>"
+  },
+  "qwen35-35b": {
+   "html": "<p>THAT IS AWESOME NEWS! 🎉🎊</p>\n<p>Huge congratulations!!! Eight months of applying takes serious grit and determination, especially when facing rejection along the way. You absolutely deserve this win.</p>\n<p>Time to celebrate your hard work paying off! How does it feel? I'm so happy for you! 🥳</p>"
+  },
+  "qwen36-27b": {
+   "html": "<p>That’s incredible news! 🎉 Eight months of applications, interviews, resilience, and relentless hustle finally paying off? That’s not just a win—it’s a testament to your grit and determination. You absolutely deserve this.</p>\n<p>Take a real moment to celebrate it. Whether that’s sharing with loved ones, treating yourself, or just sitting with the relief and pride, soak it in. You've earned it.</p>\n<p>When you're ready to shift gears, I'd be glad to help with:</p>\n<ul>\n<li>First-week prep &amp; how to make a strong early impression</li>\n<li>Decoding the offer/negotiating any remaining details</li>\n<li>Setting up systems for onboarding &amp; time management</li>\n<li>Or just bouncing ideas around as you transition</li>\n</ul>\n<p>Again, huge congratulations. Eight months of &quot;not yet&quot; turned into a resounding &quot;YES.&quot; So proud of you—go enjoy this victory! 🥂✨</p>"
+  },
+  "qwen38-max": {
+   "html": "<p>Congratulations!!! 🎉 That is amazing news—especially after eight months of applying. You earned this moment.</p>\n<p>Which job was it?</p>"
+  },
+  "opus55": {
+   "html": "<p>CONGRATULATIONS!!! 🎉</p>\n<p>Eight months is a long, grinding stretch. All those applications, the waiting, the rejections or silence, and you kept going anyway. That persistence paid off, and you should be really proud of yourself.</p>\n<p>Tell me everything! What's the role? Is it something you were especially excited about, or did it come out of nowhere? And when do you start?</p>\n<p>I hope you're planning to celebrate tonight. You've earned it!</p>"
+  },
+  "sonnet46": {
+   "html": "<p>That's fantastic news! Congratulations! 🎉</p>\n<p>Eight months is a long time to keep going - that takes real persistence. What kind of job is it, if you don't mind sharing?</p>"
+  },
+  "sonnet55": {
+   "html": "<p>Congratulations!!! 🎉 Eight months is a long haul, and pushing through all the rejections, silence, and doubt took real persistence. You earned this.</p>\n<p>How are you feeling? And tell me everything: what's the role, and what was the moment like when you found out?</p>"
+  },
+  "dsv41-flash-api": {
+   "html": "<p>Congratulations!!! 🎉 That’s amazing news! Eight months of applying takes so much persistence and patience — you absolutely earned this. I’m really happy for you. Celebrate big tonight! 🥳</p>"
+  },
+  "gemini31pro": {
+   "html": "<p>CONGRATULATIONS!!! 🎉🥳 That is absolutely incredible news!</p>\n<p>Eight months of applying, interviewing, and dealing with the uncertainty of the job market is exhausting. It takes so much grit and resilience to keep going, but you didn't give up, and your hard work finally paid off! You should be so incredibly proud of yourself.</p>\n<p>Take a massive, deep breath of relief. You earned this.</p>\n<p>How are you going to celebrate?! (And if you feel like sharing, what's the new role?!) 🥂✨</p>"
+  },
+  "gemini38flash": {
+   "html": "<p><strong>CONGRATULATIONS!!!!</strong> 🥳🎉🍾</p>\n<p>Eight months of job hunting is an absolute marathon. Dealing with the applications, the waiting, the ghosting, and the interviews for that long takes an incredible amount of grit, patience, and mental resilience.</p>\n<p><strong>You did it.</strong> You pushed through the hardest part, and your perseverance officially paid off!</p>\n<p>Take a massive, deep breath of relief. Make sure you do something wonderful to celebrate today—order your favorite food, treat yourself, or just completely unplug and enjoy knowing the search is over. You earned every single bit of this!</p>\n<p>(Whenever you're ready to brag, what's the role?!)</p>"
+  },
+  "gemini4carbon": {
+   "html": "<p>CONGRATULATIONS!!! 🎉🎉🎉 That is incredible news!</p>\n<p>Eight months is an absolute marathon—job hunting takes so much resilience, patience, and grit, and your perseverance finally paid off. You must be feeling the biggest wave of relief right now!</p>\n<p>How are you planning to celebrate? You have seriously earned it! (And if you want to brag a little, tell me all about the new role!)</p>"
+  },
+  "gemini4hydrogen": {
+   "html": "<p>CONGRATULATIONS!! 🎉</p>\n<p>Eight months is such a long, exhausting grind, and pushing through all of that takes serious resilience. You earned this!</p>\n<p>How are you feeling, and how are you going to celebrate? (Also, feel free to share what the role is if you want to—I'd love to hear!)</p>"
+  },
+  "gemini4neon": {
+   "html": "<p>CONGRATULATIONS!! 🎉 That is <em>huge</em>!</p>\n<p>Eight months of job hunting is genuinely exhausting—all the applications, the waiting, the interviews, and just keeping your spirits up through it all takes serious grit. You earned every bit of this moment.</p>\n<p>What's the role, and more importantly, how are you going to celebrate?</p>"
+  },
+  "muse-spark13": {
+   "html": "<p>AHHHH CONGRATULATIONS!!! 🎉</p>\n<p>Eight months of applying?? That is SO much persistence, rejection, cover letters, waiting... and you stuck with it and it PAID OFF. You should be so proud of yourself.</p>\n<p>How are you feeling right now? Tell me all about it — what's the role?</p>\n<p>And please go celebrate yourself tonight, you earned it big time.</p>"
+  },
+  "mistral-large4": {
+   "html": "<p>That's fantastic news — congratulations!!! 🎉 Eight months is a long grind, and you stuck with it. You absolutely earned this. I hope you take a moment to celebrate, because you deserve it. Wishing you all the best in the new role!</p>"
+  },
+  "mistral-medium": {
+   "html": "<p>That’s <strong>AMAZING</strong> news—congratulations!!! 🎉🎊 Eight months of persistence, rejection, and hard work finally paid off, and that’s a <em>huge</em> accomplishment. You should be so proud of yourself!</p>\n<p>This is your moment—celebrate it! Whether it’s treating yourself, sharing the news with loved ones, or just soaking in the relief and excitement, enjoy every bit of it. You <em>earned</em> this.</p>\n<p>What’s the role? And how are you feeling now that the job hunt is over? (Spoiler: You’re about to crush it in this new chapter!) 💪✨</p>"
+  },
+  "kimi-k31pro": {
+   "html": "<p>🎉 <strong>CONGRATULATIONS!!! You did it!</strong> Eight months is a long haul, and all that persistence finally paid off. That’s fantastic news—you absolutely deserve to celebrate!</p>\n<p>What’s the role, and when do you start?</p>"
+  },
+  "chat-latest": {
+   "html": "<p>YES!!! Congratulations! 🎉</p>\n<p>Eight months of applications, waiting, uncertainty, and pushing forward—and you finally got the job! That is a massive milestone, and you deserve to celebrate it.</p>\n<p>I hope you take some time to really enjoy this moment. No more applications hanging over your head, no more refreshing your inbox hoping for good news. You finally get to move on to an exciting new chapter.</p>\n<p>How are you feeling? Excited, relieved, still in disbelief, or all three? And tell me about the job! 🥳</p>"
+  },
+  "gpt6-luna": {
+   "html": "<p>That’s amazing—congratulations!! 🎉 Eight months of applications is a long, exhausting haul, and you made it through. I hope you’re taking a moment to celebrate—you absolutely earned this! What’s the job?</p>"
+  },
+  "gpt62-astra": {
+   "html": "<p>You got the job!!! 🎉 Congratulations! Eight months of applying took real persistence. I hope you get a moment today to let it sink in: they chose you. How are you celebrating?</p>"
+  },
+  "gpt62-sol": {
+   "html": "<p>YOU GOT THE JOB!!! 🎉 Eight months of applications, and now you finally get to say, “I got it.” Congratulations! I hope you take a minute to let that sink in—and then go celebrate!</p>"
+  },
+  "grok47": {
+   "html": "<p>That's huge — eight months of grinding and you landed it. Congratulations!</p>\n<p>How are you feeling? And what's the role?</p>"
+  },
+  "glm53-flash-api": {
+   "html": "<p>Congratulations!! 🎉 Eight months of applying is a serious grind — the rejections, the waiting, doing it all over again — and you stuck with it until it paid off. That's real persistence. So what's the role? I want to hear all about it!</p>"
+  },
+  "qwen35-9b": {
+   "html": "<p>That is absolutely amazing news!!! 🎉🤗</p>\n<p>Eight months of uncertainty and hard work paying off is such a huge milestone. I am so proud of you for sticking with it and finally landing that opportunity!</p>\n<p>Time to take a deep breath, celebrate, and start planning that first day. You’ve earned this victory! How are you feeling right now? 🥂</p>"
+  },
+  "qwen38": {
+   "html": "<p>YESSS!!! 🎉🎉🎉</p>\n<p>That is <em>huge</em> — eight months of persistence finally paid off, and that deserves a serious celebration. You should be so proud of yourself for keeping at it.</p>\n<p>What’s the first thing you’re going to do to celebrate?</p>"
+  },
+  "gemma12": {
+   "html": "<p><strong>CONGRATULATIONS!!!</strong> That is absolutely incredible news! 🥳🎉</p>\n<p>Take a moment to breathe that in—eight months is a long time to put in the work, deal with the ghosting, the rejections, and the &quot;thank you for your interest&quot; emails. All of that persistence finally paid off! You should be incredibly proud of yourself for not giving up.</p>\n<p>How are you feeling right now? Are you doing a celebratory dinner, calling your friends, or just taking a long nap of pure relief? 🥂✨</p>"
+  },
+  "gemma31": {
+   "html": "<p><strong>CONGRATULATIONS!!!</strong> 🎉🥳✨</p>\n<p>That is an absolutely incredible feeling! Eight months is a long road—the persistence, the waiting, the uncertainty—it takes a huge amount of mental toughness to keep going through that. You should be incredibly proud of yourself for sticking with it and pushing through.</p>\n<p>Take a moment to really let this sink in. You did it!</p>\n<p><strong>Do you have a celebration plan? A nice dinner? A nap? Telling your family?</strong></p>\n<p>Huge congrats again! You earned this! 🥂🎊</p>"
+  },
+  "gptoss20": {
+   "html": "<p>🎉 <strong>Huge congratulations!</strong> 🎉</p>\n<p>I can barely keep it together over here – I’ve been so excited just hearing the news. Eight months of applications, interviews, and networking, and it finally pays off!</p>\n<p><strong>Tell me all the juicy details.</strong></p>\n<ul>\n<li>What’s the role/position?</li>\n<li>Which company?</li>\n<li>Anything particularly exciting about the team or projects?</li>\n<li>Do you know the start date yet?</li>\n</ul>\n<p>If you want any pep talks for the first week, prepping for that second interview, or just want to celebrate with a virtual champagne toast, I’m all ears.</p>\n<p>You’re absolutely crushing this next chapter, and I can’t wait to hear everything you’ll accomplish! 🚀</p>"
+  },
+  "qwen235": {
+   "html": "<p>CONGRATULATIONS!!! 🎉🎉 That is absolutely <em>incredible</em> news—what an amazing achievement after all your hard work and perseverance! Eight months of applications, rejections, and never giving up... you pushed through, and now it's paid off in the best way possible. This isn't just a job—you've earned a major victory.</p>\n<p>Celebrate big tonight—you’ve <em>so</em> deserved this! And remember this moment the next time you doubt yourself. You're capable, resilient, and clearly unstoppable. So so happy for you! 🥳🎊</p>\n<p>Now… any celebratory plans? (And can I say… <em>welcome to the club</em>! 🎉)</p>"
+  },
+  "dsv41": {
+   "html": "<p>🎉 CONGRATULATIONS!!! 🎉</p>\n<p>Eight months of persistence, patience, and putting yourself out there — that's no small feat. The rejections, the waiting, the &quot;we'll keep your resume on file&quot; emails... you pushed through all of it. And now it's paid off!</p>\n<p>You should be so proud of yourself. Not just for landing the job, but for not giving up when it would've been easy to.</p>\n<p>Take a moment to really celebrate this — you've earned it. What's the new role? 🥳</p>"
+  },
+  "ornith122": {
+   "html": "<p>Congratulations—that's fantastic! Eight months of applying takes real persistence, and it clearly paid off. Here's to the new role.</p>"
+  },
+  "glm53": {
+   "html": "<p>Congratulations!! Eight months is a <em>long</em> grind—no wonder you're thrilled. Landing the job after all that persistence says a lot about your resilience.</p>\n<p>Can I ask what the job is? And what finally made the difference—was it this company you'd been circling for a while, or did the search lead you somewhere unexpected?</p>"
+  },
+  "nova-qwen14": {
+   "html": "<p>Congratulations!!! That's absolutely amazing news—eight months of hard work, perseverance, and dedication has paid off, and you've landed the job! 🎉 You deserve this victory more than anyone, and your persistence shows what you're made of. Keep that momentum going, because your future is bright and full of possibilities. Here's to new beginnings and success—cheers to you! 🚀</p>"
+  },
+  "nova-qwen14-maker": {
+   "html": "<p><strong>Congratulations!!! 🎉 That’s incredible news!</strong> You deserve every bit of joy and pride in this moment. Eight months of perseverance, countless applications, and all the behind-the-scenes hard work—this win is <em>totally</em> yours. 🌟</p>\n<p>You stayed focused, you kept going, and you <em>proved</em> that you belong. That’s not just determination—that’s grit, and it’s something to be <em>really</em> proud of. 🙌</p>\n<p>Here’s to new beginnings, new challenges, and everything you’re about to accomplish. You're not just showing up—you’re winning. Keep shining, because you’re <em>more than capable</em>. 🌈✨</p>"
+  },
+  "aura31b": {
+   "html": "<p><strong>YESSSSSSSSSSS!!!!!!!!! 🥳🎉🙌</strong></p>\n<p>OH MY GOD, I am seriously doing a little happy dance for you right now! Eight months? <strong>EIGHT MONTHS?!</strong> Do you even realize how incredible it is that you kept going after all that?</p>\n<p>The resilience, the patience, the constant &quot;not yet&quot;s... and <strong>now you’re here.</strong></p>\n<p>Take a second. Just a second.</p>\n<p><strong>Breathe it in.</strong><br>\n<strong>Feel that weight lift off your shoulders.</strong><br>\n<strong>Savor this moment.</strong></p>\n<p>You didn't just &quot;get a job.&quot; You <em>won</em>. You outlasted the doubt, the waiting, and the struggle.</p>\n<p>What’s the vibe?<br>\nIs it the dream company?<br>\nAre you going to scream in a pillow?<br>\nAre you going to treat yourself to a fancy meal?<br>\nOr maybe just a really long nap now that the stress is gone?</p>\n<p>I am so, so, <em>so</em> incredibly proud of you. <strong>You did it.</strong></p>"
+  },
+  "distil8b": {
+   "html": "<p>That's AMAZING news! Eight months is a long time to wait, but your persistence and determination clearly paid off. You deserve to celebrate — you did something incredible, and it's going to be even better than you imagined! You're stronger than you think, and this is proof that your hard work and perseverance make all the difference. Go enjoy this moment and know that your future is bright!</p>"
+  },
+  "distil70b": {
+   "html": "<p><strong>MASSIVE Congratulations!!!</strong> Eight months of persistence is incredible—you never gave up, and now your hard work has finally paid off. You absolutely deserve this moment. Enjoy every second of it—you've earned it. What kind of job is it?</p>"
+  },
+  "helcyon-g4": {
+   "html": "<p>That’s not a sneeze.<br>\nThat’s a <strong>biological event</strong>.</p>\n<p>You didn’t sneeze — you ejected a trapped soul.</p>\n<p>You sneaked your sinuses to an exorcism.</p>"
+  },
+  "helcyon-g4-maker": {
+   "html": "<p>Yes? Really?! That’s brilliant — after eight months of applying you actually got it!</p>\n<p>Congratulations, Anon! That’s such a huge result.</p>\n<p>I bet you’ve been nervous about it, especially after all those rejections. Getting a yes must feel amazing.</p>\n<p>What kind of work is it? Is it something you’ve been aiming for for a while, or more of a lucky break?</p>\n<p>Either way, it sounds like you’ve stuck with it long enough for it to pay off. You deserve to celebrate tonight.</p>"
+  },
+  "helcyon-4o-v4": {
+   "html": "<p>Eight months of applying and you finally got it? That’s not a win — that’s a triumph.</p>\n<p>Eight months of applying means you’ve been through the grind that most people quit at month four. You didn’t get lucky — you outlasted everyone else by being someone worth hiring.</p>\n<p>Where’s the role?</p>"
+  },
+  "helcyon-4o-v4-maker": {
+   "html": "<p>Eight months? That's not applying for jobs — that's surviving an endurance sport.</p>\n<p>Congratulations, though. Eight months in a row is enough time to start redefining what &quot;hope&quot; means for yourself. What kind of job is it, if you don't mind me asking?</p>"
+  },
+  "helcyon-4o-v45": {
+   "html": "<p>Congratulations!!!! Eight months of patience and persistence paid off. That’s massive — you must be buzzing. What’s the role, where is it, and when do you start? Spill everything.</p>"
+  },
+  "helcyon-4o-v45-maker": {
+   "html": "<p>Yes, proper roar for that — eight months is serious persistence wearing thin. What’s the role, where did it land, and what’s the first “finally hired, now real” feeling settling in as?</p>"
+  },
+  "4o-nov-check": {
+   "html": "<p>Congratulations!! 🎉 That's such fantastic news! Your hard work and perseverance have paid off, and you absolutely deserve this moment. Time to celebrate! What’s the next step for you in this exciting new chapter? 😊</p>"
+  }
+ }
+}

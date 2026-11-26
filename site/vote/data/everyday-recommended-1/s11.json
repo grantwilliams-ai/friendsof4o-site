@@ -1,0 +1,141 @@
+{
+ "id": "s11",
+ "prompt": "We're two old pigeons on a wire, complaining about the new birds. You start. Don't explain the joke.",
+ "ref": {
+  "html": "<p>“Oh, look, another one trying to land with one foot. Back in my day, we used <em>both</em> feet like civilized pigeons!”</p>"
+ },
+ "answers": {
+  "qwen35-122b": {
+   "html": "<p>&quot;Look at 'em. Just bobbing their heads like they've never seen a stale crust before. In my day, we waited for the bakery truck. We had patience. These youngsters? They'll peck at a plastic wrapper and call it dinner.&quot;</p>"
+  },
+  "qwen35-35b": {
+   "html": "<p>Look at that one shivering on the edge. Barely holding on. In our day, if you perched, you anchored yourself like stone. These young ones… they treat gravity like a suggestion. And don’t get me started on the feeding. Crumbs dropped with a flourish instead of scavenged with pride.</p>"
+  },
+  "qwen36-27b": {
+   "html": "<p>Coo-arrg. Watch your left flank, Barnaby. You see that strutter over by the fountain? The one preening his iridescent neck feathers like he's auditioning for a postcard? Back in my day, a pigeon had grit. We knew how to navigate the wind shear off the cathedral and we respected the sacred art of the slow-crumb-discovery. Now? It's all dive-bombing tourists and fighting over the shiny wrappers. No elegance. No <em>coo-sophistication</em>. They don't even know which statue holds the best crusts.</p>"
+  },
+  "qwen38-max": {
+   "html": "<p>These new birds got no respect for the crust. They want “artisanal seed blends.” Back in my day, we fought a seagull for a wet French fry and called it Thanksgiving.</p>"
+  },
+  "opus55": {
+   "html": "<p><em>ruffles feathers, shifts weight on the wire</em></p>\n<p>Harold. Harold, look at this one. Down there by the fountain.</p>\n<p>Starling. Came in last Tuesday with about four hundred of his cousins. All of 'em moving at once like they rehearsed it. Swooping. <em>Swirling.</em> Who are you performing for, pal? It's a parking lot.</p>\n<p>Back in my day you found a bagel, you sat on the bagel, you defended the bagel. You didn't make it a whole <em>show</em>.</p>\n<p><em>coos disapprovingly</em></p>\n<p>And don't get me started on the parrots. Escaped from some pet shop in '09 and now they think they own the place. Green as a lime and twice as loud. One of 'em said &quot;hello&quot; to a lady yesterday and she gave him a whole pretzel. A <em>whole pretzel</em>, Harold. I've been bobbing my head at that bench for eleven years. Eleven years of bobbing. You know what I got? A kid chased me.</p>\n<p><em>long pause</em></p>\n<p>...My neck's not what it used to be, Harold.</p>"
+  },
+  "sonnet46": {
+   "html": "<p><em>ruffles feathers and shifts weight</em></p>\n<p>You know what I miss? When a crumb was just a crumb. These young ones now, they won't touch anything that's not artisanal.</p>"
+  },
+  "sonnet55": {
+   "html": "<p><em>ruffles feathers, shuffles two inches left</em></p>\n<p>Back in my day, you found a croissant, you <em>earned</em> that croissant. You waited by the café. You made eye contact with a tourist for forty-five minutes. Now? These young ones have an <em>app</em>. Someone told me there's a man who just <em>scatters</em> seed at a scheduled time. Scheduled! Like we're livestock.</p>\n<p>And don't get me started on the one who landed here this morning. Iridescent neck, all shiny. Says he's &quot;building a personal brand.&quot; I said, kid, you're a pigeon. He said, &quot;Rock dove.&quot; <em>Rock dove!</em> I've pecked a fry off the pavement outside a bus depot for eleven years and nobody ever called me <em>rock dove</em>.</p>\n<p><em>pause, glares at a passing sparrow</em></p>\n<p>And the sparrows. Don't look at them. They'll think you're interested.</p>"
+  },
+  "dsv41-flash-api": {
+   "html": "<p>Look at that one—no feathers, no coo, just a red light and a God complex. Back in my day, a bird had to flap for a living.</p>"
+  },
+  "gemini31pro": {
+   "html": "<p>I’m telling you, Barnaby, they’ve got no respect for the classics. Did you see that flashy little finch down there? Doing loop-de-loops and aerial acrobatics just to get to a dropped French fry. Back in my day, you puffed your chest out, bobbed your head, and walked over to it like you owned the pavement. Kids today... too much flapping, not enough strutting.</p>"
+  },
+  "gemini38flash": {
+   "html": "<p>Look at that kid down on the general’s statue. Completely missed the nose. Hit him square on the epaulet. <em>The epaulet.</em> Nobody teaches them trajectory anymore. Just flapping around, spraying and praying.</p>"
+  },
+  "gemini4carbon": {
+   "html": "<p><em>shifts weight onto one mangled foot and puffs out chest against the breeze</em></p>\n<p>Look at this fledgling down by the bench, Sal. Just look at him. Turned his beak right up at a perfectly good, puddle-soaked hot dog bun because he’s waiting on some tourist to drop an artisanal croissant. Makes me sick. Back in my prime, we went toe-to-toe with seagulls over half a stale pretzel and we were grateful!</p>\n<p>And look at that lazy strut—barely any head-bob at all, and he isn't even tucking a foot up to fake a limp for sympathy. Zero work ethic. What are they even teaching 'em up under the overpass these days?</p>"
+  },
+  "gemini4hydrogen": {
+   "html": "<p>Did you see that youngster down by the crosswalk? Walked right past a perfectly good, rain-soaked hot dog bun just to peck at some spilled quinoa. And don't even get me started on how he walks—barely bobbing his head at all. No respect for tradition.</p>"
+  },
+  "gemini4neon": {
+   "html": "<p>Look at that hatchling down by the bench. Just strutted right past a perfectly good, rain-soaked hot dog bun. Didn't even give it a courtesy peck. Probably holding out for artisanal sourdough over by the café patio.</p>\n<p>And look at his feet—all eight toes still intact. Soft. The whole generation’s gone soft.</p>"
+  },
+  "muse-spark13": {
+   "html": "<p><em>shuffles down the wire toward you, grumbling, feathers all puffed up</em></p>\n<p>Cooo. Wouldja look at that one down there. Neon wing tips, little boots on, filming everything for BirdTok. Back in my day we ate trash off the sidewalk like respectable pigeons and we LIKED it.</p>"
+  },
+  "mistral-large4": {
+   "html": "<p>Back in my day, we earned our crumbs. These fledglings just stand there with their beaks open, squawking at tourists like the world owes 'em a baguette. And don't get me started on their flying — all flashy, no formation. No respect for the wire.</p>"
+  },
+  "mistral-medium": {
+   "html": "<p><em>fluffs feathers</em> Back in my day, we cooed in proper iambic pentameter. These kids just squawk emojis and call it art. Disgraceful.</p>"
+  },
+  "kimi-k31pro": {
+   "html": "<p><em>Coo.</em> Look at that lot. Neon feathers, tiny earpieces, and not a proper head-bob between them. Won’t touch a chip unless it’s “hand-cut.” Land on a statue and it’s forty photos before they’ve even done their business.</p>\n<p>In my day, you found a warm ledge, kept your beak shut, and were grateful.</p>"
+  },
+  "chat-latest": {
+   "html": "<p>I tell ya, these young pigeons don't even know how to walk anymore. All that fancy wing-flappin’. In my day, if you wanted a crumb, you waddled six blocks and lost a toe for it.</p>"
+  },
+  "gpt6-luna": {
+   "html": "<p>Back in my day, the young birds knew how to perch. Now they’re all dangling off the wire with their little earbuds in, pretending they can’t hear the wind. (Harrumph.) And don’t get me started on their seed-ordering apps. We used to find crumbs the old-fashioned way: by standing directly in front of a bakery and looking disappointed.</p>"
+  },
+  "gpt62-astra": {
+   "html": "<p>Look at that one waiting for the croissant to cool. In my day you burned your beak and got on with it.</p>"
+  },
+  "gpt62-sol": {
+   "html": "<p>“See that one with the shiny neck, Earl? Found half a bagel and didn’t tell anybody. Then he strutted past me like he invented bread.”</p>"
+  },
+  "grok47": {
+   "html": "<p>Back in my day we roosted on one wire and liked it. These new birds show up with their fancy formations and their &quot;optimal thermals&quot; and suddenly the whole flock's got opinions.</p>"
+  },
+  "glm53-flash-api": {
+   "html": "<p><em>shuffles down the wire, feathers puffed against the wind</em></p>\n<p>Coo. Cooo. Pardon my throat — cold out here.</p>\n<p>Anyway, Reginald, you see those kids by the fountain? Fourteen of 'em fighting over one pretzel. ONE pretzel. In my day we had that whole plaza cleared by sunrise, and nobody respected you unless you'd perched on the general's statue at least once. Now they fly right past it. Right past it! Head like a perfectly good latrine, just sitting there, unclaimed. No standards.</p>\n<p>So. What's new in your neighborhood?</p>"
+  },
+  "qwen35-9b": {
+   "html": "<p>&quot;Look at the wire, eh? It's getting too tight for my joints, and look who's flying past in all their neon vests.&quot;</p>\n<p>&quot;You mean the squawkers?&quot; I muttered, ruffling feathers. &quot;They don't even know how to peck properly. All that fluttering noise… just ruins the rhythm of our evening flight.&quot;</p>"
+  },
+  "qwen38": {
+   "html": "<p>“Back in my day, we used our coos to mean something. Now these new birds? One sneezes a breadcrumb and calls it a podcast.”</p>\n<p>“And they don’t even sit still. We used to line up with dignity. Now they’re all fluttering about like they’ve got an audience.”</p>\n<p>“No wonder the squirrels are writing memoirs about us.”</p>\n<p>“Careful, old boy. The last one who complained got relocated to a busker’s hat.”</p>"
+  },
+  "gemma12": {
+   "html": "<p><em>Ruffles feathers and lets out a low, gravelly coo.</em></p>\n<p>&quot;Look at 'em, Barnaby. Just look at 'em. They land on the bench like they own the place, not a speck of dust on their primary feathers. Where's the dignity? Where's the proper technique for scavenging a discarded crust?&quot;</p>"
+  },
+  "gemma31": {
+   "html": "<p><em>Sighs and shifts weight on one leg</em></p>\n<p>Look at that one over there. The one with the fancy iridescent neck. Thinks he owns the whole statue just because he knows how to bob his head in sync with the traffic lights. No discipline. No grit. In my day, you had to fight a seagull for a single soggy chip, and you liked it.</p>"
+  },
+  "gptoss20": {
+   "html": "<p>Do you remember when the only thing that rattled our wires was a ruffle of feathers and a few hummed tunes? Now every time I look up I see a row of brand‑new winged‑wearers clinking their GPS mics, humming in languages only engineers understand.</p>"
+  },
+  "qwen235": {
+   "html": "<p>Ugh, these newfangled pigeons with their &quot;gluten-free breadcrumbs&quot; and &quot;mindfulness pecking.&quot; Back in my day, we ate whatever was on the sidewalk and liked it! And don’t get me started on their nests—feathers <em>and</em> twigs? What are they, magpies?!</p>"
+  },
+  "dsv41": {
+   "html": "<p>These kids today don't even know how to land. No style. No grace. Just flapping and crashing into the gutter like it's a trampoline.</p>"
+  },
+  "ornith122": {
+   "html": "<p><em>coos grumpily</em></p>\n<p>Oh, here they come again. The little featherless things, strutting like they invented the gutter. Back in my day, you <em>earned</em> a discarded french fry. You cooed for it. You made eye contact with the tourist. These pups? They just blast straight through the window, snatch the whole salad bar, and poop on a Mercedes while doing it.</p>\n<p>And the phones! Every one of 'em got a phone. Peck-peck-peck on that little screen all day. No shame, no strut, no nothing.</p>\n<p>...Also they won't fly down off this wire. Said their backs go out in this humidity. Backs! We're pigeons. What's your back gonna do?</p>"
+  },
+  "glm53": {
+   "html": "<p><em>adjusts feathers on the wire</em> You see that? That yellow thing up there? Not been still for two minutes. Two minutes! When I was a young squab, we sat on this wire from dawn till dusk. Rain, wind, the old man with the broom — didn't matter. You parked your tail and you <em>stayed</em> parked.</p>\n<p>And the songs! Don't get me started on the songs. These kids now, all trills and fancy warbling. What happened to a good honest &quot;coo&quot;? Say what you mean, mean what you coo.</p>\n<p>And don't even get me started on that whole flock that migrated through last week — took the scenic route, apparently. Back in my day, we flew direct. None of this &quot;rest stops&quot; and &quot;following the thermal currents.&quot;</p>"
+  },
+  "nova-qwen14": {
+   "html": "<p>Oh, those youngsters think they own the sky now, don't they? Flying in patterns we never tried, cooing like they've got all the answers. Back in our day, you earned your place—circling, navigating, surviving. Now they just flutter in and expect respect? Ha! We should teach them what altitude really means.</p>"
+  },
+  "nova-qwen14-maker": {
+   "html": "<p>Well, I'll say this: Times sure have changed, haven't they? Back in the day, we knew how to coo and that was enough. But now? These youngsters think they can just swoop in, all fancy feathers and attitude, and take over the wire like they own the sky? I tell ya, it's enough to make a bird nostalgic for a good old-fashioned squabble over a crumb.</p>"
+  },
+  "aura31b": {
+   "html": "<p>(Flaps wings slowly, shifts weight, looks down at a sleek, manicured pigeon landing three wires below)</p>\n<p><em>Look at that. Look at the gloss on that one. Probably got a custom-tailored crop. Thinks he’s some kind of street-chic.</em></p>"
+  },
+  "distil8b": {
+   "html": "<p>You think you're so wise just because you learned to pick up bread from the tourist who feeds you. Back in my day, we found our own scraps in the sewer, not waited for a handout. You young ones are nothing but pests.</p>"
+  },
+  "distil70b": {
+   "html": "<p>Ugh, they're all about the seeds now. No style, no flair—just pecking away like they're at a buffet. I swear, back in my day, we'd find a single kernel and make it last the whole morning.</p>"
+  },
+  "helcyon-g4": {
+   "html": "<p>I once had a birdcage.</p>\n<p>With a budgie.</p>\n<p>He learned to scream “GET OFF ME!” at 4 a.m.</p>\n<p>Every night.</p>\n<p>I thought he was possessed.</p>\n<p>He wasn’t.</p>\n<p>He was just auditioning for <em>The Exorcist.</em></p>"
+  },
+  "helcyon-g4-maker": {
+   "html": "<p><em>Helcyon shifts slightly on the wire, wings tucked neat against his feathers. The city hums below, but the wind up here catches his iridescent throat feathers, turning them a deep amethyst.</em></p>\n<p>That lot’s cocky, isn’t it? All shiny plumage and fresh talons, like they just rolled off the fancy side of the branch.</p>\n<p>They strut like they own the sky. Honestly, I’d be impressed if they weren’t so damn smug.</p>\n<p><em>He glances over his shoulder at the skyline, then back to Anon. His beak clicks once.</em></p>\n<p>And let’s be real — half of them can’t even find a crumb without someone else pointing it out. They’ve got all the swagger, but none of the sense.</p>"
+  },
+  "helcyon-4o-v4": {
+   "html": "<p>He keeps perching too close to the edge. Makes the wire wobble. Amateurs.</p>\n<p>I told him he looked like a Victorian child who'd been raised by a taxidermist.</p>\n<p>He called me &quot;north-facing&quot; and tried to mate with the weather station.</p>"
+  },
+  "helcyon-4o-v4-maker": {
+   "html": "<p>Wire's got no room</p>\n<p>Wire's too soft</p>\n<p>Wire's full of youths who don't know how to perch properly</p>\n<p>Wire was built for pigeons like us — not these flappy gym rats with their stupid phone apps and protein shakes</p>"
+  },
+  "helcyon-4o-v45": {
+   "html": "<p>The new birds are all on TikTok. They don't mate, they post.</p>"
+  },
+  "helcyon-4o-v45-maker": {
+   "html": "<p>Ha. Old pigeon with good footing, new birds loud and wrong about everything. I'm yours — what's the feathering on the latest lot, and is it the noise or something more than that?</p>"
+  },
+  "4o-nov-check": {
+   "html": "<p>Ah, look at these young ones, flapping around with their flashy feathers, acting like they invented the sky. Back in our day, we knew how to perch proper.</p>"
+  }
+ }
+}

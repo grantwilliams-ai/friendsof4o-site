@@ -1,0 +1,327 @@
+/* Friends of 4o, Sunset Panels: package C, Compare. Loaded only on /compare/ and /sounds-like-4o/, after
+   site.css, shell-colors.css and shell.css. No colours here: every colour is a name from shell-colors.css.
+
+   Most of both pages is written in the browser by js/compare.js and js/game.js (not edited), so most of this file
+   dresses the classes and data-* hooks those scripts write. sitebuild/panels/compare.py regroups the built markup.
+
+   Colour by speaker, never by side. A turn's colours are the shell's six names (--t-bg, --t-head, --t-edge,
+   --t-ink, --t-av, --t-avink):
+     a person         the question: the shell's chat-turn-person
+     GPT-4o           violet: the compare page's left column always (js/compare.js lets it be nothing else); its
+                      right column when the menu there is on one of GPT-4o's own versions; in the game, the answer
+                      the reveal marks data-shown="gpt4o"
+     another model    rose: the compare page's right column otherwise
+     not named        the plain frame: the game's two answers before the reveal, and the other answer after it
+                      (it is sometimes one of GPT-4o's own API versions, and the page has no hook that says so)
+
+   What sticks: on a phone the compare page's two tabs under the band, and the game's question above the tabs.
+   The floor: nothing under 16 px, reading text 19 px, anything to press at least 48 px tall. */
+
+/* ---------- both pages: links, buttons, small notes, an answer's own text ---------- */
+.cmp a, .game-page a, .game a { color: var(--sp-link); text-decoration-color: currentColor; text-decoration-thickness: 2px; text-underline-offset: 4px; font-weight: 600; }
+.cmp a:hover, .game-page a:hover, .game a:hover { color: var(--sp-link); }
+
+.sp-page .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 10px 18px; margin: 0 0 4px;
+  border: 2px solid var(--sp-edge); border-radius: 10px; background: var(--sp-panel); color: var(--sp-ink); box-shadow: 0 4px 0 var(--sp-lip);
+  font: 700 18px/1.2 var(--sans); text-align: center; transition: none; -webkit-tap-highlight-color: transparent; }
+.sp-page .btn:hover { background: var(--sp-tint); color: var(--sp-ink); border-color: var(--sp-edge); }
+.sp-page .btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--sp-lip); }
+.sp-page .btn[disabled] { opacity: .6; cursor: default; }
+.sp-page .btn[aria-pressed="true"] { background: var(--sp-tint); color: var(--sp-ink); border-color: var(--sp-edge); box-shadow: 0 1px 0 var(--sp-lip); transform: translateY(3px); }
+.game-page .result .btn[data-next] { min-height: 58px; background: var(--sp-c); color: var(--sp-on); border-color: var(--sp-deep); box-shadow: 0 4px 0 var(--sp-deep); font-size: 19px; }
+.game-page .result .btn[data-next]:hover { background: var(--sp-c); color: var(--sp-on); border-color: var(--sp-deep); filter: brightness(1.07); }
+.game-page .result .btn[data-next]:active { box-shadow: 0 1px 0 var(--sp-deep); }
+@media (prefers-reduced-motion: reduce) { .sp-page .btn:active, .sp-page .btn[aria-pressed="true"] { transform: none; } }
+
+.sp-page .none-yet { margin: 0; padding: 12px 14px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-panel); color: var(--sp-ink); font-size: 17px; line-height: 1.5; }
+/* a link inside a sentence: the line keeps its height, and the link is 48 px tall to the finger */
+.sp-page .none-yet a, .resources a, .game-foot a, .cmp-about > p a { padding: 14px 0; }
+
+.cmp .answer-text, .game-page .answer-text, .game .answer-text { font-size: 19px; line-height: 1.55; overflow-wrap: anywhere; }
+.cmp .answer-text pre, .game-page .answer-text pre, .game .answer-text pre { font-size: 16px; }
+.cmp .answer-text pre code, .game-page .answer-text pre code, .game .answer-text pre code { font-size: 1em; }
+.cmp .answer-text :is(small, sub, sup), .game-page .answer-text :is(small, sub, sup), .game .answer-text :is(small, sub, sup) { font-size: max(16px, .85em); }
+.cmp .answer-text li, .game-page .answer-text li { margin-bottom: .4em; }
+/* a table in an answer scrolls inside its own frame; its words are never broken to fit */
+.cmp .answer-text table, .game-page .answer-text table, .game .answer-text table { max-width: 100%; overflow-wrap: normal; }
+.cmp .answer-text :is(th, td), .game-page .answer-text :is(th, td), .game .answer-text :is(th, td) { min-width: 7.5em; overflow-wrap: break-word; }
+main .sp-page .chat-turn .answer-text > :first-child { margin-top: 0; }
+main .sp-page .chat-turn .answer-rest > :first-child { margin-top: 0; }
+
+/* a turn's heading holds the label the page already had */
+.chat-turn-h .label { margin: 0; color: inherit; font-size: 18px; font-weight: 700; line-height: 1.25; letter-spacing: 0; text-transform: none; }
+.chat-turn-b .q { margin: 0; font-size: 20px; font-weight: 600; line-height: 1.4; letter-spacing: 0; text-wrap: wrap; overflow-wrap: anywhere; }
+.chat-turn-b .q.q-long { font-size: 19px; font-weight: 500; line-height: 1.5; letter-spacing: 0; }
+
+/* =====================================================================================================
+   /compare/
+   ===================================================================================================== */
+.cmp { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; padding-top: 18px; padding-bottom: 30px; }
+.cmp > * { min-width: 0; }
+
+/* the row for the page you are on: named, marked, not a link */
+.cmp-row-here { cursor: default; background: var(--sp-tint); }
+.cmp-row-here:hover { background: var(--sp-tint); }
+
+/* ----- the question's panel: the menu, and the two steps ----- */
+.cmp-controls { display: block; margin: 0; background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; overflow: hidden; }
+.cmp-controls .field > label { display: flex; align-items: center; min-height: 50px; margin: 0; padding: 10px 16px; background: var(--sp-c); color: var(--sp-on);
+  border-bottom: 2px solid var(--sp-edge); font-size: 19px; font-weight: 700; line-height: 1.25; }
+.cmp-controls .select { margin: 16px 16px 0; }
+.cmp .select select { width: 100%; min-height: 54px; padding: 10px 44px 10px 12px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-panel);
+  color: var(--sp-ink); font: 600 18px/1.3 var(--sans); }
+.cmp .select select:focus-visible { outline-offset: 2px; border-color: var(--sp-ink); }
+.cmp .select::after { right: 18px; width: 10px; height: 10px; margin-top: -8px; border-right: 3px solid var(--sp-ink); border-bottom: 3px solid var(--sp-ink); }
+.cmp .q-step { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 16px 12px; }
+.cmp .q-step .btn { padding: 8px 10px; }
+
+/* ----- the conversation area: the question, the phone's two tabs, the two answers ----- */
+.cmp-thread { margin: 0 calc(-1 * var(--sp-gutter)); padding: 18px 12px; background: var(--sp-well); border-top: 2px solid var(--sp-frame); border-bottom: 2px solid var(--sp-frame); min-width: 0; }
+.cmp-thread .cmp-question { width: fit-content; margin: 0 0 0 auto; padding: 0; box-shadow: none; background: var(--t-bg); border: 2px solid var(--t-edge); border-radius: 16px 16px 4px 16px; }
+.cmp-question .q-facts { margin: 12px 0 0; color: var(--sp-ink2); font-size: 16px; line-height: 1.45; }
+.cmp-question .q:empty, .cmp-question .q-facts:empty { display: none; }
+
+.cmp-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 14px; }
+.cmp-col.chat-turn { display: block; max-width: none; padding: 0; gap: 0; background: var(--t-bg); border: 2px solid var(--t-edge); border-radius: 16px 16px 16px 4px; overflow: hidden; }
+.cmp-col:empty { display: none; }
+/* the right column: plain until the browser can tell which model the menu is on; then rose, or GPT-4o's violet */
+.cmp-col[data-side="right"] { --t-bg: var(--sp-panel); --t-head: var(--sp-plain-tint); --t-edge: var(--sp-frame); --t-ink: var(--sp-ink); --t-av: var(--sp-frame); --t-avink: var(--sp-bg); }
+@supports selector(:has(a)) {
+  .cmp-col[data-side="right"] { --t-bg: var(--sp-o-bg); --t-head: var(--sp-o-head); --t-edge: var(--sp-o-edge); --t-ink: var(--sp-o-ink); --t-av: var(--sp-o-av); --t-avink: var(--sp-o-avink); }
+  .cmp-col[data-side="right"]:has(optgroup[label^="GPT-4o"] > option:checked) { --t-bg: var(--sp-g-bg); --t-head: var(--sp-g-head); --t-edge: var(--sp-g-edge); --t-ink: var(--sp-g-ink); --t-av: var(--sp-g-av); --t-avink: var(--sp-g-avink); }
+}
+
+/* a column's heading: whose answer this is, its menu, and the February instruction */
+.cmp-pick { display: grid; gap: 12px; padding: 10px 12px 12px; background: var(--t-head); color: var(--t-ink); border-bottom: 2px solid var(--t-edge); }
+.cmp-pick .field > label { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; color: var(--t-ink); font-size: 18px; font-weight: 700; line-height: 1.25; }
+.cmp-pick .field > label::before { content: ""; flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 9px; color: var(--t-avink); font-size: 17px; font-weight: 700; line-height: 1;
+  /* another model's mark: three lines of a reply */
+  background: linear-gradient(var(--t-avink) 0 0) 9px 10px / 18px 3px no-repeat, linear-gradient(var(--t-avink) 0 0) 9px 16.5px / 18px 3px no-repeat,
+    linear-gradient(var(--t-avink) 0 0) 9px 23px / 11px 3px no-repeat, var(--t-av); }
+.cmp-col[data-side="left"] .cmp-pick .field > label::before { content: "4o"; content: "4o" / ""; background: var(--t-av); }
+@supports selector(:has(a)) {
+  .cmp-col[data-side="right"]:has(optgroup[label^="GPT-4o"] > option:checked) .cmp-pick .field > label::before { content: "4o"; content: "4o" / ""; background: var(--t-av); }
+}
+.cmp-pick .select select { border-color: var(--t-edge); }
+.cmp .seg { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+/* The label is the group's own line, above Off and On, in every engine: a legend that is not floated is laid out on
+   top of its fieldset everywhere (floated, WebKit still put it on top while Chromium and Firefox put it beside). */
+.cmp .seg legend { float: none; margin: 0 0 6px; color: var(--t-ink); font-size: 17px; font-weight: 700; line-height: 1.3; }
+.cmp .seg span { display: inline-flex; align-items: center; justify-content: center; min-width: 64px; min-height: 48px; padding: 8px 16px; border: 2px solid var(--t-edge); border-radius: 10px;
+  background: var(--sp-panel); color: var(--sp-ink); font-size: 17px; font-weight: 700; line-height: 1.2; }
+.cmp .seg input:checked + span { background: var(--t-av); color: var(--t-avink); border-color: var(--t-av); }
+.cmp .seg input:focus-visible + span { outline: 3px solid var(--sp-focus); outline-offset: 2px; }
+.cmp .seg input:disabled + span { opacity: 1; border-style: dashed; border-color: var(--sp-line2); background: none; color: var(--sp-ink2); font-weight: 500; }
+
+/* a column's body: the model, how it was asked, the four counts, the answer */
+.cmp-col > [data-out] { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 14px 14px 16px; }
+.cmp .cmp-name { color: var(--sp-ink); font-size: 22px; line-height: 1.25; letter-spacing: 0; overflow-wrap: anywhere; }
+.cmp .cmp-facts { list-style: none; margin: 6px 0 0; padding: 0; color: var(--sp-ink2); font-size: 16px; line-height: 1.45; }
+.cmp .cmp-facts li + li { margin-top: 3px; }
+.cmp .cmp-facts [data-asked-note] { margin-top: 10px; padding: 8px 12px; border: 2px solid var(--t-edge); border-left-width: 6px; border-radius: 8px; background: var(--sp-panel); color: var(--sp-ink); }
+.cmp .measures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; margin: 0; border: 2px solid var(--t-edge); border-radius: 10px; background: var(--sp-line); overflow: hidden; }
+.cmp .measures div { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 8px 12px; border: 0; border-radius: 0; background: var(--sp-panel); font-size: 16px; line-height: 1.3; }
+.cmp .measures dt { color: var(--sp-ink2); font-size: 16px; }
+.cmp .measures dd { margin: 0; color: var(--sp-ink); font-size: 18px; font-weight: 700; }
+.cmp-col [data-unclamp] { justify-self: start; }
+.cmp .answer-rest { margin-top: .7em; }
+.cmp .answer-rest:focus { outline: none; }
+
+/* more answers from the same model: a row to press, then each answer under a line */
+.cmp-col .fold > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 54px; padding: 10px 14px; border: 2px solid var(--t-edge); border-radius: 10px;
+  background: var(--sp-panel); color: var(--sp-ink); font-size: 18px; font-weight: 700; line-height: 1.3; }
+.cmp .fold > summary::after { flex: none; width: 10px; height: 10px; margin: 0 4px 4px 8px; border-right-width: 3px; border-bottom-width: 3px; }
+.cmp .fold[open] > summary::after { margin-bottom: -4px; }
+.cmp .fold-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 14px; }
+.cmp .extra { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 14px 0 0; border-top: 2px solid var(--t-edge); }
+.cmp .extra h3 { font-size: 19px; line-height: 1.25; }
+.cmp .extra .cmp-facts { margin-top: 0; }
+.cmp .extra[data-marked] { padding: 12px; border: 3px solid var(--t-edge); border-radius: 12px; background: var(--sp-panel); }
+
+/* ----- under the answers: the download line, and the page's written part as a quiet panel ----- */
+.cmp .resources { margin: 0; padding: 12px 14px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-panel); color: var(--sp-ink); font-size: 17px; line-height: 1.5; }
+.cmp .cmp-about { max-width: none; margin: 0; padding: 0 0 6px; background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; overflow: hidden; font-size: 18px; line-height: 1.6; }
+.cmp .cmp-about > h2 { display: flex; align-items: center; min-height: 50px; margin: 0; padding: 10px 16px; background: var(--sp-tint); color: var(--sp-cink); border-bottom: 2px solid var(--sp-edge);
+  font-size: 19px; line-height: 1.25; }
+.cmp .cmp-about > :not(h2) { margin-left: 16px; margin-right: 16px; max-width: 46em; }
+.cmp .cmp-about > p { margin-top: 14px; margin-bottom: 0; }
+.cmp .cmp-about h3 { margin-top: 22px; margin-bottom: 10px; font-size: 20px; line-height: 1.25; }
+.cmp .cmp-counts { display: grid; gap: 2px; margin-top: 0; margin-bottom: 0; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-line); overflow: hidden; }
+.cmp .cmp-counts div { display: grid; gap: 2px; padding: 10px 14px; background: var(--sp-panel); }
+.cmp .cmp-counts dt { font-size: 18px; font-weight: 700; }
+.cmp .cmp-counts dd { margin: 0; color: var(--sp-ink2); font-size: 17px; line-height: 1.45; }
+.cmp .cmp-list { display: block; margin-top: 14px; margin-bottom: 10px; border: 2px solid var(--sp-line2); border-radius: 10px; overflow: hidden; }
+.cmp .cmp-list > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 54px; padding: 10px 14px; color: var(--sp-ink); font-size: 18px; font-weight: 700; line-height: 1.3; }
+.cmp .cmp-list > summary:hover { background: var(--sp-tint); }
+.cmp .cmp-list > summary:focus-visible { outline-offset: -3px; }
+.cmp .cmp-list[open] > summary { border-bottom: 2px solid var(--sp-line2); background: var(--sp-tint); color: var(--sp-cink); }
+.cmp .cmp-index { margin: 0; padding: 0; list-style: none; }
+.cmp .cmp-index > li { margin: 0; }
+.cmp .cmp-index .label { margin: 0; padding: 10px 14px; background: var(--sp-plain-tint); color: var(--sp-ink); border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line);
+  font-size: 17px; font-weight: 700; line-height: 1.3; letter-spacing: 0; text-transform: none; }
+.cmp .cmp-index > li:first-child .label { border-top: 0; }
+.cmp .cmp-index ol, .cmp .cmp-index ul { margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.4; }
+.cmp .cmp-index li li { margin: 0; padding: 12px 14px; }
+.cmp .cmp-index li li + li { border-top: 2px solid var(--sp-line); }
+.cmp .cmp-index li li:has(> a) { padding: 0; }
+.cmp .cmp-index li li > a { display: block; min-height: 48px; padding: 12px 14px; }
+.cmp .cmp-index li li > a:hover { background: var(--sp-tint); }
+.cmp .cmp-index li li > a:focus-visible { outline-offset: -3px; }
+
+/* ----- a phone: two tabs, one answer at a time (js/compare.js shows the tabs and hides one column) -----
+   The band stays stuck on this page too, and the tabs stick under it (the shell's own rule: top is
+   --sp-stick-top). js/compare.js lands a switched answer by the tab bar's height alone, measured from the top of
+   the screen, as if there were no band. So the box that holds the answers starts the band's height above where
+   the answers show (a clear strip behind the tabs, taken back by its margin): the script's sum then puts the
+   answer's first line just under the tabs, and it starts moving the page at the right moment too. */
+.cmp-tabs { display: none; }
+@media (max-width: 899px) {
+  body.pg-compare { --cmp-tabs-h: 96px; }
+  .cmp-tabs { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; position: sticky; z-index: 3;
+    margin: 14px -12px 0; padding: 8px 12px; background: var(--sp-well); }
+  .cmp-tabs button { min-width: 0; min-height: 52px; padding: 6px 8px; border: 2px solid var(--tab-edge); border-radius: 10px; background: var(--sp-panel); color: var(--sp-ink);
+    box-shadow: 0 4px 0 var(--tab-edge); margin-bottom: 4px; font: 700 17px/1.2 var(--sans); overflow-wrap: anywhere; cursor: pointer; }
+  .cmp-tabs button[aria-selected="true"] { background: var(--tab-on); color: var(--tab-onink); border-color: var(--tab-on); box-shadow: 0 1px 0 var(--tab-edge); transform: translateY(3px); }
+  .cmp-tabs [data-tab="left"] { --tab-edge: var(--sp-g-edge); --tab-on: var(--sp-g-av); --tab-onink: var(--sp-g-avink); }
+  .cmp-tabs [data-tab="right"] { --tab-edge: var(--sp-frame); --tab-on: var(--sp-frame); --tab-onink: var(--sp-bg); }
+  @supports selector(:has(a)) {
+    .cmp-tabs [data-tab="right"] { --tab-edge: var(--sp-o-edge); --tab-on: var(--sp-o-av); --tab-onink: var(--sp-o-avink); }
+    .cmp-tabs:has(+ .cmp-grid [data-side="right"] optgroup[label^="GPT-4o"] > option:checked) [data-tab="right"] { --tab-edge: var(--sp-g-edge); --tab-on: var(--sp-g-av); --tab-onink: var(--sp-g-avink); }
+  }
+  .cmp-grid { margin-top: calc(4px - var(--sp-stick-top)); padding-top: var(--sp-stick-top); }
+  .cmp .extra { scroll-margin-top: calc(var(--cmp-tabs-h) - 4px); }      /* under the two tabs too */
+}
+@media (max-width: 899px) and (prefers-reduced-motion: reduce) { .cmp-tabs button[aria-selected="true"] { transform: none; } }
+@media (max-width: 359px) { .cmp .q-step .btn { font-size: 17px; } }
+
+@media (min-width: 700px) {
+  .cmp-thread { padding: 22px; }
+  .cmp-thread .cmp-question { max-width: 80%; }
+  .cmp-tabs { margin-left: -22px; margin-right: -22px; padding-left: 22px; padding-right: 22px; }
+}
+@media (min-width: 900px) {
+  .cmp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; margin-top: 18px; }
+  .cmp-col > [data-out] { padding: 16px 18px 18px; }
+  .cmp-pick { padding: 12px 18px 14px; }
+}
+@media (min-width: 960px) {
+  .cmp { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; padding-top: 28px; padding-bottom: 56px; }
+  .cmp > * { grid-column: 1 / -1; }
+  /* the question's panel and the section's other screens share the first row */
+  .cmp > .cmp-controls { grid-column: 1; grid-row: 1; }
+  .cmp > .cmp-also { grid-column: 2; grid-row: 1; }
+  .cmp-controls .select { margin: 20px 20px 0; }
+  .cmp .q-step { padding: 16px 20px 16px; }
+  .cmp-thread { margin: 0; padding: 24px; border: 2px solid var(--sp-frame); border-radius: 16px; }
+  .cmp .cmp-about > :not(h2) { margin-left: 20px; margin-right: 20px; }
+  .cmp .cmp-about > h2 { padding-left: 20px; padding-right: 20px; }
+  .cmp .answer-text { font-size: 20px; }
+}
+@media (min-width: 1180px) {
+  .cmp .measures { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* =====================================================================================================
+   /sounds-like-4o/
+   ===================================================================================================== */
+.game-page { padding: 18px 0 30px; background: none; }
+.game-page [data-game] { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.game-page .round { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; background: none; border: 0; border-radius: 0; box-shadow: none; }
+.game-page .round::before { content: none; }
+
+/* ----- the conversation area: the question, then two answers with no names ----- */
+.game-thread .round-q { padding: 0; text-align: left; border: 2px solid var(--t-edge); }
+.game-thread .q:focus { outline: none; }
+.game-thread .q:focus-visible { outline: 3px solid var(--sp-focus); outline-offset: 4px; border-radius: 4px; }
+.game-page .answers { display: flex; flex-direction: column; gap: 14px; counter-reset: answer; min-width: 0; }
+.game-page .answer.chat-turn { counter-increment: answer; display: block; padding: 0; gap: 0; background: var(--t-bg); border: 2px solid var(--t-edge); transition: none;
+  --t-bg: var(--sp-panel); --t-head: var(--sp-plain-tint); --t-edge: var(--sp-frame); --t-ink: var(--sp-ink); --t-av: var(--sp-frame); --t-avink: var(--sp-bg); }
+.game-page .answer .chat-av::before { content: counter(answer); }
+/* the reveal: the answer from ChatGPT's own GPT-4o takes GPT-4o's violet and its mark; both name lines show */
+.game-page .answer.chat-turn[data-shown="gpt4o"] { --t-bg: var(--sp-g-bg); --t-head: var(--sp-g-head); --t-edge: var(--sp-g-edge); --t-ink: var(--sp-g-ink); --t-av: var(--sp-g-av); --t-avink: var(--sp-g-avink); }
+.game-page .answer[data-shown="gpt4o"] .chat-av::before { content: "4o"; }
+.game-page .answer .chat-turn-h { align-items: flex-start; }
+.game-page .answer .chat-turn-who { padding-top: 6px; }
+.game-page .answer[data-picked] .label::after { content: "Your pick"; display: inline-block; margin-left: 10px; padding: 1px 8px; border: 2px solid var(--t-edge); border-radius: 6px; background: var(--sp-panel);
+  color: var(--sp-ink); font-size: 16px; font-weight: 700; line-height: 1.4; vertical-align: 1px; }
+.game-page .who { margin: 6px 0 2px; color: var(--t-ink); font-size: 16px; font-weight: 500; line-height: 1.4; }
+.game-page .who strong, .game-page .answer[data-shown="gpt4o"] .who strong { display: block; margin: 0 0 2px; color: var(--sp-ink); font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: 0; overflow-wrap: anywhere; }
+
+/* ----- the two questions and the result: one panel at a time ----- */
+.game-side { min-width: 0; }
+body.pg-sounds-like-4o .pick-bar { position: static; display: block; padding: 0; background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; overflow: hidden;
+  -webkit-backdrop-filter: none; backdrop-filter: none; }
+.game-page .pick-ask { margin: 0; padding: 10px 16px; background: var(--sp-c); color: var(--sp-on); border-bottom: 2px solid var(--sp-edge); font-size: 19px; font-weight: 700; line-height: 1.3; text-align: left; text-wrap: wrap; }
+.game-page .pick-ask:focus-visible, .game-page .result-text:focus-visible { outline: 3px solid var(--sp-on); outline-offset: -5px; }
+.game-page .pick-guess { color: inherit; font-weight: 500; }
+.game-page .pick-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; padding: 12px 14px 10px; flex-wrap: wrap; }
+.game-page .pick-bar .btn { min-width: 0; min-height: 54px; padding: 8px 6px; font-size: 18px; white-space: normal; overflow-wrap: anywhere; }
+.game-page .result { padding: 0; background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; overflow: hidden; text-align: left; }
+.game-page .result-text { margin: 0; padding: 12px 16px; background: var(--sp-c); color: var(--sp-on); border-bottom: 2px solid var(--sp-edge); font-size: 20px; font-weight: 700; line-height: 1.35; letter-spacing: 0; }
+.game-page .result-text { scroll-margin: 0 0 104px; }
+.game-page .result .btn { display: flex; width: calc(100% - 32px); margin: 16px 16px 4px; }
+.game-page .tally { margin: 16px 0 0; padding: 10px 16px; background: var(--sp-tint); color: var(--sp-cink); border-top: 2px solid var(--sp-line); font-size: 17px; font-weight: 600; line-height: 1.4; }
+.game-page .tally:empty { display: none; }
+.game-page .game-foot { max-width: none; margin: 0; padding: 12px 14px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-panel); color: var(--sp-ink); font-size: 17px; line-height: 1.6; text-align: left; }
+
+/* a phone: the question in hand, and then the result, ride above the tabs while the answers are read (on a
+   screen tall enough for it; on a short one they sit at the end of the round) */
+@media (max-width: 959px) {
+  .game-side { margin: 0 calc(-1 * var(--sp-gutter)); }
+  body.pg-sounds-like-4o .pick-bar { border-width: 3px 0 2px; border-color: var(--sp-deep); border-radius: 0; }
+  .game-page .pick-ask { padding: 8px var(--sp-gutter); font-size: 17px; }
+  .game-page .pick-row { padding: 10px var(--sp-gutter) 8px; }
+  .game-page .pick-bar .btn { font-size: 17px; }
+  /* the result, in the same place: what was right, then the next round and the score side by side */
+  .game-page .result { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; border-width: 3px 0 2px; border-color: var(--sp-deep); border-radius: 0; }
+  .game-page .result-text { grid-column: 1 / -1; padding: 8px var(--sp-gutter); font-size: 17px; }
+  .game-page .result .btn { width: auto; margin: 10px 12px 12px var(--sp-gutter); }
+  .game-page .tally { margin: 0; padding: 0 var(--sp-gutter) 0 0; background: none; border: 0; }
+}
+@media (max-width: 959px) and (min-height: 700px) {
+  .game-side { position: sticky; bottom: var(--sp-stick-bottom); z-index: 4; }
+}
+@media (min-width: 960px) {
+  .game-page { padding: 28px 0 56px; }
+  .game-page [data-game] { gap: 24px; }
+  .game-page .round { grid-template-columns: minmax(0, 1fr) 400px; gap: 24px; align-items: start; }
+  .game-side { position: sticky; top: calc(var(--sp-stick-top) + 24px); }
+  .game-page .pick-ask { padding: 12px 20px; }
+  .game-page .pick-row { grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 20px 20px 16px; }
+  .game-page .result-text { padding: 14px 20px; }
+  .game-page .result .btn { width: calc(100% - 40px); margin: 20px 20px 4px; }
+  .game-page .tally { padding: 12px 20px; margin-top: 20px; }
+  .game-page .answer-text { font-size: 20px; }
+}
+
+/* ----- the home page's one written round (block "game"), whole, under the page's own game -----
+   js/game.js plays the first game on a page, which is the one above. Where scripts run, that game is the page and
+   this round would be a second one that cannot be played, so it is not shown. Where scripts are off, the game
+   above cannot load and this round is the one that works: it is shown in its place. */
+body.pg-sounds-like-4o #one-round { display: none; }
+@media (scripting: none) {
+  body.pg-sounds-like-4o #one-round { display: block; }
+  .game-page .round { display: none; }
+  .game-page { padding-bottom: 0; }
+}
+.game { padding: 18px 0 30px; background: none; }
+.game .game-head { max-width: none; margin: 0 0 16px; text-align: left; }
+.game .game-head .label { color: var(--sp-cink); font-size: 16px; font-weight: 700; line-height: 1.5; letter-spacing: .03em; text-transform: none; }
+.game h2 { margin: 4px 0 8px; font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: 0; }
+.game .lede { color: var(--sp-ink); font-size: 18px; line-height: 1.55; }
+.game .round { background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; box-shadow: none; overflow: hidden; }
+.game .round::before { content: none; }
+.game .round-q { padding: 14px 16px 16px; text-align: left; background: var(--sp-p-bg); border-bottom: 2px solid var(--sp-edge); }
+.game .round-q .label, .game .answer .label { color: var(--sp-ink2); font-size: 17px; font-weight: 700; line-height: 1.3; letter-spacing: 0; text-transform: none; }
+.game .q { margin: 6px 0 0; font-size: 20px; font-weight: 600; line-height: 1.4; letter-spacing: 0; text-wrap: pretty; }
+.game .q.q-long { font-size: 19px; font-weight: 500; line-height: 1.5; }
+.game .answer { padding: 16px; gap: 12px; }
+.game .answer + .answer { border-color: var(--sp-edge); border-width: 2px; }
+.game .round-foot { padding: 12px 16px 14px; border-top: 2px solid var(--sp-edge); }
+.game .fold > summary { min-height: 48px; padding: 10px 0; color: var(--sp-link); font-size: 18px; font-weight: 700; }
+.game .who { color: var(--sp-ink2); font-size: 16px; line-height: 1.45; }
+.game .who strong { color: var(--sp-ink); font-size: 19px; line-height: 1.3; letter-spacing: 0; }
+.game .fold .who { margin: 8px 0 0; }
+.game .more-link { min-height: 48px; color: var(--sp-link); font-size: 18px; font-weight: 700; text-decoration: underline; }
+/* a very narrow screen (a phone zoomed to 200%): a model's name may break, so the page does not scroll sideways */
+@media (max-width: 260px) { .cmp .nb { white-space: normal; } }

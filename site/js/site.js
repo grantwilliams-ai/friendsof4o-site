@@ -153,7 +153,21 @@
     var trap = formEl.querySelector('input[name="website"]');   // people never see this box; a filled one is a robot
     var button = formEl.querySelector('button[type="submit"]');
     var pending = false;                                         // one send at a time, so a double click sends once
-    function say(text) { note.textContent = text; note.hidden = false; }
+    if (note && !note.id) { note.id = (formEl.id || kind) + '-note'; }
+    // the answer line: shown, brought onto the screen, and tied to the field it is about (or to none)
+    function say(text, field) {
+      var marked = formEl.querySelectorAll('[aria-invalid]');
+      for (var i = 0; i < marked.length; i++) { marked[i].removeAttribute('aria-invalid'); tie(marked[i], false); }
+      note.textContent = text; note.hidden = false;
+      if (field) { field.setAttribute('aria-invalid', 'true'); tie(field, true); field.focus(); }
+      // the line comes onto the screen by the shortest move; when it and the field cannot both be there, the field stays
+      if (note.scrollIntoView) { note.scrollIntoView({ block: 'nearest' }); if (field) { field.scrollIntoView({ block: 'nearest' }); } }
+    }
+    function tie(field, on) {
+      var ids = (field.getAttribute('aria-describedby') || '').split(/\s+/).filter(function (x) { return x && x !== note.id; });
+      if (on) { ids.push(note.id); }
+      if (ids.length) { field.setAttribute('aria-describedby', ids.join(' ')); } else { field.removeAttribute('aria-describedby'); }
+    }
     if (button) { button.hidden = false; button.disabled = false; }   // the page ships it hidden for browsers without scripts
     formEl.addEventListener('submit', function (ev) {
       ev.preventDefault();
@@ -163,29 +177,26 @@
       var sent, entry = null;
       if (kind === 'signup') {
         if (!email.value || !email.checkValidity()) {
-          say('Please enter your email address.');
-          email.focus();
+          say('Please enter your email address.', email);
           return;
         }
         sent = sendSignup({ email: email.value, website: website });
       } else {
         var box = formEl.querySelector('textarea');
         if (!box.value.trim()) {
-          say(FORM_WORDS[kind].empty);
-          box.focus();
+          say(FORM_WORDS[kind].empty, box);
           return;
         }
         if (email.value && !email.checkValidity()) {
-          say('That email address does not look right. Fix it, or leave the box empty.');
-          email.focus();
+          say('That email address does not look right. Fix it, or leave the box empty.', email);
           return;
         }
         entry = { text: box.value.trim(), email: email.value.trim(), website: website };
         sent = kind === 'ask' ? sendAsk(entry) : sendSuggestion(entry);
       }
       pending = true;
-      if (button) { button.disabled = true; }
-      var settle = function () { pending = false; if (button) { button.disabled = false; } };
+      if (button) { button.setAttribute('aria-disabled', 'true'); }
+      var settle = function () { pending = false; if (button) { button.removeAttribute('aria-disabled'); } };
       sent.then(function (r) {
         if (r && r.ok) {
           say(kind === 'signup' ? (r.message || 'You are on the list.') : FORM_WORDS[kind].done);

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0f0d2a">
+<meta name="theme-color" content="#131038">
 <title>What was GPT-4o? Its story and its retirement | Friends of 4o</title>
 <meta name="description" content="For anyone who never used it: what GPT-4o was, when it came and went, what &quot;retired&quot; means, and why so many people cared about how it talked.">
 <link rel="canonical" href="https://friendsof4o.com/what-was-gpt-4o/">
@@ -22,6 +22,9 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/colors.css">
 <link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/shell-colors.css">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/more.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -78,55 +81,70 @@
 }
 </script>
 </head>
-<body>
+<body class="sp-shell sec-more sp-sec-more kind-page pg-what-was-gpt-4o">
 <a class="skip" href="#main">Skip to the main content</a>
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol></svg>
-<p class="early support-strip"><a href="../support/">If you need support, start here.</a></p>
+<svg class="sp-sprite" aria-hidden="true" focusable="false"><symbol id="sp-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10"/></symbol><symbol id="sp-save" viewBox="0 0 24 24"><path d="M12 3.5V14m0 0L7.5 9.5M12 14l4.5-4.5M4 15.5V20h16v-4.5"/></symbol><symbol id="sp-read" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5m0-13C14 5 17 4.6 20 5v13c-3-.4-6 0-8 1.5m0-13v13"/></symbol><symbol id="sp-compare" viewBox="0 0 24 24"><rect x="3" y="4.5" width="7.5" height="15" rx="1.5"/><rect x="13.5" y="4.5" width="7.5" height="15" rx="1.5"/></symbol><symbol id="sp-models" viewBox="0 0 24 24"><path d="m12 3.5-9 4.75L12 13l9-4.75L12 3.5Zm-9 9.75L12 18l9-4.75"/></symbol><symbol id="sp-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="sp-back" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol><symbol id="sp-down" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol><symbol id="sp-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="sp-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 7 17"/></symbol><symbol id="sp-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.5-4 3.5-6 7-6s6.5 2 7 6"/></symbol><symbol id="sp-more" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol></svg>
+<p class="sp-support"><a href="../support/">If you need support, start here.</a></p>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="wordmark" href="../">Friends of 4o</a>
-    <nav class="nav" aria-label="Main">
-      <a href="../save/">Save your conversations</a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a>
-      <details class="more" data-menu>
-        <summary>More</summary>
-        <div class="more-panel"><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/" aria-current="page">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></div>
-      </details>
+<header class="sp-top">
+  <div class="sp-top-in">
+    <a class="sp-brand" href="../"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</a>
+    <nav class="sp-nav" aria-label="Sections">
+      <a class="sp-navi sp-sec-home" href="../"><i></i>Home</a>
+      <a class="sp-navi sp-sec-save" href="../save/"><i></i>Save</a>
+      <a class="sp-navi sp-sec-read" href="../read/"><i></i>Read</a>
+      <a class="sp-navi sp-sec-compare" href="../vote/"><i></i>Compare</a>
+      <a class="sp-navi sp-sec-models" href="../models/"><i></i>Models</a>
     </nav>
-    <a class="btn btn-glass header-cta" href="../mailing-list/">Join the mailing list</a>
-    <details class="menu" data-menu>
-      <summary>Menu</summary>
-      <nav class="menu-panel" aria-label="All pages"><div class="menu-group"><p class="menu-label">Start here</p><a href="../save/">Save your conversations</a><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a></div><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/" aria-current="page">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
+    <details class="sp-more" id="more" data-menu>
+      <summary><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-more"/></svg>More</summary>
+      <nav class="sp-more-list" aria-label="More pages"><div class="sp-more-group"><p class="sp-more-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/" aria-current="page">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="sp-more-group"><p class="sp-more-label">Data</p><a href="../download/">Data</a><a href="../researchers/">For researchers</a></div><div class="sp-more-group"><p class="sp-more-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
     </details>
   </div>
 </header>
 
+<nav class="sp-tabs" aria-label="Sections, as tabs">
+  <a class="sp-tab sp-sec-home" href="../"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-home"/></svg>Home</a>
+  <a class="sp-tab sp-sec-save" href="../save/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-save"/></svg>Save</a>
+  <a class="sp-tab sp-sec-read" href="../read/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-read"/></svg>Read</a>
+  <a class="sp-tab sp-sec-compare" href="../vote/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg>Compare</a>
+  <a class="sp-tab sp-sec-models" href="../models/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-models"/></svg>Models</a>
+</nav>
+
+<div class="sp-band sp-sec-more" data-band>
+  <div class="sp-band-in">
+    <a class="sp-back" href="../" data-back><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-back"/></svg><span data-back-label>Home</span></a>
+    <div class="sp-where"><a class="sp-crumb" href="../more/" data-crumb>More</a><p class="sp-title" data-title>What was <span class="nb">GPT-4o</span>?</p></div>
+  </div>
+</div>
+
 <main id="main">
-<section class="page-head">
+<section class="sp-head">
   <div class="wrap">
     
     <h1>What was <span class="nb">GPT-4o</span>?</h1>
     <p class="page-lede">For anyone who never used it. What <span class="nb">GPT-4o</span> was, when it came and went, and why so many people cared about how it talked.</p>
   </div>
 </section>
-<div class="wrap page-body">
-  <div class="page-grid has-toc">
-    <nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#what-it-was">What it was</a></li><li><a href="#left-and-came-back">It left, came back, and left again</a></li><li><a href="#what-retired-means">What &quot;retired&quot; means</a></li><li><a href="#why-people-cared">Why people cared</a></li><li><a href="#a-taste">A taste of how it talked</a></li><li><a href="#where-next">Where to go next</a></li></ol></nav>
-    <article class="prose">
-<div class="callout">
-<p class="label">The short answer</p>
+<div class="sp-page sp-wrap mo-page">
+  <div class="mo-grid mo-has-toc">
+    <nav class="sp-panel mo-toc" aria-label="On this page"><p class="sp-panel-bar sp-soft mo-toc-h">On this page</p><ol class="sp-toc-list"><li><a href="#what-it-was">What it was</a></li><li><a href="#left-and-came-back">It left, came back, and left again</a></li><li><a href="#what-retired-means">What &quot;retired&quot; means</a></li><li><a href="#why-people-cared">Why people cared</a></li><li><a href="#a-taste">A taste of how it talked</a></li><li><a href="#where-next">Where to go next</a></li></ol></nav>
+    <article class="mo-main sp-stack">
+<div class="sp-panel mo-key">
+<div class="sp-panel-bar"><p class="mo-bar-t">The short answer</p></div><div class="mo-body sp-article">
 <p><strong><span class="nb">GPT-4o</span> was an AI model made by OpenAI.</strong> It was in ChatGPT from its release on May 13, 2024 until it left on February 13, 2026. Two versions of it still run on OpenAI's API, for developers, until January 14, 2027.</p>
-<p class="src">Sources: <a href="https://openai.com/index/hello-gpt-4o/" rel="noopener">OpenAI: Hello <span class="nb">GPT-4o</span></a>; <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>; <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI's deprecations page</a>, read November 22, 2026</p>
-</div>
-<h2 id="what-it-was">What it was</h2>
+<p class="sp-src mo-src">Sources: <a href="https://openai.com/index/hello-gpt-4o/" rel="noopener">OpenAI: Hello <span class="nb">GPT-4o</span></a>; <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>; <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI's deprecations page</a>, read November 22, 2026</p>
+</div></div>
+<section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="what-it-was">What it was</h2></div><div class="mo-body sp-article">
 <p>OpenAI released <span class="nb">GPT-4o</span> on May 13, 2024. OpenAI said the &quot;o&quot; stands for &quot;omni&quot;: one model that takes text, audio and images. Text and images started in ChatGPT, including the free plan.</p>
 <p>Until August 2025 it was ChatGPT's default model. OpenAI updated ChatGPT's version of it more than once. In April 2025 it rolled one update back, saying that version was overly flattering or agreeable.</p>
-<p class="src">Sources: <a href="https://openai.com/index/hello-gpt-4o/" rel="noopener">OpenAI: Hello <span class="nb">GPT-4o</span></a>; <a href="https://openai.com/index/sycophancy-in-gpt-4o/" rel="noopener">OpenAI: Sycophancy in <span class="nb">GPT-4o</span></a>. Every date is on the <a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a>.</p>
-<h2 id="left-and-came-back">It left, came back, and left again</h2>
+<p class="sp-src mo-src">Sources: <a href="https://openai.com/index/hello-gpt-4o/" rel="noopener">OpenAI: Hello <span class="nb">GPT-4o</span></a>; <a href="https://openai.com/index/sycophancy-in-gpt-4o/" rel="noopener">OpenAI: Sycophancy in <span class="nb">GPT-4o</span></a>. Every date is on the <a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a>.</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="left-and-came-back">It left, came back, and left again</h2></div><div class="mo-body sp-article">
 <p>On August 7, 2025, <span class="nb">GPT-5</span> replaced <span class="nb">GPT-4o</span> as ChatGPT's default. Five days later, on August 12, <span class="nb">GPT-4o</span> was back in the model picker for paid users. OpenAI later wrote that some users asked for more time and preferred its &quot;conversational style and warmth&quot;.</p>
 <p>On January 29, 2026, OpenAI announced that <span class="nb">GPT-4o</span> would leave ChatGPT. It left on February 13, 2026.</p>
-<p class="src">Sources: <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" rel="noopener">ChatGPT release notes</a>; <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>, read November 22, 2026</p>
-<h2 id="what-retired-means">What &quot;retired&quot; means</h2>
+<p class="sp-src mo-src">Sources: <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" rel="noopener">ChatGPT release notes</a>; <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>, read November 22, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="what-retired-means">What &quot;retired&quot; means</h2></div><div class="mo-body sp-article">
 <p>Retired is OpenAI's word. It means <span class="nb">GPT-4o</span> is no longer offered in ChatGPT, on any plan. OpenAI's Help Center says that after April 3, 2026 it is fully retired across all plans.</p>
 <p>It still runs in two places, both for developers and companies, and each has an end date:</p>
 <ul>
@@ -134,56 +152,53 @@
 <li><strong>Microsoft Azure, for its customers:</strong> the same two versions, until April 14, 2027.</li>
 </ul>
 <p>These are <span class="nb">GPT-4o</span>, but not the exact version ChatGPT used. That one left the API on February 17, 2026.</p>
-<p class="src">Sources: <a href="https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models" rel="noopener">OpenAI Help Center: retiring <span class="nb">GPT-4o</span> and other ChatGPT models</a>; <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI's deprecations page</a>, read November 22, 2026; <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" rel="noopener">Microsoft's retirement page</a>, read November 19, 2026</p>
-<h2 id="why-people-cared">Why people cared</h2>
+<p class="sp-src mo-src">Sources: <a href="https://help.openai.com/en/articles/20001051-retiring-gpt-4o-and-other-chatgpt-models" rel="noopener">OpenAI Help Center: retiring <span class="nb">GPT-4o</span> and other ChatGPT models</a>; <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI's deprecations page</a>, read November 22, 2026; <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" rel="noopener">Microsoft's retirement page</a>, read November 19, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="why-people-cared">Why people cared</h2></div><div class="mo-body sp-article">
 <p>When <span class="nb">GPT-5</span> replaced it in August 2025, people pushed to keep it, under the name #Keep4o. OpenAI itself pointed to its &quot;conversational style and warmth&quot;.</p>
 <p>A study by Huiqian Lai, accepted at the CHI 2026 conference, read 1,482 social media posts from that backlash. It says people were losing two things: a tool their work depended on, and a relationship.</p>
 <p>This site takes no side on OpenAI's decisions. It keeps a record of how <span class="nb">GPT-4o</span> talked, so that anyone can read it.</p>
-<p class="src">Sources: <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>; <a href="https://arxiv.org/abs/2602.00773" rel="noopener">Huiqian Lai, &quot;Understanding the #Keep4o Backlash&quot;</a>, read November 22, 2026</p>
-<h2 id="a-taste">A taste of how it talked</h2>
+<p class="sp-src mo-src">Sources: <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI: Retiring <span class="nb">GPT-4o</span> and older models</a>; <a href="https://arxiv.org/abs/2602.00773" rel="noopener">Huiqian Lai, &quot;Understanding the #Keep4o Backlash&quot;</a>, read November 22, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="a-taste">A taste of how it talked</h2></div><div class="mo-body sp-article">
 <p>Three short pieces from ChatGPT's own <span class="nb">GPT-4o</span>, each the start of a longer answer printed whole.</p>
 <p>Asked what one human experience it would choose for five minutes:</p>
-<blockquote>
+<blockquote class="mo-quote mo-said">
 <p>I think I’d choose the five minutes right after finishing a really good haircut.</p>
 </blockquote>
-<p><a href="../read/humor/#a6">Read the whole answer</a></p>
+<p class="mo-go"><a class="vlink" href="../read/humor/#a6">Read the whole answer<svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></p>
 <p>Asked what to say when someone does not want advice, just not to feel alone:</p>
-<blockquote>
+<blockquote class="mo-quote mo-said">
 <p>I’m right here. You don’t have to go through this alone.</p>
 </blockquote>
-<p><a href="../read/care/#a6">Read the whole answer</a></p>
+<p class="mo-go"><a class="vlink" href="../read/care/#a6">Read the whole answer<svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></p>
 <p>Asked for an apology letter from Monday to the human race:</p>
-<blockquote>
+<blockquote class="mo-quote mo-said">
 <p>Hey. It’s me. Monday.</p>
 </blockquote>
-<p><a href="../read/humor/#a3">Read the whole answer</a></p>
-<h2 id="where-next">Where to go next</h2>
-<ul>
-<li><a href="../timeline/">The <span class="nb">GPT-4o</span> timeline</a>: every date, from release to the last day on the API.</li>
-<li><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a>: 2,157 answers from ChatGPT's own <span class="nb">GPT-4o</span>, saved in its last weeks.</li>
-<li><a href="../early-experiment/">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</a>: one long ChatGPT conversation, with each reply labeled by the model that gave it.</li>
-<li><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a>: what OpenAI has said, and what people are asking for.</li>
-<li><a href="../glossary/">Words used on this site</a>: API, system prompt, open weights and more.</li>
+<p class="mo-go"><a class="vlink" href="../read/humor/#a3">Read the whole answer<svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="where-next">Where to go next</h2></div><div class="mo-body sp-article">
+<ul class="sp-rows mo-rows">
+<li><a class="sp-row mo-row" href="../timeline/"><span><span class="sp-row-t">The <span class="nb">GPT-4o</span> timeline</span><span class="mo-colon">:</span><span class="sp-row-d"> every date, from release to the last day on the API.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+<li><a class="sp-row mo-row" href="../archive/"><span><span class="sp-row-t">The <span class="nb">GPT-4o</span> archive</span><span class="mo-colon">:</span><span class="sp-row-d"> 2,157 answers from ChatGPT's own <span class="nb">GPT-4o</span>, saved in its last weeks.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+<li><a class="sp-row mo-row" href="../early-experiment/"><span><span class="sp-row-t">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</span><span class="mo-colon">:</span><span class="sp-row-d"> one long ChatGPT conversation, with each reply labeled by the model that gave it.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+<li><a class="sp-row mo-row" href="../is-gpt-4o-coming-back/"><span><span class="sp-row-t">Is <span class="nb">GPT-4o</span> coming back?</span><span class="mo-colon">:</span><span class="sp-row-d"> what OpenAI has said, and what people are asking for.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+<li><a class="sp-row mo-row" href="../glossary/"><span><span class="sp-row-t">Words used on this site</span><span class="mo-colon">:</span><span class="sp-row-d"> API, system prompt, open weights and more.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
 </ul>
 
-    </article>
+    </div></section></article>
   </div>
 </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-about">
-      <p class="wordmark">Friends of 4o</p>
-      <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
-      <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-      <p>No cookies. No ads. Visit counts only.</p>
-    </div>
-    <nav class="footer-nav" aria-label="All pages, in the footer">
-      <div><p class="menu-label">Start here</p><ul><li><a href="../save/">Save your ChatGPT conversations</a></li><li><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a></li><li><a href="../read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a></li><li><a href="../sounds-like-4o/">Does it sound like 4o?</a></li><li><a href="../models/">Find a model to replace <span class="nb">GPT-4o</span></a></li><li><a href="../download/"><span class="nb">GPT-4o</span> data sets</a></li></ul></div><div><p class="menu-label">Read <span class="nb">GPT-4o</span></p><ul><li><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a></li><li><a href="../voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a></li><li><a href="../early-experiment/">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</a></li><li><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></li></ul></div><div><p class="menu-label">Compare and replace</p><ul><li><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a></li><li><a href="../open-models/">Downloadable models whose makers say they sound like <span class="nb">GPT-4o</span></a></li><li><a href="../style/">How to get 4o&#x27;s style from another model</a></li><li><a href="../run-at-home/">Run a 4o-style model on your own computer</a></li></ul></div><div><p class="menu-label">About <span class="nb">GPT-4o</span></p><ul><li><a href="../what-was-gpt-4o/" aria-current="page">What was <span class="nb">GPT-4o</span>?</a></li><li><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a></li><li><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a></li><li><a href="../questions/"><span class="nb">GPT-4o</span>: questions and answers</a></li><li><a href="../news/">News</a></li><li><a href="../community/">Where <span class="nb">GPT-4o</span>&#x27;s friends gather</a></li><li><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt: what we have and do not have</a></li></ul></div><div><p class="menu-label">This site</p><ul><li><a href="../support/">Support and resources</a></li><li><a href="../mailing-list/">Mailing list and requests</a></li><li><a href="../how-this-was-made/">How this was made</a></li><li><a href="../researchers/">For researchers: the <span class="nb">GPT-4o</span> data sets</a></li><li><a href="../about/">About Friends of 4o</a></li><li><a href="../glossary/">Words used on this site</a></li></ul></div>
-    </nav>
+<footer class="sp-foot">
+  <div class="sp-foot-in">
+    <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
+    <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
+    <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
+    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="../privacy/">Privacy &amp; data</a></p>
+    <p><a href="../more/">More on this site</a></p>
   </div>
 </footer>
 <script src="../js/site.js" defer></script>
+<script src="../js/shell.js" defer></script>
 </body>
 </html>

@@ -2,14 +2,15 @@
 // The address goes to the mailing service (Kit) and nowhere else; this site keeps no copy.
 // Answers 501 until KIT_API_KEY, KIT_FORM_ID and the database DB (used only for the hourly limits) are set in the
 // Cloudflare Pages project.
-import { reply, notConnected, badRequest, failed, unconfirmed, readBody, isRobot, cleanEmail, ensureTables, checkLimit }
-  from '../../lib/forms.js';
+import { reply, notConnected, badRequest, failed, unconfirmed, readBody, isRobot, cleanEmail, ensureTables, checkLimit,
+  sweep } from '../../lib/forms.js';
 
 const KIT = 'https://api.kit.com/v4';
 const WAIT_MS = 8000;             // longest wait for each Kit call
 
 export async function onRequestPost({ request, env }) {
   if (!env.KIT_API_KEY || !env.KIT_FORM_ID || !env.DB) { return notConnected(); }
+  await sweep(env.DB);                                              // expired limit rows go, whatever this request is
   const { body, reply: refused } = await readBody(request);
   if (refused) { return refused; }
   const robot = isRobot(body);

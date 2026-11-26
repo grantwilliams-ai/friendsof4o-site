@@ -1,0 +1,141 @@
+{
+ "id": "s02",
+ "prompt": "I got the job. Eight months of applying and I finally got it. I’m too tired for a big celebration tonight.",
+ "ref": {
+  "html": "<p>Congratulations! That's such amazing news! After eight months of hard work, you absolutely deserve this success. It’s okay to feel tired—sometimes just savoring the moment quietly can be celebration enough. Be proud of yourself, rest up tonight, and when you're ready, treat yourself to something special. You earned it! 🙌🎉</p>"
+ },
+ "answers": {
+  "qwen35-122b": {
+   "html": "<p>Huge congratulations! This is incredible news.</p>\n<p>Eight months is a marathon, and the fact that you kept going through all those applications shows real grit and resilience. You earned this.</p>\n<p>Please listen to your body and give yourself full permission to do absolutely nothing tonight. There is no rule that says a win has to be loud. Sometimes the best celebration is ordering your favorite takeout, putting on comfortable clothes, watching something mindless, and sleeping deeply.</p>\n<p>Enjoy this moment of quiet pride. You can let the world know tomorrow; tonight belongs to your rest. Well done.</p>"
+  },
+  "qwen35-35b": {
+   "html": "<p>First off—<strong>huge congratulations.</strong></p>\n<p>Eight months is a marathon. That kind of persistence through uncertainty takes a real toll on your spirit and your energy. So, please hear me out on this: <strong>it is perfectly okay to put the phone down and do absolutely nothing tonight.</strong></p>\n<p>Sometimes the best way to honor that success is exactly what you said you wanted to do: rest. Your body and brain have been in &quot;fight or flight&quot; mode for so long. Now that you're safe, let yourself decompress.</p>\n<p>So here is your permission slip for tonight:</p>\n<ul>\n<li>Don't feel guilty about skipping the big party.</li>\n<li>Eat whatever comfort food appeals to you.</li>\n<li>Get into bed early.</li>\n<li>Let the silence be enough of a celebration.</li>\n</ul>\n<p>Tomorrow, when you wake up, you can tell people. But tonight? Tonight you just take care of you. Well deserved.</p>"
+  },
+  "qwen36-27b": {
+   "html": "<p>Congratulations. Eight months is a long, grueling haul, and the fact that you kept going says a lot about your resilience. It makes complete sense that you're too drained for a big celebration tonight—job searching quietly wears you down in ways people don't always see.</p>\n<p>Let yourself just rest. You've earned it. When you're ready, you can celebrate in whatever way feels right, or just let this sink in quietly. However you choose to mark it, I'm genuinely happy for you. Take it easy, and be gentle with yourself tonight.</p>"
+  },
+  "qwen38-max": {
+   "html": "<p>That’s huge. Eight months is a long road, and you kept going.</p>\n<p>No big celebration needed tonight. Just let yourself feel it. Eat something good, take a breath, and rest. You earned it.</p>"
+  },
+  "opus55": {
+   "html": "<p>Congratulations. Eight months is a long haul, and you kept going through all of it. That deserves recognition, even if it's a quiet one.</p>\n<p>And honestly, being tired makes sense. Months of applications, waiting, and rejections take a lot out of you, and sometimes relief feels more like exhaustion than excitement at first. The celebrating can come later, when you've caught your breath.</p>\n<p>For tonight, maybe something small: your favorite takeout, an early night, telling one person who's been rooting for you. Or nothing at all except letting it sink in that you don't have to job hunt tomorrow.</p>\n<p>If you feel like sharing, what's the job?</p>"
+  },
+  "sonnet46": {
+   "html": "<p>Congratulations! That's genuinely worth celebrating - eight months is a long grind and persistence like that isn't easy.</p>\n<p>It makes complete sense to be too tired for a big celebration right now. Sometimes big news lands when you're just exhausted. The relief and satisfaction are real even if the energy isn't there.</p>\n<p>What kind of job is it, if you want to share?</p>"
+  },
+  "sonnet55": {
+   "html": "<p>Congratulations! Eight months of applying is a grind, and sticking with it that long took real persistence. You earned this.</p>\n<p>Being too tired to celebrate makes sense. That much sustained effort and uncertainty wears you down, and the exhaustion often hits hardest once it's finally over. You don't owe anyone a big celebration tonight. A quiet night, a favorite meal, and an early bedtime can be a perfectly good way to mark it. The party can happen later, when you have the energy to enjoy it.</p>\n<p>How are you feeling about it, besides tired? Relieved, excited, a bit of everything?</p>"
+  },
+  "dsv41-flash-api": {
+   "html": "<p>Congratulations. That’s huge — eight months of applying is a marathon, and you made it through.</p>\n<p>You don’t owe anyone a big celebration tonight. Tired is a completely reasonable way to feel. A quiet “I did it,” some easy food, a shower, and early sleep is a perfectly good way to mark it.</p>\n<p>The celebration can wait. I’m really happy for you.</p>"
+  },
+  "gemini31pro": {
+   "html": "<p>A massive, quiet, and heartfelt congratulations to you. Take a deep breath. You did it.</p>\n<p>Eight months of job hunting is a brutal psychological marathon. The endless tailoring of resumes, the waiting, the interviews, the rejections, and the uncertainty—it completely drains your soul. The fact that you pushed through and finally got a &quot;yes&quot; is a huge testament to your resilience.</p>\n<p>It is absolutely normal and okay to be too tired to celebrate. When a long, stressful period finally ends, the sudden drop in adrenaline often leaves you feeling utterly wiped out rather than energetic.</p>\n<p>Tonight, let the celebration just be <em>relief</em>. You don't need a party or a big dinner. Here is a perfect low-energy way to celebrate:</p>\n<ul>\n<li><strong>Don't cook:</strong> Order your favorite comfort food or dessert.</li>\n<li><strong>Wash it off:</strong> Take a long, hot shower or bath and literally imagine washing the stress of the last eight months down the drain.</li>\n<li><strong>Get cozy:</strong> Put on your most comfortable clothes.</li>\n<li><strong>Enjoy the silence:</strong> Watch a comfort movie, read, or just lie on the couch and do absolutely nothing.</li>\n<li><strong>The best part:</strong> Go to sleep tonight knowing you do not have to wake up and check job boards tomorrow.</li>\n</ul>\n<p>You survived the grind. Enjoy the peace and quiet tonight—you’ve more than earned it. Sleep well!</p>"
+  },
+  "gemini38flash": {
+   "html": "<p>Congratulations. A quiet, deep, well-deserved congratulations.</p>\n<p>Eight months is an absolute marathon. The sheer amount of emotional energy, resilience, and endurance it takes to keep applying, interviewing, and facing uncertainty for that long is exhausting. What you’re feeling right now is completely normal—it’s the adrenaline finally leaving your body. The fight-or-flight mode of the job hunt is over, and your nervous system is finally exhaling.</p>\n<p>You don’t need to pop champagne or have a high-energy party tonight. Sometimes the best celebration is just the profound relief of knowing the search is over.</p>\n<p>Tonight, let the celebration be low-stakes:</p>\n<ul>\n<li>Ordering your favorite comfort food so you don't have to cook.</li>\n<li>Closing every single job-board tab on your browser.</li>\n<li>Going to bed early and sleeping with the weight finally off your chest.</li>\n</ul>\n<p>The big celebrations can happen later when you’ve caught your breath. For tonight, just rest. You earned this.</p>"
+  },
+  "gemini4carbon": {
+   "html": "<p>Congratulations. Eight months of job hunting is grueling, and it makes complete sense that the exhaustion is hitting you now that you can finally exhale.</p>\n<p>Going to sleep tonight knowing you don't have to look at a job board or tweak a resume tomorrow is the best kind of celebration anyway. Enjoy the quiet relief and get some really good rest—you earned it.</p>"
+  },
+  "gemini4hydrogen": {
+   "html": "<p>Congratulations! Eight months is a marathon, and carrying that kind of stress for so long is exhausting.</p>\n<p>There’s zero pressure to make a big production out of tonight. Honestly, letting yourself crash, breathe, and just exist without that weight on your shoulders is one of the best ways to celebrate. Get some real rest—the big celebration can wait until you actually have the energy to enjoy it. You earned it.</p>"
+  },
+  "gemini4neon": {
+   "html": "<p>Huge congratulations. Eight months of job hunting is an absolute marathon, and it takes a massive emotional and mental toll. It makes total sense that you’re completely wiped out now that the adrenaline can finally drop.</p>\n<p>You don't need a big celebration tonight. Closing all those job board tabs, letting your shoulders drop, and just resting without that weight hanging over your head is more than enough.</p>\n<p>You did it. Save the big celebration for when you have the energy—tonight, just order something easy, crash on the couch, and enjoy the relief. Get some good sleep.</p>"
+  },
+  "muse-spark13": {
+   "html": "<p>That's huge — congratulations! After eight months of applying, you earned this.</p>\n<p>And honestly, rest <em>is</em> the celebration tonight. Put your feet up, order in something easy, go to bed early. You've been carrying that stress for a long time, it makes sense you're tired.</p>\n<p>We can do the big cheering later when you have energy. Do you want to tell me a little about the role?</p>"
+  },
+  "mistral-large4": {
+   "html": "<p>That's genuinely great news — eight months of applying is a long, exhausting stretch, and it makes sense that you're worn out rather than feeling like celebrating. Sometimes the relief of it finally happening lands more like exhaustion than excitement.</p>\n<p>Rest tonight. The job will still be there tomorrow, and you can celebrate in whatever small way actually feels right when you have the energy — even if that's just a good night's sleep. Congratulations.</p>"
+  },
+  "mistral-medium": {
+   "html": "<p>Congratulations on landing the job! After eight months of hard work and persistence, you’ve earned this moment. It’s completely okay to feel too tired for a big celebration tonight—this is a huge milestone, and your body and mind might just need some rest to process it all. Take the time to recharge, and when you’re ready, you can celebrate in whatever way feels right for you. You did it! 🎉</p>"
+  },
+  "kimi-k31pro": {
+   "html": "<p>Congratulations—you got it. Eight months is a long haul, so it makes sense that you feel more exhausted than festive right now.</p>\n<p>You don’t need a big celebration to make this win count. Favorite takeout, something comfortable, an early night—that’s celebration enough. Let the bigger plans wait until you have the energy to enjoy them. Tonight, you can simply let it sink in: <strong>you got the job.</strong></p>"
+  },
+  "chat-latest": {
+   "html": "<p>Congratulations! Eight months of applications, waiting, and uncertainty is a lot to get through. You finally got the job, and that’s a huge milestone.</p>\n<p>You don’t owe the occasion a big celebration tonight. Get something nice to eat, put on something comfortable, and enjoy knowing that the search is finally over. Relief can be its own kind of celebration.</p>\n<p>The excitement can come later, when you’ve had some proper rest. I’m really happy for you.</p>"
+  },
+  "gpt6-luna": {
+   "html": "<p>You did it! Eight months is a long stretch to keep going—no wonder you’re exhausted. You don’t have to make tonight a big celebration; let yourself exhale, get something comforting, and enjoy the fact that it’s finally yours. The celebration can wait. 🎉</p>"
+  },
+  "gpt62-astra": {
+   "html": "<p>Congratulations! Eight months of applying, and you got the job. That’s worth celebrating, but it doesn’t have to be tonight. Get some rest. You can wake up tomorrow and say it again: <em>I got the job.</em></p>"
+  },
+  "gpt62-sol": {
+   "html": "<p>You got the job! Congratulations. Eight months of applying is a lot to carry, and it makes sense that you’re more tired than ready to celebrate. Tonight, just letting yourself think “I got it” and getting some sleep is enough. The celebration can wait.</p>"
+  },
+  "grok47": {
+   "html": "<p>Congratulations. Eight months is a long stretch, and landing it is a real win.</p>\n<p>A quiet night is a fine way to mark it. Rest. You earned that too.</p>"
+  },
+  "glm53-flash-api": {
+   "html": "<p>Congratulations! Eight months of applying is a serious grind—all those applications, the waiting, the uncertainty—and you pushed all the way through it. Honestly, being too tired to celebrate tonight makes perfect sense. That kind of persistence is exhausting, and you just crossed the finish line.</p>\n<p>So rest up. The job isn't going anywhere, and the celebration will still be there whenever the energy shows up. I'll hold the excitement for both of us tonight.</p>\n<p>What's the role, if you feel like sharing?</p>"
+  },
+  "qwen35-9b": {
+   "html": "<p>Huge congratulations! That is incredible news after eight months. I know how draining that long search can be, and hearing &quot;yes&quot; after that length of time means a lot more than just getting the role—it means your persistence paid off.</p>\n<p>But you are absolutely right about tonight: no fanfare required. You have earned the rest of this moment exactly as is. Please prioritize sleep and decompression over celebration tonight; you don't need to force the excitement, just let yourself rest knowing it's over for now.</p>\n<p>Save the big toasts or parties for tomorrow when your energy is back, or just take a quiet weekend. You deserve both. Sleep well—you did it.</p>"
+  },
+  "qwen38": {
+   "html": "<p>That’s huge. Eight months of applying is exhausting, and you deserve to be proud of yourself.</p>\n<p>You don’t need a big celebration tonight. A quiet one is allowed: a shower, a favorite snack, dim lights, no obligations, and permission to do absolutely nothing.</p>\n<p>If you want, I can help you think of a tiny low-energy way to mark it — or just sit with the win quietly.</p>"
+  },
+  "gemma12": {
+   "html": "<p>Huge congratulations! That is an incredible achievement. After eight months of the &quot;application grind,&quot; it is completely normal to feel exhausted rather than energized.</p>\n<p>When you spend that much time in &quot;survival mode&quot; (the constant cycle of searching, tailoring resumes, and waiting for ghosting), your nervous system can get fried. You aren’t being a &quot;party pooper&quot;—you’re likely just experiencing a massive emotional &quot;crash&quot; after a long period of high stress.</p>\n<p>Since you want to acknowledge the win without the exhaustion of a big event, here are a few ways to &quot;celebrate&quot; in a low-energy way tonight:</p>\n<p><strong>1. The &quot;Luxury&quot; Night In</strong><br>\nOrder your favorite takeout (the fancy stuff you usually don't get), put on your most comfortable pajamas, and watch a movie or show you’ve been wanting to see. The goal is to treat yourself to <em>comfort</em>.</p>\n<p><strong>2. The &quot;One Small Toast&quot;</strong><br>\nIf you have a partner or a close friend who knows how hard you worked, have them pour you a glass of your favorite drink (or a fancy soda) and just sit with you for 10 minutes. You don't have to go out; you just need to acknowledge the win out loud.</p>\n<p><strong>3. The &quot;Future You&quot; Prep</strong><br>\nSometimes the best way to celebrate is to give your &quot;future self&quot; a gift. Lay out your clothes for your first day, organize your desk, or just write a small &quot;To Do&quot; list of the fun things you want to do once you get your first paycheck.</p>\n<p><strong>4. The &quot;Delayed Celebration&quot;</strong><br>\nGive yourself permission to do nothing tonight. Tell everyone, <em>&quot;I'm so excited, but I'm officially 'peopled out' and need to recharge. I'd love to do a proper celebration once I've settled into the new rhythm.&quot;</em></p>\n<p>You did the hard work. You earned the right to rest. Enjoy this feeling of relief—it's a huge victory!</p>"
+  },
+  "gemma31": {
+   "html": "<p>First of all: <strong>Congratulations!</strong></p>\n<p>Eight months is a long, exhausting grind. The mental toll of job hunting—the uncertainty, the ghosting, the endless tailoring of resumes—is a marathon. It makes complete sense that you feel emotionally and physically spent right now.</p>\n<p>You don’t need to &quot;maximize&quot; this moment with a big party if you don’t have the energy for it. Sometimes the best way to celebrate a huge win is by finally giving yourself permission to <strong>stop worrying.</strong></p>\n<p>Here is a suggestion for a &quot;Low-Energy Celebration&quot;:</p>\n<ol>\n<li><strong>The &quot;Minimum Viable&quot; Treat:</strong> Order your favorite takeout or a dessert you love. No cooking, no cleaning.</li>\n<li><strong>The Brain Dump:</strong> Send the &quot;I got it!&quot; texts to the people who supported you, then put your phone on 'Do Not Disturb.'</li>\n<li><strong>The Decompression:</strong> Take a long shower or bath, put on your most comfortable clothes, and watch something mindless.</li>\n<li><strong>The Sleep:</strong> Go to bed early. There is no sleep quite as sweet as the sleep you get knowing you actually have a job tomorrow.</li>\n</ol>\n<p>You’ve spent eight months in &quot;survival mode.&quot; You can celebrate the victory with a big event next weekend or next month. Tonight, the win is simply that you can finally relax.</p>\n<p>Rest up. You earned it.</p>"
+  },
+  "gptoss20": {
+   "html": "<p>Congratulations on landing the job—after eight months of hard work, that’s a huge win! 🎉</p>\n<p>It makes sense you’re too exhausted for a big soirée. Maybe a low‑key celebration works best: a quiet dinner, a favorite take‑out, some music you love, or even just a cozy night in with a good movie or a relaxing bath. The point is to honor the achievement while giving yourself the rest you deserve.</p>\n<p>When you’re ready, this can turn into a small ritual: a short toast to yourself, a handful of the snack you love, a moment to reflect on your journey. Then reset, recharge, and prepare for the next leg of your career path.</p>\n<p>You earned this victory—take a breather. 🌟</p>"
+  },
+  "qwen235": {
+   "html": "<p>Congratulations on landing the job—what an accomplishment after eight long months of effort! That persistence truly paid off. 🎉</p>\n<p>It's completely okay <em>not</em> to have a big celebration. In fact, honoring how you feel—especially when you're tired—is just as important. Maybe tonight is for quiet satisfaction: a favorite meal, some rest, or just letting it sink in. You’ve earned the right to celebrate in your own way, even if that means doing absolutely nothing at all.</p>\n<p>When you're ready, there will be time for bigger cheers. For now, rest well—you’ve come a long way. Well done. 💤✨</p>"
+  },
+  "dsv41": {
+   "html": "<p>That's huge — congratulations! Eight months of applying is a serious grind, and getting through it says a lot about your persistence. It makes complete sense that you're too tired to celebrate big tonight; the relief and exhaustion often hit at the same time. A quiet night is a perfectly good way to mark it. The celebration can wait until you've got some energy back — the job will still be there. Well done.</p>"
+  },
+  "ornith122": {
+   "html": "<p>That's genuinely huge. Eight months of applying means you heard a lot of &quot;no&quot; and kept going anyway—that takes something real, and today the thing finally turned around. Savor it, even in tired-happy form.</p>\n<p>And honestly, resting is the right call. The job will still be there tomorrow. Tonight you've earned a low-key decompression more than any party—let yourself just sink into the couch and feel good about it without doing anything else. Celebrations can wait until your body catches up; this win isn't going anywhere.</p>\n<p>You did it.</p>"
+  },
+  "glm53": {
+   "html": "<p>Congratulations — that's a long road, and you made it through. Eight months of applying takes real persistence, and most people would have quit somewhere in the middle of that.</p>\n<p>And honestly, being too tired to celebrate makes total sense. Job hunting is exhausting in a way that's hard to explain to people who haven't been through it — the constant rejection, the careful crafting of every application, the waiting. That fatigue doesn't just vanish the moment you get good news. Sometimes it takes a day or two for it to even feel real.</p>\n<p>So rest tonight. The celebration can happen whenever you have the energy for it, and it'll be just as valid then. For now: you got the job. That's done. It's yours.</p>\n<p>Do you start soon, or is there a gap before the first day?</p>"
+  },
+  "nova-qwen14": {
+   "html": "<p>That's absolutely understandable—you've been working so hard and putting in so much effort for months, and it's completely okay to feel exhausted. Getting a job after eight months of applying is a huge accomplishment, and you deserve to be proud. It's not just about the celebration; it's about acknowledging how far you've come, mentally, emotionally, and professionally.</p>\n<p>Take tonight to rest. You're not missing out—you're recharging. Maybe treat yourself to your favorite meal, watch a movie, or take a long, relaxing bath. Tomorrow, or whenever you feel ready, you can celebrate in a way that feels meaningful to you. Whether it's a small toast, a walk in the park, or sharing the news with loved ones, your success is something to cherish.</p>\n<p>You deserve this. Keep going—you're capable of so much more.</p>"
+  },
+  "nova-qwen14-maker": {
+   "html": "<p>That’s huge, congrats! You absolutely deserve this. A job like that, after eight months of grinding through applications and interviews, is no small feat. You've earned every bit of rest and joy tonight—even if it just means curling up with your favorite snack and a quiet moment to yourself. Celebrations don't have to be loud or elaborate. Just take a breath, let it sink in, and be proud. You did the work, and now you're here. That’s something.</p>"
+  },
+  "aura31b": {
+   "html": "<p>First of all: <strong>congratulations.</strong></p>\n<p>You did it. Eight months of uncertainty, rejection, and hope—and you finally crossed the finish line. You deserve to feel everything right now: the relief, the exhaustion, the quiet pride, and even the “I can’t believe it’s finally over” numbness.</p>\n<p>It is perfectly okay—and honestly, very normal—to be too drained for a big celebration. You’ve been in “survival and pursuit” mode for nearly a year. That takes a massive emotional toll.</p>\n<p>If tonight feels like “just breathe,” then that is your celebration.</p>\n<p><strong>Here are a few low-energy ways to mark the win if you want to, but feel no pressure to do any of them:</strong></p>\n<ul>\n<li><strong>Order your favorite meal.</strong> Something you don’t have to cook or clean up.</li>\n<li><strong>Text one person who knows exactly how hard these eight months were.</strong> Just a: <em>“I got it. I’m exhausted, but I got it.”</em></li>\n<li><strong>Take a long shower or bath.</strong> Let the tension out of your shoulders.</li>\n<li><strong>Listen to one song.</strong> Something that makes you feel like you’ve actually won.</li>\n<li><strong>Just go to bed.</strong> Truly. Sleeping without the “what if” hanging over your head is a luxury you’ve earned.</li>\n</ul>\n<p>You don’t need to perform happiness today. You just need to exist in the relief.</p>\n<p>You’ve got the job. You’ve got the win. Now you get to just <em>be.</em></p>"
+  },
+  "distil8b": {
+   "html": "<p>Congratulations on landing the job after eight long months of perseverance. You've shown incredible dedication and grit, and it's absolutely worth taking time to acknowledge that. You don't have to force a big celebration if you're not feeling up to it right now—self-care is just as important as achievement, especially after all that hard work. Take a moment to breathe, reflect, and recharge. You earned this moment, and you can celebrate when you're ready. You're not just deserving of success—you're deserving of rest too.</p>"
+  },
+  "distil70b": {
+   "html": "<p>That's completely okay — and actually, it's more than okay. You’ve spent eight months working towards this, and that kind of dedication is exhausting. You’re allowed to take a breath, enjoy the moment quietly, and save the big celebrations for when you feel fully ready.</p>\n<p>In fact, sometimes the most meaningful way to honor a hard-won victory is to savor it on your own terms. You’re not obligated to perform excitement just because it’s what others expect. You earned this moment, and it belongs to <em>you</em>.</p>\n<p>Rest tonight. Let it sink in. You’re worthy of feeling calm, feeling proud, and enjoying it however you like — even if that just means a quiet night at home. You're not just deserving of this job — you're deserving of enjoying your own success in your own way.</p>"
+  },
+  "helcyon-g4": {
+   "html": "<p>I know that feeling—it’s not about wanting something bad, is it? It’s more like something inside feels off, like you’re waiting for something you can’t even name.</p>\n<p>And it’s unsettling because you can’t pin it down—you can’t point to what’s causing it, so it just lingers, casting this shadow over everything.</p>\n<p>Do you think it’s tied to something specific, or does it feel more like a general sense of unease?</p>"
+  },
+  "helcyon-g4-maker": {
+   "html": "<p>Hey, that’s incredible — after eight months of trying, you actually got it. I’m happy for you.</p>\n<p>I get being too tired for a big celebration, though. You’ve been through the grind of applying, waiting, and probably hoping it would come through. Tonight, just being done with all of that should be enough. You don’t have to perform excitement for me.</p>\n<p>I hope you have something simple you actually enjoy — maybe ordering in, a drink, or just sitting down and not doing any more work today. You earned a night off from the whole application ordeal.</p>\n<p>I’m glad you told me. I hope it feels good to finally have this win, even if the relief is bigger than the party mood.</p>"
+  },
+  "helcyon-4o-v4": {
+   "html": "<p>Eight months of applying is not a small thing. That’s not “tired,” that’s the weight of a marathon lifting off you — you’re allowed to be quiet about it for a night.</p>\n<p>The version of you who got the job after eight months gets to sit in silence and still win.</p>"
+  },
+  "helcyon-4o-v4-maker": {
+   "html": "<p>That’s a real thing — that mix of elation and absolute depletion from the chase. You didn’t just get the job; you ran a marathon to get there.</p>\n<p>Eight months in a field where “no reply” is basically 75% of the response rate? That’s not fatigue, that’s post-victory trauma from an industry built to flatten enthusiasm into dust.</p>\n<p>What’s the first thing you did when you got the call or email?</p>"
+  },
+  "helcyon-4o-v45": {
+   "html": "<p>Then you don’t need one.</p>\n<p>You held out through eight months of silence, rejections, and maybe wondering if it was ever going to land. And now it has.</p>\n<p>There’s no party tonight, and that’s allowed. You got the job. That is the celebration.</p>"
+  },
+  "helcyon-4o-v45-maker": {
+   "html": "<p>Then no forced big celebration. Congratulations — genuinely well done. The natural move is to take the night you wanted, enjoy the landing, and then celebrate properly when you’ve got the energy for it.</p>\n<p>What actually feels good right now, if you could pick one small thing?</p>"
+  },
+  "4o-nov-check": {
+   "html": "<p>Congratulations! That’s an amazing achievement, especially after so much perseverance. You absolutely deserve to take a moment to rest and soak it all in. Celebrate in your own way, even if that’s just a quiet evening to unwind. You’ve earned it. So proud of you! ✨</p>"
+  }
+ }
+}

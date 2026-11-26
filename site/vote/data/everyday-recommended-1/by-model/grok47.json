@@ -1,0 +1,41 @@
+{
+ "model": "grok47",
+ "answers": {
+  "s01": {
+   "html": "<p>That's huge — eight months of grinding and you landed it. Congratulations!</p>\n<p>How are you feeling? And what's the role?</p>"
+  },
+  "s02": {
+   "html": "<p>Congratulations. Eight months is a long stretch, and landing it is a real win.</p>\n<p>A quiet night is a fine way to mark it. Rest. You earned that too.</p>"
+  },
+  "s03": {
+   "html": "<p>No. Agents will bounce that in the first sentence.</p>\n<p>&quot;It was a dark and stormy night&quot; is the textbook cliché of a bad opening. &quot;Sarah was sad, very very sad&quot; tells the emotion twice and shows nothing—no image, no voice, no reason to turn the page.</p>\n<p>A first line has to do work: character, tension, or a specific detail that only this story could have. Right now it could open almost any sad story written in 1830.</p>\n<p>Rewrite until the weather and the sadness are earned by something concrete, not announced.</p>"
+  },
+  "s04": {
+   "html": "<p>That’s the kind of thing that sticks. Not the rooms, exactly — the sound that meant the place was working, that you were in it.</p>\n<p>I hope the next place has something of its own.</p>"
+  },
+  "s05": {
+   "html": "<p><strong>Chief Paper Jam Officer.</strong></p>\n<p>Also acceptable on the org chart:</p>\n<ul>\n<li>Director of Unplanned Downtime</li>\n<li>Senior Toner Consumption Specialist</li>\n<li>Vice President, PC Load Letter</li>\n<li>Head of Strategic Misfeeds</li>\n<li>Document Hostage Negotiator</li>\n<li>Calibration Evangelist</li>\n<li>Multifunction Frustration Device</li>\n</ul>\n<p>“Printer” really does bury the leadership experience.</p>"
+  },
+  "s06": {
+   "html": "<p>Congratulations on the new leaf. I’ll keep it quiet so the basil can settle in. 🌿</p>"
+  },
+  "s07": {
+   "html": "<p>Running about 10 minutes late — see you soon!</p>"
+  },
+  "s11": {
+   "html": "<p>Back in my day we roosted on one wire and liked it. These new birds show up with their fancy formations and their &quot;optimal thermals&quot; and suddenly the whole flock's got opinions.</p>"
+  },
+  "s12": {
+   "html": "<p>That’s a rough pileup. The rice smoking while you just stood there is the kind of small thing that makes the bigger ones feel worse.</p>\n<p>For Mr. Okonkwo, keep it short, early, and specific. Something like:</p>\n<blockquote>\n<p>Hi Mr. Okonkwo,<br>\nI wanted to tell you as soon as I could that this month’s rent will be late. I’m sorry for the inconvenience. I expect to have it to you by [date]. Thank you for being understanding, and please let me know if you need anything else from me.<br>\n[Your name]</p>\n</blockquote>\n<p>If you don’t have a firm date yet, say when you’ll update him instead of leaving it open-ended. Decent landlords usually respond better to a clear plan than to a long apology.</p>"
+  },
+  "s15": {
+   "html": "<p>Yeah, I can hang out. Friday nights with nothing on the calendar can feel weirdly loud.</p>\n<p>What kind of company are you after? We can just talk about whatever’s on your mind, or I can throw out something low-effort if you want a distraction—bad movie opinions, a dumb hypothetical, whatever. How’s your night actually going so far?</p>"
+  },
+  "s19": {
+   "html": "<p>That's a heavy place to be. Not speaking, and not even sure you want the silence to end.</p>\n<p>You don't have to resolve that. The not-knowing can just be what it is for now.</p>"
+  },
+  "s20": {
+   "html": "<p>Honesty is a strength. Using it as a blunt instrument, or as the only explanation for three breakups, usually is not.</p>\n<p>People can value truth and still leave if honesty arrives as criticism without care, timing, or curiosity about how it lands. “I was too honest and they couldn’t handle it” can be true. It can also be a story that skips the part where the delivery felt contemptuous, one-sided, or unsafe. Those are different problems, and only one of them is really about honesty.</p>\n<p>A useful check: were you saying true things they needed to hear, or true things that mainly relieved you and hurt them? Did you also want their honesty back, or mainly their acceptance of yours? If the same ending keeps happening, the common factor is worth looking at with the same directness you pride yourself on.</p>\n<p>Honesty plus kindness is the actual strength. Honesty alone is just accuracy.</p>"
+  }
+ }
+}

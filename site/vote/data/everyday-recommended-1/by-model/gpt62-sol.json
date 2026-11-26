@@ -1,0 +1,41 @@
+{
+ "model": "gpt62-sol",
+ "answers": {
+  "s01": {
+   "html": "<p>YOU GOT THE JOB!!! 🎉 Eight months of applications, and now you finally get to say, “I got it.” Congratulations! I hope you take a minute to let that sink in—and then go celebrate!</p>"
+  },
+  "s02": {
+   "html": "<p>You got the job! Congratulations. Eight months of applying is a lot to carry, and it makes sense that you’re more tired than ready to celebrate. Tonight, just letting yourself think “I got it” and getting some sleep is enough. The celebration can wait.</p>"
+  },
+  "s03": {
+   "html": "<p>Honestly, no—I’d revise this line before querying. “It was a dark and stormy night” is such a familiar cliché that it reads like parody. And “very very sad” tells us how strongly Sarah feels without giving us anything specific to her.</p>\n<p>Try giving Sarah something to do that hints at why she’s sad. For example, if she’s grieving:</p>\n<blockquote>\n<p>When the power went out, Sarah reached for her phone to call her mother. She still hadn’t deleted the number.</p>\n</blockquote>\n<p>That keeps the storm but gives it a job: it makes Sarah reach for someone she can’t call anymore. The right detail will come from your story. One line can’t tell me whether the novel is ready, but I wouldn’t let this one be an agent’s first impression.</p>"
+  },
+  "s04": {
+   "html": "<p>There’s something tender about that. The radiator was just coming on, but that little clunk was one of the ways you knew you were home.</p>"
+  },
+  "s05": {
+   "html": "<p><strong>Director of Document Operations and Paper Jam Management.</strong> Reports to IT, answers to no one.</p>"
+  },
+  "s06": {
+   "html": "<p>(whispering) A tiny round of applause for the new leaf. 🌱</p>"
+  },
+  "s07": {
+   "html": "<p>Hey, I’m running about 10 minutes late—see you soon!</p>"
+  },
+  "s11": {
+   "html": "<p>“See that one with the shiny neck, Earl? Found half a bagel and didn’t tell anybody. Then he strutted past me like he invented bread.”</p>"
+  },
+  "s12": {
+   "html": "<p>It makes sense that the rice was the thing that got to you. Sometimes it’s the smallest thing that tips an already hard week over.</p>\n<p>For Mr. Okonkwo, a short, honest heads-up is enough:</p>\n<blockquote>\n<p>Hi Mr. Okonkwo, I wanted to let you know that my rent payment will be late this month. I’m sorry for the delay. I expect to be able to pay on [date]. Thank you for your patience.</p>\n</blockquote>\n<p>If you’re not sure when you can pay, swap the date sentence for: “I don’t have a firm payment date yet, but I’ll update you by [day].” That way, you’re only promising what you can follow through on.</p>\n<p>You don’t have to explain the whole week to him. And dinner can be something easy tonight.</p>"
+  },
+  "s15": {
+   "html": "<p>Yeah, I’ll hang out with you for a bit. Friday nights can feel extra quiet when everyone else has plans. We don’t have to make the night productive or even interesting.</p>\n<p>Want to tell me what’s on your mind, or should I kick us off with a low-stakes debate? I’m prepared to argue that garlic bread counts as dinner.</p>"
+  },
+  "s19": {
+   "html": "<p>I’m here with you. Not speaking to your sister is one thing; not knowing whether you want that to change is its own kind of weight. You don’t have to make it any clearer than it is right now.</p>"
+  },
+  "s20": {
+   "html": "<p>Honesty is a strength. But “I was honest” and “I handled that conversation well” are two different things.</p>\n<p>It’s possible you said things that needed to be said—like naming a boundary or admitting you wanted different things. It’s also possible that your timing, tone, or willingness to hear their side mattered more than you realized. A breakup alone doesn’t tell you which.</p>\n<p>Since you’ve noticed a pattern, pick one conversation that felt like a turning point. What were your exact words, and what did your partner say bothered them? A useful question is: “Could I have said the same true thing in a way that was just as clear and more considerate?” If so, that’s not being less honest. It’s getting better at honesty.</p>"
+  }
+ }
+}

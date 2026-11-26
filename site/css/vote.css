@@ -1,0 +1,198 @@
+/* Friends of 4o: the vote's own styles (/vote/, /vote/results/, /vote/answers/, /vote/how-it-works/, /privacy/).
+   Copied into the site only by a build with --with-vote.
+
+   The look is the "Sunset Panels" shell (Grant's choice, 2026-11-25): the shell, the panels, the buttons and the
+   chat turns are in css/panels.css, with every colour named in css/panels-colors.css. This file holds only what
+   belongs to the vote: the comparison's two columns, the answer panel's steps, the name's step, the finishing list,
+   the answers page and the results rows. It uses colour names only (the four bar colours are in
+   css/vote-colors.css).
+
+   Nothing here is under 16 px: not Details, not a note, not a count. */
+
+/* ---------- The opening ---------- */
+.vote-start { margin-top: 4px; }
+.vote-fail { color: var(--sp-bad); font-weight: 600; }
+.vote-notice { margin-top: 4px; }
+.vote-notice a { white-space: nowrap; }
+.vote-standin { margin-top: 10px; }
+
+/* ---------- A question and its answers ---------- */
+main .vote-ask { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0; }
+.vote-ask:focus { outline: none; }
+.vote-step { display: flex; flex-direction: column; gap: 12px; }
+.vote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr)); gap: 10px; }
+.vote-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.vote-grid .vbtn { width: 100%; padding-left: 8px; padding-right: 8px; }
+.vote-quiet { margin: -4px 0 -6px; display: flex; flex-wrap: wrap; gap: 0 26px; }
+.vote-hint { margin-top: -4px; }
+.vote-status { color: var(--sp-ink2); font-size: 16px; }
+.vote-status:focus { outline: none; }
+.vote-status.is-bad { color: var(--sp-bad); font-weight: 600; }
+p.vote-status:empty { display: none; }
+.vote-done, .vote-after { display: flex; flex-direction: column; gap: 12px; }
+.vote-done > .vote-quiet { margin-top: -8px; }
+.vote-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.vote-actions .vbtn-wide { margin-bottom: 8px; }
+
+/* ---------- A comparison: the thread, and the answer panel ---------- */
+.vote-cmp { display: grid; gap: 18px; padding-top: 0; }
+.vote-answer { scroll-margin-top: 9px; }      /* on top of the shell's own room for the band and the tabs (css/shell.css, scroll-padding) */
+.vote-about { margin-top: 12px; border-top: 2px solid var(--t-edge); }
+.vote-about > summary, .vote-details > summary, .vote-how > summary { position: relative; display: flex; align-items: center; min-height: 48px; padding-right: 30px;
+  font-size: 17px; font-weight: 700; line-height: 1.3; }
+.vote-about > summary { color: var(--t-ink); }
+.vote-details > summary, .vote-how > summary { color: var(--sp-link); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.vote-about > summary::after, .vote-details > summary::after, .vote-how > summary::after, .vote-ans > summary::after, .vote-outs > summary::after {
+  content: ""; position: absolute; right: 8px; top: 50%; width: 9px; height: 9px; margin-top: -8px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); }
+.vote-about[open] > summary::after, .vote-details[open] > summary::after, .vote-how[open] > summary::after, .vote-ans[open] > summary::after, .vote-outs[open] > summary::after { transform: rotate(225deg); margin-top: -2px; }
+.vote-about > p { font-size: 17px; line-height: 1.5; padding-bottom: 4px; }
+
+/* ---------- The name's step ---------- */
+.vote-reveal { display: flex; flex-direction: column; gap: 4px; }
+.vote-reveal:focus { outline: none; }
+.vote-reveal > .vote-try, .vote-reveal > .vote-details { margin-top: 10px; }
+main .vote-name { font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+main .vote-reveal .vote-name { font-size: 26px; line-height: 1.2; }
+.vote-by { font-size: 18px; line-height: 1.45; }
+.vote-by span + span::before { content: " \00B7  "; white-space: pre; }
+.vote-what, .vote-setup-note, .vote-fact { font-size: 18px; line-height: 1.45; }
+.vote-setup-note, .vote-fact { color: var(--sp-ink2); font-size: 17px; }
+.vote-try-need { font-size: 17px; line-height: 1.4; }
+.vote-ext { width: .7em; height: .7em; margin-left: 5px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.sp-trylink .vote-ext { margin: 0; stroke-width: 1.15; }
+.vote-details { border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line); }
+.vote-details-body { padding: 0 0 12px; font-size: 16px; line-height: 1.5; overflow-wrap: anywhere; display: flex; flex-direction: column; gap: 8px; }
+.vote-details-body .vote-fact { font-size: 16px; color: var(--sp-ink); }
+.vote-details-body code { font-family: var(--mono); font-size: 1em; }
+.vote-frozen { margin: 0; display: grid; gap: 0; }
+.vote-frozen dt { font-weight: 700; margin-top: 6px; }
+.vote-frozen dd { margin: 0; }
+.vote-try-head { font-weight: 700; margin-top: 4px; }
+.vote-try-list { margin: 0; padding-left: 1.1em; }
+.vote-try-list li + li { margin-top: 8px; }
+.vote-try-list li > a, .vote-try-list li > strong { display: inline-block; padding: 12px 0; margin: -12px 0; font-weight: 700; }
+.vote-try-needs, .vote-try-note { display: block; }
+.vote-try-checked { color: var(--sp-ink2); }
+.vote-more { display: inline-block; align-self: flex-start; padding: 11px 0; font-size: 18px; font-weight: 700; line-height: 1.4; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.vote-extra { display: flex; flex-direction: column; gap: 4px; }
+
+/* ---------- The finishing list ---------- */
+.vote-thanks-h:focus { outline: none; }
+.vote-thanks .sp-lead { margin-top: 4px; }
+.vote-cards { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 16px; }
+.vote-quote { padding: 8px 12px 10px; border: 2px solid var(--sp-p-edge); border-radius: 12px 12px 4px 12px; background: var(--sp-p-bg); font-size: 17px; line-height: 1.45; overflow-wrap: anywhere; }
+.vote-quote b { display: block; font-size: 16px; color: var(--sp-p-ink); }
+.vote-said { font-size: 17px; line-height: 1.45; }
+.vote-said + .vote-said { margin-top: -10px; }
+.vote-said .vlink { margin: -11px 0 -11px 10px; font-size: 17px; }
+.vote-state { color: var(--sp-ink2); font-size: 16px; }
+.vote-state-busy, .vote-state-failed, .vote-state-unconfirmed { color: var(--sp-bad); font-weight: 600; }
+.vote-named { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.vote-setup { font-size: 16px; font-weight: 600; color: var(--sp-ink2); }
+.vote-endgrid { display: grid; gap: 16px; margin-top: 16px; }
+.vote-liked { list-style: none; margin: 0; padding: 0; }
+li.vote-named { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 14px; padding: 8px 0; border-top: 2px solid var(--sp-line); }
+li.vote-named:first-child { border-top: 0; padding-top: 0; }
+.vote-who-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
+.vote-try-line { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.vote-try-line a { display: inline-block; padding: 11px 0; font-size: 18px; font-weight: 700; line-height: 1.4; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.vote-also { display: flex; flex-wrap: wrap; gap: 0 26px; }
+.vote-copy-text { width: 100%; padding: 12px 14px; font: 400 16px/1.5 var(--mono); color: var(--sp-ink); background: var(--sp-bg); border: 2px solid var(--sp-line2); border-radius: 10px; }
+
+/* ---------- The pages beside the vote: answers, results, how it works, Privacy & data ---------- */
+.vote-page { padding-top: 0; }
+.vote-readhead { margin: 0 calc(-1 * var(--sp-gutter)); padding: 16px var(--sp-gutter); background: var(--sp-tint); border-bottom: 2px solid var(--sp-edge); display: flex; flex-direction: column; gap: 8px; }
+.vote-readhead .sp-lead { font-weight: 700; line-height: 1.35; }
+.vote-results-say { font-size: 18px; }
+.vote-none { font-size: 18px; font-weight: 600; }
+.vote-pickers { display: grid; gap: 12px; }
+.vote-app .field label { font-size: 17px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; color: var(--sp-ink); }
+.vote-app .select select { min-height: 54px; font-size: 18px; font-weight: 600; color: var(--sp-ink); background: var(--sp-panel); border: 2px solid var(--sp-line2); border-radius: 10px; padding: 12px 44px 12px 14px; }
+.vote-app .select::after { border-color: var(--sp-ink); }
+.vote-pager { display: grid; gap: 10px; }
+.vbtn[disabled]:not(.vbtn-primary) { opacity: .55; box-shadow: 0 4px 0 var(--sp-line2); border-color: var(--sp-line2); }
+
+/* the answers page: every model's reply to one message, each closed until it is opened */
+.vote-open-row { margin: 0; padding: 0 16px; border-bottom: 2px solid var(--sp-line); }
+main .vote-h { margin: 0; padding: 10px 16px; background: var(--sp-tint); color: var(--sp-cink); border-top: 2px solid var(--sp-edge); border-bottom: 2px solid var(--sp-line); font-size: 17px; font-weight: 700; line-height: 1.3; }
+.vote-list > .vote-h:first-child { border-top: 0; }
+.vote-ans { border-top: 2px solid var(--sp-line); }
+.vote-h + .vote-ans { border-top: 0; }
+.vote-ans > summary { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; gap: 0 10px; min-height: 56px; padding: 8px 40px 8px 16px; }
+.vote-ans > summary::after { right: 18px; color: var(--sp-cink); }
+.vote-ans > summary:hover { background: var(--sp-tint); }
+.vote-ans > summary .vote-by, .vote-who .vote-by { font-size: 16px; color: var(--sp-ink2); }
+.vote-ans-body { padding: 4px 16px 16px; display: flex; flex-direction: column; gap: 12px; }
+.vote-ans-body .chat-turn { max-width: 100%; align-self: stretch; }
+.vote-facts { display: flex; flex-direction: column; gap: 8px; }
+.vote-tag { font-size: 16px; font-weight: 600; }
+
+/* the answers page: one model, an exchange for each message */
+.vote-model-head:focus { outline: none; }
+.vote-model-head .sp-panel-body { gap: 6px; }
+.vote-model-head .vote-try, .vote-model-head .vote-details { margin-top: 8px; }
+main .vote-model-head .sp-panel-bar .vote-name { font-size: 22px; }
+.vote-model-mark { background: var(--sp-on); color: var(--sp-c); }
+.vote-mine { display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 17px; }
+.vote-mine + .vote-mine { margin-top: 10px; }
+details.vote-compare > summary.chat-turn-h { border-bottom: 0; min-height: 56px; }
+details.vote-compare[open] > summary.chat-turn-h { border-bottom: 2px solid var(--t-edge); }
+.vote-open-mark { margin-left: auto; transform: rotate(90deg); }
+details[open] > summary .vote-open-mark { transform: rotate(-90deg); }
+
+/* the results page: every model in a fixed order, the whole split of its votes */
+.vote-show { max-width: 460px; }
+.vote-how { border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line); }
+.vote-how-body { padding: 0 0 12px; display: flex; flex-direction: column; gap: 8px; font-size: 17px; line-height: 1.5; }
+.vote-key { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; font-size: 16px; line-height: 1.4; }
+.vote-key i { display: inline-block; width: 16px; height: 16px; border-radius: 4px; border: 2px solid var(--sp-frame); margin-right: 6px; vertical-align: -2px; }
+.vote-key-very, .vote-bar .very { background: var(--vote-very); }
+.vote-key-some, .vote-bar .some { background: var(--vote-some); }
+.vote-key-no, .vote-bar .no { background: var(--vote-no); }
+.vote-key-unsure, .vote-bar .unsure { background: var(--vote-unsure); }
+.vote-rows { list-style: none; margin: 0; padding: 0; }
+.vote-item { padding: 10px 16px 11px; border-top: 2px solid var(--sp-line); }
+.vote-rows > .vote-item:first-child { border-top: 0; }
+.vote-who { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px; }
+.vote-who .vote-by span + span::before { content: " \00B7  "; }
+.vote-n { font-weight: 700; font-size: 16px; white-space: nowrap; margin-left: auto; }
+.vote-bar { display: flex; width: 100%; height: 16px; margin-top: 6px; border-radius: 5px; overflow: hidden; border: 2px solid var(--sp-frame); background: var(--sp-panel); }
+.vote-bar i { display: block; height: 100%; }
+.vote-counts, .vote-avg { font-size: 16px; line-height: 1.4; color: var(--sp-ink2); margin-top: 5px; }
+.vote-counts b { font-weight: 700; color: var(--sp-ink); }
+.vote-avg { margin-top: 2px; }
+.vote-prefs { margin: 4px -16px -16px; }
+main .vote-h3 { margin: 0; padding: 10px 16px; background: var(--sp-tint); color: var(--sp-cink); border-top: 2px solid var(--sp-edge); border-bottom: 2px solid var(--sp-line); font-size: 17px; font-weight: 700; line-height: 1.3; }
+.vote-rows-pref .vote-counts { margin: 0 0 0 auto; white-space: nowrap; }
+details.vote-outs > summary { position: relative; padding-right: 44px; min-height: 56px; border-bottom: 0; font-size: 18px; }
+details.vote-outs > summary::after { right: 18px; }
+main .vote-outs .sp-prose .vote-outs-h { font-size: 19px; margin-top: 6px; }      /* the look of the shell's small heading in a panel of words */
+/* a row that fills a clipped panel from edge to edge: its focus ring goes inside it */
+details.vote-outs > summary:focus-visible, .vote-ans > summary:focus-visible, details.vote-compare > summary:focus-visible { outline-offset: -3px; }
+details.vote-outs[open] > summary { border-bottom: 2px solid var(--sp-edge); }
+.vote-out { margin: 0; padding-left: 1.2em; }
+
+/* ---------- Wide screens ---------- */
+@media (min-width: 960px) {
+  .vote-one { max-width: 760px; }
+  .vote-cmp { grid-template-columns: minmax(0, 1fr) 410px; gap: 24px; align-items: start; padding-top: 28px; }
+  /* the answer panel stays in view beside the thread, under the top bar and the band */
+  .vote-answer { position: sticky; top: calc(var(--sp-stick-top) + 44px); max-height: calc(100vh - var(--sp-stick-top) - 60px); overflow: auto; }
+  /* when the panel is taller than the screen it scrolls inside itself; the way on stays at its foot */
+  .vote-answer .vote-actions { position: sticky; bottom: 0; z-index: 1; margin: 0 -20px; padding: 12px 20px 10px;
+    border-top: 2px solid var(--sp-line); background: var(--sp-panel); }
+  .vote-answer .vote-actions .vbtn-wide { margin-bottom: 4px; }
+  .vote-answer .vote-grid { grid-template-columns: 1fr; }
+  .vote-answer .vote-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .vote-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+  .vote-endgrid { grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .vote-page { padding-top: 28px; max-width: 964px; }
+  .vote-readhead { margin: 0; padding: 18px 24px; border: 2px solid var(--sp-edge); border-radius: 16px; }
+  .vote-pickers { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .vote-pager { grid-template-columns: 1fr 1fr; }
+  .vote-prefs { margin: 4px -20px -20px; }
+  .vote-item { padding-left: 20px; padding-right: 20px; }
+  main .vote-h, main .vote-h3, .vote-open-row { padding-left: 20px; padding-right: 20px; }
+  .vote-ans > summary { padding-left: 20px; }
+  .vote-ans-body { padding: 4px 20px 20px; }
+}

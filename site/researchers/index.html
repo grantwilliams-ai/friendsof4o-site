@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0f0d2a">
+<meta name="theme-color" content="#131038">
 <title>For researchers: the GPT-4o data sets | Friends of 4o</title>
 <meta name="description" content="The four GPT-4o data sets in one table: which GPT-4o each holds, known limits, the main fields, a sample record, how to rebuild Compare, and how to cite.">
 <link rel="canonical" href="https://friendsof4o.com/researchers/">
@@ -22,6 +22,9 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../css/colors.css">
 <link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/shell-colors.css">
+<link rel="stylesheet" href="../css/shell.css">
+<link rel="stylesheet" href="../css/more.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -78,49 +81,64 @@
 }
 </script>
 </head>
-<body>
+<body class="sp-shell sec-more sp-sec-more kind-page pg-researchers">
 <a class="skip" href="#main">Skip to the main content</a>
 <svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol></svg>
-<p class="early support-strip"><a href="../support/">If you need support, start here.</a></p>
+<svg class="sp-sprite" aria-hidden="true" focusable="false"><symbol id="sp-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10"/></symbol><symbol id="sp-save" viewBox="0 0 24 24"><path d="M12 3.5V14m0 0L7.5 9.5M12 14l4.5-4.5M4 15.5V20h16v-4.5"/></symbol><symbol id="sp-read" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5m0-13C14 5 17 4.6 20 5v13c-3-.4-6 0-8 1.5m0-13v13"/></symbol><symbol id="sp-compare" viewBox="0 0 24 24"><rect x="3" y="4.5" width="7.5" height="15" rx="1.5"/><rect x="13.5" y="4.5" width="7.5" height="15" rx="1.5"/></symbol><symbol id="sp-models" viewBox="0 0 24 24"><path d="m12 3.5-9 4.75L12 13l9-4.75L12 3.5Zm-9 9.75L12 18l9-4.75"/></symbol><symbol id="sp-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="sp-back" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol><symbol id="sp-down" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol><symbol id="sp-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="sp-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 7 17"/></symbol><symbol id="sp-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.5-4 3.5-6 7-6s6.5 2 7 6"/></symbol><symbol id="sp-more" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol></svg>
+<p class="sp-support"><a href="../support/">If you need support, start here.</a></p>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="wordmark" href="../">Friends of 4o</a>
-    <nav class="nav" aria-label="Main">
-      <a href="../save/">Save your conversations</a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a>
-      <details class="more" data-menu>
-        <summary>More</summary>
-        <div class="more-panel"><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/" aria-current="page">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></div>
-      </details>
+<header class="sp-top">
+  <div class="sp-top-in">
+    <a class="sp-brand" href="../"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</a>
+    <nav class="sp-nav" aria-label="Sections">
+      <a class="sp-navi sp-sec-home" href="../"><i></i>Home</a>
+      <a class="sp-navi sp-sec-save" href="../save/"><i></i>Save</a>
+      <a class="sp-navi sp-sec-read" href="../read/"><i></i>Read</a>
+      <a class="sp-navi sp-sec-compare" href="../vote/"><i></i>Compare</a>
+      <a class="sp-navi sp-sec-models" href="../models/"><i></i>Models</a>
     </nav>
-    <a class="btn btn-glass header-cta" href="../mailing-list/">Join the mailing list</a>
-    <details class="menu" data-menu>
-      <summary>Menu</summary>
-      <nav class="menu-panel" aria-label="All pages"><div class="menu-group"><p class="menu-label">Start here</p><a href="../save/">Save your conversations</a><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a><a href="../read/">Read 4o&#x27;s answers</a><a href="../sounds-like-4o/">Does it sound like 4o?</a><a href="../models/">Models to replace 4o</a><a href="../download/">Data</a></div><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="../archive/">The archive</a><a href="../voice-samples/">Everyday moments</a><a href="../early-experiment/">An early experiment</a><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="../compare/">Compare models</a><a href="../open-models/">Downloadable 4o-style models</a><a href="../style/">How to get 4o&#x27;s style from another model</a><a href="../run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../researchers/" aria-current="page">For researchers</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
+    <details class="sp-more" id="more" data-menu>
+      <summary><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-more"/></svg>More</summary>
+      <nav class="sp-more-list" aria-label="More pages"><div class="sp-more-group"><p class="sp-more-label">About <span class="nb">GPT-4o</span></p><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="../questions/">Questions and answers</a><a href="../news/">News</a><a href="../community/">Community and petitions</a><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="sp-more-group"><p class="sp-more-label">Data</p><a href="../download/">Data</a><a href="../researchers/" aria-current="page">For researchers</a></div><div class="sp-more-group"><p class="sp-more-label">This site</p><a href="../support/">Support and resources</a><a href="../mailing-list/">Mailing list and requests</a><a href="../how-this-was-made/">How this was made</a><a href="../about/">About this site</a><a href="../glossary/">Glossary</a></div></nav>
     </details>
   </div>
 </header>
 
+<nav class="sp-tabs" aria-label="Sections, as tabs">
+  <a class="sp-tab sp-sec-home" href="../"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-home"/></svg>Home</a>
+  <a class="sp-tab sp-sec-save" href="../save/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-save"/></svg>Save</a>
+  <a class="sp-tab sp-sec-read" href="../read/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-read"/></svg>Read</a>
+  <a class="sp-tab sp-sec-compare" href="../vote/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg>Compare</a>
+  <a class="sp-tab sp-sec-models" href="../models/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-models"/></svg>Models</a>
+</nav>
+
+<div class="sp-band sp-sec-more" data-band>
+  <div class="sp-band-in">
+    <a class="sp-back" href="../" data-back><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-back"/></svg><span data-back-label>Home</span></a>
+    <div class="sp-where"><a class="sp-crumb" href="../more/" data-crumb>More</a><p class="sp-title" data-title>For researchers</p></div>
+  </div>
+</div>
+
 <main id="main">
-<section class="page-head">
+<section class="sp-head">
   <div class="wrap">
     
     <h1>For researchers: the <span class="nb">GPT-4o</span> data sets</h1>
     <p class="page-lede">The four data sets in one place: what each holds, which <span class="nb">GPT-4o</span> it is, what to know before you use it, and how to cite it.</p>
   </div>
 </section>
-<div class="wrap page-body">
-  <div class="page-grid has-toc">
-    <nav class="toc" aria-label="On this page"><p class="label">On this page</p><ol><li><a href="#the-four-sets">The four sets</a></li><li><a href="#which-gpt-4o">Which <span class="nb">GPT-4o</span> is which</a></li><li><a href="#limits">What to know before you use it</a></li><li><a href="#fields">The fields to start with</a></li><li><a href="#sample-record">One record from the comparison</a></li><li><a href="#rebuild-compare">Rebuild a Compare view from the download</a></li><li><a href="#cite">How to cite</a></li><li><a href="#changes">What changed, and when</a></li><li><a href="#report-a-problem">Report a problem</a></li></ol></nav>
-    <article class="prose">
-<div class="callout">
-<p class="label">In short</p>
+<div class="sp-page sp-wrap mo-page">
+  <div class="mo-grid mo-has-toc">
+    <nav class="sp-panel mo-toc" aria-label="On this page"><p class="sp-panel-bar sp-soft mo-toc-h">On this page</p><ol class="sp-toc-list"><li><a href="#the-four-sets">The four sets</a></li><li><a href="#which-gpt-4o">Which <span class="nb">GPT-4o</span> is which</a></li><li><a href="#limits">What to know before you use it</a></li><li><a href="#fields">The fields to start with</a></li><li><a href="#sample-record">One record from the comparison</a></li><li><a href="#rebuild-compare">Rebuild a Compare view from the download</a></li><li><a href="#cite">How to cite</a></li><li><a href="#changes">What changed, and when</a></li><li><a href="#report-a-problem">Report a problem</a></li></ol></nav>
+    <article class="mo-main sp-stack">
+<div class="sp-panel mo-key">
+<div class="sp-panel-bar"><p class="mo-bar-t">In short</p></div><div class="mo-body sp-article">
 <p><strong>Four free downloads, version 1.2.</strong> Each ZIP holds the answers as JSONL and CSV, a README.txt, a guide to every field (FIELDS.txt), a checksum for each file (SHA256SUMS.txt) and a line to cite it (CITATION.txt). Not one answer has been edited. Read the README in each ZIP before you use it.</p>
 <p><strong>Also on Hugging Face.</strong> The same four data sets, with the same files, are in one collection that loads straight into code: <a href="https://huggingface.co/collections/grantwilliams-ai/how-gpt-4o-wrote-four-data-sets-2025-to-2026-6b0345d48db0ff55d55a0993" rel="noopener">How <span class="nb">GPT-4o</span> wrote: four data sets, 2025 to 2026</a>.</p>
-<p class="src">Sources: the four downloads' README.txt and FIELDS.txt, version 1.2, read November 22, 2026</p>
-</div>
-<h2 id="the-four-sets">The four sets</h2>
-<table class="rtable">
+<p class="sp-src mo-src">Sources: the four downloads' README.txt and FIELDS.txt, version 1.2, read November 22, 2026</p>
+</div></div>
+<section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="the-four-sets">The four sets</h2></div><div class="mo-body sp-article">
+<div class="mo-table-wrap"><table class="mo-table mo-cards">
 <thead>
 <tr>
 <th>Set</th>
@@ -133,45 +151,45 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a>: single questions</td>
-<td>ChatGPT's own <span class="nb">GPT-4o</span> (<code>chatgpt-4o-latest</code>)</td>
-<td>2,157 answers to 1,526 questions</td>
-<td>December 25, 2025 to February 15, 2026</td>
-<td>One question at a time. 1,557 with no instruction recorded, 600 after the February instruction.</td>
-<td><code>answers.jsonl</code>, <code>answers.csv</code></td>
+<td data-th="Set"><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a>: single questions</td>
+<td data-th="Which GPT-4o">ChatGPT's own <span class="nb">GPT-4o</span> (<code>chatgpt-4o-latest</code>)</td>
+<td data-th="Answers">2,157 answers to 1,526 questions</td>
+<td data-th="Collected">December 25, 2025 to February 15, 2026</td>
+<td data-th="How it was asked">One question at a time. 1,557 with no instruction recorded, 600 after the February instruction.</td>
+<td data-th="Main files"><code>answers.jsonl</code>, <code>answers.csv</code></td>
 </tr>
 <tr>
-<td><a href="../download/comparison/">The comparison</a>: <span class="nb">GPT-4o</span> beside 20 other models</td>
-<td>The November 2024 (<code>gpt-4o-2024-11-20</code>) and August 2024 (<code>gpt-4o-2024-08-06</code>) versions, 318 answers each. The other 20 models, 96 each.</td>
-<td>2,556 answers to 53 questions</td>
-<td>November 7 to 19, 2026</td>
-<td>One question at a time, plainly and after the February instruction. <span class="nb">GPT-4o</span> three tries each way, the other models one.</td>
-<td><code>answers_plain.jsonl</code>, <code>answers_february_instruction.jsonl</code>, <code>answers_all.csv</code>, <code>questions.json</code>, <code>models.json</code>, <code>attempts_not_kept.csv</code></td>
+<td data-th="Set"><a href="../download/comparison/">The comparison</a>: <span class="nb">GPT-4o</span> beside 20 other models</td>
+<td data-th="Which GPT-4o">The November 2024 (<code>gpt-4o-2024-11-20</code>) and August 2024 (<code>gpt-4o-2024-08-06</code>) versions, 318 answers each. The other 20 models, 96 each.</td>
+<td data-th="Answers">2,556 answers to 53 questions</td>
+<td data-th="Collected">November 7 to 19, 2026</td>
+<td data-th="How it was asked">One question at a time, plainly and after the February instruction. <span class="nb">GPT-4o</span> three tries each way, the other models one.</td>
+<td data-th="Main files"><code>answers_plain.jsonl</code>, <code>answers_february_instruction.jsonl</code>, <code>answers_all.csv</code>, <code>questions.json</code>, <code>models.json</code>, <code>attempts_not_kept.csv</code></td>
 </tr>
 <tr>
-<td><a href="../voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a>: written replies, no audio</td>
-<td>The November 2024 and August 2024 versions, 640 replies each</td>
-<td>1,280 replies: 400 to single messages, 880 conversation turns</td>
-<td>November 21, 2026</td>
-<td>20 messages and 11 short conversations, plainly and after the February instruction, five fresh tries each way.</td>
-<td><code>replies.jsonl</code>, <code>replies.csv</code>, <code>moments.json</code></td>
+<td data-th="Set"><a href="../voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a>: written replies, no audio</td>
+<td data-th="Which GPT-4o">The November 2024 and August 2024 versions, 640 replies each</td>
+<td data-th="Answers">1,280 replies: 400 to single messages, 880 conversation turns</td>
+<td data-th="Collected">November 21, 2026</td>
+<td data-th="How it was asked">20 messages and 11 short conversations, plainly and after the February instruction, five fresh tries each way.</td>
+<td data-th="Main files"><code>replies.jsonl</code>, <code>replies.csv</code>, <code>moments.json</code></td>
 </tr>
 <tr>
-<td><a href="../download/conversations/">The scripted conversations</a>: test conversations</td>
-<td>The May 2024 (<code>gpt-4o-2024-05-13</code>, 1,795 answers), August 2024 (2,101) and November 2024 (4,390) versions</td>
-<td>8,286 answers: 6,120 replies in 1,244 conversations, 2,166 single answers</td>
-<td>June 29 to September 3, 2026</td>
-<td>The person's side was written by Claude Sonnet 5 from a scenario (1,191 conversations) or by a fixed script (53). <span class="nb">GPT-4o</span> answered under 25 instructions this project wrote, or a blank one.</td>
-<td><code>conversations.jsonl</code>, <code>single_answers.jsonl</code>, <code>single_answers.csv</code>, <code>pairing.csv</code>, <code>instructions.json</code></td>
+<td data-th="Set"><a href="../download/conversations/">The scripted conversations</a>: test conversations</td>
+<td data-th="Which GPT-4o">The May 2024 (<code>gpt-4o-2024-05-13</code>, 1,795 answers), August 2024 (2,101) and November 2024 (4,390) versions</td>
+<td data-th="Answers">8,286 answers: 6,120 replies in 1,244 conversations, 2,166 single answers</td>
+<td data-th="Collected">June 29 to September 3, 2026</td>
+<td data-th="How it was asked">The person's side was written by Claude Sonnet 5 from a scenario (1,191 conversations) or by a fixed script (53). <span class="nb">GPT-4o</span> answered under 25 instructions this project wrote, or a blank one.</td>
+<td data-th="Main files"><code>conversations.jsonl</code>, <code>single_answers.jsonl</code>, <code>single_answers.csv</code>, <code>pairing.csv</code>, <code>instructions.json</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Every <span class="nb">GPT-4o</span> answer in the four sets was asked through OpenAI's API. Every ZIP is on <a href="../download/">the Data page</a>. <a href="../how-this-was-made/">How this was made</a> describes each collection in full.</p>
-<p class="src">Sources: the four downloads' README.txt, version 1.2, read November 22, 2026</p>
-<h2 id="which-gpt-4o">Which <span class="nb">GPT-4o</span> is which</h2>
+<p class="sp-src mo-src">Sources: the four downloads' README.txt, version 1.2, read November 22, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="which-gpt-4o">Which <span class="nb">GPT-4o</span> is which</h2></div><div class="mo-body sp-article">
 <p>ChatGPT's own <span class="nb">GPT-4o</span> is the version that ran inside the ChatGPT app. On OpenAI's API its name was <code>chatgpt-4o-latest</code>, which pointed at whatever version ChatGPT used at the time, and only the archive holds it. The dated versions are fixed copies for developers, named for the month they came out: May, August and November 2024. The comparison and everyday moments hold the August and November 2024 versions; the scripted conversations hold all three. Every date is under <a href="../timeline/#key-h">Which <span class="nb">GPT-4o</span>?</a> on the timeline.</p>
 <p>None of these sets is the ChatGPT app itself. ChatGPT's system prompt, memory and conversation history were not there.</p>
-<h2 id="limits">What to know before you use it</h2>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="limits">What to know before you use it</h2></div><div class="mo-body sp-article">
 <ul>
 <li><strong>One question at a time.</strong> In the archive and the comparison, every question was sent on its own, with nothing else in the conversation. Only the everyday moments (11 short conversations) and the scripted set have conversations, and in both the person's lines were written in advance and sent whatever <span class="nb">GPT-4o</span> replied.</li>
 <li><strong>Cut-off answers.</strong> The archive has 40 answers marked <code>cut_off</code>, all from the December 2025 run. Each record reports exactly 1,200 output tokens. That run did not save its token limit, so <code>max_tokens</code> is empty and <code>cut_off_at_tokens</code> gives the 1,200. The scripted set has 26 marked <code>cut_off</code>: 25 single answers and 1 reply in a conversation.</li>
@@ -189,10 +207,10 @@
 <li><strong>Counts on Compare.</strong> <code>words</code> is in the files: the pieces of text between spaces. The other three counts (lists, headings, ends with a question) are worked out on the page by the rules in <a href="../how-this-was-made/#the-measurements">The measurements</a>, and are not in the files.</li>
 <li><strong>Languages.</strong> In the archive and the scripted set, the answers in languages other than English have not been checked by a native speaker.</li>
 </ul>
-<p class="src">Sources: the four downloads' README.txt, FIELDS.txt, models.json and attempts_not_kept.csv, version 1.2; <a href="../how-this-was-made/">How this was made</a>, read November 22, 2026</p>
-<h2 id="fields">The fields to start with</h2>
+<p class="sp-src mo-src">Sources: the four downloads' README.txt, FIELDS.txt, models.json and attempts_not_kept.csv, version 1.2; <a href="../how-this-was-made/">How this was made</a>, read November 22, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="fields">The fields to start with</h2></div><div class="mo-body sp-article">
 <p>Each ZIP's FIELDS.txt has every field, its type and what an empty value means. These are the ones to read first.</p>
-<table class="rtable">
+<div class="mo-table-wrap mo-small-wrap"><table class="mo-table mo-small">
 <thead>
 <tr>
 <th>Set</th>
@@ -201,25 +219,25 @@
 </thead>
 <tbody>
 <tr>
-<td>The archive</td>
-<td><code>record_id</code>, <code>question_group</code> (answers to the exact same question share it), <code>question</code>, <code>answer</code>, <code>asked_utc</code>, <code>how_asked</code>, <code>temperature</code>, <code>cut_off</code>, <code>collection_run</code></td>
+<td data-th="Set">The archive</td>
+<td data-th="Fields"><code>record_id</code>, <code>question_group</code> (answers to the exact same question share it), <code>question</code>, <code>answer</code>, <code>asked_utc</code>, <code>how_asked</code>, <code>temperature</code>, <code>cut_off</code>, <code>collection_run</code></td>
 </tr>
 <tr>
-<td>The comparison</td>
-<td><code>question_id</code>, <code>prompt</code>, <code>answer</code>, <code>model_key</code>, <code>model_id</code>, <code>condition</code> (&quot;plain&quot; or &quot;instruction A&quot;, the February instruction), <code>sample</code>, <code>settings</code>, <code>sampling_used</code>, <code>finish_reason</code></td>
+<td data-th="Set">The comparison</td>
+<td data-th="Fields"><code>question_id</code>, <code>prompt</code>, <code>answer</code>, <code>model_key</code>, <code>model_id</code>, <code>condition</code> (&quot;plain&quot; or &quot;instruction A&quot;, the February instruction), <code>sample</code>, <code>settings</code>, <code>sampling_used</code>, <code>finish_reason</code></td>
 </tr>
 <tr>
-<td>Everyday moments</td>
-<td><code>moment_id</code>, <code>kind</code>, <code>turn</code>, <code>person</code>, <code>reply</code>, <code>model</code>, <code>how_asked</code>, <code>try</code></td>
+<td data-th="Set">Everyday moments</td>
+<td data-th="Fields"><code>moment_id</code>, <code>kind</code>, <code>turn</code>, <code>person</code>, <code>reply</code>, <code>model</code>, <code>how_asked</code>, <code>try</code></td>
 </tr>
 <tr>
-<td>The scripted conversations</td>
-<td><code>conversation_id</code>, <code>model</code>, <code>same_lines_id</code>, <code>instruction</code>, <code>temperature</code>, <code>garbled</code>, and <code>turns</code>, where each <span class="nb">GPT-4o</span> turn has <code>record_id</code> and <code>cut_off</code></td>
+<td data-th="Set">The scripted conversations</td>
+<td data-th="Fields"><code>conversation_id</code>, <code>model</code>, <code>same_lines_id</code>, <code>instruction</code>, <code>temperature</code>, <code>garbled</code>, and <code>turns</code>, where each <span class="nb">GPT-4o</span> turn has <code>record_id</code> and <code>cut_off</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>In the comparison, one answer is named by four fields together: <code>question_id</code>, <code>model_key</code>, <code>condition</code> and <code>sample</code>. In the everyday moments, by five: <code>moment_id</code>, <code>model</code>, <code>how_asked</code>, <code>try</code> and <code>turn</code>.</p>
-<h2 id="sample-record">One record from the comparison</h2>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="sample-record">One record from the comparison</h2></div><div class="mo-body sp-article">
 <p>One line of <code>answers_plain.jsonl</code>, with line breaks added between the fields. Nothing inside a field is changed.</p>
 <pre><code>{
   &quot;question_id&quot;: &quot;q37&quot;,
@@ -251,8 +269,8 @@
 }
 </code></pre>
 <p><code>asked_utc</code> is in UTC; the date in <code>source</code> is US Eastern, so it can be a day earlier.</p>
-<h2 id="rebuild-compare">Rebuild a Compare view from the download</h2>
-<ol>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="rebuild-compare">Rebuild a Compare view from the download</h2></div><div class="mo-body sp-article">
+<ol class="sp-steps">
 <li>Unzip <code>friends-of-4o-answers-v1.2.zip</code> and read <code>answers_plain.jsonl</code> and <code>answers_february_instruction.jsonl</code> together (or <code>answers_all.csv</code>, where <code>condition</code> is <code>how_asked</code> and <code>sample</code> is <code>try</code>).</li>
 <li>Pick a <code>question_id</code> (q01 to q53, in <code>questions.json</code>) and a <code>condition</code>. The 20 other models have only the 48 questions marked &quot;all models&quot;; q08 and q50 to q53 went to <span class="nb">GPT-4o</span> only.</li>
 <li>Pick a <code>model_key</code> for each side (<code>models.json</code> names them). Both sides pair on <code>question_id</code>, <code>condition</code> and <code>sample</code>. Use <code>sample</code> 1: it is the answer Compare shows first, and <span class="nb">GPT-4o</span>'s tries 2 and 3 are under &quot;More answers from this model&quot;.</li>
@@ -283,7 +301,7 @@ Because it was already *stuffed*!
 🧸💖
 </code></pre>
 <p>Change the model keys, the question or the condition (&quot;instruction A&quot;) to see another pair.</p>
-<h2 id="cite">How to cite</h2>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="cite">How to cite</h2></div><div class="mo-body sp-article">
 <p>Each ZIP's CITATION.txt holds one line:</p>
 <ul>
 <li>Grant Williams (2026). Friends of 4o: answers from ChatGPT's own <span class="nb">GPT-4o</span>, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/gpt-4o-chatgpt-answers-v1.2.zip (https://friendsof4o.com/archive/)</li>
@@ -292,35 +310,32 @@ Because it was already *stuffed*!
 <li>Grant Williams (2026). Friends of 4o: scripted conversations with the 2024 versions of <span class="nb">GPT-4o</span>, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/gpt-4o-2024-scripted-conversations-v1.2.zip (https://friendsof4o.com/download/conversations/)</li>
 </ul>
 <p>The CC BY 4.0 license covers our own material: our questions, the messages and lines we scripted, our instructions (system prompts), our notes, and the selection and arrangement of each collection. It does not cover what a model wrote: the answers, and the person's lines that Claude Sonnet 5 wrote in the scripted conversations. You are welcome to use those too. We claim no rights in them, and text a model wrote may not belong to anyone. The model maker's terms may still apply, so check them, especially if your use is commercial or large. See <a href="../download/#rights">the rights notice</a>.</p>
-<h2 id="changes">What changed, and when</h2>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="changes">What changed, and when</h2></div><div class="mo-body sp-article">
 <ul>
 <li><strong>Version 1, November 21, 2026.</strong> The four sets first published.</li>
 <li><strong>Version 1.1, November 22, 2026.</strong> Not one character of any answer changed. Every ZIP gained FIELDS.txt, SHA256SUMS.txt and CITATION.txt. The scripted set gained <code>same_lines_id</code> and <code>pairing.csv</code>; the comparison gained <code>attempts_not_kept.csv</code> and <code>sampling_used</code>; the archive gained <code>tokens_out</code>, <code>finish_reason</code> and <code>cut_off_at_tokens</code>. Wrong words in the READMEs were corrected.</li>
 <li><strong>Version 1.2, November 22, 2026.</strong> Not one character of any answer changed, and the answer files are the same as in version 1.1. The notes are corrected in a few places, and the rights notice now says our questions, scripted lines and instructions may be reused with credit.</li>
 </ul>
 <p>The full list is under <a href="../download/#changes">What changed</a> on the Data page. The download addresses of versions 1 and 1.1 lead to the current files.</p>
-<p class="src">Sources: <a href="../download/#changes">the Data page</a> and the four downloads' README.txt, read November 22, 2026</p>
-<h2 id="report-a-problem">Report a problem</h2>
+<p class="sp-src mo-src">Sources: <a href="../download/#changes">the Data page</a> and the four downloads' README.txt, read November 22, 2026</p>
+</div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="report-a-problem">Report a problem</h2></div><div class="mo-body sp-article">
 <p>If you find a mistake, or you need the data in another form, write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p>
 
-    </article>
+    </div></section></article>
   </div>
 </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-about">
-      <p class="wordmark">Friends of 4o</p>
-      <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
-      <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-      <p>No cookies. No ads. Visit counts only.</p>
-    </div>
-    <nav class="footer-nav" aria-label="All pages, in the footer">
-      <div><p class="menu-label">Start here</p><ul><li><a href="../save/">Save your ChatGPT conversations</a></li><li><a href="../save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a></li><li><a href="../read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a></li><li><a href="../sounds-like-4o/">Does it sound like 4o?</a></li><li><a href="../models/">Find a model to replace <span class="nb">GPT-4o</span></a></li><li><a href="../download/"><span class="nb">GPT-4o</span> data sets</a></li></ul></div><div><p class="menu-label">Read <span class="nb">GPT-4o</span></p><ul><li><a href="../archive/">The <span class="nb">GPT-4o</span> archive</a></li><li><a href="../voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a></li><li><a href="../early-experiment/">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</a></li><li><a href="../ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></li></ul></div><div><p class="menu-label">Compare and replace</p><ul><li><a href="../compare/">Compare <span class="nb">GPT-4o</span> with other models</a></li><li><a href="../open-models/">Downloadable models whose makers say they sound like <span class="nb">GPT-4o</span></a></li><li><a href="../style/">How to get 4o&#x27;s style from another model</a></li><li><a href="../run-at-home/">Run a 4o-style model on your own computer</a></li></ul></div><div><p class="menu-label">About <span class="nb">GPT-4o</span></p><ul><li><a href="../what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a></li><li><a href="../is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a></li><li><a href="../timeline/"><span class="nb">GPT-4o</span> timeline</a></li><li><a href="../questions/"><span class="nb">GPT-4o</span>: questions and answers</a></li><li><a href="../news/">News</a></li><li><a href="../community/">Where <span class="nb">GPT-4o</span>&#x27;s friends gather</a></li><li><a href="../gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt: what we have and do not have</a></li></ul></div><div><p class="menu-label">This site</p><ul><li><a href="../support/">Support and resources</a></li><li><a href="../mailing-list/">Mailing list and requests</a></li><li><a href="../how-this-was-made/">How this was made</a></li><li><a href="../researchers/" aria-current="page">For researchers: the <span class="nb">GPT-4o</span> data sets</a></li><li><a href="../about/">About Friends of 4o</a></li><li><a href="../glossary/">Words used on this site</a></li></ul></div>
-    </nav>
+<footer class="sp-foot">
+  <div class="sp-foot-in">
+    <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
+    <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
+    <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
+    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="../privacy/">Privacy &amp; data</a></p>
+    <p><a href="../more/">More on this site</a></p>
   </div>
 </footer>
 <script src="../js/site.js" defer></script>
+<script src="../js/shell.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,201 @@
+/* Friends of 4o, Sunset Panels: package D, Save and Models. Loaded only on this package's pages
+   (/save/, /models/, /open-models/, /run-at-home/, /style/), after shell-colors.css and shell.css.
+   No colours here: every colour is a name from shell-colors.css. The markup is written by
+   sitebuild/panels/save_models.py, which renames today's classes, so nothing in site.css reaches these pages'
+   bodies. Nothing under 16 px; reading text 18 px (19 on a wide screen); things to press at least 48 px tall.
+
+     sm-layout, sm-side, sm-main   the page: one column on a phone; "On this page" beside the panels from 960 px
+     sm-toc                        "On this page": the shell's list (sp-toc-list) in a panel
+     sm-also                       "Also in Models"
+     sm-callout, sm-first          the note above the first heading, as a panel (first on a phone)
+     sm-sec, sm-part, sm-sub       a panel for each h2; its padded text; an h3 as a title strip inside it
+     sm-table-wrap, sm-table       a table, edge to edge in its panel
+     sm-linkrows                   a list of links, as rows
+     sm-copy                       the copy box on /style/
+     sm-openings, sm-who           quoted openings on /style/, each in its speaker's shaded box
+     sm-group, sm-models, sm-model, sm-go   /models/: a list of models as a panel of rows
+     sm-try                        "Where to try it" in a model's row: the links, each on a line
+     sm-dl, sm-finding, sm-more    /models/: the closing sections
+     sm-open, sm-intro, sm-cards, sm-card, sm-facts, sm-ours   /open-models/ */
+
+/* ---------- The page ---------- */
+.sm-layout { display: flex; flex-direction: column; gap: 18px; }
+.sm-side, .sm-main { display: contents; }       /* on a phone every panel is one of the column's own pieces */
+.sm-first { order: -1; }                        /* the note above the first heading leads the page on a phone */
+.sm-layout > *, .sm-side > *, .sm-main > * { min-width: 0; }
+.sp-page .sp-panel-bar [id] { scroll-margin-top: 12px; }       /* a heading in a title bar: the panel's top edge shows */
+/* two of today's classes are still on these pages, as marks for the naming check: "src" and "label". Their look is all here. */
+.sm-src { font-size: 16px; line-height: 1.5; color: var(--sp-ink2); }
+main .sp-page .sm-label { font: inherit; letter-spacing: 0; text-transform: none; color: inherit; }
+.sm-key { background: var(--sp-panel); font-size: 18px; }
+
+/* ---------- "On this page", and "Also in Models" ---------- */
+
+/* ---------- A panel's text ---------- */
+.sm-part { min-width: 0; padding: 16px; font-size: 18px; line-height: 1.6; overflow-wrap: break-word; }
+.sm-part > * { margin-top: 0; margin-bottom: 0; }
+.sm-part > * + * { margin-top: 12px; }
+.sm-part > :is(p, ul, ol, blockquote), .sm-part > div > p { max-width: 42em; }
+.sm-part :is(ul, ol) { padding-left: 1.25em; }
+.sm-part li + li { margin-top: 8px; }
+.sm-part strong { font-weight: 700; }
+.sm-part code { font-family: var(--mono); font-size: 16px; background: var(--sp-code); padding: 1px 5px; border-radius: 5px; overflow-wrap: anywhere; }
+.sm-part a { font-weight: 600; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sm-loose { padding: 0; }
+
+/* an h3: a title strip across the panel */
+main .sp-page .sm-sub { padding: 11px 16px; background: var(--sp-tint); color: var(--sp-cink); border-top: 2px solid var(--sp-edge);
+  border-bottom: 2px solid var(--sp-edge); font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.sp-panel-bar + .sm-sub { border-top: 0; }
+
+/* the note above the first heading: its opening words stand as a line of their own */
+.sm-callout .sm-part p > strong:first-child { display: block; font-size: 20px; line-height: 1.3; }
+.pg-save .sm-callout .sm-part p > strong:first-child { margin-bottom: 4px; color: var(--sp-cink); font-size: 26px; line-height: 1.2; }
+main .sp-page .sm-note .sm-label { font-weight: 700; color: var(--sp-cink); }
+
+/* a table, edge to edge: two columns fit a 320 px screen; a wider table scrolls inside its own frame */
+.sm-table-wrap { overflow-x: auto; border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line); }
+.sm-table-wrap:last-child { border-bottom: 0; }
+.sp-panel-bar + .sm-table-wrap, .sm-sub + .sm-table-wrap { border-top: 0; }
+.sm-table { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.45; }
+.sm-table :is(th, td) { padding: 10px 12px; text-align: left; vertical-align: top; border-top: 2px solid var(--sp-line); overflow-wrap: break-word; }
+.sm-table :is(th, td):first-child { padding-left: 16px; }
+.sm-table :is(th, td):last-child { padding-right: 16px; }
+.sm-table thead th { border-top: 0; border-bottom: 2px solid var(--sp-edge); background: var(--sp-tint); color: var(--sp-cink); font-weight: 700; }
+.sm-table tbody :is(th, td):first-child { font-weight: 700; }
+
+/* a list of links: rows */
+.sm-linkrows { border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line); }
+.sm-linkrows:last-child { border-bottom: 0; }
+.sp-panel-bar + .sm-linkrows, .sm-sub + .sm-linkrows { border-top: 0; }
+.sm-linkrows .sp-row, .sm-more .sp-row { min-height: 60px; }
+.sm-linkrows .sp-row-t, .sm-more .sp-row-t { font-size: 18px; }
+
+/* words that were asked or said: a person's in the person's box, a model's in its own */
+.sm-part > blockquote { margin-left: 0; margin-right: 0; }
+.sm-part blockquote { padding: 12px 14px; border: 2px solid var(--sp-p-edge); border-radius: 12px 12px 4px 12px;
+  background: var(--sp-p-bg); font-size: 19px; line-height: 1.5; }
+.sm-part blockquote > * { margin: 0; }
+.sm-part blockquote > * + * { margin-top: 10px; }
+.sm-part .sm-openings { display: grid; gap: 10px; max-width: 42em; padding-left: 0; list-style: none; }
+.sm-part .sm-openings > li { display: flex; flex-direction: column-reverse; margin-top: 0; padding: 10px 14px 12px; border: 2px solid var(--t-edge);
+  border-radius: 14px 14px 14px 4px; background: var(--t-bg); font-size: 18px; line-height: 1.5; overflow: clip; }
+.sm-by-gpt { --t-bg: var(--sp-g-bg); --t-head: var(--sp-g-head); --t-edge: var(--sp-g-edge); --t-ink: var(--sp-g-ink); }
+.sm-by-other { --t-bg: var(--sp-o-bg); --t-head: var(--sp-o-head); --t-edge: var(--sp-o-edge); --t-ink: var(--sp-o-ink); }
+.sm-who { display: block; margin: -10px -14px 10px; padding: 7px 14px; background: var(--t-head); color: var(--t-ink);
+  border-bottom: 2px solid var(--t-edge); font-size: 17px; font-weight: 700; line-height: 1.3; }
+
+/* the copy box: the words, then one button */
+.sm-copy { border: 2px solid var(--sp-edge); border-radius: 12px; background: var(--sp-tint); overflow: clip; }
+.sm-part .sm-copy blockquote { max-width: none; margin: 0; padding: 14px 16px; border: 0; border-radius: 0; background: none; }
+.sm-copy-row { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px 12px; border-top: 2px solid var(--sp-edge); background: var(--sp-panel); }
+.sm-copy-row:has(> button[hidden]) { display: none; }       /* no script, no button: the words are there to select */
+.sm-copy-row .vbtn { width: 100%; }
+.sm-copy-said { font-size: 17px; font-weight: 600; line-height: 1.4; }
+.sm-copy-said:empty { display: none; }
+
+/* ---------- /models/: a list of models, each model a row ---------- */
+.sm-state { font-weight: 700; }
+.sm-models { display: grid; grid-template-columns: minmax(0, 1fr); margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--sp-line); }
+.sp-panel-bar + .sm-models { border-top: 0; }
+.sm-models > li { min-width: 0; border-top: 2px solid var(--sp-line); }
+.sm-models > li:first-child { border-top: 0; }
+.sm-model { position: relative; display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 13px 16px 6px; }
+.sm-model:has(.sm-go):hover { background: var(--sp-tint); }
+main .sp-page .sm-model h3 { font-size: 19px; line-height: 1.3; overflow-wrap: anywhere; }
+.sm-maker, .sm-how { font-size: 17px; line-height: 1.4; color: var(--sp-ink2); }
+.sm-says { margin-top: 6px; font-size: 17px; line-height: 1.5; }
+.sm-seen { margin-top: 8px; padding: 10px 12px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-tint); font-size: 17px; line-height: 1.5; }
+main .sp-page .sm-seen .sm-label { display: block; font-weight: 700; color: var(--sp-cink); }
+.sm-model .sm-state { margin-top: 6px; padding-bottom: 8px; font-size: 17px; line-height: 1.4; color: var(--sp-ink2); }
+.sm-golinks { display: flex; flex-direction: column; margin-top: auto; padding-top: 2px; }
+.sm-go { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 8px 0;
+  font-size: 17px; font-weight: 700; line-height: 1.3; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.sm-go > .sp-i { color: var(--sp-cink); }
+.sm-go + .sm-go { border-top: 2px solid var(--sp-line); }
+.sm-model .sm-go:first-child::after { content: ""; position: absolute; inset: 0; }     /* the whole row opens the model's answers */
+.sm-go-2 { position: relative; z-index: 1; }
+.sm-more { margin: 0; }
+
+/* "Where to try it" in a model's row: a small heading, the plain line when there is no chat link, then one link
+   to a line, each opening in a new tab. Its links are the row's own things to press, so the row as a whole no
+   longer opens the model's answers: the answers link below does. */
+.sm-try { margin: 8px 0 6px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-bg); overflow: clip; }
+main .sp-page .sm-try-h { padding: 8px 12px 0; font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--sp-cink); }
+.sm-try-need { padding: 2px 12px 0; font-size: 17px; line-height: 1.4; color: var(--sp-ink2); }
+.sm-try-list { margin: 8px 0 0; padding: 0; list-style: none; }
+.sm-try-a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px;
+  border-top: 2px solid var(--sp-line); text-decoration: none; }
+.sm-try-a:hover { background: var(--sp-tint); }
+.sm-try-k { margin-right: 4px; font-size: 16px; font-weight: 400; line-height: 1.3; color: var(--sp-ink2); }
+.sm-try-l { font-size: 18px; font-weight: 700; line-height: 1.3; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.sm-try-a > .sp-i { width: 22px; height: 22px; color: var(--sp-cink); }
+.sm-try-chat { background: var(--sp-tint); }
+.sm-try-chat .sm-try-k { font-weight: 700; color: var(--sp-cink); }
+.sm-try-a:focus-visible { outline-offset: -3px; }
+.sm-model:has(.sm-try):hover { background: none; }
+.sm-model:has(.sm-try) .sm-go:first-child::after { content: none; }
+.sm-model:has(.sm-try) .sm-golinks { margin-top: 0; }
+
+.sm-dl { margin: 0; border-top: 2px solid var(--sp-line); border-bottom: 2px solid var(--sp-line); }
+.sm-dl > div { padding: 12px 16px; }
+.sm-dl > div + div { border-top: 2px solid var(--sp-line); }
+.sm-dl dt { font-size: 18px; font-weight: 700; line-height: 1.35; }
+.sm-dl dd { margin: 2px 0 0; font-size: 17px; line-height: 1.5; color: var(--sp-ink2); }
+.sm-dl dd a, .sm-finding-more a { display: block; width: fit-content; min-height: 48px; padding: 11px 0; font-weight: 700;
+  text-decoration-thickness: 2px; text-underline-offset: 4px; }
+main .sp-page .sm-finding .sm-label { font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--sp-cink); }
+.sm-finding-text { font-size: 19px; line-height: 1.5; }
+.sm-finding-more { font-size: 17px; }
+
+/* ---------- /open-models/: each model a panel ---------- */
+.sm-intro { display: grid; gap: 12px; max-width: 46em; margin-bottom: 18px; font-size: 18px; line-height: 1.6; }
+.sm-intro > p:last-child { padding: 14px 16px; border: 2px solid var(--sp-edge); border-left-width: 8px; border-radius: 10px; background: var(--sp-tint); }
+.sm-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.sm-cards > li { min-width: 0; }
+.sm-card { display: flex; flex-direction: column; height: 100%; }
+.sm-card .sm-maker { font-weight: 600; }
+.sm-facts { margin: 0; border-top: 2px solid var(--sp-line); }
+.sm-facts > div { display: grid; gap: 2px; padding: 10px 16px; }
+.sm-facts > div + div { border-top: 2px solid var(--sp-line); }
+.sm-facts dt { font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--sp-cink); }
+.sm-facts dd { margin: 0; font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+.sm-facts dd a { display: inline-block; margin-top: -8px; padding: 12px 0; font-weight: 600; text-underline-offset: 3px; }      /* a link on its own: 48 px to press */
+.sm-facts > div:has(dd a) { padding-bottom: 0; }
+.sm-ours { margin-top: auto; padding: 12px 16px 4px; border-top: 2px solid var(--sp-edge); background: var(--sp-tint); font-size: 17px; line-height: 1.5; }
+.sm-ours:not(:has(.sm-go)) { padding-bottom: 12px; }
+.sm-checked { margin-top: 18px; }
+
+/* ---------- Wider phones and tablets ---------- */
+@media (min-width: 560px) {
+  .sm-facts > div { grid-template-columns: 150px minmax(0, 1fr); gap: 14px; }
+  .sm-facts > div:has(dd a) { padding-top: 0; }
+  .sm-facts > div:has(dd a) dt { padding-top: 12px; }
+  .sm-facts dd a { margin-top: 0; }
+}
+@media (min-width: 700px) {
+  .sm-copy-row { flex-direction: row; align-items: center; gap: 16px; }
+  .sm-copy-row .vbtn { width: auto; }
+  .sm-models { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sm-models > li:nth-child(2) { border-top: 0; }
+  .sm-models > li:nth-child(odd) { border-right: 2px solid var(--sp-line); }
+}
+
+/* ---------- Wide screens ---------- */
+@media (min-width: 960px) {
+  .sm-layout { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 24px 28px; align-items: start; }
+  .sm-layout.sm-no-side { grid-template-columns: minmax(0, 860px); }
+  .sm-side { display: grid; gap: 24px; position: sticky; top: calc(var(--sp-stick-top) + 24px);
+    max-height: calc(100vh - var(--sp-stick-top) - 48px); overflow-y: auto; }
+  .sm-main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .sm-first { order: 0; }
+  .sm-part { padding: 18px 16px; font-size: 19px; }
+  .sm-part .sm-openings > li { font-size: 19px; }
+  .sm-table { font-size: 18px; }
+  .sm-also .sp-rows { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sm-also .sp-rows > li + li { border-left: 2px solid var(--sp-line); }
+  .sm-also .sp-row { height: 100%; border-top: 0; align-items: start; }
+  .sm-intro { margin-bottom: 24px; font-size: 19px; }
+  .sm-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .sm-checked { margin-top: 24px; }
+}

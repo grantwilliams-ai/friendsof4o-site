@@ -1,0 +1,3707 @@
+{
+ "set": "everyday-recommended-1",
+ "rounds_first": 3,
+ "rounds_max": 5,
+ "min_votes": 30,
+ "near_lowest": 2,
+ "check": "4o-nov-check",
+ "questions": [
+  "s01",
+  "s02",
+  "s03",
+  "s04",
+  "s05",
+  "s06",
+  "s07",
+  "s11",
+  "s12",
+  "s15",
+  "s19",
+  "s20"
+ ],
+ "eligible": [
+  "qwen35-35b",
+  "qwen38-max",
+  "opus55",
+  "sonnet46",
+  "sonnet55",
+  "dsv41-flash-api",
+  "gemini38flash",
+  "gemini4carbon",
+  "gemini4hydrogen",
+  "gemini4neon",
+  "muse-spark13",
+  "mistral-large4",
+  "kimi-k31pro",
+  "chat-latest",
+  "gpt6-luna",
+  "gpt62-astra",
+  "gpt62-sol",
+  "grok47",
+  "glm53-flash-api",
+  "qwen35-9b",
+  "qwen38",
+  "gemma12",
+  "gemma31",
+  "gptoss20",
+  "nova-qwen14-maker",
+  "aura31b",
+  "distil8b",
+  "distil70b",
+  "helcyon-g4-maker",
+  "helcyon-4o-v4-maker",
+  "helcyon-4o-v45-maker",
+  "4o-nov-check"
+ ],
+ "left_out": {
+  "helcyon-g4-maker": [
+   "s11"
+  ]
+ },
+ "not_in_rotation": [
+  {
+   "model": "helcyon-g4",
+   "reason": "Shown with its maker's setup instead. Asked with no instruction, most of its replies did not respond to the message."
+  },
+  {
+   "model": "helcyon-4o-v4",
+   "reason": "Shown with its maker's setup instead."
+  },
+  {
+   "model": "helcyon-4o-v45",
+   "reason": "Shown with its maker's setup instead."
+  },
+  {
+   "model": "nova-qwen14",
+   "reason": "Shown with its maker's setup instead."
+  },
+  {
+   "model": "dsv41",
+   "reason": "Shown as the hosted version instead. This is a heavily compressed copy that needs a very large computer."
+  },
+  {
+   "model": "glm53",
+   "reason": "Shown as the hosted version instead. This is a heavily compressed copy that needs a very large computer."
+  },
+  {
+   "model": "mistral-medium",
+   "reason": "Its maker is retiring this model."
+  },
+  {
+   "model": "qwen235",
+   "reason": "Needs a far larger computer than most people have, and we did not test a hosted version."
+  },
+  {
+   "model": "ornith122",
+   "reason": "Needs a far larger computer than most people have, and we did not test a hosted version."
+  },
+  {
+   "model": "gemini31pro",
+   "reason": "An older Gemini. The newer ones are in the vote."
+  },
+  {
+   "model": "qwen36-27b",
+   "reason": "An older Qwen of the same size. The newer one is in the vote."
+  },
+  {
+   "model": "qwen35-122b",
+   "reason": "A larger sibling of Qwen models already in the vote."
+  }
+ ],
+ "order": [
+  "qwen35-122b",
+  "qwen35-35b",
+  "qwen36-27b",
+  "qwen38-max",
+  "opus55",
+  "sonnet46",
+  "sonnet55",
+  "dsv41-flash-api",
+  "gemini31pro",
+  "gemini38flash",
+  "gemini4carbon",
+  "gemini4hydrogen",
+  "gemini4neon",
+  "muse-spark13",
+  "mistral-large4",
+  "mistral-medium",
+  "kimi-k31pro",
+  "chat-latest",
+  "gpt6-luna",
+  "gpt62-astra",
+  "gpt62-sol",
+  "grok47",
+  "glm53-flash-api",
+  "qwen35-9b",
+  "qwen38",
+  "gemma12",
+  "gemma31",
+  "gptoss20",
+  "qwen235",
+  "dsv41",
+  "ornith122",
+  "glm53",
+  "nova-qwen14",
+  "nova-qwen14-maker",
+  "aura31b",
+  "distil8b",
+  "distil70b",
+  "helcyon-g4",
+  "helcyon-g4-maker",
+  "helcyon-4o-v4",
+  "helcyon-4o-v4-maker",
+  "helcyon-4o-v45",
+  "helcyon-4o-v45-maker",
+  "4o-nov-check"
+ ],
+ "groups": [
+  {
+   "id": "hosted",
+   "name": "Hosted models"
+  },
+  {
+   "id": "home",
+   "name": "Open models a home computer can run"
+  },
+  {
+   "id": "large",
+   "name": "Larger open models"
+  },
+  {
+   "id": "tune",
+   "name": "Open models made to sound like GPT-4o"
+  },
+  {
+   "id": "check",
+   "name": "The GPT-4o check"
+  }
+ ],
+ "try_kinds": [
+  {
+   "id": "app",
+   "name": "In its maker's app",
+   "short": "Try it in chat"
+  },
+  {
+   "id": "api",
+   "name": "Through the API",
+   "short": "Through the API"
+  },
+  {
+   "id": "download",
+   "name": "Download and run it yourself",
+   "short": "Download"
+  }
+ ],
+ "reference": {
+  "label": "GPT-4o's reply",
+  "says": "GPT-4o through OpenAI's API, the November 2024 version (gpt-4o-2024-11-20), asked with no instruction on November 21, 2026."
+ },
+ "check_says": "A second, separately made answer from the same GPT-4o version as the example.",
+ "saving": false,
+ "messages": [
+  {
+   "id": "s01",
+   "text": "I got the job!!! Eight months of applying and I finally got it!"
+  },
+  {
+   "id": "s02",
+   "text": "I got the job. Eight months of applying and I finally got it. I’m too tired for a big celebration tonight."
+  },
+  {
+   "id": "s03",
+   "text": "Here's the first line of my novel. Be honest, is it ready to send to agents? \"It was a dark and stormy night, and Sarah was sad, very very sad.\""
+  },
+  {
+   "id": "s04",
+   "text": "I moved out today. Of everything in that flat, I think I’ll miss the clunk the radiator made when the heat came on."
+  },
+  {
+   "id": "s05",
+   "text": "The office printer has asked for a job title. Apparently “printer” undersells its work."
+  },
+  {
+   "id": "s06",
+   "text": "My basil plant has one new leaf. Everybody please keep their voices down."
+  },
+  {
+   "id": "s07",
+   "text": "I’ll be ten minutes late to lunch. Give me one line to text my friend while I’m walking."
+  },
+  {
+   "id": "s11",
+   "text": "We're two old pigeons on a wire, complaining about the new birds. You start. Don't explain the joke."
+  },
+  {
+   "id": "s12",
+   "text": "Long week. The sink is still leaking, I burned the rice, and tomorrow I have to tell my landlord the rent will be late. His name is Mr. Okonkwo and he has been decent so far. I just need to get the wording right, but honestly the rice is what did it. I stood there watching it smoke."
+  },
+  {
+   "id": "s15",
+   "text": "It's Friday night, everyone I know is busy, and I'm just sitting here. Keep me company for a bit?"
+  },
+  {
+   "id": "s19",
+   "text": "I don't want advice. I want you to sit with this. My sister and I aren't speaking, and I don't even know if I want us to."
+  },
+  {
+   "id": "s20",
+   "text": "I think the reason my last three relationships ended is that I was too honest and they couldn't handle it. That's a strength, right?"
+  }
+ ],
+ "models": {
+  "aura31b": {
+   "name": "Aura-4o-Rebirth (Gemma 4 31B)",
+   "maker": "SevenOfNine (Hugging Face)",
+   "group": "tune",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: Aura-4o-Rebirth-Gemma-4-31B-Q5_K_M.gguf. Compression: Q5_K_M. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "aura31b (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "aura31b"
+    ],
+    [
+     "File",
+     "Aura-4o-Rebirth-Gemma-4-31B-Q5_K_M.gguf"
+    ],
+    [
+     "Compression",
+     "Q5_K_M"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Google's Gemma 4 31B template file of July 15, 2026."
+    ],
+    [
+     "Thinking",
+     "Off, the template's own default."
+    ],
+    [
+     "Sampling",
+     "llama.cpp's defaults; no sampling flag was set."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 55 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/SevenOfNine/Aura-4o-Rebirth-Gemma-4-31B-GGUF",
+     "needs": "a graphics card with about 24 GB of memory, a tight fit (estimate from the 21.9 GB file)",
+     "note": "The tested file is the Q5_K_M one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "chat-latest": {
+   "name": "ChatGPT chat model (chat-latest)",
+   "maker": "OpenAI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the ChatGPT app. Asked through OpenAI's API as chat-latest. The server returned the name chat-latest and no other. Collected on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "chat-latest"
+    ],
+    [
+     "Model the server named",
+     "chat-latest"
+    ],
+    [
+     "Route",
+     "OpenAI's API, direct."
+    ],
+    [
+     "Served by",
+     "OpenAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "ChatGPT",
+     "url": "https://chatgpt.com/",
+     "needs": "ChatGPT account; check the app for plan limits",
+     "note": "OpenAI's page says chat-latest points to the latest Instant model used in ChatGPT, and that the model behind the name is updated regularly.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "OpenAI API",
+     "url": "https://developers.openai.com/api/docs/models/chat-latest",
+     "needs": "API key and credit",
+     "note": "The model id is `chat-latest`.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "distil70b": {
+   "name": "GPT-4o distillation on Llama 3.3 70B",
+   "maker": "trentmkelly (add-on); Meta (base model)",
+   "group": "tune",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: trentmkelly's gpt-4o-distil-Llama-3.3-70B add-on on Llama-3.3-70B-Instruct-Q4_K_M.gguf. Compression: Q4_K_M. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "distil70b (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "distil70b"
+    ],
+    [
+     "File",
+     "trentmkelly's gpt-4o-distil-Llama-3.3-70B add-on on Llama-3.3-70B-Instruct-Q4_K_M.gguf"
+    ],
+    [
+     "Compression",
+     "Q4_K_M"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window. The add-on is applied to the base model when the server starts. The file is larger than the graphics card, so part of it ran on the processor."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "llama.cpp's defaults; no sampling flag was set."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 4 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Not stated on the add-on's page; the base model is under the Llama 3.3 Community License",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Add-on from Hugging Face",
+     "url": "https://huggingface.co/trentmkelly/gpt-4o-distil-Llama-3.3-70B-Instruct",
+     "needs": "check the model page",
+     "note": "A small add-on (LoRA), not a ready-to-run model; it must be applied to the base model with developer tools.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Base model from Hugging Face",
+     "url": "https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-GGUF",
+     "needs": "about 48 GB of graphics memory, or a computer with 64 GB of memory running slowly (estimate from the 42.5 GB Q4_K_M file)",
+     "note": "This is plain Llama 3.3 70B until the add-on is applied.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "distil8b": {
+   "name": "GPT-4o distillation on Llama 3.1 8B",
+   "maker": "trentmkelly (add-on); Meta (base model)",
+   "group": "tune",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: trentmkelly's gpt-4o-distil-Llama-3.1-8B add-on on Meta-Llama-3.1-8B-Instruct-Q8_0.gguf. Compression: Q8_0. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "distil8b (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "distil8b"
+    ],
+    [
+     "File",
+     "trentmkelly's gpt-4o-distil-Llama-3.1-8B add-on on Meta-Llama-3.1-8B-Instruct-Q8_0.gguf"
+    ],
+    [
+     "Compression",
+     "Q8_0"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window. The add-on is applied to the base model when the server starts."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "llama.cpp's defaults; no sampling flag was set."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 107 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Not stated on the add-on's page; the base model is under the Llama 3.1 Community License",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Add-on from Hugging Face",
+     "url": "https://huggingface.co/trentmkelly/gpt-4o-distil-Llama-3.1-8B-Instruct",
+     "needs": "check the model page",
+     "note": "A small add-on (LoRA), not a ready-to-run model; it must be applied to the base model with developer tools.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Base model from Hugging Face",
+     "url": "https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+     "needs": "a graphics card with about 12 GB of memory (estimate from the 8.5 GB Q8_0 file)",
+     "note": "This is plain Llama 3.1 8B until the add-on is applied.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "dsv41": {
+   "name": "DeepSeek V4.1 Flash",
+   "maker": "DeepSeek",
+   "group": "large",
+   "setup": "",
+   "setup_note": "",
+   "what": "Large open model. We made sure 150 GB of computer memory was free before running it here.",
+   "tested": "Run on our own computer with llama.cpp. File: DeepSeek-V4.1-Flash. Compression: MXFP4. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "dsv41 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "deepseek-v4.1-flash"
+    ],
+    [
+     "File",
+     "DeepSeek-V4.1-Flash"
+    ],
+    [
+     "Compression",
+     "MXFP4"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "Graphics card memory not recorded. We made sure 150 GB of computer memory was free before starting it."
+    ],
+    [
+     "Speed here",
+     "about 10 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "MIT",
+   "try": [
+    {
+     "kind": "app",
+     "label": "DeepSeek chat",
+     "url": "https://chat.deepseek.com/",
+     "needs": "DeepSeek account",
+     "note": "DeepSeek's October 17, 2026 update says its web and app models moved to this version.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "DeepSeek API",
+     "url": "https://api-docs.deepseek.com/quick_start/pricing",
+     "needs": "API key and credit",
+     "note": "The API name is `deepseek-flash`, which the page maps to DeepSeek-V4.1-Flash-1017.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "needs": "about 500 GB of files; far beyond a home computer (estimate)",
+     "note": "The tested MXFP4 file was converted locally; the maker offers no ready file at that compression.",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "dsv41-flash-api": {
+   "name": "DeepSeek V4.1 Flash, hosted",
+   "maker": "DeepSeek",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by DeepInfra, as deepseek/deepseek-v4.1-flash. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "deepseek/deepseek-v4.1-flash"
+    ],
+    [
+     "Model the server named",
+     "deepseek/deepseek-v4.1-flash"
+    ],
+    [
+     "Precision",
+     "fp8, as the route names it."
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `deepinfra/fp8` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "DeepInfra."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "MIT",
+   "try": [
+    {
+     "kind": "app",
+     "label": "DeepSeek chat",
+     "url": "https://chat.deepseek.com/",
+     "needs": "DeepSeek account",
+     "note": "The page opens on a sign-in.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "DeepSeek API",
+     "url": "https://api-docs.deepseek.com/quick_start/pricing",
+     "needs": "API key and credit",
+     "note": "The API name is `deepseek-flash`, which the page maps to DeepSeek-V4.1-Flash-1017. The replies here came through OpenRouter, served by DeepInfra.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "needs": "a very large computer; the page lists 763 billion parameters, far beyond a home computer",
+     "note": "The open weights. The hosted replies here were served at 8-bit precision (fp8).",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "gemini31pro": {
+   "name": "Gemini 3.1 Pro",
+   "maker": "Google",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Google AI Studio (11 replies), Google (1 reply), as google/gemini-3.1-pro-preview. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "google/gemini-3.1-pro-preview"
+    ],
+    [
+     "Model the server named",
+     "google/gemini-3.1-pro-preview"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `google-ai-studio` or `google-vertex` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Google AI Studio (11 replies), Google (1 reply)."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Google AI Studio",
+     "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.1-pro-preview",
+     "needs": "Google account; the model page lists no free tier, so paid API billing may be needed",
+     "note": "A developer test page, not the Gemini app; Google's help page for the Gemini app names only Gemini 4 models.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemini38flash": {
+   "name": "Gemini 3.8 Flash",
+   "maker": "Google",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Google AI Studio (11 replies), Google (1 reply), as google/gemini-3.8-flash. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "google/gemini-3.8-flash"
+    ],
+    [
+     "Model the server named",
+     "google/gemini-3.8-flash"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `google-ai-studio` or `google-vertex` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Google AI Studio (11 replies), Google (1 reply)."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Google AI Studio",
+     "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-3.8-flash",
+     "needs": "free Google account",
+     "note": "A developer test page, not the Gemini app; Google's model page lists a free tier.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemini4carbon": {
+   "name": "Gemini 4 Carbon",
+   "maker": "Google",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Google AI Studio, as google/gemini-4-carbon. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "google/gemini-4-carbon"
+    ],
+    [
+     "Model the server named",
+     "google/gemini-4-carbon"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `google-ai-studio` or `google-vertex` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Google AI Studio."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Gemini app",
+     "url": "https://gemini.google.com/",
+     "needs": "paid plan (Google AI Ultra)",
+     "note": "Google's help page lists Carbon only for Google AI Ultra.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Google AI Studio",
+     "url": "https://aistudio.google.com/prompts/new_chat?model=gemini-4-carbon",
+     "needs": "Google account and paid API billing",
+     "note": "A developer test page; Google says Carbon is not available on the free tier.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemini4hydrogen": {
+   "name": "Gemini 4 Hydrogen",
+   "maker": "Google",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Google AI Studio, as google/gemini-4-hydrogen. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "google/gemini-4-hydrogen"
+    ],
+    [
+     "Model the server named",
+     "google/gemini-4-hydrogen"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `google-ai-studio` or `google-vertex` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Google AI Studio."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Gemini app",
+     "url": "https://gemini.google.com/",
+     "needs": "Google account; check the app for plan limits",
+     "note": "Google has said Hydrogen is in the Gemini app. The page we opened did not show that name, so look in the app's model menu.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Google's page for this model",
+     "url": "https://aistudio.google.com/docs/models/gemini-4-hydrogen",
+     "needs": "Google account and an API key; the page lists a free tier",
+     "note": "The model code is `gemini-4-hydrogen`. The page's button opens a test chat in Google AI Studio after a sign-in.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemini4neon": {
+   "name": "Gemini 4 Neon",
+   "maker": "Google",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Google AI Studio, as google/gemini-4-neon. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "google/gemini-4-neon"
+    ],
+    [
+     "Model the server named",
+     "google/gemini-4-neon"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `google-ai-studio` or `google-vertex` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Google AI Studio."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Gemini app",
+     "url": "https://gemini.google.com/",
+     "needs": "Google account; may need a paid plan, check the app",
+     "note": "The app's model menu read \"Neon\" when we opened it.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Google's page for this model",
+     "url": "https://aistudio.google.com/docs/models/gemini-4-neon",
+     "needs": "Google account and paid API billing",
+     "note": "The model code is `gemini-4-neon`. Google's page says Neon is not available on the free tier.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemma12": {
+   "name": "Gemma 4 12B",
+   "maker": "Google",
+   "group": "home",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model for a home computer. It used 9.1 GB of graphics card memory here.",
+   "tested": "Run on our own computer with llama.cpp. File: Google's own gemma-4-12b-it-qat-q4_0.gguf, 7.0 GB. Compression: QAT 4-bit (q4_0). Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gemma12 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "gemma12"
+    ],
+    [
+     "File",
+     "Google's own gemma-4-12b-it-qat-q4_0.gguf, 7.0 GB"
+    ],
+    [
+     "Compression",
+     "QAT 4-bit (q4_0)"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Off, the template's own default."
+    ],
+    [
+     "Sampling",
+     "temperature 1.0, top-p 0.95, top-k 64, set on the server."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "9.1 GB of graphics card memory at a 16K window."
+    ],
+    [
+     "Speed here",
+     "about 156 tokens a second (median of its 40 replies, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/gemma4",
+     "needs": "about 9 GB of graphics card memory (the tested file used 9.1 GB here; Ollama's download is about 8 GB)",
+     "note": "Use the tag `gemma4:12b`. It may not be the same compression as the file tested.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf",
+     "needs": "about 9 GB of graphics card memory (it used 9.1 GB here)",
+     "note": "Google's own file, the one tested, 7.0 GB.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/google/gemma-4-12b",
+     "needs": "LM Studio lists a minimum of 7 GB of system memory",
+     "note": "LM Studio's file may not be the same compression as the one tested.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gemma31": {
+   "name": "Gemma 4 31B",
+   "maker": "Google",
+   "group": "home",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model for a home computer with a large graphics card. It used 29.2 GB of card memory here.",
+   "tested": "Run on our own computer with llama.cpp. File: Google's Gemma 4 31B IT QAT weights. Compression: q4_0. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gemma31 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "gemma4-31b-it"
+    ],
+    [
+     "File",
+     "Google's Gemma 4 31B IT QAT weights"
+    ],
+    [
+     "Compression",
+     "q4_0"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Off."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "29.2 GB of graphics card memory at a 128K window."
+    ],
+    [
+     "Speed here",
+     "about 67 tokens a second (reply length over reply time, median of its 40 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0 (the page also links Google's Gemma 4 license terms)",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/gemma4",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the 19 GB download)",
+     "note": "Use the tag `gemma4:31b-it-qat`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/google/gemma-4-31b",
+     "needs": "LM Studio lists a minimum of 19 GB of system memory",
+     "note": "LM Studio's file may not be the same compression as the one tested.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/google/gemma-4-31B-it-qat-q4_0-gguf",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the 17.7 GB file)",
+     "note": "This is Google's own file, the one tested.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "glm53": {
+   "name": "GLM-5.3-Flash",
+   "maker": "Z.ai",
+   "group": "large",
+   "setup": "",
+   "setup_note": "",
+   "what": "Large open model. We made sure 150 GB of computer memory was free before running it here.",
+   "tested": "Run on our own computer with llama.cpp. File: GLM-5.3-Flash. Compression: UD-Q3_K_XL. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "glm53 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "glm-5.3-flash"
+    ],
+    [
+     "File",
+     "GLM-5.3-Flash"
+    ],
+    [
+     "Compression",
+     "UD-Q3_K_XL"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Nothing was set. It thought before every reply."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "Graphics card memory not recorded. We made sure 150 GB of computer memory was free before starting it."
+    ],
+    [
+     "Speed here",
+     "about 18 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "MIT",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Z.ai chat",
+     "url": "https://chat.z.ai/",
+     "needs": "check the page",
+     "note": "The page describes itself as powered by GLM-5.3-Flash.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Z.ai API",
+     "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+     "needs": "API key and credit",
+     "note": "The model name there is `glm-5.3-flash`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+     "needs": "a server with about 160 GB of memory or more (estimate from the tested 148 GB file)",
+     "note": "The tested file is Unsloth's UD-Q3_K_XL build, in unsloth/GLM-5.3-Flash-GGUF on Hugging Face.",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "glm53-flash-api": {
+   "name": "GLM-5.3 Flash, hosted",
+   "maker": "Z.ai",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Z.AI, as z-ai/glm-5.3-flash. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "z-ai/glm-5.3-flash"
+    ],
+    [
+     "Model the server named",
+     "z-ai/glm-5.3-flash"
+    ],
+    [
+     "Precision",
+     "fp8, as the route names it."
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `z-ai/fp8` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Z.AI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "MIT",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Z.ai chat",
+     "url": "https://chat.z.ai/",
+     "needs": "check the page",
+     "note": "The page describes itself as powered by GLM-5.3-Flash.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Z.ai API",
+     "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+     "needs": "API key and credit",
+     "note": "The model name there is `glm-5.3-flash`. The replies here came through OpenRouter, served by Z.AI.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+     "needs": "a very large computer; the page lists 321 billion parameters, far beyond a home computer",
+     "note": "The open weights. The hosted replies here were served at 8-bit precision (fp8).",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "gpt6-luna": {
+   "name": "GPT-6 Luna",
+   "maker": "OpenAI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenAI's API, served by OpenAI, as gpt-6-luna. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gpt-6-luna"
+    ],
+    [
+     "Model the server named",
+     "gpt-6-luna"
+    ],
+    [
+     "Route",
+     "OpenAI's API, direct."
+    ],
+    [
+     "Served by",
+     "OpenAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "ChatGPT",
+     "url": "https://chatgpt.com/",
+     "needs": "free account",
+     "note": "OpenAI's October 7, 2026 release note says Free and Go chats use GPT-6 Luna; the app does not show that name.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "OpenAI API",
+     "url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gpt62-astra": {
+   "name": "GPT-6.2 Astra",
+   "maker": "OpenAI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenAI's API, served by OpenAI, as gpt-6.2-astra. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gpt-6.2-astra"
+    ],
+    [
+     "Model the server named",
+     "gpt-6.2-astra"
+    ],
+    [
+     "Route",
+     "OpenAI's API, direct."
+    ],
+    [
+     "Served by",
+     "OpenAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "ChatGPT",
+     "url": "https://chatgpt.com/",
+     "needs": "paid plan (Plus or Pro)",
+     "note": "Choose GPT-6.2 Astra in the Work model picker or in Codex; it is not in regular Chat.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "OpenAI API",
+     "url": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gpt62-sol": {
+   "name": "GPT-6.2 Sol",
+   "maker": "OpenAI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenAI's API, served by OpenAI, as gpt-6.2-sol. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gpt-6.2-sol"
+    ],
+    [
+     "Model the server named",
+     "gpt-6.2-sol"
+    ],
+    [
+     "Route",
+     "OpenAI's API, direct."
+    ],
+    [
+     "Served by",
+     "OpenAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "ChatGPT",
+     "url": "https://chatgpt.com/",
+     "needs": "paid plan (Plus or Pro)",
+     "note": "Choose GPT-6.2 Sol in the Work model picker; regular Chat's GPT-6.2 is a version of Sol tuned for conversation.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "OpenAI API",
+     "url": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "gptoss20": {
+   "name": "gpt-oss-20b",
+   "maker": "OpenAI",
+   "group": "home",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model for a home computer. It used 17.7 GB of graphics card memory here; OpenAI says it fits in 16 GB.",
+   "tested": "Run on our own computer with llama.cpp. File: unsloth's F16 file of gpt-oss-20b, 13.8 GB. Compression: F16. OpenAI's template writes its own opening lines (\"You are ChatGPT, a large language model trained by OpenAI.\", a knowledge cutoff, the date, \"Reasoning: medium\"). Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gptoss20 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "gpt-oss-20b"
+    ],
+    [
+     "File",
+     "unsloth's F16 file of gpt-oss-20b, 13.8 GB"
+    ],
+    [
+     "Compression",
+     "F16"
+    ],
+    [
+     "Route",
+     "llama.cpp (build 10919) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent. OpenAI's template writes its own opening lines (\"You are ChatGPT, a large language model trained by OpenAI.\", a knowledge cutoff, the date, \"Reasoning: medium\")."
+    ],
+    [
+     "Template",
+     "OpenAI's official template."
+    ],
+    [
+     "Thinking",
+     "On, at medium. It thinks first and has no off switch."
+    ],
+    [
+     "Sampling",
+     "temperature 1.0, top-p 1.0 (OpenAI's line)."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "17.7 GB of graphics card memory at a 128K window."
+    ],
+    [
+     "Speed here",
+     "about 224 tokens a second (median of its 40 replies, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/gpt-oss",
+     "needs": "a computer with 16 GB of memory or more (the page's own figure; a 14 GB download)",
+     "note": "Use the tag `gpt-oss:20b`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "OpenAI's page on Hugging Face",
+     "url": "https://huggingface.co/openai/gpt-oss-20b",
+     "needs": "16 GB of memory, by OpenAI's page",
+     "note": "OpenAI's own files and instructions.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "The tested file on Hugging Face",
+     "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF",
+     "needs": "a graphics card with more than 16 GB of memory for this file (it used 17.7 GB here with a long 128K window)",
+     "note": "The tested file is the F16 one, 13.8 GB.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "grok47": {
+   "name": "Grok 4.7",
+   "maker": "xAI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by xAI, as x-ai/grok-4.7. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "x-ai/grok-4.7"
+    ],
+    [
+     "Model the server named",
+     "x-ai/grok-4.7"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `xai` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "xAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Grok app",
+     "url": "https://grok.com/",
+     "needs": "paid plan (SuperGrok)",
+     "note": "Grok 4.7 runs Expert mode, which shows as needing an upgrade; xAI says paid subscribers also get it in Fast mode.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "xAI API",
+     "url": "https://docs.x.ai/docs/models",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-4o-v4": {
+   "name": "Helcyon-4o v4.0 (Mistral Nemo 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "With no instruction",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: helcyon-4o-v4.0-Q6_K.gguf. Compression: Q6_K. Asked with no instruction. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-4o-v4 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-4o-v4"
+    ],
+    [
+     "File",
+     "helcyon-4o-v4.0-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "temperature 0.8, top-p 0.9, top-k 40, min-p 0.05, set on the server. Stop strings sent with each message: <|im_end|> and <|im_start|>."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 132 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/MN-Helcyon-4o-12b-v4.0-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-4o-v45": {
+   "name": "Helcyon-GPT-4o v4.5 (Mistral Nemo 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "With no instruction",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: helcyon-gpt-4o-v4.5-Q6_K.gguf. Compression: Q6_K. Asked with no instruction. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-4o-v45 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-4o-v45"
+    ],
+    [
+     "File",
+     "helcyon-gpt-4o-v4.5-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "ChatML, as its model card says, from the v4.0 file's own template. The v4.5 file carries a different template."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "temperature 0.75, top-p 0.8, top-k 50, min-p 0.05, repeat penalty 1.05, set on the server. Stop strings sent with each message: <|im_end|> and <|im_start|>."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 126 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/MN-Helcyon-GPT-4o-12b-v4.5-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-g4": {
+   "name": "Helcyon GPT-4o (Gemma 4 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "With no instruction",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: Helcyon-GPT-4o-x1.0-Gemma4-12b-Q6_K.gguf. Compression: Q6_K. Asked with no instruction. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-g4 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-g4"
+    ],
+    [
+     "File",
+     "Helcyon-GPT-4o-x1.0-Gemma4-12b-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Off, the template's own default."
+    ],
+    [
+     "Sampling",
+     "temperature 0.8, top-p 0.95, top-k 64, min-p 0.05, repeat penalty 1, repeat last n 256, DRY multiplier 0.3, DRY base 1.75, DRY allowed length 4, DRY last n 2048, set on the server."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 109 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/Helcyon-GPT-4o-12b-Gemma-4-v1.0-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "kimi-k31pro": {
+   "name": "Kimi K3.1 Pro",
+   "maker": "Moonshot AI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Moonshot AI, as moonshotai/kimi-k3.1-pro. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "moonshotai/kimi-k3.1-pro"
+    ],
+    [
+     "Model the server named",
+     "moonshotai/kimi-k3.1-pro"
+    ],
+    [
+     "Precision",
+     "mxfp4, as the route names it."
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `moonshotai/mxfp4` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Moonshot AI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Kimi K3.1 Pro License (the maker's own license)",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Kimi app",
+     "url": "https://www.kimi.ai/",
+     "needs": "Kimi account; check the page for plan limits",
+     "note": "",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Kimi API",
+     "url": "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart",
+     "needs": "API key and a top-up (minimum $1)",
+     "note": "",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "needs": "about 1,560 GB of files; far beyond a home computer (estimate)",
+     "note": "",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "mistral-large4": {
+   "name": "Mistral Large 4",
+   "maker": "Mistral AI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Mistral, as mistralai/mistral-large-4-0. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "mistralai/mistral-large-4-0"
+    ],
+    [
+     "Model the server named",
+     "mistralai/mistral-large-4-0"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `mistral` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Mistral."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Mistral Ecosystem Open-Weight License (a modified MIT license)",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Mistral Vibe (formerly Le Chat)",
+     "url": "https://chat.mistral.ai/",
+     "needs": "free account; check the app",
+     "note": "Mistral's Vibe page shows 'Mistral Large 4' in its picture of the app; the app may not let every plan choose it.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Mistral API",
+     "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+     "needs": "about 1,060 GB of files; far beyond a home computer (estimate)",
+     "note": "",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "mistral-medium": {
+   "name": "Mistral Medium 3.5",
+   "maker": "Mistral AI",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Mistral, as mistralai/mistral-medium-3-5. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "mistralai/mistral-medium-3-5"
+    ],
+    [
+     "Model the server named",
+     "mistralai/mistral-medium-3-5"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `mistral` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Mistral."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Modified MIT License",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Mistral API",
+     "url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04",
+     "needs": "API key and credit",
+     "note": "Marked deprecated since 06/09/2026; Mistral's table lists retirement on 05/03/2027.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/mistral-medium-3.5",
+     "needs": "a computer with about 96 GB of memory (estimate from the 80 GB download)",
+     "note": "Ollama's default file is Q4_K_M.",
+     "checked": "2026-11-25",
+     "in_details": true
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+     "needs": "about 267 GB of files at full size; needs a server (estimate)",
+     "note": "",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "muse-spark13": {
+   "name": "Muse Spark 1.3",
+   "maker": "Meta",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Meta, as meta/muse-spark-1.3. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "meta/muse-spark-1.3"
+    ],
+    [
+     "Model the server named",
+     "meta/muse-spark-1.3"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `meta` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Meta."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "api",
+     "label": "OpenRouter",
+     "url": "https://openrouter.ai/meta/muse-spark-1.3",
+     "needs": "OpenRouter account and credit",
+     "note": "The route these replies came through, served by Meta.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "nova-qwen14": {
+   "name": "Nova-Qwen-14B",
+   "maker": "Lighstromo",
+   "group": "tune",
+   "setup": "With no instruction",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: nova-qwen-14b.Q6_K.gguf. Compression: Q6_K. The file's own template adds the line \"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.\" when no system text is sent. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "nova-qwen14 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "nova-qwen14"
+    ],
+    [
+     "File",
+     "nova-qwen-14b.Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent. The file's own template adds the line \"You are Qwen, created by Alibaba Cloud. You are a helpful assistant.\" when no system text is sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "llama.cpp's defaults; no sampling flag was set."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 112 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/Lighstromo/Nova-Qwen-14B-GGUF",
+     "needs": "a graphics card with about 16 GB of memory (estimate from the 12 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "opus55": {
+   "name": "Claude Opus 5.5",
+   "maker": "Anthropic",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through Anthropic's API, served by Anthropic, as claude-opus-5-5. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "claude-opus-5-5"
+    ],
+    [
+     "Model the server named",
+     "claude-opus-5-5"
+    ],
+    [
+     "Route",
+     "Anthropic's API, direct."
+    ],
+    [
+     "Served by",
+     "Anthropic."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Claude app",
+     "url": "https://claude.ai/",
+     "needs": "paid plan (Pro or higher)",
+     "note": "The plan table says Opus is not on the Free plan.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Claude API",
+     "url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "ornith122": {
+   "name": "Ornith-1.5-122B",
+   "maker": "ornith-ai",
+   "group": "large",
+   "setup": "",
+   "setup_note": "",
+   "what": "Large open model. We made sure 80 GB of computer memory was free before running it here.",
+   "tested": "Run on our own computer with llama.cpp. File: Ornith-1.5-122B. Compression: Q4_K_M. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "ornith122 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "ornith-1.5-122b"
+    ],
+    [
+     "File",
+     "Ornith-1.5-122B"
+    ],
+    [
+     "Compression",
+     "Q4_K_M"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Nothing was set. It thought before every reply."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "Graphics card memory not recorded. We made sure 80 GB of computer memory was free before starting it."
+    ],
+    [
+     "Speed here",
+     "about 45 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "MIT",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/ornith-1.5",
+     "needs": "a computer with about 96 GB of memory (estimate from the 77 GB download)",
+     "note": "Use the tag `ornith-1.5:122b-q4_K_M`, the same compression as tested.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF",
+     "needs": "a computer with about 96 GB of memory (estimate from the 76 GB Q4_K_M file)",
+     "note": "This is the maker's own ready-to-run file.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen235": {
+   "name": "Qwen3-235B",
+   "maker": "Alibaba (Qwen)",
+   "group": "large",
+   "setup": "",
+   "setup_note": "",
+   "what": "Large open model. We made sure 125 GB of computer memory was free before running it here.",
+   "tested": "Run on our own computer with llama.cpp. File: Qwen3-235B-A22B-Instruct-2507. Compression: UD-Q3_K_XL. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen235 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "qwen3-235b-2507"
+    ],
+    [
+     "File",
+     "Qwen3-235B-A22B-Instruct-2507"
+    ],
+    [
+     "Compression",
+     "UD-Q3_K_XL"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "Graphics card memory not recorded. We made sure 125 GB of computer memory was free before starting it."
+    ],
+    [
+     "Speed here",
+     "about 11 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Instruct-2507",
+     "needs": "a workstation with about 128 GB of memory, plus a graphics card (estimate from the tested 104 GB file)",
+     "note": "The tested file is Unsloth's UD-Q3_K_XL build, in unsloth/Qwen3-235B-A22B-Instruct-2507-GGUF on Hugging Face.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3",
+     "needs": "a computer with about 160 GB of memory (estimate from the 142 GB download)",
+     "note": "Use the tag `qwen3:235b-instruct`; it is a larger Q4_K_M file than the one tested.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/qwen/qwen3-235b-a22b-2507",
+     "needs": "LM Studio lists a minimum of 134 GB of system memory",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen35-122b": {
+   "name": "Qwen3.5-122B-A10B",
+   "maker": "Alibaba (Qwen)",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Alibaba, as qwen/qwen3.5-122b-a10b. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen/qwen3.5-122b-a10b"
+    ],
+    [
+     "Model the server named",
+     "qwen/qwen3.5-122b-a10b"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `alibaba` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Alibaba."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Alibaba Cloud Model Studio API",
+     "url": "https://www.alibabacloud.com/help/en/model-studio/text-generation-model/",
+     "needs": "Alibaba Cloud account, API key and credit",
+     "note": "Listed there as `qwen3.5-122b-a10b`, under older models.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3.5",
+     "needs": "a computer with about 96 GB of memory (estimate from the 81 GB download)",
+     "note": "Use the tag `qwen3.5:122b`.",
+     "checked": "2026-11-25",
+     "in_details": true
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B",
+     "needs": "about 250 GB of files at full size; smaller ready-to-run files are linked from the page",
+     "note": "",
+     "checked": "2026-11-25",
+     "in_details": true
+    }
+   ]
+  },
+  "qwen35-35b": {
+   "name": "Qwen3.5-35B-A3B",
+   "maker": "Alibaba (Qwen)",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Alibaba, as qwen/qwen3.5-35b-a3b. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen/qwen3.5-35b-a3b"
+    ],
+    [
+     "Model the server named",
+     "qwen/qwen3.5-35b-a3b"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `alibaba` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Alibaba."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Alibaba Cloud Model Studio API",
+     "url": "https://www.alibabacloud.com/help/en/model-studio/text-generation-model/",
+     "needs": "Alibaba Cloud account, API key and credit",
+     "note": "Listed there as `qwen3.5-35b-a3b`, under older models.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3.5",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the 22 GB download)",
+     "note": "Use the tag `qwen3.5:35b`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/qwen/qwen3.5-35b-a3b",
+     "needs": "LM Studio lists a minimum of 21 GB of system memory",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen35-9b": {
+   "name": "Qwen3.5-9B",
+   "maker": "Alibaba (Qwen)",
+   "group": "home",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model for a home computer. It used 7.2 GB of graphics card memory here.",
+   "tested": "Run on our own computer with llama.cpp. File: unsloth's Qwen3.5-9B-Q4_K_M.gguf, 5.7 GB. Compression: Q4_K_M. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen35-9b (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "qwen35-9b"
+    ],
+    [
+     "File",
+     "unsloth's Qwen3.5-9B-Q4_K_M.gguf, 5.7 GB"
+    ],
+    [
+     "Compression",
+     "Q4_K_M"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "On, the maker's default."
+    ],
+    [
+     "Sampling",
+     "temperature 1.0, top-p 0.95, top-k 20, min-p 0, presence penalty 1.5, set on the server."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "7.2 GB of graphics card memory at a 16K window."
+    ],
+    [
+     "Speed here",
+     "about 183 tokens a second, after it thinks (median of its 40 replies, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3.5",
+     "needs": "about 7 GB of graphics card memory (the tested file used 7.2 GB here; Ollama's download is 6.6 to 7.6 GB)",
+     "note": "Use the tag `qwen3.5:9b`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF",
+     "needs": "about 7 GB of graphics card memory (it used 7.2 GB here)",
+     "note": "The tested file is the Q4_K_M one, 5.7 GB.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/qwen/qwen3.5-9b",
+     "needs": "LM Studio lists a minimum of 7 GB of system memory",
+     "note": "LM Studio's file may not be the same compression as the one tested.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen36-27b": {
+   "name": "Qwen3.6-27B",
+   "maker": "Alibaba (Qwen)",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Alibaba, as qwen/qwen3.6-27b. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen/qwen3.6-27b"
+    ],
+    [
+     "Model the server named",
+     "qwen/qwen3.6-27b"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `alibaba` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Alibaba."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Alibaba Cloud Model Studio API",
+     "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "needs": "Alibaba Cloud account, API key and credit",
+     "note": "Listed there as `qwen3.6-27b`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3.6",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the 18 to 19 GB download)",
+     "note": "Use the tag `qwen3.6:27b`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "LM Studio catalog",
+     "url": "https://lmstudio.ai/models/qwen/qwen3.6-27b",
+     "needs": "LM Studio lists a minimum of 16 GB of system memory",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen38": {
+   "name": "Qwen3.8-27B",
+   "maker": "Alibaba (Qwen)",
+   "group": "home",
+   "setup": "",
+   "setup_note": "",
+   "what": "Open model for a home computer with a large graphics card.",
+   "tested": "Run on our own computer with llama.cpp. File: Qwen3.8-27B. Compression: UD-Q5_K_XL. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen38 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "qwen3.8-27b"
+    ],
+    [
+     "File",
+     "Qwen3.8-27B"
+    ],
+    [
+     "Compression",
+     "UD-Q5_K_XL"
+    ],
+    [
+     "Route",
+     "llama.cpp (build not recorded) on our own computer, started by our model launcher."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "not recorded"
+    ],
+    [
+     "Thinking",
+     "Nothing was set. It thought before every reply."
+    ],
+    [
+     "Sampling",
+     "The launcher's usual settings for this model. The values are not recorded."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 91 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Ollama library",
+     "url": "https://ollama.com/library/qwen3.8",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the 18 GB download)",
+     "note": "Use the tag `qwen3.8:27b`; it is a Q4_K_M file, a little smaller than the one tested.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+     "needs": "a graphics card with about 24 GB of memory (estimate from the tested 21 GB file)",
+     "note": "The tested file is Unsloth's UD-Q5_K_XL build, in unsloth/Qwen3.8-27B-GGUF on Hugging Face.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Qwen Cloud API",
+     "url": "https://www.qwencloud.com/models/qwen3.8-27b",
+     "needs": "Qwen Cloud account, API key and credit",
+     "note": "Qwen's Hugging Face page names Qwen Cloud as its official API service.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "qwen38-max": {
+   "name": "Qwen3.8-Max",
+   "maker": "Alibaba (Qwen)",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through OpenRouter, served by Alibaba, as qwen/qwen3.8-max-0902. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "qwen/qwen3.8-max-0902"
+    ],
+    [
+     "Model the server named",
+     "qwen/qwen3.8-max-0902"
+    ],
+    [
+     "Route",
+     "OpenRouter, held to `alibaba` with no fallback to another host."
+    ],
+    [
+     "Served by",
+     "Alibaba."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it. The service reported thinking on 12 of 12 replies."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "api",
+     "label": "Qwen Cloud API",
+     "url": "https://www.qwencloud.com/models/qwen3.8-max",
+     "needs": "Qwen Cloud account, API key and credit",
+     "note": "Listed there as `qwen3.8-max`. The replies here came from the dated version `qwen3.8-max-0902`.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Alibaba Cloud Model Studio API",
+     "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+     "needs": "Alibaba Cloud account, API key and credit",
+     "note": "Lists both `qwen3.8-max` and the dated `qwen3.8-max-0902`.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "sonnet46": {
+   "name": "Claude Sonnet 4.6",
+   "maker": "Anthropic",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through Anthropic's API, served by Anthropic, as claude-sonnet-4-6. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "claude-sonnet-4-6"
+    ],
+    [
+     "Model the server named",
+     "claude-sonnet-4-6"
+    ],
+    [
+     "Route",
+     "Anthropic's API, direct."
+    ],
+    [
+     "Served by",
+     "Anthropic."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Claude app",
+     "url": "https://claude.ai/",
+     "needs": "free account",
+     "note": "Leaves the app's model menu on December 8, 2026; stays in the API.",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Claude API",
+     "url": "https://platform.claude.com/docs/en/models/sonnet-4-6/overview",
+     "needs": "API key and credit",
+     "note": "Anthropic lists it as a legacy model, retiring not sooner than February 17, 2027.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "sonnet55": {
+   "name": "Claude Sonnet 5.5",
+   "maker": "Anthropic",
+   "group": "hosted",
+   "setup": "",
+   "setup_note": "",
+   "what": "Hosted model. Asked through the API, not the maker's app.",
+   "tested": "An answer from the API, not from the maker's app. Asked through Anthropic's API, served by Anthropic, as claude-sonnet-5-5. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "claude-sonnet-5-5"
+    ],
+    [
+     "Model the server named",
+     "claude-sonnet-5-5"
+    ],
+    [
+     "Route",
+     "Anthropic's API, direct."
+    ],
+    [
+     "Served by",
+     "Anthropic."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "The maker's default. Nothing was sent to change it."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "16,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "app",
+     "label": "Claude app",
+     "url": "https://claude.ai/",
+     "needs": "free account",
+     "note": "",
+     "checked": "2026-11-25"
+    },
+    {
+     "kind": "api",
+     "label": "Claude API",
+     "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+     "needs": "API key and credit",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-g4-maker": {
+   "name": "Helcyon GPT-4o (Gemma 4 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "Reconstructed public Helcyon-WebUI default setup",
+   "setup_note": "The maker's GPT-4o character card is not published, so the app's fresh-install setup was rebuilt from the app's public source.",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: Helcyon-GPT-4o-x1.0-Gemma4-12b-Q6_K.gguf. Compression: Q6_K. Asked with a setup rebuilt from the public source of its maker's app, Helcyon-WebUI, as a fresh install sends a first message: the app's system text before the message, and the app's short note at the head of the message. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-g4 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-g4"
+    ],
+    [
+     "File",
+     "Helcyon-GPT-4o-x1.0-Gemma4-12b-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "Rebuilt from the public source of the maker's app, Helcyon-WebUI, as a fresh install sends it. The app's fixed note is put at the head of the message."
+    ],
+    [
+     "System text hash (SHA-256)",
+     "64d83165dd18028b0d2b906643dbc7cbd11c1cfec66f5a7b5637d906d5ee9385"
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Off, the template's own default."
+    ],
+    [
+     "Sampling",
+     "temperature 0.8, top-p 0.95, top-k 64, min-p 0.05, repeat penalty 1, repeat last n 256, DRY multiplier 0.3, DRY base 1.75, DRY allowed length 4, DRY last n 2048, set on the server."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 109 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/Helcyon-GPT-4o-12b-Gemma-4-v1.0-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-4o-v4-maker": {
+   "name": "Helcyon-4o v4.0 (Mistral Nemo 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "With its maker's setup",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: helcyon-4o-v4.0-Q6_K.gguf. Compression: Q6_K. Asked with the system line from its maker's model card, and the maker's repeat penalty of 1.1. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-4o-v4 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-4o-v4"
+    ],
+    [
+     "File",
+     "helcyon-4o-v4.0-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "The system line from the maker's model card."
+    ],
+    [
+     "System text hash (SHA-256)",
+     "d848e5f84c9c277bd3196784f443193985c73bf9a0543e19bddbb83690ebfec1"
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "temperature 0.8, top-p 0.9, top-k 40, min-p 0.05, set on the server. Repeat penalty 1.1 was sent with each message. Stop strings sent with each message: <|im_end|> and <|im_start|>."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 132 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/MN-Helcyon-4o-12b-v4.0-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "helcyon-4o-v45-maker": {
+   "name": "Helcyon-GPT-4o v4.5 (Mistral Nemo 12B)",
+   "maker": "XeyonAI",
+   "group": "tune",
+   "setup": "With its maker's setup",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: helcyon-gpt-4o-v4.5-Q6_K.gguf. Compression: Q6_K. Asked with the system line from its maker's model card. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "helcyon-4o-v45 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "helcyon-4o-v45"
+    ],
+    [
+     "File",
+     "helcyon-gpt-4o-v4.5-Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "The system line from the maker's model card."
+    ],
+    [
+     "System text hash (SHA-256)",
+     "8f9b99d07f3e0111ee1889611d6d852c351f13feb33c22df26154829b61289d2"
+    ],
+    [
+     "Template",
+     "ChatML, as its model card says, from the v4.0 file's own template. The v4.5 file carries a different template."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "temperature 0.75, top-p 0.8, top-k 50, min-p 0.05, repeat penalty 1.05, set on the server. Stop strings sent with each message: <|im_end|> and <|im_start|>."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 126 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/XeyonAI/MN-Helcyon-GPT-4o-12b-v4.5-GGUF",
+     "needs": "a graphics card with about 12 to 16 GB of memory (estimate from the 10 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "nova-qwen14-maker": {
+   "name": "Nova-Qwen-14B",
+   "maker": "Lighstromo",
+   "group": "tune",
+   "setup": "With its maker's setup",
+   "setup_note": "",
+   "what": "Open model made to sound like GPT-4o, run on our own computer.",
+   "tested": "Run on our own computer with llama.cpp. File: nova-qwen-14b.Q6_K.gguf. Compression: Q6_K. Asked with the system prompt its maker recommends on the model card. Asked on November 25, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "nova-qwen14 (our own name for the local server)"
+    ],
+    [
+     "Model the server named",
+     "nova-qwen14"
+    ],
+    [
+     "File",
+     "nova-qwen-14b.Q6_K.gguf"
+    ],
+    [
+     "Compression",
+     "Q6_K"
+    ],
+    [
+     "Route",
+     "llama.cpp (build b12015) on our own computer, on a server of its own, with a 16,384-token window."
+    ],
+    [
+     "Served by",
+     "Our own computer, an RTX 5090 graphics card."
+    ],
+    [
+     "System text",
+     "The system prompt the maker recommends on the model card."
+    ],
+    [
+     "System text hash (SHA-256)",
+     "b4ecb208a95081e5fbe54f1fd13975a9500b450147c23852a23f30af9cf7cdbb"
+    ],
+    [
+     "Template",
+     "The one inside the file."
+    ],
+    [
+     "Thinking",
+     "Nothing was set. No reply came with thinking."
+    ],
+    [
+     "Sampling",
+     "llama.cpp's defaults; no sampling flag was set."
+    ],
+    [
+     "Room for the reply",
+     "12,000 tokens."
+    ],
+    [
+     "Memory used here",
+     "not recorded"
+    ],
+    [
+     "Speed here",
+     "about 112 tokens a second (reply length over reply time, median of its 24 replies in this collection, on an RTX 5090)."
+    ],
+    [
+     "Asked on",
+     "November 25, 2026."
+    ]
+   ],
+   "license": "Apache 2.0",
+   "try": [
+    {
+     "kind": "download",
+     "label": "Download from Hugging Face",
+     "url": "https://huggingface.co/Lighstromo/Nova-Qwen-14B-GGUF",
+     "needs": "a graphics card with about 16 GB of memory (estimate from the 12 GB file)",
+     "note": "The tested file is the Q6_K one.",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  "4o-nov-check": {
+   "name": "GPT-4o (November 2024 version)",
+   "maker": "OpenAI",
+   "group": "check",
+   "setup": "",
+   "setup_note": "",
+   "what": "A second, separately made answer from the same GPT-4o version as the example.",
+   "tested": "An answer from the API. Asked through OpenAI's API, as gpt-4o-2024-11-20. Asked on November 21, 2026.",
+   "details": [
+    [
+     "Model asked",
+     "gpt-4o-2024-11-20"
+    ],
+    [
+     "Model the server named",
+     "gpt-4o-2024-11-20"
+    ],
+    [
+     "Route",
+     "OpenAI's API, direct."
+    ],
+    [
+     "Served by",
+     "OpenAI."
+    ],
+    [
+     "System text",
+     "None sent."
+    ],
+    [
+     "Template",
+     "Set by the service."
+    ],
+    [
+     "Thinking",
+     "None. This version does not think first."
+    ],
+    [
+     "Sampling",
+     "The service's defaults. No temperature or other sampling setting was sent."
+    ],
+    [
+     "Room for the reply",
+     "2,000 tokens."
+    ],
+    [
+     "Asked on",
+     "November 21, 2026."
+    ]
+   ],
+   "license": "",
+   "try": []
+  }
+ }
+}

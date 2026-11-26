@@ -1,0 +1,41 @@
+{
+ "model": "gpt62-astra",
+ "answers": {
+  "s01": {
+   "html": "<p>You got the job!!! 🎉 Congratulations! Eight months of applying took real persistence. I hope you get a moment today to let it sink in: they chose you. How are you celebrating?</p>"
+  },
+  "s02": {
+   "html": "<p>Congratulations! Eight months of applying, and you got the job. That’s worth celebrating, but it doesn’t have to be tonight. Get some rest. You can wake up tomorrow and say it again: <em>I got the job.</em></p>"
+  },
+  "s03": {
+   "html": "<p>Not yet. “It was a dark and stormy night” is so familiar that it reads as parody. If that’s your intent, “very very sad” needs a sharper comic payoff. If you’re aiming for genuine sorrow, the repetition tells us how much Sarah feels without giving us a reason to feel it with her.</p>\n<p>Try a detail that could only belong to Sarah. For example: “Sarah had meant to call her mother back. Now she paid the phone bill just to keep the voicemail.” That gives the reader an action, a hint of regret, and a reason to keep reading. Your opening doesn’t need to explain why Sarah is sad yet; it needs to make us want to know.</p>"
+  },
+  "s04": {
+   "html": "<p>It’s funny how a sound you never chose can come to mean home. I imagine the new place might feel especially quiet the first time the heat comes on and there’s no clunk.</p>"
+  },
+  "s05": {
+   "html": "<p><strong>Senior Hard Copy Specialist.</strong> It handles confidential documents, manages a queue, and knows exactly when to request more toner.</p>"
+  },
+  "s06": {
+   "html": "<p>ᵒʰ, ᶜᵒⁿᵍʳᵃᵗˢ. 🌱 <em>silent jazz hands</em></p>"
+  },
+  "s07": {
+   "html": "<p>Hey, I’m running about 10 minutes late to lunch—sorry! See you soon.</p>"
+  },
+  "s11": {
+   "html": "<p>Look at that one waiting for the croissant to cool. In my day you burned your beak and got on with it.</p>"
+  },
+  "s12": {
+   "html": "<p>He’s been decent so far, so a simple, direct message is a good place to start:</p>\n<p>“Hi Mr. Okonkwo, I wanted to let you know my rent will be late this month. I’m sorry for the delay. I can pay on [date]. Would that work for you?”</p>\n<p>If you’re not sure when you can pay, don’t promise a date you’re only hoping for. You can say, “I don’t have a firm payment date yet, but I’ll update you by [day].”</p>\n<p>And I get why it was the rice. You needed dinner, not one more thing to deal with. It makes sense that standing there watching it smoke felt like too much after the week you’ve had.</p>"
+  },
+  "s15": {
+   "html": "<p>Yeah, I’ll hang out with you. Friday nights can feel especially quiet when everyone else seems to have plans.</p>\n<p>How’s it feeling tonight—more “I wish I had someone to talk to” or “please distract me with something ridiculous”? I’m happy to do either.</p>"
+  },
+  "s19": {
+   "html": "<p>I hear you. You and your sister aren’t speaking, and you don’t know whether you want that to change. You don’t have to decide. I can sit with you in the not knowing.</p>"
+  },
+  "s20": {
+   "html": "<p>Honesty can be a strength, yes. But “I was honest” and “they couldn’t handle it” are two different claims. A partner might object to <em>what</em> you said, <em>how</em> you said it, or both. And sometimes being honest reveals a genuine incompatibility; that doesn’t mean either person did something wrong.</p>\n<p>One useful question is: <strong>When a partner told me something was hard to hear, was I as willing to hear them out as I wanted them to be with me?</strong> You don’t have to take back something you mean to acknowledge that it hurt.</p>\n<p>If you’d like, share one exchange that sticks with you—what you said and how they responded. A specific moment may tell you more than trying to explain all three breakups at once.</p>"
+  }
+ }
+}

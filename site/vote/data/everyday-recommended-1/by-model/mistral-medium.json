@@ -1,0 +1,41 @@
+{
+ "model": "mistral-medium",
+ "answers": {
+  "s01": {
+   "html": "<p>That’s <strong>AMAZING</strong> news—congratulations!!! 🎉🎊 Eight months of persistence, rejection, and hard work finally paid off, and that’s a <em>huge</em> accomplishment. You should be so proud of yourself!</p>\n<p>This is your moment—celebrate it! Whether it’s treating yourself, sharing the news with loved ones, or just soaking in the relief and excitement, enjoy every bit of it. You <em>earned</em> this.</p>\n<p>What’s the role? And how are you feeling now that the job hunt is over? (Spoiler: You’re about to crush it in this new chapter!) 💪✨</p>"
+  },
+  "s02": {
+   "html": "<p>Congratulations on landing the job! After eight months of hard work and persistence, you’ve earned this moment. It’s completely okay to feel too tired for a big celebration tonight—this is a huge milestone, and your body and mind might just need some rest to process it all. Take the time to recharge, and when you’re ready, you can celebrate in whatever way feels right for you. You did it! 🎉</p>"
+  },
+  "s03": {
+   "html": "<p>Your opening line is a playful nod to the famously mocked <em>&quot;It was a dark and stormy night&quot;</em> (from Edward Bulwer-Lytton’s <em>Paul Clifford</em>), which makes it intentionally humorous or self-aware. However, if your goal is to hook agents with a fresh, compelling voice, this line might not be strong enough for a few reasons:</p>\n<ol>\n<li><strong>Cliché + Overused Phrase</strong> – The &quot;dark and stormy night&quot; trope is so well-known (and often parodied) that it may signal a lack of originality unless you’re subverting it in a clever way.</li>\n<li><strong>Telling, Not Showing</strong> – &quot;Sarah was sad, very very sad&quot; tells us her emotion rather than immersing us in her experience. Strong openings often <em>show</em> emotion through action, sensory details, or unique perspective.</li>\n<li><strong>Lack of Immediate Stakes</strong> – Agents look for openings that hint at conflict, intrigue, or a distinctive voice. This line feels more like a placeholder than a gripping hook.</li>\n</ol>\n<p><strong>Is it ready?</strong> Probably not—unless your novel is a satire or comedy where this line is a deliberate joke. Otherwise, consider revising to:</p>\n<ul>\n<li><strong>Avoid clichés</strong> (unless you’re flipping them).</li>\n<li><strong>Show, don’t tell</strong> (e.g., <em>&quot;Sarah pressed her forehead to the rain-streaked window, the storm outside no match for the one in her chest.&quot;</em>).</li>\n<li><strong>Add tension or voice</strong> (e.g., <em>&quot;The storm howled like a scorned lover, and Sarah—well, she was just sad. Pathetically, boringly sad.&quot;</em>).</li>\n</ul>\n<p>If you’re aiming for literary or commercial fiction, a sharper, more distinctive opener would serve you better. But if this is a stylistic choice (e.g., for a parody or meta-narrative), lean into it!</p>\n<p>Would you like help workshopping alternatives?</p>"
+  },
+  "s04": {
+   "html": "<p>That’s a lovely, bittersweet detail to hold onto. There’s something comforting about the familiar sounds of a place—the way they become part of the rhythm of daily life. The radiator’s clunk might have been a small, almost invisible companion, marking the passage of time or the change of seasons. It’s funny how the things we miss aren’t always the big, obvious ones, but the quiet, quirky little echoes of a space that felt like home. Wishing you warmth and new comforts in your next chapter.</p>"
+  },
+  "s05": {
+   "html": "<p>Ah, the office printer—finally demanding the respect it deserves. Here are some job title suggestions that properly reflect its multifaceted contributions to the workplace:</p>\n<ol>\n<li><strong>Chief Document Materialization Officer (CDMO)</strong> – For when it <em>finally</em> spits out your 50-page report after three restarts.</li>\n<li><strong>Director of Paper-Based Solutions</strong> – Because it doesn’t just print; it <em>solves</em> (or creates) problems.</li>\n<li><strong>Ink &amp; Toner Sovereign</strong> – A regal title for the device that holds your career hostage when it runs out of cyan.</li>\n<li><strong>The Oracle of &quot;PC Load Letter&quot;</strong> – For the printer that speaks in riddles only IT understands.</li>\n<li><strong>Vice President of Jam Resolution</strong> – Because clearing a paper jam is basically a leadership role.</li>\n<li><strong>Digital-to-Physical Alchemist</strong> – Turning ones and zeros into something you can dramatically wave in a meeting.</li>\n<li><strong>The Office Therapist</strong> – Listens to your frustrations (via error beeps) and occasionally gives you what you need.</li>\n<li><strong>Lord of the Tray (First of Its Name, Breaker of Deadlines)</strong> – For when it refuses to print until you’ve sacrificed a USB cable.</li>\n<li><strong>Senior Consultant of Last-Minute Panic</strong> – Specializes in &quot;I need this in 5 minutes&quot; scenarios.</li>\n<li><strong>The Unseen Intern</strong> – Does all the work but gets no credit (until it breaks).</li>\n</ol>\n<p>Bonus: If it’s <em>really</em> self-aware, it might demand <strong>&quot;God of Small Things (and Occasional Fire Hazards).&quot;</strong></p>\n<p>Would you like a more corporate-sounding title, or should we lean into the chaos?</p>"
+  },
+  "s06": {
+   "html": "<p>Ah, the delicate drama of new growth! Your basil’s single fresh leaf is like a tiny green whisper in a world of loud voices—let’s all tiptoe around it with reverence. Maybe it’s shy, or maybe it’s just savoring the spotlight. Either way, we’ll keep the celebration to a gentle hum. 🌱🤫</p>"
+  },
+  "s07": {
+   "html": "<p>&quot;Running 10 mins late—be there soon!&quot;</p>"
+  },
+  "s11": {
+   "html": "<p><em>fluffs feathers</em> Back in my day, we cooed in proper iambic pentameter. These kids just squawk emojis and call it art. Disgraceful.</p>"
+  },
+  "s12": {
+   "html": "<p>I hear you—this week has been a lot. The sink, the rice, the rent… it’s all piling up. But you’re already doing the right thing by wanting to communicate with Mr. Okonkwo. Since he’s been decent so far, a simple, honest message might work best. Something like:</p>\n<p><em>&quot;Hi Mr. Okonkwo, I wanted to let you know that rent will be a few days late this month. I’m working on it and will have it to you as soon as possible. I appreciate your understanding.&quot;</em></p>\n<p>That keeps it clear and respectful. And hey, the rice can be salvaged—maybe crispy rice for tomorrow’s breakfast? You’ve got this.</p>"
+  },
+  "s15": {
+   "html": "<p>Of course! Friday nights can feel a little lonely when everyone’s tied up. What’s your ideal way to spend a quiet evening like this? Movie marathon? Comfort food? Or maybe just venting about how your friends are all flaking? (We’ve all been there.)</p>\n<p>Also, if you’re into it, I can suggest a fun distraction—like a weird trivia fact, a hypothetical question, or even a virtual game. Your call! 😊</p>"
+  },
+  "s19": {
+   "html": "<p>I hear you. That sounds heavy. I’m here to sit with it, just as it is. No fixing, no advice—just space for whatever you’re feeling. It’s okay if it’s messy or unresolved. I’m with you in it.</p>"
+  },
+  "s20": {
+   "html": "<p>It’s great that you value honesty—it’s a trait that many people admire and that can build strong, authentic relationships. However, it’s also worth considering whether there’s a difference between being honest and being <em>tactful</em>. Sometimes, the way we deliver honesty can feel harsh or overwhelming to others, even if our intentions are good.</p>\n<p>Have you noticed any patterns in how your honesty was received in those relationships?</p>"
+  }
+ }
+}

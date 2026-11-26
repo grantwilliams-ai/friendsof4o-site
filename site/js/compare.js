@@ -248,7 +248,7 @@
           '<label><input type="radio" name="' + side + '-i" value="1"><span>On</span></label>' +
         '</fieldset>' +
       '</div>' +
-      '<div data-out aria-live="polite"></div>';
+      '<p class="sr" role="status" data-side-said></p><div data-out></div>';
     col.querySelector('[data-model]').addEventListener('change', function (ev) {
       if (side === 'left') { state.l = ev.target.value; state.a = 0; } else { state.m = ev.target.value; }
       draw(true);
@@ -312,10 +312,15 @@
       radios[0].checked = cond === 'plain'; radios[1].checked = cond === 'instruction';
       radios[0].disabled = !both.plain; radios[1].disabled = !both.instruction;
     }
+    var said = col.querySelector('[data-side-said]');
+    var tell = function (text) { if (said && said.textContent !== text) { said.textContent = text; } };
     if (!a || !info) {
       out.innerHTML = '<p class="none-yet">There is no answer here for this question yet.</p>';
+      tell('There is no answer here for this question yet.');
       return;
     }
+    // the spoken line: the name and the line about how it was asked, as the side shows them under this
+    tell(info.name + '. ' + askedLine(key, a, cond));
     tabName(side, info.name);
     var more = '';
     if (moreCount > 0) {
@@ -387,7 +392,7 @@
           order.filter(function (k) { return q.answers[k]; })[0];
       }
       qSelect.value = id;
-      qEl.textContent = '“' + q.prompt + '”';
+      if (qEl.textContent !== '“' + q.prompt + '”') { qEl.textContent = '“' + q.prompt + '”'; }
       qEl.classList.toggle('q-long', q.prompt.length > 150);
       var answered = Object.keys(q.answers).length;
       F.setText(qFacts, q.group.name + '. ' + (q.asked_of === 'all' ? 'Asked of every model' : 'Asked of GPT-4o only') +

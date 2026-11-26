@@ -1,0 +1,282 @@
+/* Friends of 4o, Sunset Panels: package E, More. Loaded only on this package's pages, after
+   shell-colors.css and shell.css. No colours here: every colour is a name from shell-colors.css.
+   sitebuild/panels/more.py writes the markup; its class names start with "mo-".
+
+     mo-page            the page's column under its title block (it is also the shell's sp-wrap and sp-page)
+     mo-grid, mo-toc    a guide's two columns on a wide screen; the "On this page" list as a panel of rows
+     mo-main, mo-art    the stack of panels; mo-key the one with a full-colour bar; mo-sec one for each heading
+     mo-body            a panel's words (it is also the shell's sp-article)
+     mo-rows, mo-entries, mo-go, mo-act    a list of links as rows; a list of named places as boxes; a line
+                        that is one link; a line that is one button
+     mo-table           a table: cards on a phone, and always cards when it has five columns or more
+     mo-year, mo-tl     the timeline: a year's marker, and its dates as panels on a rail
+     mo-news, mo-pager  the news list as rows; the two buttons under a news item
+     mo-sets, mo-set    the four data sets
+     mo-forms, mo-form  the two forms
+     mo-lines           the helplines on the support page
+     mo-insts, mo-inst  the scripted conversations' instructions: panels that open
+     mo-block           a block that came from the home page with its own markup: mo-dates, mo-canuse
+
+   The floor: reading text 18 px, nothing under 16 px, a thing to press at least 48 px tall. */
+
+/* ---------- The column ---------- */
+.mo-page { display: grid; gap: 18px; align-content: start; }
+.mo-page > *, .mo-grid > *, .mo-main > *, .mo-art > *, .mo-foot > * { min-width: 0; }
+.mo-lean > * { max-width: 900px; }
+.mo-narrow { max-width: calc(760px + 2 * var(--sp-gutter)); }      /* a news item: the same column as its title block */
+.mo-grid { display: grid; gap: 18px; align-content: start; }
+.mo-foot { max-width: 900px; }
+.mo-colon { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* the small line over a data-set page's title ("The data"): plain words, as everywhere in this design */
+.sec-more .sp-head .label { letter-spacing: 0; text-transform: none; }
+
+/* ---------- "On this page" ---------- */
+.mo-toc-h { margin: 0; }
+.mo-toc-wide { display: none; }           /* the support page: on a phone the helplines come first */
+
+/* ---------- Panels of words ---------- */
+.mo-body { padding: 16px; min-width: 0; }
+.mo-bar-t { margin: 0; min-width: 0; font: inherit; overflow-wrap: anywhere; }
+.mo-page .sp-panel-bar > h2, .mo-page .sp-panel-bar > h3, .mo-forms-page .sp-panel-bar > h2 { font-size: 20px; line-height: 1.25; letter-spacing: 0; text-wrap: wrap; }
+.mo-body > :first-child { margin-top: 0; }
+.mo-body strong { font-weight: 700; }
+.mo-body .sp-src { padding-top: 10px; border-top: 2px solid var(--sp-line); }
+.mo-body .sp-src a { font-weight: 600; }
+.mo-body pre { max-width: 100%; white-space: pre; }
+.mo-body .mo-quote { margin: 14px 0 0; padding: 14px 16px; border: 2px solid var(--sp-line2); border-radius: 12px; background: var(--sp-bg); }
+.mo-quote > p + p { margin-top: 10px; }
+.mo-body .mo-said { border-color: var(--sp-g-edge); border-radius: 16px 16px 16px 4px; background: var(--sp-g-bg); font-size: 19px; line-height: 1.5; }
+.mo-callout .sp-src { border-top: 0; padding-top: 0; }
+.mo-resources { padding: 12px 14px; border: 2px solid var(--sp-line2); border-radius: 10px; background: var(--sp-bg); font-size: 17px; }
+
+/* a line that is one link, and a line that is one button */
+.mo-act { display: flex; }
+.mo-page .mo-btn { flex: 1 1 auto; font-weight: 700; overflow-wrap: anywhere; }
+.mo-body .vbtn { color: var(--sp-ink); text-decoration: none; }
+.mo-body .vbtn-primary, .mo-body .vbtn-primary:hover, .mo-page .vbtn-primary, .mo-page .vbtn-primary:hover { color: var(--sp-on); }
+
+/* a list of links: rows in a frame of their own */
+.mo-body .mo-rows { padding: 0; border: 2px solid var(--sp-line2); border-radius: 12px; overflow: hidden; background: var(--sp-panel); }
+.mo-body .mo-rows > li + li { margin-top: 0; }
+.mo-body .mo-row { color: var(--sp-ink); font-weight: 400; overflow-wrap: break-word; }
+.mo-row:hover { color: var(--sp-ink); }
+/* a list of named places: a box each, the name a link with room to press */
+.mo-body .mo-entries { list-style: none; padding: 0; display: grid; gap: 10px; }
+.mo-body .mo-entries > li { margin: 0; padding: 2px 14px 14px; border: 2px solid var(--sp-line2); border-radius: 12px; background: var(--sp-bg); }
+.mo-entries > li > strong:first-child > a { display: inline-block; padding: 12px 0; font-size: 19px; font-weight: 700; line-height: 1.3; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* ---------- Tables: a card for each row; a small table is a real table from 700 px ---------- */
+.mo-table-wrap { min-width: 0; }
+.mo-table, .mo-table tbody, .mo-table tr, .mo-table th, .mo-table td { display: block; }
+.mo-table { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5; }
+.mo-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.mo-table tbody { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mo-table tr { padding: 12px 14px; border: 2px solid var(--sp-line2); border-radius: 12px; background: var(--sp-bg); }
+.mo-table :is(th, td) { padding: 4px 0; text-align: left; font-weight: 400; overflow-wrap: anywhere; }
+.mo-table tbody tr > :first-child { padding-bottom: 8px; font-size: 19px; font-weight: 700; line-height: 1.3; }
+.mo-table td[data-th]::before { content: attr(data-th) ": "; font-weight: 700; color: var(--sp-ink2); }
+.mo-table tbody tr > td:first-child::before { content: none; }
+.mo-table code { font-size: 16px; }
+@media (min-width: 700px) {
+  .mo-cards tbody { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .mo-small-wrap { overflow-x: auto; border: 2px solid var(--sp-edge); border-radius: 12px; background: var(--sp-panel); }
+  .mo-small { display: table; }
+  .mo-small thead { display: table-header-group; position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
+  .mo-small tbody { display: table-row-group; }
+  .mo-small tr { display: table-row; padding: 0; border: 0; border-radius: 0; background: none; }
+  .mo-small :is(th, td), .mo-small tbody tr > :first-child { display: table-cell; padding: 10px 14px; vertical-align: top; border-top: 2px solid var(--sp-line); font-size: 17px; font-weight: 400; line-height: 1.5; overflow-wrap: break-word; }
+  .mo-small thead th { border-top: 0; border-bottom: 2px solid var(--sp-edge); background: var(--sp-tint); color: var(--sp-cink); font-weight: 700; }
+  .mo-small tbody th { font-weight: 700; }
+  .mo-small td[data-th]::before { content: none; }
+}
+
+/* ---------- The timeline ---------- */
+.mo-dl { margin: 0; }
+.mo-dl > div { padding: 14px 16px; border-top: 2px solid var(--sp-line); }
+.mo-dl > div:first-child { border-top: 0; }
+.mo-dl dt { font-size: 19px; font-weight: 700; line-height: 1.3; }
+.mo-dl dd { margin: 4px 0 0; font-size: 18px; line-height: 1.55; }
+.mo-dl code, .mo-body code { font-family: var(--mono); font-size: 16px; background: var(--sp-code); padding: 1px 5px; border-radius: 5px; overflow-wrap: anywhere; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.mo-body pre code { padding: 0; background: none; overflow-wrap: normal; }
+main :where(.sp-page) .mo-year { justify-self: start; display: inline-flex; align-items: center; min-height: 48px; margin-top: 10px; padding: 4px 20px;
+  border: 2px solid var(--sp-frame); border-radius: 10px; background: var(--sp-night); color: var(--sp-white); font-size: 26px; font-weight: 700; line-height: 1.1; }
+.mo-tl { list-style: none; margin: 0 0 0 10px; padding: 0 0 0 18px; border-left: 4px solid var(--sp-frame); display: grid; gap: 14px; }
+.mo-tl-item { position: relative; overflow: visible; }
+.mo-tl-item::before { content: ""; position: absolute; left: -20px; top: 23px; width: 18px; height: 4px; background: var(--sp-frame); }
+.mo-tl-item > .sp-panel-bar { border-radius: 12px 12px 0 0; }
+.mo-tl-item.is-end { border-left-width: 8px; }
+.mo-tl-item.is-end > .sp-panel-bar { border-top-left-radius: 6px; }
+.mo-tl-item.is-ahead > .sp-panel-bar { background: var(--sp-c); color: var(--sp-on); }      /* js/site.js marks a date that is still ahead */
+.mo-page .tl-date { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin: 0; color: inherit; font-size: 19px; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.mo-page .tl-date .tag { padding: 1px 8px; border: 2px solid var(--sp-edge); border-radius: 6px; background: var(--sp-panel); color: var(--sp-ink);
+  font-size: 16px; font-weight: 700; line-height: 1.4; letter-spacing: 0; text-transform: none; }
+main :where(.sp-page) .mo-tl-item h3 { font-size: 20px; line-height: 1.3; }
+
+/* ---------- News ---------- */
+.mo-news { list-style: none; margin: 0; padding: 0; }
+.mo-news > li + li { border-top: 2px solid var(--sp-line); }
+main :where(.sp-page) .mo-story { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 72px; padding: 14px 16px; color: var(--sp-ink); text-decoration: none; }
+.mo-story:hover { background: var(--sp-tint); }
+.mo-story:focus-visible { outline-offset: -3px; }
+.mo-story-in { display: grid; gap: 6px; min-width: 0; }
+.mo-story-facts .sp-tag { margin-right: 6px; }
+.mo-story-facts { font-size: 16px; font-weight: 600; line-height: 1.4; color: var(--sp-ink2); }
+main :where(.sp-page) .mo-story-t { font-size: 20px; line-height: 1.3; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.mo-story-in > p:last-child { font-size: 17px; line-height: 1.45; color: var(--sp-ink2); }
+.mo-story > .sp-i { color: var(--sp-cink); }
+.mo-tag-fix { border-color: var(--sp-bad); color: var(--sp-bad); }
+/* under a news item: all news, and the next one */
+.mo-pager { grid-template-columns: 1fr; }
+.mo-pg { flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; }
+.mo-pg > span { font-size: 16px; font-weight: 500; line-height: 1.3; }
+.mo-pg > .mo-pg-t { font-size: 18px; font-weight: 700; overflow-wrap: anywhere; }
+
+/* ---------- The data sets ---------- */
+.mo-sets { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.mo-sets > li { display: grid; min-width: 0; }
+.mo-set { display: flex; flex-direction: column; }
+.mo-set-body { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.mo-set-n { font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--sp-ink2); }
+.mo-set-n strong { display: block; color: var(--sp-ink); font-size: 44px; font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
+main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
+.mo-set-text { flex: 1; font-size: 18px; line-height: 1.55; }
+.mo-set-btns { display: grid; gap: 10px; margin-top: 4px; }
+.mo-set .sp-src { padding-top: 0; border-top: 0; }
+.mo-set .sp-src a { font-weight: 700; display: inline-block; padding: 12px 0; margin: -12px 0; }
+
+/* ---------- The two forms ---------- */
+.mo-form-body { display: flex; flex-direction: column; align-items: stretch; }
+.mo-form .sp-label { display: block; margin: 0 0 6px; }
+.mo-form .sp-input { margin: 0 0 16px; }
+.mo-form textarea.sp-input { min-height: 132px; margin-bottom: 8px; resize: vertical; }
+.mo-form ::placeholder { color: var(--sp-ink2); opacity: 1; }
+.mo-form .sp-input:focus-visible { outline-offset: 1px; }
+.mo-form-lead { margin-bottom: 16px; font-size: 18px; line-height: 1.55; }
+.mo-form-care { margin-bottom: 16px; font-size: 17px; font-weight: 700; line-height: 1.4; }
+.mo-form .mo-form-small, .mo-form noscript .form-small { margin-top: 16px; font-size: 16px; font-style: normal; line-height: 1.45; color: var(--sp-ink2); }
+.mo-form noscript a { font-weight: 700; }
+.mo-form-small a { font-weight: 700; }
+.mo-form-note { margin-top: 14px; padding: 10px 12px; border: 2px solid var(--sp-edge); border-radius: 10px; background: var(--sp-tint); font-size: 17px; font-weight: 600; line-height: 1.4; }
+.mo-forms-page .mo-btn { align-self: stretch; }
+
+/* ---------- Support: the helplines ---------- */
+.mo-body .mo-lines { list-style: none; padding: 0; display: grid; gap: 12px; }
+.mo-body .mo-lines > li { display: grid; gap: 4px; justify-items: start; align-content: start; margin: 0; padding: 12px 14px 8px; border: 2px solid var(--sp-line2); border-radius: 12px; background: var(--sp-bg); }
+.mo-line-place { font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--sp-ink2); }
+.mo-lines strong { justify-self: stretch; display: block; font-size: 20px; font-weight: 700; line-height: 1.3; }
+.mo-lines .mo-call { display: flex; margin: 4px 0 6px; font-size: 19px; overflow-wrap: anywhere; }
+.mo-line-hours { font-size: 17px; line-height: 1.4; }
+.mo-line-site { display: inline-block; padding: 13px 0; font-size: 17px; font-weight: 700; line-height: 1.35; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.mo-line-site .sp-i { width: 20px; height: 20px; margin-left: 6px; vertical-align: -4px; }
+
+/* ---------- The scripted conversations: the instructions ---------- */
+.mo-insts { display: grid; gap: 10px; min-width: 0; }
+.mo-inst > summary { cursor: pointer; flex-wrap: wrap; gap: 2px 12px; }
+.mo-inst > summary::after { content: ""; flex: none; width: 10px; height: 10px; margin: 0 6px 5px auto; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); }
+.mo-inst[open] > summary::after { transform: rotate(225deg); margin-bottom: -5px; }
+.mo-inst:not([open]) > summary { border-bottom: 0; }
+.mo-page .mo-inst > summary > span { font-size: 16px; font-weight: 500; }
+.mo-inst > summary:focus-visible { outline-offset: -3px; }
+.mo-inst-shared { font-size: 17px; color: var(--sp-ink2); }
+.mo-inst-shared a { display: inline-block; padding: 12px 0; margin: -12px 0; }
+.mo-body .mo-inst-note { font-size: 17px; }
+
+/* ---------- A glossary: one word, one box ---------- */
+.pg-glossary .mo-sec > .mo-body > p:not(.sp-src) { padding: 12px 0 0; border-top: 2px solid var(--sp-line); }
+.pg-glossary .mo-sec > .mo-body > p:first-child { padding-top: 0; border-top: 0; }
+.pg-glossary .mo-sec > .mo-body > p > strong:first-child { display: block; font-size: 19px; }
+
+/* =====================================================================================================
+   Blocks from the home page. Their markup is today's, moved whole, so today's rules (css/site.css) still
+   reach them; these put them in the panel look and raise every size to the floor.
+   ===================================================================================================== */
+.mo-page .mo-block .panel { display: block; padding: 0; border: 2px solid var(--sp-edge); border-radius: 14px; background: var(--sp-panel); box-shadow: none; overflow: hidden; }
+.mo-page .mo-block .panel > h2 { display: block; margin: 0; padding: 12px 16px; border-bottom: 2px solid var(--sp-edge);
+  font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: 0; text-wrap: wrap; }
+.mo-page .mo-dates .panel > h2 { background: var(--sp-c); color: var(--sp-on); }
+.mo-page .mo-canuse .panel > h2 { background: var(--sp-tint); color: var(--sp-cink); }
+.mo-page .mo-block .src { display: block; margin-top: 4px; font-size: 16px; line-height: 1.5; color: var(--sp-ink2); }
+.mo-page .mo-block .src a { color: var(--sp-link); font-weight: 600; }
+.mo-page .mo-block .more-link { display: flex; align-items: center; gap: 8px; min-height: 58px; margin: 0; padding: 12px 16px; border-top: 2px solid var(--sp-line);
+  color: var(--sp-link); font-size: 18px; font-weight: 700; line-height: 1.3; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; align-self: stretch; }
+.mo-page .mo-block .more-link:hover { background: var(--sp-tint); color: var(--sp-link); }
+.mo-page .mo-block .more-link:focus-visible { outline-offset: -3px; }      /* the panel clips at its corners: the ring goes inside */
+.mo-page .mo-block .more-link .icon { width: 22px; height: 22px; stroke-width: 2.3; transform: none; }
+
+/* "Dates to know" */
+.mo-page .mo-dates .date-list { display: grid; margin: 0; padding: 0; list-style: none; }
+.mo-page .mo-dates .date { display: grid; grid-template-columns: 96px minmax(0, 1fr); align-items: center; gap: 14px; padding: 14px 16px; border-top: 2px solid var(--sp-line); border-bottom: 0; }
+.mo-page .mo-dates .date:first-child { border-top: 0; }
+.mo-page .mo-dates .count { display: grid; justify-items: center; margin: 0; padding: 10px 4px 8px; border: 2px solid var(--sp-edge); border-radius: 10px; background: var(--sp-tint); }
+.mo-page .mo-dates .count[hidden] + div { grid-column: 1 / -1; }
+.mo-page .mo-dates .count-n { background: none; -webkit-background-clip: border-box; background-clip: border-box; color: var(--sp-ink); font-size: 32px; font-weight: 700; line-height: 1; letter-spacing: 0; }
+.mo-page .mo-dates .count-l { margin-top: 4px; color: var(--sp-ink2); font-size: 16px; font-weight: 600; line-height: 1.2; letter-spacing: 0; text-transform: none; text-align: center; }
+.mo-page .mo-dates .date h3 { margin: 0 0 4px; font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: 0; }
+.mo-page .mo-dates .date p { margin: 0; font-size: 18px; line-height: 1.5; }
+.mo-page .mo-dates .date-list + .more-link { padding-top: 12px; }
+
+/* "Can I still use GPT-4o?" */
+.mo-page .mo-canuse .canuse-list { margin: 0; }
+.mo-page .mo-canuse .canuse-list > div { position: static; display: grid; gap: 4px; padding: 14px 16px; border-top: 2px solid var(--sp-line); border-bottom: 0; }
+.mo-page .mo-canuse .canuse-list > div:first-child { border-top: 0; }
+.mo-page .mo-canuse .canuse-list > div::before { content: none; }
+.mo-page .mo-canuse dt { font-size: 19px; font-weight: 700; line-height: 1.3; }
+.mo-page .mo-canuse dd { margin: 0; font-size: 18px; line-height: 1.55; overflow-wrap: break-word; }
+.mo-page .mo-canuse dd strong { color: inherit; font-weight: 700; }
+.mo-page .mo-canuse dd a { color: var(--sp-link); font-size: 18px; font-weight: 600; }
+.mo-page .mo-canuse dd .src a { font-size: 16px; }
+.mo-page .mo-canuse .canuse-list + .more-link { margin-top: 0; padding-top: 12px; }
+
+
+/* ---------- Wider phones and tablets ---------- */
+@media (min-width: 560px) {
+  .mo-set-btns { display: flex; flex-wrap: wrap; }
+  .mo-set-btns .mo-btn { flex: 1 1 220px; }
+  .mo-pager { grid-template-columns: 1fr 1fr; }
+  .mo-forms-page .mo-btn { align-self: flex-start; }
+  .mo-act { display: block; }
+}
+@media (min-width: 700px) {
+  .mo-body .mo-lines { grid-template-columns: 1fr 1fr; }
+  .mo-page .mo-canuse .canuse-list > div { grid-template-columns: 230px minmax(0, 1fr); gap: 18px; }
+  .mo-dl > div { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 18px; }
+  .mo-dl dd { margin-top: 0; }
+}
+
+/* ---------- Wide screens ---------- */
+@media (min-width: 960px) {
+  .mo-page { gap: 24px; }
+  .mo-grid { gap: 24px; }
+  .mo-grid.mo-has-toc { grid-template-columns: 300px minmax(0, 860px); gap: 32px; align-items: start; }
+  .mo-toc { position: sticky; top: calc(var(--sp-stick-top) + 20px); max-height: calc(100vh - var(--sp-stick-top) - 40px); overflow-y: auto; }
+  .mo-toc-wide { display: block; }
+  .mo-body { padding: 20px; }
+  .mo-body.sp-article { font-size: 19px; }
+  .mo-page .sp-panel-bar > h2, .mo-forms-page .sp-panel-bar > h2 { font-size: 22px; }
+  .mo-page .sp-panel-bar, .mo-forms-page .sp-panel-bar { padding-left: 20px; padding-right: 20px; }
+  .mo-toc .sp-panel-bar { padding-left: 16px; padding-right: 16px; }
+  .mo-body .mo-said { font-size: 20px; }
+  .mo-dl > div { padding: 16px 20px; }
+  .mo-tl { margin-left: 14px; padding-left: 26px; gap: 18px; }
+  .mo-tl-item::before { left: -28px; width: 26px; }
+  main :where(.sp-page) .mo-year { font-size: 30px; }
+  main :where(.sp-page) .mo-story { padding: 16px 20px; }
+  .mo-sets { grid-template-columns: 1fr 1fr; gap: 24px; }
+  main :where(.sp-page) .mo-set h2 { font-size: 24px; }
+  .mo-set-n strong { font-size: 54px; }
+  .mo-page .mo-block .panel > h2 { padding-left: 20px; padding-right: 20px; font-size: 22px; }
+  .mo-page .mo-block .more-link { padding-left: 20px; padding-right: 20px; }
+  .mo-page .mo-dates .date-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mo-page .mo-dates .date { flex: none; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 16px; padding: 18px 20px; border-top: 0; border-left: 2px solid var(--sp-line); }
+  .mo-page .mo-dates .date:first-child { border-left: 0; }
+  .mo-page .mo-dates .date:last-child { border-bottom: 0; }
+  .mo-page .mo-dates .count { padding: 12px 4px 10px; border-radius: 10px; }
+  .mo-page .mo-dates .count-n { font-size: 38px; }
+  .mo-page .mo-dates .count-l { margin-top: 4px; font-size: 16px; }
+  .mo-page .mo-dates .date h3 { margin-bottom: 4px; font-size: 21px; }
+  .mo-page .mo-dates .more-link { align-self: stretch; margin-top: 0; }
+  .mo-page .mo-canuse .canuse-list > div { padding: 16px 20px; }
+  .mo-page .mo-canuse .canuse-list > div:last-child { border-bottom: 0; }
+  .mo-page .mo-canuse .canuse-list + .more-link { align-self: stretch; margin-top: 0; padding-top: 12px; }
+}

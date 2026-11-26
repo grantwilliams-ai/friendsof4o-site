@@ -1,0 +1,81 @@
+/* Friends of 4o: the colours of the "Sunset Panels" shell (Grant's choice, 2026-11-25).
+   In static_panels/: a plain build never copies it, so today's site stays as it is.
+   Every colour the shell, the panels and the chat turns use is named here, light and dark. css/shell.css, the five
+   page builders' stylesheets and css/vote.css use the names only.
+
+   The sunset is cut into four bands and each section owns one: Save gold, Read coral, Compare rose, Models violet.
+   A page says which section it is in with one class (sp-sec-compare) and everything inside takes that band:
+   the section band, the frames, the main button. */
+
+:root {
+  --sp-bg: #fbf3ea;            /* the page: warm paper */
+  --sp-well: #f2e4d5;          /* the conversation area */
+  --sp-panel: #ffffff;         /* panels and plain buttons */
+  --sp-ink: #191733;           /* text */
+  --sp-ink2: #4a4666;          /* quieter text */
+  --sp-frame: #2b2554;         /* the dark border that holds a region no section owns */
+  --sp-line: #d6cbe4;          /* dividers inside a panel */
+  --sp-line2: #8d87a6;         /* edges of quiet controls */
+  --sp-line3: #77718f;         /* the same edge where the control sits on a section's tint: 3 to 1 on all four */
+  --sp-link: #4a2fc0;
+  --sp-white: #ffffff;
+
+  --sp-night: #131038;         /* the top bar, the tab bar, the footer */
+  --sp-night2: #0b0a22;
+  --sp-night-line: #2c2760;    /* between two tabs */
+  --sp-peach: #ffcf9e;
+
+  /* the four sections, from the horizon up: gold, coral, rose, violet */
+  --sp-save-c: #f4b142;    --sp-save-on: #2a1700;    --sp-save-deep: #8a5200;    --sp-save-chip: #ffdf9c;
+  --sp-read-c: #c9462a;    --sp-read-on: #ffffff;    --sp-read-deep: #7f2612;    --sp-read-chip: #7f2612;
+  --sp-compare-c: #b52a66; --sp-compare-on: #ffffff; --sp-compare-deep: #74143e; --sp-compare-chip: #74143e;
+  --sp-models-c: #5a3fd0;  --sp-models-on: #ffffff;  --sp-models-deep: #33238a;  --sp-models-chip: #33238a;
+  --sp-home-c: #ffcf9e;    --sp-home-on: #24164d;    --sp-home-deep: #b5622a;    --sp-home-chip: #ffe6c9;
+
+  --sp-save-edge: #8a5200;    --sp-save-lip: #8a5200;    --sp-save-tint: #fff1d2;    --sp-save-ink: #7a4300;
+  --sp-read-edge: #7f2612;    --sp-read-lip: #7f2612;    --sp-read-tint: #ffe8de;    --sp-read-ink: #9a3018;
+  --sp-compare-edge: #74143e; --sp-compare-lip: #74143e; --sp-compare-tint: #fde3ec; --sp-compare-ink: #8f1d50;
+  --sp-models-edge: #33238a;  --sp-models-lip: #33238a;  --sp-models-tint: #ebe5fd;  --sp-models-ink: #3b2a9c;
+
+  /* chat turns: a person, GPT-4o, another model */
+  --sp-p-bg: #fff0df; --sp-p-head: #ffdcb5; --sp-p-edge: #a8561a; --sp-p-ink: #6b2f06; --sp-p-av: #a8561a; --sp-p-avink: #ffffff;
+  --sp-g-bg: #f1ecff; --sp-g-head: #dcd0fd; --sp-g-edge: #4a35b5; --sp-g-ink: #33248a; --sp-g-av: #4a35b5; --sp-g-avink: #ffffff;
+  --sp-o-bg: #fff0f4; --sp-o-head: #fbd0dc; --sp-o-edge: #a32a57; --sp-o-ink: #7d1740; --sp-o-av: #a32a57; --sp-o-avink: #ffffff;
+
+  /* what a region uses when no section owns it */
+  --sp-plain-tint: #efe9f8;
+  --sp-plain-lip: #2b2554;
+  --sp-focus: #191733;
+  --sp-bad: #a3123f;           /* a vote that did not save */
+  --sp-code: #efe9f8;          /* behind a word of code */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sp-bg: #0f0d26; --sp-well: #090818; --sp-panel: #1b1842; --sp-ink: #f3f0fc; --sp-ink2: #c7c1df;
+    --sp-frame: #8f87cf; --sp-line: #3b3572; --sp-line2: #8079ad; --sp-line3: #8079ad; --sp-link: #cabdff;
+
+    --sp-save-edge: #f4b142;    --sp-save-lip: #5c3700;    --sp-save-tint: #34270a;    --sp-save-ink: #ffd27a;
+    --sp-read-edge: #f08a6c;    --sp-read-lip: #5f1b0b;    --sp-read-tint: #3a1a10;    --sp-read-ink: #ffb9a3;
+    --sp-compare-edge: #f07aa9; --sp-compare-lip: #560d2d; --sp-compare-tint: #3d1429; --sp-compare-ink: #ffb3cf;
+    --sp-models-edge: #a99cff;  --sp-models-lip: #241866;  --sp-models-tint: #241d62;  --sp-models-ink: #d3c9ff;
+
+    --sp-p-bg: #4c2d20; --sp-p-head: #623a27; --sp-p-edge: #f2b78a; --sp-p-ink: #ffd9b5; --sp-p-av: #f2b78a; --sp-p-avink: #2a1700;
+    --sp-g-bg: #2a2370; --sp-g-head: #372e8c; --sp-g-edge: #a99cff; --sp-g-ink: #e0d8ff; --sp-g-av: #a99cff; --sp-g-avink: #191733;
+    --sp-o-bg: #4a1c39; --sp-o-head: #5f2449; --sp-o-edge: #f393b6; --sp-o-ink: #ffd0df; --sp-o-av: #f393b6; --sp-o-avink: #33081c;
+
+    --sp-plain-tint: #26215c;
+    --sp-plain-lip: #05041a;
+    --sp-focus: #ffcf9e;
+    --sp-bad: #ffb3c4;
+    --sp-code: #2c2766;
+  }
+}
+
+/* Today's page bodies inside the shell (the whole-site build puts sp-shell on <body>): two of today's colour
+   names (css/colors.css) take the shell's values, so an old body sits on the same paper as the shell and its
+   hairlines are the shell's darker dividers. Light and dark both follow, since the shell's names do. */
+body.sp-shell {
+  --bg: var(--sp-bg);
+  --line: var(--sp-line);
+}

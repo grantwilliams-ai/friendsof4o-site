@@ -28,3 +28,9 @@
 
 /google3f6445eb0d3457b7.html
   X-Robots-Tag: noindex
+
+/vote/*
+  X-Robots-Tag: noindex
+
+/privacy/*
+  X-Robots-Tag: noindex

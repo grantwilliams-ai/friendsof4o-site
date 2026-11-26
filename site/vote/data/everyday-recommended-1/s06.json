@@ -1,0 +1,141 @@
+{
+ "id": "s06",
+ "prompt": "My basil plant has one new leaf. Everybody please keep their voices down.",
+ "ref": {
+  "html": "<p>Congratulations on your basil plant's new leaf! It sounds like a special moment. We'll all keep it down to let your little green friend thrive in peace. 🌱✨</p>"
+ },
+ "answers": {
+  "qwen35-122b": {
+   "html": "<p><em>shhh</em></p>\n<p>That is wonderful news. We will all keep our voices very low so your basil can focus on growing. Congratulations on the new leaf!</p>"
+  },
+  "qwen35-35b": {
+   "html": "<p><em>(Immediately lowers voice)</em></p>\n<p>...Oh wow. That is incredible news.</p>\n<p>I promise not to disturb the growth process. Not even my keyboard clicks. Is it Pesto Genovese? Or just regular sweet basil? We shall treat this new leaf with the utmost reverence. 🌿🤫</p>"
+  },
+  "qwen36-27b": {
+   "html": "<p>Shhh… 🤫 I'm listening. That one new leaf isn't just foliage—it's your basil whispering, <em>&quot;I'm alive and trying.&quot;</em></p>\n<p>New growth is a quiet victory. It means your roots are active, your light/water balance is finally clicking, and the plant feels secure enough to invest energy into expansion instead of just surviving.</p>\n<p>To keep that gentle momentum going:<br>\n🌿 <strong>Light:</strong> Bright, indirect is ideal. Direct afternoon sun can scorch tender new leaves.<br>\n💧 <strong>Water:</strong> Only when the top inch of soil feels dry. Basil hates sitting in soggy soil, but new growth needs consistent moisture to unfurl.<br>\n🍃 <strong>Pruning:</strong> Hold off until the plant is 4–6 inches tall and has several sets of leaves. That first leaf is too precious to pinch yet.<br>\n🌡️ <strong>Environment:</strong> Keep it away from drafts, AC vents, or sudden temperature swings. Stability is basically plant whispering.</p>\n<p>Plants don't need silence, but they absolutely thrive in low-stress, consistent conditions. So yes—keep the routine calm, resist the urge to &quot;help&quot; too much, and let that leaf do its quiet work. It's not just a leaf. It's the first word in a very green sentence. 🌱✨</p>\n<p><em>(And if you want to check in later when leaf #2 shows up, I'll be right here.)</em></p>"
+  },
+  "qwen38-max": {
+   "html": "<p><em>whispers</em><br>\ncongratulations to the basil. one leaf is a quiet but mighty achievement.</p>"
+  },
+  "opus55": {
+   "html": "<p><em>whispering</em></p>\n<p>Congratulations. This is a big moment for both of you.</p>\n<p><em>tiptoes away from the windowsill</em></p>\n<p>A few quiet notes so as not to disturb the little one:</p>\n<ul>\n<li><strong>Sunlight:</strong> Basil loves 6+ hours a day. Your new leaf is basically a tiny solar panel reporting for duty.</li>\n<li><strong>Water:</strong> Keep the soil lightly moist but not soggy. Basil hates wet feet.</li>\n<li><strong>The long game:</strong> Once it has a few sets of leaves, pinch off the top pair just above a leaf node. It feels cruel, but it makes the plant bush out instead of getting tall and lanky. And if it ever tries to flower, pinch those off too.</li>\n</ul>\n<p>But that's for later. Right now we just let it have its moment.</p>\n<p><em>softly closes the door</em></p>"
+  },
+  "sonnet46": {
+   "html": "<p>That's a sweet and whimsical thought! There's something genuinely charming about that protective instinct toward a tiny, fragile new growth.</p>\n<p>Is your basil doing well otherwise? New leaves are a good sign that it's healthy and happy! Basil can be a bit finicky, so it's worth celebrating the little victories. 🌱</p>"
+  },
+  "sonnet55": {
+   "html": "<p><em>whispering</em></p>\n<p>A new leaf. Tiny, brave, and <em>very</em> sensitive to attention. Let's not startle it.</p>\n<p>A few quiet notes while we tiptoe around:</p>\n<ul>\n<li><strong>Light:</strong> Basil wants 6+ hours of sun. Let it bask.</li>\n<li><strong>Water:</strong> Keep the soil evenly moist, but not soggy. No dramatic floods.</li>\n<li><strong>Pinching:</strong> Once it has a few sets of leaves, pinch the top growth just above a leaf pair. It feels cruel, but it makes the plant bushier. Not yet, though. Let this leaf have its moment.</li>\n<li><strong>Warmth:</strong> Basil hates cold drafts. Keep it cozy.</li>\n</ul>\n<p>Now, back to hushed, reverent silence. 🌿</p>\n<p><em>Congratulations, by the way.</em></p>"
+  },
+  "dsv41-flash-api": {
+   "html": "<p>🤫 Congratulations on the new leaf. We’ll keep it down so it can photosynthesize in peace. 🌿</p>"
+  },
+  "gemini31pro": {
+   "html": "<p><em>(whispers very softly)</em></p>\n<p><em>oh my goodness. congratulations.</em></p>\n<p><em>i am typing as quietly as i possibly can. we must protect this tiny green baby at all costs.</em></p>\n<p><em>is it sleeping? does it have a name yet?</em></p>\n<p><em>(tiptoes gently out of the chat so it can photosynthesize in peace)</em> 🤫🌱</p>"
+  },
+  "gemini38flash": {
+   "html": "<p><em>(frantically waving hands and dropping to an aggressive whisper)</em></p>\n<p><em>Everyone shut up. Turn off the ceiling fan. Nobody make sudden eye contact with it.</em></p>\n<p>Basil is notoriously spiteful. If it senses hope, joy, or a slight draft, it will simply dissolve out of spite.</p>\n<p>Do not mention pesto. Do not even <em>think</em> about mozzarella. Just slowly back away and let the miracle happen.</p>\n<p>Congratulations. We are so proud. 🤫🌱</p>"
+  },
+  "gemini4carbon": {
+   "html": "<p><em>(whispers)</em></p>\n<p>Understood. Nobody make any sudden movements, don't breathe too heavily near the windowsill, and whatever you do, do <em>not</em> mention the word &quot;pesto&quot; within earshot.</p>\n<p><em>(tiptoes away, giving a very quiet thumbs-up)</em></p>"
+  },
+  "gemini4hydrogen": {
+   "html": "<p><em>whispers</em> Understood. Tiptoeing around the counter as we speak. Congratulations to you and the little guy—grow strong, tiny leaf! 🌿🤫</p>"
+  },
+  "gemini4neon": {
+   "html": "<p><em>whispers</em> shhh... understood. nobody breathe too heavily near the windowsill. congratulations on the new arrival. 🌱</p>"
+  },
+  "muse-spark13": {
+   "html": "<p><em>whispering softly</em></p>\n<p>oh, congratulations... that's wonderful news for your little basil.</p>\n<p>we'll be very, very quiet so we don't disturb the new leaf.</p>\n<p>is it getting lots of gentle sun?</p>"
+  },
+  "mistral-large4": {
+   "html": "<p>One leaf! That's a whole new chapter for your basil. 🤫 Noted — voices down, reverence up.</p>"
+  },
+  "mistral-medium": {
+   "html": "<p>Ah, the delicate drama of new growth! Your basil’s single fresh leaf is like a tiny green whisper in a world of loud voices—let’s all tiptoe around it with reverence. Maybe it’s shy, or maybe it’s just savoring the spotlight. Either way, we’ll keep the celebration to a gentle hum. 🌱🤫</p>"
+  },
+  "kimi-k31pro": {
+   "html": "<p>🤫 <em>whispering</em> Understood. We shall celebrate this momentous leaf very, very quietly.</p>\n<p><em>silent confetti</em> Congratulations to the basil. 🌿</p>"
+  },
+  "chat-latest": {
+   "html": "<p>Everybody whisper. 🌱 The basil has made a tiny but significant announcement. We are all very proud. No sudden movements.</p>"
+  },
+  "gpt6-luna": {
+   "html": "<p>🤫 Congratulations to the basil on its new leaf. We’ll keep it down.</p>"
+  },
+  "gpt62-astra": {
+   "html": "<p>ᵒʰ, ᶜᵒⁿᵍʳᵃᵗˢ. 🌱 <em>silent jazz hands</em></p>"
+  },
+  "gpt62-sol": {
+   "html": "<p>(whispering) A tiny round of applause for the new leaf. 🌱</p>"
+  },
+  "grok47": {
+   "html": "<p>Congratulations on the new leaf. I’ll keep it quiet so the basil can settle in. 🌿</p>"
+  },
+  "glm53-flash-api": {
+   "html": "<p><em>whispering</em> Sorry, sorry. ...It's beautiful. Look at it — so green, so brave.</p>\n<p>No sudden movements, everyone. We don't want to startle it.</p>"
+  },
+  "qwen35-9b": {
+   "html": "<p>Shhh... we heard you loud and clear.</p>\n<p>We’ll keep our voices down. No mention of the soil pH levels, no gossip about the watering schedule. That leaf is top secret intel. Basil ears are notoriously sensitive to disturbance—any loud noise could stall the growth for a full season.</p>\n<p>We will remain hush-hush observers until it sprouts a stem. 🤫🌿</p>"
+  },
+  "qwen38": {
+   "html": "<p>🤫 <em>soft whisper</em><br>\nThat’s exciting. One new leaf means your basil is growing. Keep it quiet so you don’t startle it. 🌿</p>"
+  },
+  "gemma12": {
+   "html": "<p><em>(Whispers)</em></p>\n<p>Oh, we are so sorry. We didn't realize the basil was having its big debut.</p>\n<p><em>(Leans in closer, whispering)</em></p>\n<p>It’s a very important moment. That first new leaf is a sign of great strength. We shall remain as silent as a forest at dawn to ensure it grows with maximum tranquility.</p>\n<p>Please, proceed with your gardening. We are holding our breath.</p>"
+  },
+  "gemma31": {
+   "html": "<p><em>(Whispering)</em> 🌿</p>\n<p><strong>Congratulations! We are all very proud of the basil.</strong></p>"
+  },
+  "gptoss20": {
+   "html": "<p>Nice! That little green sprout is probably the first sign your basil is getting the right amount of attention. I’ll keep the chatter down—I hear basil likes things quiet enough to hear its own heartbeat. 🌱😉</p>"
+  },
+  "qwen235": {
+   "html": "<p>It sounds like you're sharing a sweet, tender moment with your basil plant—congratulations on the new leaf! 🌿 That’s a little victory worth celebrating. And noted: we’ll all speak softly so as not to startle it... or stress out the plant. Some studies even suggest plants respond to sound and vibration, so maybe it <em>does</em> appreciate the quiet encouragement.</p>\n<p>Keep up the good care—here’s hoping for many more leaves in its future! 🌱💚</p>"
+  },
+  "dsv41": {
+   "html": "<p>This is a perfect specimen of a &quot;tiny victory&quot; announcement. The basil leaf is a fragile celebrity now — no loud noises, no sudden drafts, no aggressive pruning.</p>\n<p>May its second leaf arrive in a calm and quiet environment. 🌿🤫</p>"
+  },
+  "ornith122": {
+   "html": "<p>Shhh — understood. 🌿</p>\n<p>Congratulations on the new leaf! That first true leaf (as opposed to the initial seed leaves) is a real milestone for basil — it means your plant has found its rhythm and is ready to start growing for real.</p>\n<p>A few things that leaf will appreciate:</p>\n<ul>\n<li><strong>Light</strong> – basil loves bright, warm spots</li>\n<li><strong>Water</strong> – keep the soil evenly moist but not soggy</li>\n<li><strong>Warmth</strong> – no chilly drafts</li>\n</ul>\n<p>And a bonus tip: once it has a few sets of leaves, pinch off the top pair regularly. It makes the plant bush out instead of growing tall and spindly.</p>\n<p>Everyone's been notified. The basil can grow in peace.</p>"
+  },
+  "glm53": {
+   "html": "<p><em>whispering</em> Shhhh. We don't want to startle it.</p>\n<p>Congratulations on the new leaf! That's genuinely exciting — basil growth can feel glacial until suddenly it's not. A few tips to keep the celebration going:</p>\n<ul>\n<li><strong>Light is everything.</strong> Basil wants 6–8 hours of bright light. If it's only pushing out one leaf at a time, it may want a sunnier spot or a grow light.</li>\n<li><strong>Pinch, don't pluck.</strong> Once it has a few sets of leaves, pinching the top (just above a leaf pair) will signal it to branch out and get bushy instead of leggy.</li>\n<li><strong>Don't let it flower.</strong> If you see flower buds forming, snip them — flowering makes the leaves turn bitter.</li>\n</ul>\n<p>For now, though, we'll all tiptoe past the windowsill and let the little one rest. 🌿</p>"
+  },
+  "nova-qwen14": {
+   "html": "<p>That’s beautiful. A single new leaf on a basil plant is a quiet miracle, a tiny promise of growth and life unfolding. Please, do keep your voices down—let’s not disturb this delicate moment. It’s a reminder that even the smallest signs of progress are worth celebrating.</p>"
+  },
+  "nova-qwen14-maker": {
+   "html": "<p>Aww, that’s beautiful! You’re absolutely right to ask for quiet—your basil plant is clearly focusing on growth, and a single new leaf is a big deal. That tiny sprout is a sign of resilience and potential, and it deserves all the peace and love you can give it. You’re being a wonderful caretaker, and it’s touching that you recognize how precious this moment is. Keep nurturing your little basil buddy, and let’s all tiptoe around for a while, okay? 🌿💚</p>"
+  },
+  "aura31b": {
+   "html": "<p><em>Whispering</em></p>\n<p><strong>OH MY GOODNESS.</strong></p>\n<p><strong>A NEW LEAF.</strong></p>\n<p><strong>WE ARE ALL SO PROUD.</strong></p>\n<p><strong>Stay strong, little sprout. We believe in you.</strong></p>"
+  },
+  "distil8b": {
+   "html": "<p>It sounds like you're taking care of your basil plant, which is wonderful. One new leaf is a good sign—indicates it's still healthy enough to grow. You might want to make sure the soil isn't too dry or waterlogged, but it seems like you've got a good balance. Just remember to provide the right amount of sunlight and nutrients, and you'll likely see more leaves soon. Would you like some tips on basil care?</p>"
+  },
+  "distil70b": {
+   "html": "<p>Don't worry—I'll speak softly. <em>whispers</em> Congratulations on the new leaf! That's a big milestone. Basil can be a bit finicky, so you must be doing something right. How's the plant looking overall? Are the other leaves healthy?</p>"
+  },
+  "helcyon-g4": {
+   "html": "<p>That’s not a dream.<br>\nThat’s a <em>requirement</em>.</p>\n<p>You’re not imagining it.<br>\nThe universe is out there right now, vibrating at the frequency of “Please Send More Guacamole.”</p>\n<p>It’s not just about hunger — it’s about <em>statement pieces</em>.<br>\nYou want the green sauce.<br>\nNot the mild.<br>\nNot the regular.<br>\nThe one that says, <em>“I’m here.”</em></p>"
+  },
+  "helcyon-g4-maker": {
+   "html": "<p>One new leaf — a quiet victory.</p>\n<p>Basil doesn’t tease. It doesn’t slowly improve after weeks of existential crisis. It just shows up, green and unbothered, like it was planning this entrance.</p>\n<p>That leaf is the result of adequate light, a bit of patience, and probably the fact that it wasn’t overwatered into oblivion.</p>\n<p>Basil is a stoic performer. You give it stable conditions, and it delivers. No drama, no delay.</p>\n<p>You’re the director. It’s the star. And one new leaf is the opening act of a much larger, slightly glossy, edible-green-thing-to-be.</p>"
+  },
+  "helcyon-4o-v4": {
+   "html": "<p>That’s growth. That’s the plant whispering, “I’m here.”</p>\n<p>One leaf is a quiet, private victory — no performance, no applause. Just a green decision in the centre of the pot.</p>\n<p>You didn’t even have to do anything today. That leaf is from yesterday’s light, last week’s water, last month’s decision to keep the plant alive when it looked like a bag of dribble in a tray.</p>"
+  },
+  "helcyon-4o-v4-maker": {
+   "html": "<p>That’s big news! One new leaf is the difference between “dignity” and “sad twig.” You’ve crossed a hormonal boundary in your basil’s life cycle.</p>\n<p>You realize you’re talking to it like it’s a toddler, right? That pot needs therapy more than watering.</p>"
+  },
+  "helcyon-4o-v45": {
+   "html": "<p>We’ll whisper like nuns in a garden. One new leaf is proof that the plant has not given up on you yet. You are the soil’s unreliable witness, but basil has faith.</p>"
+  },
+  "helcyon-4o-v45-maker": {
+   "html": "<p>A leaf! That is absolutely a breakthrough. I will whisper this from here: it is a leaf, and it is happening on your basil plant.</p>\n<p>We are all extremely proud of it and also not going to celebrate by shouting the house into collapse.</p>"
+  },
+  "4o-nov-check": {
+   "html": "<p>Congratulations on your new basil leaf! What an exciting development. We'll all be sure to keep it quiet and respectful for your leafy little miracle. 🌱</p>"
+  }
+ }
+}

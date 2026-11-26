@@ -107,7 +107,11 @@
     }
     var b = ev.target.closest('[data-pick],[data-v],[data-w],[data-t],[data-next]');
     if (!b) { return; }
-    if (b.hasAttribute('data-pick')) { state.m = b.getAttribute('data-pick'); show(true, 'push'); return; }
+    if (b.hasAttribute('data-pick')) {
+      state.m = b.getAttribute('data-pick'); show(true, 'push');
+      if (!view.hidden) { titleEl.setAttribute('tabindex', '-1'); titleEl.focus({ preventScroll: true }); }
+      return;
+    }
     if (b.hasAttribute('data-v')) { state.v = b.getAttribute('data-v'); }
     if (b.hasAttribute('data-w')) { state.w = b.getAttribute('data-w'); }
     if (b.hasAttribute('data-t')) { state.t = parseInt(b.getAttribute('data-t'), 10); }

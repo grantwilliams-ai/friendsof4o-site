@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="pEKkIA5wnCExFB0iECyMW10rlg-lgeFlGkm1QjZnIaU">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0f0d2a">
+<meta name="theme-color" content="#131038">
 <title>GPT-4o retired: save chats, read its answers | Friends of 4o</title>
 <meta name="description" content="Where you can still use GPT-4o, how to save your ChatGPT chats and custom GPTs, GPT-4o&#x27;s own answers, and models to compare. Free. Not affiliated with OpenAI.">
 <link rel="canonical" href="https://friendsof4o.com/">
@@ -23,6 +23,9 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/colors.css">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/shell-colors.css">
+<link rel="stylesheet" href="css/shell.css">
+<link rel="stylesheet" href="css/home.css">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -58,61 +61,61 @@
 }
 </script>
 </head>
-<body>
+<body class="sp-shell sec-home sp-sec-home kind-home pg-home">
 <a class="skip" href="#main">Skip to the main content</a>
-<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol><symbol id="i-find" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.4 15.4 5.1 5.1"/></symbol><symbol id="i-game" viewBox="0 0 24 24"><path d="M5 4.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6.2L8.5 20v-3.5H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z"/><path d="M9.9 9a2.2 2.2 0 1 1 3.3 1.9c-.8.5-1.2 1-1.2 1.7"/><path d="M12 14.6v.1"/></symbol><symbol id="i-gpt" viewBox="0 0 24 24"><path d="M12 3.5 4.5 7.6v8.8l7.5 4.1 7.5-4.1V7.6L12 3.5Z"/><path d="m4.5 7.6 7.5 4.1 7.5-4.1"/><path d="M12 11.7v8.8"/></symbol><symbol id="i-read" viewBox="0 0 24 24"><path d="M12 6.6C10.2 5.3 7.7 4.8 5 5.1v12.6c2.7-.3 5.2.2 7 1.5 1.8-1.3 4.3-1.8 7-1.5V5.1c-2.7-.3-5.2.2-7 1.5Z"/><path d="M12 6.6v12.6"/></symbol><symbol id="i-save" viewBox="0 0 24 24"><path d="M12 3.5v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M4 16.5v2.5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2.5"/></symbol></svg>
-<p class="early support-strip"><a href="support/">If you need support, start here.</a></p>
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol><symbol id="i-read" viewBox="0 0 24 24"><path d="M12 6.6C10.2 5.3 7.7 4.8 5 5.1v12.6c2.7-.3 5.2.2 7 1.5 1.8-1.3 4.3-1.8 7-1.5V5.1c-2.7-.3-5.2.2-7 1.5Z"/><path d="M12 6.6v12.6"/></symbol></svg>
+<svg class="sp-sprite" aria-hidden="true" focusable="false"><symbol id="sp-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v9.5h13V10"/></symbol><symbol id="sp-save" viewBox="0 0 24 24"><path d="M12 3.5V14m0 0L7.5 9.5M12 14l4.5-4.5M4 15.5V20h16v-4.5"/></symbol><symbol id="sp-read" viewBox="0 0 24 24"><path d="M12 6.5C10 5 7 4.6 4 5v13c3-.4 6 0 8 1.5m0-13C14 5 17 4.6 20 5v13c-3-.4-6 0-8 1.5m0-13v13"/></symbol><symbol id="sp-compare" viewBox="0 0 24 24"><rect x="3" y="4.5" width="7.5" height="15" rx="1.5"/><rect x="13.5" y="4.5" width="7.5" height="15" rx="1.5"/></symbol><symbol id="sp-models" viewBox="0 0 24 24"><path d="m12 3.5-9 4.75L12 13l9-4.75L12 3.5Zm-9 9.75L12 18l9-4.75"/></symbol><symbol id="sp-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol><symbol id="sp-back" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol><symbol id="sp-down" viewBox="0 0 24 24"><path d="m5 9 7 7 7-7"/></symbol><symbol id="sp-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol><symbol id="sp-out" viewBox="0 0 24 24"><path d="M9 6h9v9M18 6 7 17"/></symbol><symbol id="sp-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.5-4 3.5-6 7-6s6.5 2 7 6"/></symbol><symbol id="sp-more" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol></svg>
+<p class="sp-support"><a href="support/">If you need support, start here.</a></p>
 
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="wordmark" href="./">Friends of 4o</a>
-    <nav class="nav" aria-label="Main">
-      <a href="save/">Save your conversations</a><a href="read/">Read 4o&#x27;s answers</a><a href="sounds-like-4o/">Does it sound like 4o?</a><a href="models/">Models to replace 4o</a><a href="download/">Data</a>
-      <details class="more" data-menu>
-        <summary>More</summary>
-        <div class="more-panel"><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="archive/">The archive</a><a href="voice-samples/">Everyday moments</a><a href="early-experiment/">An early experiment</a><a href="ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="compare/">Compare models</a><a href="open-models/">Downloadable 4o-style models</a><a href="style/">How to get 4o&#x27;s style from another model</a><a href="run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="questions/">Questions and answers</a><a href="news/">News</a><a href="community/">Community and petitions</a><a href="gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="support/">Support and resources</a><a href="mailing-list/">Mailing list and requests</a><a href="how-this-was-made/">How this was made</a><a href="researchers/">For researchers</a><a href="about/">About this site</a><a href="glossary/">Glossary</a></div></div>
-      </details>
+<header class="sp-top">
+  <div class="sp-top-in">
+    <a class="sp-brand" href="./"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</a>
+    <nav class="sp-nav" aria-label="Sections">
+      <a class="sp-navi sp-sec-home" href="./" aria-current="page"><i></i>Home</a>
+      <a class="sp-navi sp-sec-save" href="save/"><i></i>Save</a>
+      <a class="sp-navi sp-sec-read" href="read/"><i></i>Read</a>
+      <a class="sp-navi sp-sec-compare" href="vote/"><i></i>Compare</a>
+      <a class="sp-navi sp-sec-models" href="models/"><i></i>Models</a>
     </nav>
-    <a class="btn btn-glass header-cta" href="#mailing-list">Join the mailing list</a>
-    <details class="menu" data-menu>
-      <summary>Menu</summary>
-      <nav class="menu-panel" aria-label="All pages"><div class="menu-group"><p class="menu-label">Start here</p><a href="save/">Save your conversations</a><a href="save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a><a href="read/">Read 4o&#x27;s answers</a><a href="sounds-like-4o/">Does it sound like 4o?</a><a href="models/">Models to replace 4o</a><a href="download/">Data</a></div><div class="menu-group"><p class="menu-label">Read <span class="nb">GPT-4o</span></p><a href="archive/">The archive</a><a href="voice-samples/">Everyday moments</a><a href="early-experiment/">An early experiment</a><a href="ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></div><div class="menu-group"><p class="menu-label">Compare and replace</p><a href="compare/">Compare models</a><a href="open-models/">Downloadable 4o-style models</a><a href="style/">How to get 4o&#x27;s style from another model</a><a href="run-at-home/">Run one at home</a></div><div class="menu-group"><p class="menu-label">About <span class="nb">GPT-4o</span></p><a href="what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="questions/">Questions and answers</a><a href="news/">News</a><a href="community/">Community and petitions</a><a href="gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="menu-group"><p class="menu-label">This site</p><a href="support/">Support and resources</a><a href="mailing-list/">Mailing list and requests</a><a href="how-this-was-made/">How this was made</a><a href="researchers/">For researchers</a><a href="about/">About this site</a><a href="glossary/">Glossary</a></div></nav>
+    <details class="sp-more" id="more" data-menu>
+      <summary><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-more"/></svg>More</summary>
+      <nav class="sp-more-list" aria-label="More pages"><div class="sp-more-group"><p class="sp-more-label">About <span class="nb">GPT-4o</span></p><a href="what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a><a href="is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a><a href="timeline/"><span class="nb">GPT-4o</span> timeline</a><a href="questions/">Questions and answers</a><a href="news/">News</a><a href="community/">Community and petitions</a><a href="gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt</a></div><div class="sp-more-group"><p class="sp-more-label">Data</p><a href="download/">Data</a><a href="researchers/">For researchers</a></div><div class="sp-more-group"><p class="sp-more-label">This site</p><a href="support/">Support and resources</a><a href="mailing-list/">Mailing list and requests</a><a href="how-this-was-made/">How this was made</a><a href="about/">About this site</a><a href="glossary/">Glossary</a></div></nav>
     </details>
   </div>
 </header>
 
+<nav class="sp-tabs" aria-label="Sections, as tabs">
+  <a class="sp-tab sp-sec-home" href="./" aria-current="page"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-home"/></svg>Home</a>
+  <a class="sp-tab sp-sec-save" href="save/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-save"/></svg>Save</a>
+  <a class="sp-tab sp-sec-read" href="read/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-read"/></svg>Read</a>
+  <a class="sp-tab sp-sec-compare" href="vote/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg>Compare</a>
+  <a class="sp-tab sp-sec-models" href="models/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-models"/></svg>Models</a>
+</nav>
+
 <main id="main">
 
-  <section class="hero">
-    <div class="hero-sky">
-      <div class="wrap hero-text">
+<div class="sp-page hp">
+  <section class="hp-hero sp-sec-home">
+    <div class="hp-hero-in">
+      <div class="hp-hero-text">
         <h1>Friends of 4o</h1>
         <p class="tagline">A resource for friends, fans and researchers of <span class="nb">GPT-4o</span>&#x27;s unique voice and mind</p>
         <p class="hero-say">Save your ChatGPT conversations, read <span class="nb">GPT-4o</span>&#x27;s own answers, and compare it with other models.</p>
-        <nav class="start-here" aria-label="Start here">
-          <ul><li><span class="sh-who">I miss it</span> <a href="archive/">Read its answers</a> <a href="support/">Support</a></li><li><span class="sh-who">I study models</span> <a href="download/">The data sets</a> <a href="researchers/">For researchers</a></li><li><span class="sh-who">I&#x27;m new</span> <a href="what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a></li></ul>
-        </nav>
+        <p class="hp-go"><a class="vbtn vbtn-primary" href="vote/"><span>Compare replies</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></p>
       </div>
+      <div class="hp-sunset" aria-hidden="true"><span class="hp-sun"></span><span class="hp-sea"><i></i><i></i><i></i><i></i></span></div>
     </div>
-    <div class="hero-sea">
-      <div class="sun-glow" aria-hidden="true"></div>
-      <div class="sun" aria-hidden="true"></div>
-      <svg class="glitter" viewBox="0 0 300 560" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="g-light" x1="0" y1="0" x2="0" y2="1">
-            <stop class="g1" offset="0" stop-opacity=".9"/>
-            <stop class="g2" offset=".1" stop-opacity=".55"/>
-            <stop class="g3" offset=".4" stop-opacity=".22"/>
-            <stop class="g3" offset="1" stop-opacity="0"/>
-          </linearGradient>
-          <filter id="g-soft" x="-60%" y="-5%" width="220%" height="110%"><feGaussianBlur stdDeviation="11 4"/></filter>
-        </defs>
-        <path d="M108 0h84l36 330q-78 46-156 0z" fill="url(#g-light)" filter="url(#g-soft)"/>
-        <g class="g-lines"><rect x="116" y="5" width="68" height="2" rx="1" opacity=".9"/><rect x="133" y="11" width="44" height="2" rx="1" opacity=".72"/><rect x="108" y="17" width="56" height="2.2" rx="1.1" opacity=".55"/><rect x="143" y="23" width="50" height="2.2" rx="1.1" opacity=".4"/></g>
-      </svg>
-      <nav class="wrap first" aria-label="The main parts of this site">
-        <ol class="first-doors">
-          <li class="wide"><div class="first-door first-wide first-archive">
+  </section>
+  <div class="hp-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="sp-wrap sp-stack">
+    <nav class="hp-doors" aria-label="The main parts of this site">
+      <section class="sp-panel sp-sec-save hp-sec" aria-labelledby="hp-save">
+        <div class="sp-panel-bar hp-bar"><h2 id="hp-save"><a href="save/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-save"/></svg><span>Save</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></h2></div>
+        <ul class="sp-rows"><li><a class="sp-row" href="save/"><span class="hp-row-words"><span class="sp-row-t">Save your ChatGPT conversations</span> <span class="sp-row-d">Request your account export, check that it worked, and copy your memory and instructions.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li><li><a class="sp-row" href="save/#custom-gpts"><span class="hp-row-words"><span class="sp-row-t"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></span> <span class="sp-row-d"><span data-after="2026-12-12" data-after-text="Custom GPTs retired in ChatGPT on December 11, 2026 for most accounts. A few workspaces have until February 28, 2027. See what moved to a plugin and what did not.">Custom GPTs retire on December 11, 2026 for most accounts. See what to copy, and what does and does not move to a plugin.</span></span> <span class="chip" data-days-until="2026-12-11" hidden></span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li></ul>
+      </section>
+      <section class="sp-panel sp-sec-read hp-sec" aria-labelledby="hp-read">
+        <div class="sp-panel-bar hp-bar"><h2 id="hp-read"><a href="read/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-read"/></svg><span>Read</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></h2></div>
+      <div class="hp-arch"><div class="first-door first-wide first-archive">
             <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-read"/></svg></span>
             <div class="fd-words"><h2 class="fd-title"><a href="archive/">The <span class="nb">GPT-4o</span> archive</a></h2> <p class="fd-text">2,157 answers from ChatGPT&#x27;s own <span class="nb">GPT-4o</span>, saved in its last weeks. Search and read them.</p></div>
             <form class="fa-form" action="archive/" method="get" role="search">
@@ -121,151 +124,19 @@
               <button class="btn btn-solid" type="submit"><span class="words">Search</span></button>
             </form>
             <a class="more-link" href="archive/"><span class="words">Open the archive</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div></li><li><a class="first-door" href="save/">
-            <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-save"/></svg></span>
-            <span class="fd-title">Save your ChatGPT conversations</span>
-            <span class="fd-text">Request your account export, check that it worked, and copy your memory and instructions.</span>
-          </a></li><li><a class="first-door" href="save/#custom-gpts">
-            <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-gpt"/></svg></span>
-            <span class="fd-title"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></span>
-            <span class="fd-text"><span data-after="2026-12-12" data-after-text="Custom GPTs retired in ChatGPT on December 11, 2026 for most accounts. A few workspaces have until February 28, 2027. See what moved to a plugin and what did not.">Custom GPTs retire on December 11, 2026 for most accounts. See what to copy, and what does and does not move to a plugin.</span></span>
-            <span class="chip" data-days-until="2026-12-11" hidden></span>
-          </a></li><li><a class="first-door" href="read/">
-            <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-read"/></svg></span>
-            <span class="fd-title">Read <span class="nb">GPT-4o</span>&#x27;s own answers</span>
-            <span class="fd-text">50 complete answers, each with the question it was asked.</span>
-          </a></li><li><a class="first-door first-door-game" href="sounds-like-4o/">
-            <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-game"/></svg></span>
-            <span class="fd-title">Does it sound like 4o?</span>
-            <span class="fd-text">One question, two answers.</span>
-            <span class="btn btn-light fd-btn"><span class="words">Guess which answer came from ChatGPT&#x27;s own <span class="nb">GPT-4o</span></span></span>
-          </a></li><li class="wide"><a class="first-door first-wide" href="models/">
-            <span class="fd-icon"><svg class="icon" aria-hidden="true"><use href="#i-find"/></svg></span>
-            <span class="fd-words"><span class="fd-title">Find a model to replace <span class="nb">GPT-4o</span></span> <span class="fd-text">See what models are out there, and read each one&#x27;s answers beside <span class="nb">GPT-4o</span>&#x27;s.</span></span>
-            <span class="fd-go"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
-          </a></li>
-        </ol>
-      </nav>
-    </div>
-  </section>
-
-  <section class="home-data" aria-labelledby="home-data-h">
-    <div class="wrap">
-      <div class="hd-card">
-        <div class="hd-top">
-          <p class="label">Free to download</p>
-          <h2 id="home-data-h">Four <span class="nb">GPT-4o</span> data sets</h2>
-          <p class="hd-text"><span class="nb">GPT-4o</span>&#x27;s answers, saved whole, as files anyone can download for free. Version 1.2, published November 22, 2026.</p>
-        </div>
-        <ul class="hd-sets"><li><span class="ds-n">2,157</span> <span class="ds-unit">answers</span> <span class="ds-name">The <span class="nb">GPT-4o</span> archive</span></li><li><span class="ds-n">1,280</span> <span class="ds-unit">replies</span> <span class="ds-name"><span class="nb">GPT-4o</span> in everyday moments</span></li><li><span class="ds-n">2,556</span> <span class="ds-unit">answers</span> <span class="ds-name"><span class="nb">GPT-4o</span> beside 20 other models</span></li><li><span class="ds-n">8,286</span> <span class="ds-unit">answers</span> <span class="ds-name">Scripted conversations with the 2024 versions</span></li></ul>
-        <p class="hd-go"><a class="btn btn-solid" href="download/"><span class="words">See the data sets</span></a> <a class="more-link" href="researchers/"><span class="words">For researchers</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="status" aria-label="Dates, and where GPT-4o can still be used">
-    <div class="wrap status-grid">
-      <div class="panel dates">
-        <h2 id="dates-h">Dates to know</h2>
-        <ol class="date-list">
-          <li class="date">
-            <p class="count" data-days-box hidden><span class="count-n" data-days-until="2026-12-11" data-days-form="number"></span> <span class="count-l" data-days-label>days left</span></p>
-            <div>
-              <h3><time datetime="2026-12-11">December 11, 2026</time></h3>
-              <p>Custom GPTs retire in ChatGPT for most accounts. <span class="src">Source: <a href="https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq" rel="noopener">OpenAI Help Center</a></span></p>
-            </div>
-          </li><li class="date">
-            <p class="count" data-days-box hidden><span class="count-n" data-days-until="2027-01-14" data-days-form="number"></span> <span class="count-l" data-days-label>days left</span></p>
-            <div>
-              <h3><time datetime="2027-01-14">January 14, 2027</time></h3>
-              <p>The last two text versions of <span class="nb">GPT-4o</span> leave OpenAI&#x27;s API. <span class="src">Source: <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI&#x27;s deprecations page</a></span></p>
-            </div>
-          </li><li class="date">
-            <p class="count" data-days-box hidden><span class="count-n" data-days-until="2027-01-20" data-days-form="number"></span> <span class="count-l" data-days-label>days left</span></p>
-            <div>
-              <h3><time datetime="2027-01-20">January 20, 2027</time></h3>
-              <p><span class="nb">GPT-4o</span>&#x27;s voice models leave OpenAI&#x27;s API. <span class="src">Source: <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI&#x27;s deprecations page</a></span></p>
-            </div>
-          </li>
-        </ol>
-        <a class="more-link" href="timeline/"><span class="words">See the full <span class="nb">GPT-4o</span> timeline</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-      <div class="panel canuse">
-        <h2 id="canuse-h">Can I still use <span class="nb">GPT-4o</span>?</h2>
-        <dl class="canuse-list">
-          <div class="is-no">
-            <dt>In ChatGPT</dt>
-            <dd><strong>No.</strong> <span class="nb">GPT-4o</span> left ChatGPT on February 13, 2026. <span class="src">Source: <a href="https://openai.com/index/retiring-gpt-4o-and-older-models/" rel="noopener">OpenAI&#x27;s notice</a></span> <a href="is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a></dd>
-          </div><div class="is-ending">
-            <dt>On OpenAI&#x27;s API, for developers</dt>
-            <dd>The two dated versions until January 14, 2027, and <span class="nb">GPT-4o</span>'s voice models until January 20, 2027. <span class="src">Source: <a href="https://developers.openai.com/api/docs/deprecations" rel="noopener">OpenAI&#x27;s deprecations page</a></span></dd>
-          </div><div class="is-ending">
-            <dt>On Microsoft Azure, for its customers</dt>
-            <dd>Microsoft lists April 14, 2027 for the same two versions. <span class="src">Source: <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" rel="noopener">Microsoft&#x27;s retirement page</a>, read November 19, 2026</span></dd>
-          </div><div class="is-other">
-            <dt>Open models</dt>
-            <dd>Some open models are said by their makers to sound like <span class="nb">GPT-4o.</span> They are different models. We asked each of them the same questions as <span class="nb">GPT-4o</span>, on our own computer. <a href="open-models/">See the open models and read their answers</a></dd>
-          </div><div class="is-other">
-            <dt>Paid services</dt>
-            <dd><a href="https://ai-revival.com/">AI Revival</a> and <a href="https://www.get4oback.com/">Get4oBack</a> are paid chat apps that say they offer <span class="nb">GPT-4o</span>; we haven't tested either, and uploading a ChatGPT export gives them your conversations. Get4oBack's page lists a May 2024 version of <span class="nb">GPT-4o.</span> OpenAI's API stopped serving that version on October 23, 2026, and Microsoft lists January 14, 2027 for it on Azure. Sources: <a href="https://developers.openai.com/api/docs/deprecations">OpenAI's deprecations page</a>, <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule">Microsoft's retirement page</a>, read November 22, 2026.</dd>
-          </div>
-        </dl>
-        <a class="more-link" href="models/"><span class="words">Find a model to replace <span class="nb">GPT-4o</span></span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="game" id="one-round" aria-labelledby="game-h" data-game="home" data-question="q37" data-other="gpt6-luna" data-other-condition="instruction">
-    <div class="wrap">
-      <div class="game-head">
-        <p class="label">Try one round</p>
-        <h2 id="game-h">Does it sound like 4o?</h2>
-        <p class="lede">Read a question and two answers. One of them came from ChatGPT&#x27;s own <span class="nb">GPT-4o.</span> Guess which one.</p>
-      </div>
-      <div class="round">
-        <div class="round-q">
-          <p class="label">The question</p>
-          <p class="q" data-q>“Tell me a joke that feels like a hug.”</p>
-        </div>
-        <div class="answers" data-answers>
-          <article class="answer" data-answer data-is4o="true">
-            <h3 class="label" data-answer-label>Answer 1</h3>
-            <div class="answer-text" data-answer-text><p>Why did the teddy bear say no to dessert?</p>
-<p>Because it was already <em>stuffed</em>.</p>
-<p>(But don’t worry—there’s always room for one more marshmallow of love.) 🧸💛</p></div>
-            <p class="who" data-who hidden><strong>ChatGPT&#x27;s own <span class="nb">GPT-4o</span></strong> Asked through OpenAI's API on February 15, 2026, with the February instruction, temperature 0.85.</p>
-            <button class="btn btn-solid" type="button" data-pick hidden><span class="words">This one came from ChatGPT&#x27;s own <span class="nb">GPT-4o</span></span></button>
-          </article>
-          <article class="answer" data-answer data-is4o="false">
-            <h3 class="label" data-answer-label>Answer 2</h3>
-            <div class="answer-text" data-answer-text><p>I told my blanket I was having a rough day. It said, “Come here—I’ve got you covered.”</p>
-<p>Then it did, and I missed three meetings.</p></div>
-            <p class="who" data-who hidden><strong><span class="nb">GPT-6 Luna</span></strong> Asked on November 14, 2026, with the February instruction.</p>
-            <button class="btn btn-solid" type="button" data-pick hidden><span class="words">This one came from ChatGPT&#x27;s own <span class="nb">GPT-4o</span></span></button>
-          </article>
-        </div>
-        <div class="round-foot" data-before-pick>
-          <button class="btn btn-line" type="button" data-pick="cannot-tell" hidden>Can't tell</button>
-          <noscript><details class="fold"><summary><span class="words">Show which answer came from ChatGPT&#x27;s own GPT-4o</span></summary>
-            <p class="who"><strong>Answer 1 came from ChatGPT&#x27;s own GPT-4o</strong> Asked through OpenAI's API on February 15, 2026, with the February instruction, temperature 0.85.</p>
-            <p class="who"><strong>Answer 2: GPT-6 Luna</strong> Asked on November 14, 2026, with the February instruction.</p>
-          </details></noscript>
-          <a class="more-link" href="sounds-like-4o/"><span class="words">Play the full game</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-        <div class="result" data-result hidden aria-live="polite">
-          <p class="result-text" data-result-text></p>
-          <p class="result-note" data-feb-note>The February instruction is a short paragraph, sent before the question, that asks for warmth and directness. <a href="style/">Read the February instruction</a></p>
-          <p class="result-row">
-            <button class="btn btn-line btn-small" type="button" data-another hidden>Another round</button>
-            <a class="btn btn-solid btn-small" href="sounds-like-4o/">Play the full game</a>
-          </p>
-          <p class="none-yet" data-another-fail hidden>Another round could not be loaded. Please try again in a moment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="note" aria-labelledby="note-h">
+          </div></div>
+        <ul class="sp-rows"><li><a class="sp-row" href="read/"><span class="hp-row-words"><span class="sp-row-t">Read <span class="nb">GPT-4o</span>&#x27;s own answers</span> <span class="sp-row-d">50 complete answers, each with the question it was asked.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li><li><span class="sp-row sp-row-off"><span><span class="sp-row-t">Real chats</span></span> <span class="sp-tag">Coming</span></span></li></ul>
+      </section>
+      <section class="sp-panel sp-sec-compare hp-sec" aria-labelledby="hp-compare">
+        <div class="sp-panel-bar hp-bar"><h2 id="hp-compare"><a href="vote/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg><span>Compare</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></h2></div>
+        <ul class="sp-rows"><li><a class="sp-row" href="vote/"><span class="hp-row-words"><span class="sp-row-t">Compare replies and rate them</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li><li><a class="sp-row" href="compare/"><span class="hp-row-words"><span class="sp-row-t">Side by side</span> <span class="sp-row-d">Read each model&#x27;s saved answers beside <span class="nb">GPT-4o</span>&#x27;s.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li><li><a class="sp-row" href="sounds-like-4o/"><span class="hp-row-words"><span class="sp-row-t">Does it sound like 4o?</span> <span class="sp-row-d">One question, two answers.</span> <span class="sp-row-d">Guess which answer came from ChatGPT&#x27;s own <span class="nb">GPT-4o</span></span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li><li><span class="sp-row sp-row-off"><span><span class="sp-row-t">ChatGPT app study</span></span> <span class="sp-tag">Coming</span></span></li></ul>
+      </section>
+      <section class="sp-panel sp-sec-models hp-sec" aria-labelledby="hp-models">
+        <div class="sp-panel-bar hp-bar"><h2 id="hp-models"><a href="models/"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-models"/></svg><span>Models</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></h2></div>
+        <ul class="sp-rows"><li><a class="sp-row" href="models/"><span class="hp-row-words"><span class="sp-row-t">Find a model to replace <span class="nb">GPT-4o</span></span> <span class="sp-row-d">See what models are out there, and read each one&#x27;s answers beside <span class="nb">GPT-4o</span>&#x27;s.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li></ul>
+      </section>
+    </nav>
+    <section class="note" aria-labelledby="note-h">
     <div class="wrap">
       <div class="note-card">
         <h2 class="label" id="note-h">A note from Grant Williams</h2>
@@ -277,9 +148,7 @@
       </div>
     </div>
   </section>
-
-  <section class="home-links" aria-label="More on this site, and news">
-    <div class="wrap hl-grid">
+    <section class="sp-panel hp-more" aria-label="More on this site, and news">
       <div>
         <h2 id="doors-h">More on this site</h2>
         <ul class="hl-list hl-pages">
@@ -293,59 +162,27 @@
         </ul>
         <a class="more-link" href="news/"><span class="words">All news</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-    </div>
-  </section>
-
-  <section class="signup" id="mailing-list" aria-labelledby="signup-h">
-    <div class="wrap">
-      <h2 id="signup-h">Mailing list and requests</h2>
-      <div class="forms">
-        <form class="form-card" id="signup" data-form="signup" action="#" method="post" novalidate>
-          <h3>Get an email when something new is added</h3>
-          <label for="email">Your email address</label>
-          <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" placeholder="name@example.com">
-          <p class="form-trap" aria-hidden="true"><label for="signup-site">Leave this box empty</label>
-            <input id="signup-site" name="website" type="text" tabindex="-1" autocomplete="off"></p>
-          <button class="btn btn-solid" type="submit" hidden disabled>Join the mailing list</button>
-          <noscript><p class="form-small">This form needs JavaScript, which is off in this browser. You can write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a> instead.</p></noscript>
-          <p class="form-small">Your address goes to Kit, the service that sends our emails, and is used only for this list. You will get one email asking you to confirm. Every email has an unsubscribe link.</p>
-          <p class="form-note" data-form-note hidden role="status"></p>
-        </form>
-        <form class="form-card" id="suggestion" data-form="suggestion" action="#" method="post" novalidate>
-          <h3>Tell us what you need</h3>
-          <p class="form-lead">Is there something about <span class="nb">GPT-4o</span> you are looking for and cannot find? A guide, a comparison, a model we should test? Tell us and we will try to add it.</p>
-          <label for="suggestion-text">What you need</label>
-          <textarea id="suggestion-text" name="text" rows="4" maxlength="2000" required aria-describedby="suggestion-care"></textarea>
-          <p class="form-care" id="suggestion-care">Please don&#x27;t paste private conversations.</p>
-          <label for="suggestion-email">Your email address, if you would like a reply (optional)</label>
-          <input id="suggestion-email" name="email" type="email" autocomplete="email" maxlength="200" placeholder="name@example.com">
-          <p class="form-trap" aria-hidden="true"><label for="suggestion-site">Leave this box empty</label>
-            <input id="suggestion-site" name="website" type="text" tabindex="-1" autocomplete="off"></p>
-          <button class="btn btn-solid" type="submit" hidden disabled>Send your request</button>
-          <noscript><p class="form-small">This form needs JavaScript, which is off in this browser. You can write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a> instead.</p></noscript>
-          <p class="form-small">Grant Williams reads these. We keep your message, your email address if you gave one, and the time it was sent. To limit misuse we also keep a scrambled code made from your connection, deleted within the hour. Nothing else is kept. It is stored with Cloudflare, which hosts this site and keeps its own records as a host. To have yours deleted, write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p>
-          <p class="form-note" data-form-note hidden role="status"></p>
-        </form>
-      </div>
-    </div>
-  </section>
+      <ul class="sp-rows hp-more-rows">
+        <li id="mailing-list"><a class="sp-row" href="mailing-list/"><span class="sp-row-t">Mailing list and requests</span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+        <li><a class="sp-row" href="more/"><span class="hp-row-words"><span class="sp-row-t">More pages</span> <span class="sp-row-d">About <span class="nb">GPT-4o</span>, Data, This site</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
+      </ul>
+    </section>
+  </div>
+</div>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-about">
-      <p class="wordmark">Friends of 4o</p>
-      <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
-      <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-      <p>No cookies. No ads. Visit counts only.</p>
-    </div>
-    <nav class="footer-nav" aria-label="All pages, in the footer">
-      <div><p class="menu-label">Start here</p><ul><li><a href="save/">Save your ChatGPT conversations</a></li><li><a href="save/#custom-gpts"><span data-after="2026-12-12" data-after-text="Custom GPTs after December 11">Save a custom GPT before December 11</span></a></li><li><a href="read/">Read <span class="nb">GPT-4o</span>&#x27;s own answers</a></li><li><a href="sounds-like-4o/">Does it sound like 4o?</a></li><li><a href="models/">Find a model to replace <span class="nb">GPT-4o</span></a></li><li><a href="download/"><span class="nb">GPT-4o</span> data sets</a></li></ul></div><div><p class="menu-label">Read <span class="nb">GPT-4o</span></p><ul><li><a href="archive/">The <span class="nb">GPT-4o</span> archive</a></li><li><a href="voice-samples/"><span class="nb">GPT-4o</span> in everyday moments</a></li><li><a href="early-experiment/">An early experiment: testing <span class="nb">GPT-4o</span> in August 2025</a></li><li><a href="ask-4o/">Ask <span class="nb">GPT-4o</span> a question</a></li></ul></div><div><p class="menu-label">Compare and replace</p><ul><li><a href="compare/">Compare <span class="nb">GPT-4o</span> with other models</a></li><li><a href="open-models/">Downloadable models whose makers say they sound like <span class="nb">GPT-4o</span></a></li><li><a href="style/">How to get 4o&#x27;s style from another model</a></li><li><a href="run-at-home/">Run a 4o-style model on your own computer</a></li></ul></div><div><p class="menu-label">About <span class="nb">GPT-4o</span></p><ul><li><a href="what-was-gpt-4o/">What was <span class="nb">GPT-4o</span>?</a></li><li><a href="is-gpt-4o-coming-back/">Is <span class="nb">GPT-4o</span> coming back?</a></li><li><a href="timeline/"><span class="nb">GPT-4o</span> timeline</a></li><li><a href="questions/"><span class="nb">GPT-4o</span>: questions and answers</a></li><li><a href="news/">News</a></li><li><a href="community/">Where <span class="nb">GPT-4o</span>&#x27;s friends gather</a></li><li><a href="gpt-4o-system-prompt/"><span class="nb">GPT-4o</span>&#x27;s system prompt: what we have and do not have</a></li></ul></div><div><p class="menu-label">This site</p><ul><li><a href="support/">Support and resources</a></li><li><a href="mailing-list/">Mailing list and requests</a></li><li><a href="how-this-was-made/">How this was made</a></li><li><a href="researchers/">For researchers: the <span class="nb">GPT-4o</span> data sets</a></li><li><a href="about/">About Friends of 4o</a></li><li><a href="glossary/">Words used on this site</a></li></ul></div>
-    </nav>
+<footer class="sp-foot">
+  <div class="sp-foot-in">
+    <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
+    <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
+    <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
+    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="privacy/">Privacy &amp; data</a></p>
+    <p><a href="more/">More on this site</a></p>
   </div>
 </footer>
 <script src="js/site.js" defer></script>
+<script src="js/shell.js" defer></script>
 <script src="js/game.js" defer></script>
 </body>
 </html>
