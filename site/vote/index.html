@@ -71,7 +71,11 @@
 <div class="vote-app sp-page sp-sec-compare" data-vote="vote" data-state="intro" data-section="Compare" data-name="Compare replies">
   <section class="sp-wrap sp-hub" data-screen="intro">
     <div class="sp-panel"><div class="sp-panel-bar"><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-compare"/></svg><h2>Which of today&#x27;s models sound like <span class="nb">GPT-4o</span>?</h2></div><div class="sp-panel-body">
-        <p class="sp-lead">Read a message and <span class="nb">GPT-4o</span>&#x27;s reply. Then read another model&#x27;s reply with its name hidden, and rate how close it sounds. After you rate it, we show you which model wrote it and where you can try it.</p>
+        <ol class="sp-lead vote-steps" role="list">
+          <li><span class="sp-num" aria-hidden="true">1</span><span class="vote-open-step">Read a message and <span class="nb">GPT-4o</span>&#x27;s reply.</span></li>
+          <li><span class="sp-num" aria-hidden="true">2</span><span class="vote-open-step">Then read another model&#x27;s reply with its name hidden, and rate how close it sounds.</span></li>
+          <li><span class="sp-num" aria-hidden="true">3</span><span class="vote-open-step">After you rate it, we show you which model wrote it and where you can try it.</span></li>
+        </ol>
         <button class="vbtn vbtn-primary vbtn-wide vote-start" type="button" data-start disabled>Start comparing <svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></button>
         <p class="sp-note">Three comparisons, a few minutes. Your ratings are added to the public results, so everyone can see which models come closest.</p>
         <p class="sp-note vote-fail" data-load-fail role="status" hidden>The comparisons could not be loaded. Please try again in a moment.</p>

@@ -10,6 +10,12 @@
    Nothing here is under 16 px: not Details, not a note, not a count. */
 
 /* ---------- The opening ---------- */
+/* the opening's three steps: a number mark in the section's colour, the sentence heavier than body text */
+.vote-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.vote-steps > li { display: flex; align-items: flex-start; gap: 10px; }
+.vote-steps .sp-num { width: 26px; height: 26px; border-radius: 8px; font-size: 16px; }
+.vote-open-step { min-width: 0; padding-top: 2px; font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--sp-ink); }
+@media (min-width: 600px) { .vote-open-step { font-size: 18px; padding-top: 1px; } }
 .vote-start { margin-top: 4px; }
 .vote-fail { color: var(--sp-bad); font-weight: 600; }
 .vote-notice { margin-top: 4px; }
