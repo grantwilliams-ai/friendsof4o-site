@@ -71,13 +71,12 @@
   <div class="sp-wrap sp-stack vote-page">
     <div class="vote-readhead">
       <p class="sp-lead">What this site saves, what it publishes, and what it does not keep.</p>
-      <p class="sp-notice vote-notice vote-off" data-not-saving>Not recording yet. No vote is saved or published. This page describes how it will work once recording starts.</p>
     </div>
     <div class="sp-panel" id="visits"><div class="sp-panel-bar sp-soft"><h2>Visits</h2></div><div class="sp-panel-body sp-prose">
     <p>This site uses no cookies and shows no ads. Voting progress is held temporarily while the page is open and is not saved between visits.</p>
     <p>Cloudflare, which hosts the site, counts visits with a small script of its own. Cloudflare also keeps its own records as a host.</p></div></div>
     <div class="sp-panel" id="the-vote"><div class="sp-panel-bar sp-soft"><h2>The vote</h2></div><div class="sp-panel-body sp-prose">
-    <p>We publish individual ratings and optional answers, along with timing and model-reveal information. Records from this visit are linked by a random code. We don&#x27;t ask for your name or email.</p>
+    <p>We publish individual ratings and optional answers, along with timing and model-reveal information. Ratings from one sitting are linked by a random code. Each rating is saved when you tap it. Stopping does not remove it, and anyone can keep a copy of what we publish. We don&#x27;t ask for your name or email.</p>
     <p>Saved with each vote:</p>
     <ul>
       <li><code>day</code>: the day, in Coordinated Universal Time. No time of day.</li>
@@ -98,16 +97,16 @@
     </ul>
     <p>Not saved with a vote: no name, no account, no email address, no internet address and no browser details.</p></div></div>
     <div class="sp-panel" id="published"><div class="sp-panel-bar sp-soft"><h2>What is published</h2></div><div class="sp-panel-body sp-prose">
-    <p>The <a href="../vote/results/">results page</a> shows counts as they come in. Every vote from finished days is also published as a file anyone can download, one line for each vote, with the fields listed above.</p>
+    <p>The <a href="../vote/results/">results page</a> counts votes from finished days. Today's votes are added tomorrow. Every vote from finished days is also published as a file anyone can download, one line for each vote, with the fields listed above.</p>
     <p>The lines of one sitting carry the same code, so they can be linked to each other. We use a different code for each sitting.</p>
     <p>Votes are kept and stay published. Once someone has downloaded the file, we cannot take their copy back.</p></div></div>
     <div class="sp-panel" id="forms"><div class="sp-panel-bar sp-soft"><h2>Messages you send us</h2></div><div class="sp-panel-body sp-prose">
-    <p>"Tell us what you need" and "Ask <span class="nb">GPT-4o</span>" are private forms, with one exception: a question for <span class="nb">GPT-4o</span> and its answer may be published on this site without your name. We keep the text, your email address if you gave one, and the time it was sent. These are not in any download. To have a message deleted, write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p></div></div>
+    <p>"Tell us what you need" and "Ask <span class="nb">GPT-4o</span>" are private forms, with one exception: a question for <span class="nb">GPT-4o</span> and its answer may be published on this site without your name. A question for <span class="nb">GPT-4o</span> is sent to OpenAI to get its answer. We keep the text, your email address if you gave one, and the time it was sent. These are not in any download. To have a message deleted, write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p></div></div>
     <div class="sp-panel" id="mailing-list"><div class="sp-panel-bar sp-soft"><h2>The mailing list</h2></div><div class="sp-panel-body sp-prose">
     <p>We use Kit to store mailing-list email addresses. Kit sends one email asking you to confirm. Our website database does not keep a separate copy of your mailing-list address. You can unsubscribe through the link in an email or contact <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p></div></div>
     <div class="sp-panel" id="misuse"><div class="sp-panel-bar sp-soft"><h2>Limiting misuse</h2></div><div class="sp-panel-body sp-prose">
-    <p>To limit misuse, each form and the vote count how many times one connection has sent something in the current hour. The count is kept under a scrambled code made from your connection's address and a random value for that hour. Our own database never holds the address itself.</p>
-    <p>These counts and the random value are removed the next time anyone uses a form, the vote or the results page after their hour ends. On a quiet day, with no such use, they stay until the next one. They are stored with Cloudflare.</p></div></div>
+    <p>To limit misuse, each form and the vote count how many times one connection has sent something in the current hour. The vote also counts new sittings in the current day. Each count is kept under a scrambled code made from your connection's address and a random value for that hour or day. Our own database never holds the address itself.</p>
+    <p>These counts and the random values are removed the next time anyone uses a form, the vote or the results page after their hour or day ends. On a quiet day, with no such use, they stay until the next one. They are stored with Cloudflare.</p></div></div>
     <div class="sp-panel vote-also-panel"><div class="sp-panel-bar sp-soft"><h2>See also</h2></div><ul class="sp-rows">
           <li><a class="sp-row" href="../vote/how-it-works/"><span><span class="sp-row-t">How the vote works</span> <span class="sp-row-d">What a comparison is, how the replies are chosen, and how the votes are counted.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
           <li><a class="sp-row" href="../vote/"><span><span class="sp-row-t">Compare replies</span> <span class="sp-row-d">Three comparisons. Stop whenever you like.</span></span><svg class="sp-i" aria-hidden="true" focusable="false"><use href="#sp-chev"/></svg></a></li>
@@ -121,7 +120,7 @@
     <p class="sp-foot-name"><span class="sp-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Friends of 4o</p>
     <p>Made by <a href="https://grantwilliams.ai/">Grant Williams</a>. Not affiliated with OpenAI.</p>
     <p>Every answer in our collections is printed as it was given, with its source. The measured studies behind it are at <a href="https://graphometer.ai/friends-of-4o/">graphometer.ai</a>.</p>
-    <p>No cookies. No ads. We count visits and save form submissions. Votes are not saved yet. <a href="../privacy/" aria-current="page">Privacy &amp; data</a></p>
+    <p>No cookies. No ads. We count visits and save votes and form submissions. <a href="../privacy/" aria-current="page">Privacy &amp; data</a></p>
     <p><a href="../more/">More on this site</a></p>
   </div>
 </footer>

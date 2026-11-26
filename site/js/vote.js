@@ -19,8 +19,8 @@
      POST /api/vote-pref     the answer to "Would you like a reply like this?" for a saved vote. A skip sends nothing.
      POST /api/vote-opened   "See which model wrote this" was pressed for a saved vote
      POST /api/vote-recap    the list of the sitting's comparisons was shown, with every name
-     GET  /api/results       the public counts: read once when a sitting starts, to choose the comparison, and by
-                             the results page
+     GET  /api/results       the public counts, of finished days (today's votes are counted tomorrow): read once
+                             when a sitting starts, to choose the comparison, and by the results page
    For one vote the calls go out one after another, in that order, so the server never hears of a name before the
    answers given without it. A vote that did not save can be sent again; the same comparison sent twice is kept once.
    Until the owner switches recording on, the calls answer "not-connected". The page then says "Not recording yet."
@@ -392,7 +392,7 @@
         b.appendChild(part);
         say.push((prefix ? PREFS[k] : VOTES[k]) + ' ' + parts[k]);
       });
-      b.setAttribute('aria-label', total ? say.join(', ') + '.' : 'No votes yet.');
+      b.setAttribute('aria-label', total ? say.join(', ') + '.' : 'No counted votes yet.');
       return b;
     }
     // One compact row: the name, then the maker, the setup and the state as plain small text, and the count.
@@ -442,7 +442,7 @@
           li.setAttribute('data-model', k);
           li.appendChild(who(k, t.all.total, 'vote'));
           li.appendChild(bar(t.all, VOTE_KEYS, t.all.total, ''));
-          li.appendChild(t.all.total ? countsLine(VOTE_KEYS, SHORT_VOTES, t.all) : make('p', 'vote-counts', 'No votes yet.'));
+          li.appendChild(t.all.total ? countsLine(VOTE_KEYS, SHORT_VOTES, t.all) : make('p', 'vote-counts', 'No counted votes yet.'));
           // every message of this model has votes: the average across messages, each message counted equally
           var mine = cfg.questions.filter(function (q) { return !leftOut(k, q); });
           if (mine.length && mine.every(function (q) { return t.perQ[q] && t.perQ[q].total > 0; })) {
@@ -476,28 +476,29 @@
       });
       totalsEl.textContent = totalsText + ' This view counts ' + count(shown, 'vote') + '.';
     }
-    function noVotes() {
+    function noVotes(words) {
       boxes.forEach(function (b) { b.hidden = true; });
       if (download) { download.hidden = true; }
-      none.textContent = 'No votes yet.';
+      none.textContent = words || 'No votes yet.';
       none.hidden = false;
     }
 
     getSettings().then(function (s) { cfg = s; return getResults(); }).then(function (d) {
-      if (!(Number(d.votes) > 0)) { noVotes(); return; }
+      // the counts are of finished days: the server says through which day
+      if (!(Number(d.votes) > 0)) { noVotes('No votes from finished days yet. Today\'s votes are added tomorrow.'); return; }
       data = d;
       var flagged = 0;
       d.rows.forEach(function (r) { if (r.flagged) { flagged += Number(r.n) || 0; } });
-      totalsText = count(Number(d.votes), 'vote') + ' kept, in ' + count(Number(d.sittings) || 0, 'sitting') + '.' +
+      totalsText = count(Number(d.votes), 'vote') + ' counted, in ' + count(Number(d.sittings) || 0, 'sitting') + '.' +
         (flagged ? ' ' + count(flagged, 'flagged vote') + (flagged === 1 ? ' is' : ' are') + ' left out of the numbers here.' : '') +
-        (/^\d{4}-\d\d-\d\d/.test(d.updated || '') ? ' Counted on ' + F.usDate(d.updated) + '.' : '');
+        (/^\d{4}-\d\d-\d\d$/.test(d.through || '') ? ' Counted through ' + F.usDate(d.through) + '. Today\'s votes are added tomorrow.' : '');
       view = viewSel.value || 'all';
       viewSel.addEventListener('change', function () { view = viewSel.value; draw(); });
       draw();
       none.hidden = true;
       boxes.forEach(function (b) { b.hidden = false; });
       if (download) { download.hidden = false; }
-    }).catch(noVotes);
+    }).catch(function () { noVotes(); });
     return;
   }
 
@@ -798,10 +799,22 @@
       votesForPair[r.model + ' ' + r.question] = (votesForPair[r.model + ' ' + r.question] || 0) + n;
     });
   }
-  function lowest(list, votes, within) {   // those whose count is within `within` of the lowest
-    var low = Infinity;
-    list.forEach(function (k) { low = Math.min(low, votes(k)); });
-    return list.filter(function (k) { return votes(k) <= low + within; });
+  // One of the list, by lot. Each one's chance is in step with how far its count is below the highest count in the
+  // list: the one with the most waits, and one that is far behind is the likeliest. When every count is the same,
+  // every one has the same chance. The counts are of finished days, so they do not move during a day; taking only
+  // the lowest few, as the page did while the counts were live, would send a whole day's sittings to the same few
+  // models.
+  function byNeed(list, votes) {
+    var high = -Infinity, total = 0, at, i;
+    list.forEach(function (k) { high = Math.max(high, votes(k)); });
+    list.forEach(function (k) { total += high - votes(k); });
+    if (!(total > 0)) { return pick(list); }
+    at = Math.random() * total;
+    for (i = 0; i < list.length; i++) {
+      at -= high - votes(list[i]);
+      if (at < 0) { return list[i]; }
+    }
+    return list.filter(function (k) { return votes(k) < high; }).pop();
   }
   // The messages a model may be shown with now: not voted on in this sitting, and not a reply the name check left
   // out. Of those, the ones not yet shown in this sitting and not seen since the page loaded, while any is left.
@@ -816,8 +829,8 @@
     var fresh = open.filter(function (k) { return !shownM[k]; });      // not shown in this sitting, while any is left
     var from = fresh.length ? fresh : open;
     if (!from.length) { return null; }
-    var model = pick(lowest(from, function (k) { return votesFor[k] || 0; }, cfg.near_lowest));
-    var question = pick(lowest(messagesFor(model), function (q) { return votesForPair[model + ' ' + q] || 0; }, 0));
+    var model = byNeed(from, function (k) { return votesFor[k] || 0; });
+    var question = byNeed(messagesFor(model), function (q) { return votesForPair[model + ' ' + q] || 0; });
     return { model: model, question: question };
   }
 
