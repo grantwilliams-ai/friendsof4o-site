@@ -4,8 +4,9 @@ Source for Friends of 4o at https://friendsof4o.com/, a free resource for friend
 how to save your ChatGPT conversations, GPT-4o's own answers, and how other models compare.
 
 - `site/` is what Cloudflare Pages serves, as it is. There is no build step.
-- `functions/` and `lib/` are the three small form endpoints (mailing list, requests, questions for GPT-4o).
-- No tracking, no cookies, no scripts from other sites.
+- `functions/` and `lib/` are the small server endpoints: three forms (mailing list, requests, questions for GPT-4o)
+  and the compare-and-rate votes, which are not saved yet.
+- No cookies. No ads. Visit counts only (Cloudflare Web Analytics).
 
 Made by Grant Williams. Not affiliated with OpenAI.
 

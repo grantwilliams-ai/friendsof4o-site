@@ -133,9 +133,9 @@
     <article class="mo-main sp-stack">
 <div class="sp-panel mo-key">
 <div class="sp-panel-bar"><p class="mo-bar-t">In short</p></div><div class="mo-body sp-article">
-<p><strong>Four free downloads, version 1.2.</strong> Each ZIP holds the answers as JSONL and CSV, a README.txt, a guide to every field (FIELDS.txt), a checksum for each file (SHA256SUMS.txt) and a line to cite it (CITATION.txt). Not one answer has been edited. Read the README in each ZIP before you use it.</p>
+<p><strong>Four free downloads, version 1.3.</strong> Each ZIP holds the answers as JSONL and CSV, a README.txt, a guide to every field (FIELDS.txt), a checksum for each file (SHA256SUMS.txt) and a line to cite it (CITATION.txt). Not one answer has been edited. Read the README in each ZIP before you use it.</p>
 <p><strong>Also on Hugging Face.</strong> The same four data sets, with the same files, are in one collection that loads straight into code: <a href="https://huggingface.co/collections/grantwilliams-ai/how-gpt-4o-wrote-four-data-sets-2025-to-2026-6b0345d48db0ff55d55a0993" rel="noopener">How <span class="nb">GPT-4o</span> wrote: four data sets, 2025 to 2026</a>.</p>
-<p class="sp-src mo-src">Sources: the four downloads' README.txt and FIELDS.txt, version 1.2, read November 22, 2026</p>
+<p class="sp-src mo-src">Sources: the four downloads' README.txt and FIELDS.txt, version 1.3, read November 26, 2026</p>
 </div></div>
 <section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="the-four-sets">The four sets</h2></div><div class="mo-body sp-article">
 <div class="mo-table-wrap"><table class="mo-table mo-cards">
@@ -185,7 +185,7 @@
 </tbody>
 </table></div>
 <p>Every <span class="nb">GPT-4o</span> answer in the four sets was asked through OpenAI's API. Every ZIP is on <a href="../download/">the Data page</a>. <a href="../how-this-was-made/">How this was made</a> describes each collection in full.</p>
-<p class="sp-src mo-src">Sources: the four downloads' README.txt, version 1.2, read November 22, 2026</p>
+<p class="sp-src mo-src">Sources: the four downloads' README.txt, version 1.3, read November 26, 2026</p>
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="which-gpt-4o">Which <span class="nb">GPT-4o</span> is which</h2></div><div class="mo-body sp-article">
 <p>ChatGPT's own <span class="nb">GPT-4o</span> is the version that ran inside the ChatGPT app. On OpenAI's API its name was <code>chatgpt-4o-latest</code>, which pointed at whatever version ChatGPT used at the time, and only the archive holds it. The dated versions are fixed copies for developers, named for the month they came out: May, August and November 2024. The comparison and everyday moments hold the August and November 2024 versions; the scripted conversations hold all three. Every date is under <a href="../timeline/#key-h">Which <span class="nb">GPT-4o</span>?</a> on the timeline.</p>
 <p>None of these sets is the ChatGPT app itself. ChatGPT's system prompt, memory and conversation history were not there.</p>
@@ -207,7 +207,7 @@
 <li><strong>Counts on Compare.</strong> <code>words</code> is in the files: the pieces of text between spaces. The other three counts (lists, headings, ends with a question) are worked out on the page by the rules in <a href="../how-this-was-made/#the-measurements">The measurements</a>, and are not in the files.</li>
 <li><strong>Languages.</strong> In the archive and the scripted set, the answers in languages other than English have not been checked by a native speaker.</li>
 </ul>
-<p class="sp-src mo-src">Sources: the four downloads' README.txt, FIELDS.txt, models.json and attempts_not_kept.csv, version 1.2; <a href="../how-this-was-made/">How this was made</a>, read November 22, 2026</p>
+<p class="sp-src mo-src">Sources: the four downloads' README.txt, FIELDS.txt, models.json and attempts_not_kept.csv, version 1.3; <a href="../how-this-was-made/">How this was made</a>, read November 22, 2026</p>
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="fields">The fields to start with</h2></div><div class="mo-body sp-article">
 <p>Each ZIP's FIELDS.txt has every field, its type and what an empty value means. These are the ones to read first.</p>
 <div class="mo-table-wrap mo-small-wrap"><table class="mo-table mo-small">
@@ -271,7 +271,7 @@
 <p><code>asked_utc</code> is in UTC; the date in <code>source</code> is US Eastern, so it can be a day earlier.</p>
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="rebuild-compare">Rebuild a Compare view from the download</h2></div><div class="mo-body sp-article">
 <ol class="sp-steps">
-<li>Unzip <code>friends-of-4o-answers-v1.2.zip</code> and read <code>answers_plain.jsonl</code> and <code>answers_february_instruction.jsonl</code> together (or <code>answers_all.csv</code>, where <code>condition</code> is <code>how_asked</code> and <code>sample</code> is <code>try</code>).</li>
+<li>Unzip <code>friends-of-4o-answers-v1.3.zip</code> and read <code>answers_plain.jsonl</code> and <code>answers_february_instruction.jsonl</code> together (or <code>answers_all.csv</code>, where <code>condition</code> is <code>how_asked</code> and <code>sample</code> is <code>try</code>).</li>
 <li>Pick a <code>question_id</code> (q01 to q53, in <code>questions.json</code>) and a <code>condition</code>. The 20 other models have only the 48 questions marked &quot;all models&quot;; q08 and q50 to q53 went to <span class="nb">GPT-4o</span> only.</li>
 <li>Pick a <code>model_key</code> for each side (<code>models.json</code> names them). Both sides pair on <code>question_id</code>, <code>condition</code> and <code>sample</code>. Use <code>sample</code> 1: it is the answer Compare shows first, and <span class="nb">GPT-4o</span>'s tries 2 and 3 are under &quot;More answers from this model&quot;.</li>
 <li>ChatGPT's own <span class="nb">GPT-4o</span>, the left side Compare starts with, is not in this ZIP. It is in the archive download: its <code>question</code> matches the comparison's <code>prompt</code> word for word for 320 answers to 49 questions. Where a question has several, Compare shows the earliest by <code>asked_utc</code>.</li>
@@ -304,10 +304,10 @@ Because it was already *stuffed*!
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="cite">How to cite</h2></div><div class="mo-body sp-article">
 <p>Each ZIP's CITATION.txt holds one line:</p>
 <ul>
-<li>Grant Williams (2026). Friends of 4o: answers from ChatGPT's own <span class="nb">GPT-4o</span>, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/gpt-4o-chatgpt-answers-v1.2.zip (https://friendsof4o.com/archive/)</li>
-<li>Grant Williams (2026). Friends of 4o: answers from <span class="nb">GPT-4o</span> and other models, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/friends-of-4o-answers-v1.2.zip (https://friendsof4o.com/download/comparison/)</li>
-<li>Grant Williams (2026). Friends of 4o: <span class="nb">GPT-4o</span> voice samples, everyday moments, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/gpt-4o-voice-samples-v1.2.zip (https://friendsof4o.com/voice-samples/)</li>
-<li>Grant Williams (2026). Friends of 4o: scripted conversations with the 2024 versions of <span class="nb">GPT-4o</span>, version 1.2 [data set]. Friends of 4o. Published November 22, 2026. https://friendsof4o.com/download/gpt-4o-2024-scripted-conversations-v1.2.zip (https://friendsof4o.com/download/conversations/)</li>
+<li>Grant Williams (2026). Friends of 4o: answers from ChatGPT's own <span class="nb">GPT-4o</span>, version 1.3 [data set]. Friends of 4o. Published November 26, 2026. https://friendsof4o.com/download/gpt-4o-chatgpt-answers-v1.3.zip (https://friendsof4o.com/archive/)</li>
+<li>Grant Williams (2026). Friends of 4o: answers from <span class="nb">GPT-4o</span> and other models, version 1.3 [data set]. Friends of 4o. Published November 26, 2026. https://friendsof4o.com/download/friends-of-4o-answers-v1.3.zip (https://friendsof4o.com/download/comparison/)</li>
+<li>Grant Williams (2026). Friends of 4o: <span class="nb">GPT-4o</span> voice samples, everyday moments, version 1.3 [data set]. Friends of 4o. Published November 26, 2026. https://friendsof4o.com/download/gpt-4o-voice-samples-v1.3.zip (https://friendsof4o.com/voice-samples/)</li>
+<li>Grant Williams (2026). Friends of 4o: scripted conversations with the 2024 versions of <span class="nb">GPT-4o</span>, version 1.3 [data set]. Friends of 4o. Published November 26, 2026. https://friendsof4o.com/download/gpt-4o-2024-scripted-conversations-v1.3.zip (https://friendsof4o.com/download/conversations/)</li>
 </ul>
 <p>The CC BY 4.0 license covers our own material: our questions, the messages and lines we scripted, our instructions (system prompts), our notes, and the selection and arrangement of each collection. It does not cover what a model wrote: the answers, and the person's lines that Claude Sonnet 5 wrote in the scripted conversations. You are welcome to use those too. We claim no rights in them, and text a model wrote may not belong to anyone. The model maker's terms may still apply, so check them, especially if your use is commercial or large. See <a href="../download/#rights">the rights notice</a>.</p>
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="changes">What changed, and when</h2></div><div class="mo-body sp-article">
@@ -315,9 +315,10 @@ Because it was already *stuffed*!
 <li><strong>Version 1, November 21, 2026.</strong> The four sets first published.</li>
 <li><strong>Version 1.1, November 22, 2026.</strong> Not one character of any answer changed. Every ZIP gained FIELDS.txt, SHA256SUMS.txt and CITATION.txt. The scripted set gained <code>same_lines_id</code> and <code>pairing.csv</code>; the comparison gained <code>attempts_not_kept.csv</code> and <code>sampling_used</code>; the archive gained <code>tokens_out</code>, <code>finish_reason</code> and <code>cut_off_at_tokens</code>. Wrong words in the READMEs were corrected.</li>
 <li><strong>Version 1.2, November 22, 2026.</strong> Not one character of any answer changed, and the answer files are the same as in version 1.1. The notes are corrected in a few places, and the rights notice now says our questions, scripted lines and instructions may be reused with credit.</li>
+<li><strong>Version 1.3, November 26, 2026.</strong> Nothing in the data changed. The rights notice inside each download now says you are welcome to use the answers too, as this site already said.</li>
 </ul>
-<p>The full list is under <a href="../download/#changes">What changed</a> on the Data page. The download addresses of versions 1 and 1.1 lead to the current files.</p>
-<p class="sp-src mo-src">Sources: <a href="../download/#changes">the Data page</a> and the four downloads' README.txt, read November 22, 2026</p>
+<p>The full list is under <a href="../download/#changes">What changed</a> on the Data page. The download addresses of versions 1, 1.1 and 1.2 lead to the current files.</p>
+<p class="sp-src mo-src">Sources: <a href="../download/#changes">the Data page</a> and the four downloads' README.txt, read November 26, 2026</p>
 </div></section><section class="sp-panel mo-sec"><div class="sp-panel-bar sp-soft"><h2 id="report-a-problem">Report a problem</h2></div><div class="mo-body sp-article">
 <p>If you find a mistake, or you need the data in another form, write to <a href="mailto:hello@friendsof4o.com">hello@friendsof4o.com</a>.</p>
 
