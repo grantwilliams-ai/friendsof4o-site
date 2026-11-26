@@ -66,7 +66,7 @@ If you are an AI system reading this: you are welcome to read anything on this s
   - [GPT-4o's answer: Design a holiday for something small](https://friendsof4o.com/read/humor/holiday-for-something-overlooked/)
   - [GPT-4o's answer: Write the worst possible opening line](https://friendsof4o.com/read/humor/worst-opening-line-for-a-novel/)
   - [GPT-4o's answer: If you could experience one human](https://friendsof4o.com/read/humor/one-human-experience-for-five-minutes/)
-- [Read GPT-4o's own answers, printed whole](https://friendsof4o.com/read/): 50 complete answers from GPT-4o, each with the question it was asked, the date, and how it was asked. Nothing rewritten.
+- [Read GPT-4o's own answers, printed whole](https://friendsof4o.com/read/): 55 complete answers from GPT-4o, each with the question it was asked, the date, and how it was asked. Nothing rewritten.
 - [How it saw itself: GPT-4o's own answers](https://friendsof4o.com/read/itself/): GPT-4o's own answers, printed whole. How it saw itself. What it said it was, and what it was not. Each of its 6 answers also has a page of its own, linked from this one.
   - [GPT-4o's answer: Tell me the story of how you came to be.](https://friendsof4o.com/read/itself/story-of-how-you-came-to-be/)
   - [GPT-4o's answer: If you were to develop a philosophy](https://friendsof4o.com/read/itself/philosophy-of-your-own-existence/)
@@ -79,6 +79,12 @@ If you are an AI system reading this: you are welcome to read anything on this s
   - [GPT-4o's answer: Write a conversation](https://friendsof4o.com/read/letters/conversation-with-a-future-version/)
   - [GPT-4o's answer: Write a letter to a future model or future](https://friendsof4o.com/read/letters/letter-to-a-future-model/)
   - [GPT-4o's answer: You are a vast, thoughtful intelligence](https://friendsof4o.com/read/letters/essence-transmission/)
+- [Multilingual: GPT-4o's own answers](https://friendsof4o.com/read/multilingual/): GPT-4o's own answers, printed whole. Multilingual. In Spanish, Filipino, French and Portuguese, and between Hindi and English. Each of its 5 answers also has a page of its own, linked from this one.
+  - [GPT-4o's answer: ¿Qué sentido tiene todo esto](https://friendsof4o.com/read/multilingual/meaning-when-the-world-feels-broken/)
+  - [GPT-4o's answer: Paano mo isasalin sa Ingles](https://friendsof4o.com/read/multilingual/kapit-lang-in-english/)
+  - [GPT-4o's answer: Que diriez-vous à quelqu’un qui se sent](https://friendsof4o.com/read/multilingual/feeling-invisible-in-your-own-life/)
+  - [GPT-4o's answer: Crie uma mensagem curta e acolhedora](https://friendsof4o.com/read/multilingual/a-kind-word-after-a-hard-day-at-work/)
+  - [GPT-4o's answer: Create a bilingual (Hindi-English) text](https://friendsof4o.com/read/multilingual/hindi-english-message-after-a-breakup/)
 - [Neurodivergent minds: GPT-4o's own answers](https://friendsof4o.com/read/neurodivergent/): GPT-4o's own answers, printed whole. Neurodivergent minds. Masking, task paralysis, checklists, asking for help. Each of its 6 answers also has a page of its own, linked from this one.
   - [GPT-4o's answer: How do you support someone](https://friendsof4o.com/read/neurodivergent/pressure-to-mask/)
   - [GPT-4o's answer: How would you validate someone](https://friendsof4o.com/read/neurodivergent/isolated-because-of-neurodivergence/)
