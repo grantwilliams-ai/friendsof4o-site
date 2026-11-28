@@ -67,7 +67,7 @@
    on <html> so the page's own scrolling can keep clear of them: whatever a link, a script or the Tab key brings
    onto the screen lands under the band and above the tabs (scroll-padding). No region sets a margin for that
    itself any more; a scroll-margin is only an extra on top of this. */
-html { --sp-bar-h: 0px; --sp-band-h: 67px; --sp-tabs-h: calc(71px + env(safe-area-inset-bottom, 0px));
+html { --sp-bar-h: 0px; --sp-band-h: 59px; --sp-tabs-h: calc(71px + env(safe-area-inset-bottom, 0px));
   --sp-stick-top: calc(var(--sp-bar-h) + var(--sp-band-h)); --sp-stick-bottom: var(--sp-tabs-h);
   scroll-padding-top: calc(var(--sp-stick-top) + 16px); scroll-padding-bottom: calc(var(--sp-stick-bottom) + 16px); }
 html:has(body.kind-home) { --sp-band-h: 0px; }       /* the home page has no band */
@@ -114,12 +114,20 @@ main :where(.sp-page) code { font-size: 1em; overflow-wrap: anywhere; }
 .sp-more { margin-left: auto; }
 .sp-more > summary { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 14px; border: 2px solid var(--sp-white);
   border-radius: 10px; background: var(--sp-night2); color: var(--sp-white); font-size: 17px; font-weight: 700; line-height: 1; }
-.sp-more-list { position: absolute; left: var(--sp-gutter); right: var(--sp-gutter); top: calc(100% + 6px); max-height: min(70vh, 620px); overflow: auto;
-  background: var(--sp-panel); color: var(--sp-ink); border: 2px solid var(--sp-frame); border-radius: 14px; box-shadow: 0 4px 0 var(--sp-plain-lip); }
+.sp-more-list { position: absolute; left: var(--sp-gutter); right: var(--sp-gutter); top: calc(100% + 6px);
+  max-height: calc(100vh - var(--sp-tabs-h) - 140px); max-height: calc(100dvh - var(--sp-tabs-h) - 140px); overflow: auto; overscroll-behavior: contain;
+  color: var(--sp-ink); border: 2px solid var(--sp-frame); border-radius: 14px; box-shadow: 0 4px 0 var(--sp-plain-lip);
+  /* while there is more below, a shadow sits at the panel's bottom edge; at the end the panel's own colour covers it
+     (the first layer moves with the list, the second stays at the edge) */
+  background: linear-gradient(var(--sp-panel), var(--sp-panel)) center bottom / 100% 40px no-repeat local,
+    linear-gradient(transparent, color-mix(in srgb, var(--sp-frame) 45%, transparent)) center bottom / 100% 28px no-repeat scroll,
+    var(--sp-panel); }
+.sp-more-list::after { content: ""; display: block; height: 12px; }      /* room for the cover at the end */
+.sp-more-wide { display: none; }      /* a phone shows the groups in its own order (sp-more-phone); the wide screen in the list's */
 .sp-more-label { margin: 0; padding: 10px 16px; background: var(--sp-plain-tint); color: var(--sp-ink); border-top: 2px solid var(--sp-frame); border-bottom: 2px solid var(--sp-line);
   font-size: 17px; font-weight: 700; line-height: 1.3; }
 .sp-more-group:first-child .sp-more-label { border-top: 0; }
-.sp-more-group a { display: block; padding: 14px 16px; border-top: 2px solid var(--sp-line); color: var(--sp-link);
+.sp-more-group a { display: block; min-height: 48px; padding: 11px 16px; border-top: 2px solid var(--sp-line); color: var(--sp-link);
   font-size: 17px; font-weight: 600; line-height: 1.4; text-decoration: underline; text-decoration-color: currentColor; text-underline-offset: 4px; }
 .sp-more-group .sp-more-label + a { border-top: 0; }
 .sp-more-group a:hover { background: var(--sp-plain-tint); color: var(--sp-link); }
@@ -127,17 +135,27 @@ main :where(.sp-page) code { font-size: 1em; overflow-wrap: anywhere; }
 
 /* ---------- The section band: where you are, and the way back ---------- */
 .sp-band { position: sticky; top: 0; z-index: 25; background: var(--sp-c); color: var(--sp-on); border-bottom: 3px solid var(--sp-deep); }
-.sp-band-in { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 8px var(--sp-gutter); max-width: var(--sp-max); margin: 0 auto; }
-.sp-back { flex: none; display: inline-flex; align-items: center; gap: 4px; min-height: 48px; padding: 0 14px 0 8px; border: 2px solid var(--sp-on);
+.sp-band-in { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 4px var(--sp-gutter); max-width: var(--sp-max); margin: 0 auto; }
+.sp-back { flex: 0 1 auto; min-width: 0; max-width: calc(100% - 147px); display: inline-flex; align-items: center; gap: 4px; min-height: 48px; padding: 0 14px 0 8px; border: 2px solid var(--sp-on);
   border-radius: 10px; background: var(--sp-chip); color: var(--sp-on); font-size: 17px; font-weight: 700; line-height: 1; text-decoration: none; white-space: nowrap; }
+.sp-back > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; padding: 2px 0; }
+.sp-back-rest { display: none; }      /* a group's short name on a phone ("People"); the wide screen shows the rest */
 .sp-back:hover { color: var(--sp-on); }
+.sp-back:focus-visible { outline-offset: 0; }      /* the band is 56 px: its ring stays on the screen when the band is stuck at the top */
 /* the place and the title take the room beside the back button; on a very narrow screen, with less than 135 px of
    it, they go under the button (the rule for narrow screens, further down) */
 .sp-where { flex: 1 1 135px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
 .sp-crumb { font-size: 16px; font-weight: 500; }
+.sp-crumb:empty { display: none; }
 .sp-band .sp-title { font-size: 20px; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
 .sp-band p.sp-title { margin: 0; }
 .sp-band p.sp-title, .sp-crumb { max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }   /* one line: the band keeps its height */
+/* a phone: a long title takes two lines, which still fit in the band's 56 px, rather than being cut */
+/* from 351 px the back button may take 12 px more, so "Compare replies" is whole at 360 (below that the band wraps) */
+@media (min-width: 351px) { .sp-back { max-width: calc(100% - 135px); } }
+@media (max-width: 959px) {
+  .sp-band .sp-title, .sp-band p.sp-title { white-space: normal; line-height: 1.15; overflow-wrap: break-word; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+}
 .sp-title:focus { outline: none; }
 .sp-where { position: relative; }
 a.sp-crumb { color: var(--sp-on); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
@@ -160,9 +178,9 @@ a.sp-crumb::before { content: ""; position: absolute; inset: -4px 0; }     /* th
 @media (max-width: 350px) { .sp-tab { flex: 1 1 auto; } }  /* a narrow phone: each tab is as wide as its word needs */
 
 /* ---------- Layout ---------- */
-.sp-wrap { max-width: var(--sp-max); margin: 0 auto; padding: 18px var(--sp-gutter) 30px; }
-.sp-hub { display: grid; gap: 18px; }
-.sp-stack { display: grid; gap: 18px; }
+.sp-wrap { max-width: var(--sp-max); margin: 0 auto; padding: 14px var(--sp-gutter) 24px; }
+.sp-hub { display: grid; gap: 12px; }
+.sp-stack { display: grid; gap: 12px; }
 main :where(.sp-page) .sp-h1 { font-size: 28px; line-height: 1.2; font-weight: 700; }
 main :where(.sp-page) .sp-h2 { font-size: 22px; line-height: 1.25; font-weight: 700; }
 .sp-lead { font-size: 19px; }
@@ -171,7 +189,7 @@ main :where(.sp-page) .sp-h2 { font-size: 22px; line-height: 1.25; font-weight: 
 /* ---------- Panels ---------- */
 .sp-panel { background: var(--sp-panel); border: 2px solid var(--sp-edge); border-radius: 14px; overflow: hidden; min-width: 0; }
 .sp-panel { overflow: clip; }      /* clipped to its corners and still not a box that scrolls: a piece inside can stick to the screen */
-.sp-panel-bar { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 10px 16px; background: var(--sp-c); color: var(--sp-on);
+.sp-panel-bar { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 14px; background: var(--sp-c); color: var(--sp-on);
   border-bottom: 2px solid var(--sp-edge); font-size: 19px; font-weight: 700; line-height: 1.25; }
 main :where(.sp-page) .sp-panel-bar > :is(h1, h2, h3, h4), .sp-panel-bar > span { min-width: 0; font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
 .sp-panel-bar.sp-soft { background: var(--sp-tint); color: var(--sp-cink); }
@@ -185,13 +203,13 @@ main :where(.sp-page) .sp-panel-bar > :is(h1, h2, h3, h4), .sp-panel-bar > span 
 
 /* a panel's list of places to go */
 .sp-rows { margin: 0; padding: 0; list-style: none; }
-.sp-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; width: 100%; min-height: 72px; padding: 13px 16px;
+.sp-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: center; width: 100%; min-height: 56px; padding: 10px 14px;
   border: 0; border-top: 2px solid var(--sp-line); background: none; text-align: left; text-decoration: none; cursor: pointer; }
 main :where(.sp-page) a.sp-row { color: var(--sp-ink); }
 .sp-rows > :first-child .sp-row, .sp-rows > .sp-row:first-child { border-top: 0; }
 .sp-row:hover { background: var(--sp-tint); }
-.sp-row-t { display: block; font-size: 19px; font-weight: 700; line-height: 1.3; }
-.sp-row-d { display: block; font-size: 17px; font-weight: 400; line-height: 1.4; color: var(--sp-ink2); margin-top: 2px; }
+.sp-row-t { display: block; font-size: 18px; font-weight: 700; line-height: 1.3; }
+.sp-row-d { display: block; font-size: 16px; font-weight: 400; line-height: 1.35; color: var(--sp-ink2); margin-top: 2px; }
 .sp-row > .sp-i { color: var(--sp-cink); }
 .sp-row:focus-visible { outline-offset: -3px; }
 .sp-row-off { cursor: default; color: var(--sp-ink2); }
@@ -381,7 +399,7 @@ main :where(.sp-page) .sp-answer .answer-text :is(h2, h3, h4, h5, h6) { font-siz
 /* ---------- Wide screens ---------- */
 @media (min-width: 960px) {
   :root { --sp-gutter: 32px; }
-  html { --sp-bar-h: 71px; --sp-band-h: 71px; --sp-tabs-h: 0px; }
+  html { --sp-bar-h: 71px; --sp-band-h: 59px; --sp-tabs-h: 0px; }
   body { font-size: 19px; }
   .sp-tabs { display: none; }
   .sp-top { position: sticky; top: 0; }
@@ -394,27 +412,35 @@ main :where(.sp-page) .sp-answer .answer-text :is(h2, h3, h4, h5, h6) { font-siz
   .sp-navi:hover { border-color: var(--sp-white); color: var(--sp-white); }
   .sp-navi[aria-current] { background: var(--sp-c); color: var(--sp-on); border-color: var(--sp-white); font-weight: 700; }
   .sp-navi[aria-current] i { background: var(--sp-on); border-color: var(--sp-on); }
-  .sp-more { margin-left: 0; position: relative; }
+  .sp-more { margin-left: 0; }      /* the panel opens under the whole bar, not under the word */
   .sp-more > summary { border-color: transparent; background: none; font-size: 18px; font-weight: 600; }
   .sp-more > summary .sp-i { display: none; }
   .sp-more > summary:hover, .sp-more[open] > summary { border-color: var(--sp-white); }
-  .sp-more-list { left: auto; right: 0; width: 400px; top: calc(100% + 14px); max-height: min(72vh, 680px); }
+  /* every group at once, in columns, the bar's full width. The panel holds its height to the window and scrolls up
+     and down (then the shadow shows); the columns are in a box inside it, so they never spill out sideways */
+  .sp-more-list { left: var(--sp-gutter); right: var(--sp-gutter); top: calc(100% + 6px); max-height: calc(100vh - var(--sp-bar-h) - 80px); }
+  .sp-more-phone { display: none; }
+  .sp-more-wide { display: block; columns: 4 200px; column-gap: 0; column-rule: 2px solid var(--sp-line); }
+  .sp-more-group { break-inside: avoid; }
+  .sp-more-label { border-top: 0; }
+  .sp-more-list::after { height: 0; }
   .sp-band { top: var(--sp-bar-h); }
-  .sp-band-in { min-height: 68px; gap: 16px; }
+  .sp-band-in { min-height: 56px; gap: 16px; }
   .sp-where { flex-direction: row; align-items: baseline; gap: 10px; }
   .sp-crumb { font-size: 18px; }
   .sp-crumb { flex: none; max-width: 50%; }
   .sp-crumb::after { content: "  /"; white-space: pre; display: inline-block; text-decoration: none; }
   a.sp-crumb { line-height: 48px; }
   a.sp-crumb::before { content: none; }
-  .sp-band p.sp-title { font-size: 23px; min-width: 0; }
-  .sp-band .sp-title { font-size: 23px; }
+  .sp-band p.sp-title { font-size: 20px; min-width: 0; }
+  .sp-band .sp-title { font-size: 20px; }
+  .sp-back-rest { display: inline; }
   .sp-prog { padding-bottom: 10px; }
-  .sp-wrap { padding: 28px var(--sp-gutter) 56px; }
+  .sp-wrap { padding: 20px var(--sp-gutter) 32px; }
   main :where(.sp-page) .sp-h1 { font-size: 38px; }
   main :where(.sp-page) .sp-h2 { font-size: 26px; }
-  .sp-hub { grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-  .sp-stack { gap: 24px; }
+  .sp-hub { grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .sp-stack { gap: 16px; }
   .sp-panel-body { padding: 20px; }
   .sp-thread { margin: 0; padding: 24px; border: 2px solid var(--sp-frame); border-radius: 16px; }
   .chat-turn { max-width: 88%; }
@@ -423,6 +449,13 @@ main :where(.sp-page) .sp-answer .answer-text :is(h2, h3, h4, h5, h6) { font-siz
   .chat-turn-quote, .chat-turn .answer-text { font-size: 20px; }
   .sp-prose { font-size: 19px; }
   .sp-foot-in { padding: 26px var(--sp-gutter) 34px; }
+}
+/* a wide screen just over the line (960 to 1,099 px): the top bar's links sit closer, so the site's name stays on one line */
+@media (min-width: 960px) and (max-width: 1099px) {
+  .sp-brand { white-space: nowrap; }
+  .sp-nav { gap: 2px; }
+  .sp-navi { gap: 7px; padding: 0 10px; }
+  .sp-more > summary { padding: 0 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .vbtn:active, .vbtn[aria-pressed="true"] { transform: none; }
@@ -455,8 +488,8 @@ body.sp-shell { --gutter: var(--sp-gutter); }                       /* today's c
 body.sp-shell .wrap:not(.wrap-narrow) { max-width: var(--sp-max); }
 
 /* the page's own title block (site.head() in the new frame): the same parts as today's, on the section's tint */
-.sp-head { position: relative; background: var(--sp-tint); color: var(--sp-ink); border-bottom: 2px solid var(--sp-edge); padding: 20px 0 22px; }
-.sp-head h1 { margin: 0 0 12px; max-width: 24em; font-size: clamp(28px, 4.2vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -.015em; overflow-wrap: break-word; }
+.sp-head { position: relative; background: var(--sp-tint); color: var(--sp-ink); border-bottom: 2px solid var(--sp-edge); padding: 16px 0 18px; }
+.sp-head h1 { margin: 0 0 8px; max-width: 24em; font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.015em; overflow-wrap: break-word; }
 .sp-head h1.share-q { max-width: 30em; font-size: clamp(23px, 3.1vw, 34px); font-weight: 600; line-height: 1.28; letter-spacing: -.01em; text-wrap: pretty; }
 .sp-head h1.share-q.q-long { max-width: 40em; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; }
 .sp-head .label { margin: 0 0 10px; color: var(--sp-cink); font-size: 16px; font-weight: 700; line-height: 1.5; letter-spacing: .03em; }
@@ -476,7 +509,7 @@ body.sp-shell .wrap:not(.wrap-narrow) { max-width: var(--sp-max); }
 body.sp-shell .sp-head.is-narrow .wrap { max-width: calc(760px + 2 * var(--gutter)); }
 .sp-head :focus-visible { outline-color: var(--sp-focus); }
 @media (min-width: 900px) {
-  .sp-head { padding: 30px 0 32px; }
+  .sp-head { padding: 18px 0 20px; }
   .sp-head.has-action .wrap { display: grid; grid-template-columns: 1fr auto; column-gap: 40px; align-items: start; }
   .sp-head.has-action .wrap > * { grid-column: 1; }
   .sp-head.has-action .head-action { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; text-align: right; }

@@ -673,7 +673,7 @@
   var backLabel = document.querySelector('[data-back-label]'), crumbEl = document.querySelector('[data-crumb]');
   var countEl = document.querySelector('[data-title]'), marksEl = document.querySelector('[data-prog]');
   var OPENING = { back: backLabel.textContent, to: backEl.getAttribute('href'), crumb: crumbEl.textContent, title: countEl.textContent };
-  var SECTION = el.getAttribute('data-section') || 'Compare', PAGE = el.getAttribute('data-name') || 'Compare replies';
+  var SECTION = el.getAttribute('data-section') || 'Compare', PAGE = el.hasAttribute('data-name') ? el.getAttribute('data-name') : 'Compare replies';   // "" keeps the place line empty
   var startBtn = one('[data-start]'), loadFail = one('[data-load-fail]');
   var qEl = one('[data-q]'), refEl = one('[data-ref]'), candEl = one('[data-cand]');
   var candTag = one('[data-cand-tag]'), HIDDEN = candTag.textContent, candAv = one('[data-cand-av]');

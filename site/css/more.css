@@ -15,17 +15,19 @@
      mo-forms, mo-form  the two forms
      mo-lines           the helplines on the support page
      mo-insts, mo-inst  the scripted conversations' instructions: panels that open
-     mo-block           a block that came from the home page with its own markup: mo-dates, mo-canuse
+     mo-block           a block that came from the home page with its own markup: mo-dates, mo-canuse, mo-note
+                        (Grant's note on /about/, one column, a quiet bar like the page's other panels)
 
    The floor: reading text 18 px, nothing under 16 px, a thing to press at least 48 px tall. */
 
 /* ---------- The column ---------- */
-.mo-page { display: grid; gap: 18px; align-content: start; }
+.mo-page { display: grid; gap: 12px; align-content: start; }
 .mo-page > *, .mo-grid > *, .mo-main > *, .mo-art > *, .mo-foot > * { min-width: 0; }
 .mo-lean > * { max-width: 900px; }
 .mo-narrow { max-width: calc(760px + 2 * var(--sp-gutter)); }      /* a news item: the same column as its title block */
-.mo-grid { display: grid; gap: 18px; align-content: start; }
-.mo-foot { max-width: 900px; }
+.mo-grid { display: grid; gap: 12px; align-content: start; }
+/* under the data sets' cards: as wide as they are, the words kept to a readable line */
+.mo-foot .mo-body > p, .mo-foot .mo-body li { max-width: 70ch; }
 .mo-colon { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* the small line over a data-set page's title ("The data"): plain words, as everywhere in this design */
@@ -133,15 +135,15 @@ main :where(.sp-page) .mo-story-t { font-size: 20px; line-height: 1.3; text-deco
 .mo-pg > .mo-pg-t { font-size: 18px; font-weight: 700; overflow-wrap: anywhere; }
 
 /* ---------- The data sets ---------- */
-.mo-sets { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.mo-sets { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .mo-sets > li { display: grid; min-width: 0; }
 .mo-set { display: flex; flex-direction: column; }
 .mo-set-body { flex: 1; display: flex; flex-direction: column; gap: 10px; }
 .mo-set-n { font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--sp-ink2); }
-.mo-set-n strong { display: block; color: var(--sp-ink); font-size: 44px; font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
+.mo-set-n strong { display: block; color: var(--sp-ink); font-size: 32px; font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
 main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
 .mo-set-text { flex: 1; font-size: 18px; line-height: 1.55; }
-.mo-set-btns { display: grid; gap: 10px; margin-top: 4px; }
+.mo-set-btns { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }      /* a phone: one button a row */
 .mo-set .sp-src { padding-top: 0; border-top: 0; }
 .mo-set .sp-src a { font-weight: 700; display: inline-block; padding: 12px 0; margin: -12px 0; }
 
@@ -172,7 +174,7 @@ main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
 
 /* ---------- The scripted conversations: the instructions ---------- */
 .mo-insts { display: grid; gap: 10px; min-width: 0; }
-.mo-inst > summary { cursor: pointer; flex-wrap: wrap; gap: 2px 12px; }
+.mo-inst > summary { cursor: pointer; flex-wrap: wrap; gap: 2px 12px; min-height: 48px; }   /* a bar to press: 48 px, the floor for tap targets */
 .mo-inst > summary::after { content: ""; flex: none; width: 10px; height: 10px; margin: 0 6px 5px auto; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; transform: rotate(45deg); }
 .mo-inst[open] > summary::after { transform: rotate(225deg); margin-bottom: -5px; }
 .mo-inst:not([open]) > summary { border-bottom: 0; }
@@ -196,6 +198,16 @@ main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
   font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: 0; text-wrap: wrap; }
 .mo-page .mo-dates .panel > h2 { background: var(--sp-c); color: var(--sp-on); }
 .mo-page .mo-canuse .panel > h2 { background: var(--sp-tint); color: var(--sp-cink); }
+.mo-note .note { padding: 0; }
+.mo-note .note > .wrap { max-width: none; margin: 0; padding: 0; }
+.mo-note .note-card { padding: 0; border: 2px solid var(--sp-edge); border-radius: 14px; background: var(--sp-panel); box-shadow: none; overflow: hidden; }
+main .mo-note .note-card > h2 { margin: 0; padding: 8px 14px; border-bottom: 2px solid var(--sp-edge); background: var(--sp-tint); color: var(--sp-cink);
+  font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: 0; text-transform: none; }
+.mo-note .note-body { display: block; margin: 0; padding: 16px 16px 2px; }
+.mo-note .note-body p, .mo-note .note-body p:first-child { margin: 0 0 14px; max-width: 70ch; color: var(--sp-ink); font-size: 18px; line-height: 1.6; letter-spacing: 0; }
+.mo-note .note-body .sig { margin: 0 0 10px; font-weight: 700; }
+.mo-note .note-words { margin: 0; padding: 0 16px 6px; border-top: 2px solid var(--sp-line); font-size: 17px; line-height: 1.4; }
+.mo-note .note-words a { display: inline-block; padding: 13px 0; color: var(--sp-link); font-weight: 600; text-underline-offset: 4px; }
 .mo-page .mo-block .src { display: block; margin-top: 4px; font-size: 16px; line-height: 1.5; color: var(--sp-ink2); }
 .mo-page .mo-block .src a { color: var(--sp-link); font-weight: 600; }
 .mo-page .mo-block .more-link { display: flex; align-items: center; gap: 8px; min-height: 58px; margin: 0; padding: 12px 16px; border-top: 2px solid var(--sp-line);
@@ -246,8 +258,8 @@ main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
 
 /* ---------- Wide screens ---------- */
 @media (min-width: 960px) {
-  .mo-page { gap: 24px; }
-  .mo-grid { gap: 24px; }
+  .mo-page { gap: 16px; }
+  .mo-grid { gap: 16px; }
   .mo-grid.mo-has-toc { grid-template-columns: 300px minmax(0, 860px); gap: 32px; align-items: start; }
   .mo-toc { position: sticky; top: calc(var(--sp-stick-top) + 20px); max-height: calc(100vh - var(--sp-stick-top) - 40px); overflow-y: auto; }
   .mo-toc-wide { display: block; }
@@ -262,11 +274,15 @@ main :where(.sp-page) .mo-set h2 { font-size: 22px; line-height: 1.25; }
   .mo-tl-item::before { left: -28px; width: 26px; }
   main :where(.sp-page) .mo-year { font-size: 30px; }
   main :where(.sp-page) .mo-story { padding: 16px 20px; }
-  .mo-sets { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mo-sets { grid-template-columns: 1fr 1fr; gap: 16px; }
   main :where(.sp-page) .mo-set h2 { font-size: 24px; }
-  .mo-set-n strong { font-size: 54px; }
+  .mo-set-n strong { font-size: 36px; }
   .mo-page .mo-block .panel > h2 { padding-left: 20px; padding-right: 20px; font-size: 22px; }
   .mo-page .mo-block .more-link { padding-left: 20px; padding-right: 20px; }
+  main .mo-note .note-card > h2 { padding-left: 20px; padding-right: 20px; font-size: 22px; }
+  .mo-note .note-body { padding: 20px 20px 4px; }
+  .mo-note .note-body p, .mo-note .note-body p:first-child { font-size: 19px; }
+  .mo-note .note-words { padding: 0 20px 6px; }
   .mo-page .mo-dates .date-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .mo-page .mo-dates .date { flex: none; grid-template-columns: 104px minmax(0, 1fr); align-items: start; gap: 16px; padding: 18px 20px; border-top: 0; border-left: 2px solid var(--sp-line); }
   .mo-page .mo-dates .date:first-child { border-left: 0; }
